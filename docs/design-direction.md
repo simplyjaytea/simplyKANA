@@ -33,6 +33,11 @@ set like a line of poetry on good paper, and nothing asking for anything.
 Rule: the orthography never truncates and never wraps in the app. It scales
 down to a floor of 40 pt; the rest of the layout yields to it.
 
+**Dynamic Type (Dana, 2026-10-22).** The orthography tracks the system's
+largest title style, clamped to 56–96 pt, with the 40 pt fit floor above. At
+accessibility sizes the screen scrolls; the word is never squeezed to make
+room for anything else. Reading and meaning scale with their own styles.
+
 ## 3. Colour
 
 Light and dark are both first-class. Tokens, not hex, in code.
@@ -45,9 +50,12 @@ Light and dark are both first-class. Tokens, not hex, in code.
 | `rule` | `#E2D9CA` | `#2A251F` | Hairlines, 1 px. |
 | `accent` (朱, vermilion) | `#C8452A` | `#E0674A` | One element per screen at most: the level mark, a selected state, the kana tier dot. Never body text. |
 
-Contrast: `ink` on `paper` ≥ 12:1 both modes; `ink.secondary` ≥ 4.6:1.
-The accent is the only colour in the app. If a screen has two red things,
-one of them is wrong.
+Contrast (measured by Dana): `ink` on `paper` ≈ 15:1 both modes;
+`ink.secondary` ≥ 4.6:1; light-mode `accent` on `paper` is 4.3:1.
+That last number sets the rule: **the accent is never text**, and never the
+only sign that something is selected (pair it with weight or a check). It is
+a mark, 4.3:1 is fine for a mark. The accent is the only colour in the app.
+If a screen has two red things, one of them is wrong.
 
 ## 4. Screens (MVP)
 
