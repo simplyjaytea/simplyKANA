@@ -8,3 +8,18 @@
 
 Rebuild: download `http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz`, gunzip, then
 `python3 -I tools/build_bundle.py JMdict_e tools/n5.csv kana-core/Sources/KanaCore/Resources/words-ja.json --report`
+
+## Release two: licence checks (Poppy, 2026-10-22)
+
+Checked before any Chinese or Korean data is bundled (start condition, word-data-spec §7).
+
+| Source | Used for | Licence | Verdict |
+|---|---|---|---|
+| **CC-CEDICT** (MDBG) | Chinese pinyin and English glosses | CC-BY-SA 4.0, stated on mdbg.net | **OK.** Same terms as JMdict: credit, bundle file under CC-BY-SA. |
+| **HSK 3.0 list**, drkameleon/complete-hsk-vocabulary | which words are HSK 1–3 | MIT (repo). Built from elkmovie/hsk30 (MIT), an OCR of the Ministry of Education's published standard (GF 0025-2021) | **OK, with a note.** MIT covers the extraction; the level list itself is a published government standard. Take level membership only; glosses come from CC-CEDICT. Don't use its frequency data: that comes from krmanik/HSK-3.0-words-list, which has no clear licence. |
+| **NIKL 한국어 학습용 어휘 목록** (2003, 5,965 words, grades 1–3) | which Korean words, and their grade | KOGL Type 1 (공공누리 제1유형): free use incl. commercial and modification, with source credited | **OK.** Credit "국립국어원 (National Institute of Korean Language)". It has **no English glosses**. |
+| **kengdic** (garfieldnate/kengdic) | Korean → English glosses | Dual MPL 2.0 / LGPL 2.0+ (README; no LICENSE file in the repo) | **OK under MPL 2.0.** MPL is per file: the bundled Korean file must stay available under MPL with its notice. Our repo is public, so that's met. Credit kengdic. |
+
+Open points, none blocking:
+- The Korean bundle mixes KOGL (word list) and MPL (glosses); the credits screen lists both.
+- kengdic glosses are sparse for some entries; expect more hand fixes per word than JMdict needed.
