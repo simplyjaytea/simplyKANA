@@ -17,7 +17,7 @@ background of a life. Everything below serves that one glance.
 |---|---|---|
 | `accessoryRectangular` | 3 lines | **orthography** large · reading (omitted when equal to orthography) · first meaning |
 | `accessoryInline` | 1 line | `日 · にち · day` — truncate the meaning first, never the word |
-| `accessoryCircular` | 1 glyph slot | orthography only; see the overflow rule below |
+| `accessoryCircular` | 1 glyph slot | the whole orthography or no word; see the circular rule below |
 
 - Lock Screen widgets render in the system's vibrant monochrome. No colour
   decisions exist here; hierarchy is size and weight only.
@@ -27,12 +27,23 @@ background of a life. Everything below serves that one glance.
   orthography never truncates: if it does not fit, the font shrinks one step.
 - No streaks, no counters, no badges, no "tap to learn more" copy. One word.
 
-**Circular overflow rule (has a floor).** The circular slot is a glyph, not a
-line. 1–2 characters render at full size. 3–4 characters shrink, with a
-`minimumScaleFactor` floor of 0.6. 5 or more characters show the first two
-characters followed by `‥` (U+2025, two-dot leader) at full size, so the slot
-never clips and never wraps. The gate case is the longest orthography in the
-shipped bundle rendered at the floor (see §6).
+**Circular rule: never cut a word.** (Revised after Poppy's review: a cut
+word is a different word. つまらない cut to つま‥ reads "wife"; おじいさん cut
+to おじ‥ reads "uncle". The circular slot either shows the whole word or no
+word.)
+
+| Length | Rendering |
+|---|---|
+| 1–2 chars | One line, full size. |
+| 3–4 chars | One line, shrink with `minimumScaleFactor` floor 0.6. |
+| 5–8 chars | **Two lines**, at most 4 chars per line, floor 0.5. Split at `ceil(n/2)`; if the second line would start with a kinsoku character (ー, っ, ゃ, ゅ, ょ, ぁ, ぃ, ぅ, ぇ, ぉ or their katakana forms, ん), move the split one character right. テープレコーダー → テープレ / コーダー. おじいさん → おじい / さん. |
+| 9+ chars | Does not fit honestly. Show the **brand glyph** `語` alone, full size. It means "a word is waiting" and is the same for every such word, so it is never a wrong word. The rectangular and inline families still show the word in full. |
+
+- The N5 bundle has 11 words of 5+ characters and none above 8, so the 9+
+  branch is defined but unreachable in MVP. The word-data gate reports the
+  count of 9+ words in any bundle; it does not reject them.
+- Gate (§6, §7.3): all 11 words of 5+ characters render in the circular
+  snapshot test without clipping, with テープレコーダー as the worst case.
 
 ## 2. Timeline (the contract with the scheduler)
 
@@ -120,8 +131,8 @@ The rectangular family renders it as a single `—` line.
   snapshot test renders each family to an image with `ImageRenderer` at the
   family's size. Xcode previews do **not** run on a headless runner, so the
   snapshot test is the rendering gate. It asserts: no crash, and for the
-  circular family, the longest orthography in the bundle at the §1 floor does
-  not clip. This costs macOS minutes; Mira tracks them. It is the only
+  circular family, every bundle word of 5+ characters (11 in N5, worst case
+  テープレコーダー) renders on two lines at the §1 floor without clipping. This costs macOS minutes; Mira tracks them. It is the only
   rendering check we get before a phone.
 - **Phone only (known gap, on the release checklist):** real refresh cadence,
   Lock Screen vibrant rendering, Always-On dimming, tap routing. Plan a fix
@@ -144,5 +155,5 @@ The rectangular family renders it as a single `—` line.
    - same inputs, same output (determinism across reloads).
 3. The widget extension builds for the iOS Simulator in CI, and the
    `ImageRenderer` snapshot test passes for all three families, including the
-   longest-orthography circular case.
+   11 circular two-line cases and the `語` glyph for a synthetic 9-char word.
 4. Rachel has gated 1–3, and the release checklist records the phone-only gap.
