@@ -21,9 +21,16 @@ final class SettingsStore: ObservableObject {
         return .standard
     }
 
-    /// What the widget and the app read. Missing keys mean defaults.
-    static func load(from defaults: UserDefaults = sharedDefaults) -> Settings {
+    /// Stored values in a given suite. Missing keys mean defaults.
+    static func load(from defaults: UserDefaults) -> Settings {
         Settings(values: defaults.dictionaryRepresentation())
+    }
+
+    /// The settings the app and the widget actually run on. Without a shared App
+    /// Group the widget can only use the defaults, so the app uses them too:
+    /// tapping the widget must open the word that's on the Lock Screen.
+    static func effective(shared: Bool = isShared, from defaults: UserDefaults = sharedDefaults) -> Settings {
+        shared ? load(from: defaults) : .defaults
     }
 
     private let defaults: UserDefaults
