@@ -1203,9 +1203,9 @@
   "orthography": "明るい",
   "reading": "あかるい",
   "meanings": [
-   "cheerful",
    "bright",
-   "spirited"
+   "light",
+   "cheerful"
   ],
   "partOfSpeech": "adjective",
   "level": {
@@ -1650,9 +1650,9 @@
   "orthography": "余り",
   "reading": "あまり",
   "meanings": [
-   "very",
-   "(not) very",
-   "(not) much"
+   "not very",
+   "remainder",
+   "too much"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -1712,6 +1712,8 @@
   "orthography": "在る",
   "reading": "ある",
   "meanings": [
+   "to be",
+   "to exist",
    "to have"
   ],
   "partOfSpeech": "verb",
@@ -2074,7 +2076,7 @@
   "orthography": "犬",
   "reading": "いぬ",
   "meanings": [
-   "dog familiaris)",
+   "dog",
    "dog (Canis (lupus) familiaris)",
    "canine"
   ],
@@ -2554,10 +2556,8 @@
   "orthography": "美味しい",
   "reading": "おいしい",
   "meanings": [
-   "good",
-   "good(-tasting)",
-   "nice",
-   "delicious"
+   "delicious",
+   "tasty"
   ],
   "partOfSpeech": "adjective",
   "level": {
@@ -2727,7 +2727,7 @@
   "orthography": "おじいさん",
   "reading": "おじいさん",
   "meanings": [
-   "male senior-citizen",
+   "grandfather",
    "old man"
   ],
   "partOfSpeech": "noun",
@@ -2987,8 +2987,8 @@
   "orthography": "おばあさん",
   "reading": "おばあさん",
   "meanings": [
-   "old woman",
-   "female senior citizen"
+   "grandmother",
+   "old woman"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -3762,9 +3762,8 @@
   "orthography": "軽い",
   "reading": "かるい",
   "meanings": [
-   "non-serious",
-   "minor",
-   "unimportant"
+   "light",
+   "not heavy"
   ],
   "partOfSpeech": "adjective",
   "level": {
@@ -5844,9 +5843,9 @@
   "orthography": "吸う",
   "reading": "すう",
   "meanings": [
+   "to smoke",
    "to breathe in",
-   "to inhale",
-   "to smoke (a cigarette, etc.)"
+   "to suck"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -8327,6 +8326,22 @@
   "isCommon": true
  },
  {
+  "id": "jmdict:2083100",
+  "language": "ja",
+  "orthography": "日",
+  "reading": "にち",
+  "meanings": [
+   "day of the month",
+   "nth day (of the month)",
+   "for ... days"
+  ],
+  "partOfSpeech": "suffix",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
   "id": "jmdict:1464900",
   "language": "ja",
   "orthography": "日曜日",
@@ -8458,21 +8473,6 @@
    "to lie in bed"
   ],
   "partOfSpeech": "verb",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": true
- },
- {
-  "id": "jmdict:2084840",
-  "language": "ja",
-  "orthography": "年",
-  "reading": "ねん",
-  "meanings": [
-   "year",
-   "counter for years"
-  ],
-  "partOfSpeech": "counter",
   "level": {
    "jlpt": 5
   },
@@ -10094,9 +10094,9 @@
   "orthography": "曲る",
   "reading": "まがる",
   "meanings": [
+   "to turn",
    "to bend",
-   "to curve",
-   "to warp"
+   "to curve"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -10429,9 +10429,8 @@
   "orthography": "皆さん",
   "reading": "みなさん",
   "meanings": [
-   "all",
    "everyone",
-   "everybody"
+   "all"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -11084,7 +11083,9 @@
   "orthography": "呼ぶ",
   "reading": "よぶ",
   "meanings": [
-   "to take as one's wife"
+   "to call",
+   "to call out (to)",
+   "to invite"
   ],
   "partOfSpeech": "verb",
   "level": {

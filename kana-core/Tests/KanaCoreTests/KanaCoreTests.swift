@@ -223,7 +223,7 @@ private let bundle: [Word] = try! bundledWords()
     let pairs = Set(bundle.dropFirst(92).map { "\($0.orthography)|\($0.reading)" })
     // The literal rule 8 table in docs/word-data-spec.md.
     for p in ["お|お", "さん|さん", "たち|たち", "がる|がる", "人|じん", "人|にん", "中|じゅう", "中|ちゅう",
-              "屋|や", "日|にち", "時|じ", "ずつ|ずつ", "だけ|だけ", "など|など"] {
+              "屋|や", "年|ねん", "時|じ", "ずつ|ずつ", "だけ|だけ", "など|など"] {
         #expect(!pairs.contains(p), "\(p)")
     }
 }
@@ -267,7 +267,7 @@ private let bundle: [Word] = try! bundledWords()
 
 @Test func bundleKeepsAllowedEntries() {
     let pairs = Set(bundle.map { "\($0.orthography)|\($0.reading)" })
-    for p in ["キロ|キロ", "枚|まい", "回|かい", "階|かい", "人|ひと", "時|とき", "年|とし"] {
+    for p in ["キロ|キロ", "枚|まい", "回|かい", "階|かい", "人|ひと", "時|とき", "年|とし", "日|にち"] {
         #expect(pairs.contains(p), "\(p)")
     }
 }
@@ -276,5 +276,12 @@ private let bundle: [Word] = try! bundledWords()
     // word-data-spec: meanings[0] is all the Lock Screen shows; it must not truncate.
     for w in bundle {
         #expect(w.meanings[0].count <= 22, "\(w.orthography): \(w.meanings[0])")
+        // Brackets balanced (犬 once showed "dog familiaris)" from a nested-bracket strip).
+        var depth = 0
+        for ch in w.meanings[0] {
+            if ch == "(" { depth += 1 } else if ch == ")" { depth -= 1 }
+            #expect(depth >= 0, "\(w.orthography): \(w.meanings[0])")
+        }
+        #expect(depth == 0, "\(w.orthography): \(w.meanings[0])")
     }
 }

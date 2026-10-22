@@ -53,7 +53,7 @@ for _, el in ET.iterparse(jm_path, events=("end",)):
 # Not words of the day (playbook rule 8): prefixes and affix-only senses.
 # Rule 8, the literal table in docs/word-data-spec.md (PR #11). Table first, bundle second.
 DROP = {("お", "お"), ("人", "じん"), ("中", "じゅう"),
-        ("人", "にん"), ("中", "ちゅう"), ("屋", "や"), ("日", "にち"), ("時", "じ"),
+        ("人", "にん"), ("中", "ちゅう"), ("屋", "や"), ("年", "ねん"), ("時", "じ"),  # 日 にち stays: 日 has no other entry
         ("ずつ", "ずつ"), ("だけ", "だけ"), ("など", "など"),
         ("たち", "たち"), ("がる", "がる"), ("さん", "さん")}  # grammatical suffixes
 # Rows that do not match JMdict as written: list form -> JMdict form.
@@ -67,7 +67,7 @@ PIN = {("コート", "コート"): ("1049000", 0),   # coat, not court
        ("すぎ", "すぎ"): ("1195960", 0)}       # "past, after"
 # First meaning written by hand where JMdict's best sense reads wrong on its own.
 MEANING = {("キロ", "キロ"): ["kilogram", "kilometre"],
-           ("年", "ねん"): ["year", "counter for years"],
+           ("日", "にち"): ["day of the month", "nth day (of the month)", "for ... days"],
            # Counters: one short form, "<things> (counter)", so the Lock Screen fits
            # (cap below). The JMdict gloss follows for the Word screen.
            ("回", "かい"): ["times (counter)", "counter for occurrences"],
@@ -80,6 +80,18 @@ MEANING = {("キロ", "キロ"): ["kilogram", "kilometre"],
            ("枚", "まい"): ["flat things (counter)", "counter for thin, flat objects (e.g. sheets of paper, plates, coins)"],
            ("冊", "さつ"): ["books (counter)", "counter for books"],
            ("か月", "かげつ"): ["months (counter)", "counter for months"],
+           # Rachel's reading pass over all 689 N5 first meanings (PR #15).
+           ("呼ぶ", "よぶ"): ["to call", "to call out (to)", "to invite"],
+           ("軽い", "かるい"): ["light", "not heavy"],
+           ("余り", "あまり"): ["not very", "remainder", "too much"],
+           ("皆さん", "みなさん"): ["everyone", "all"],
+           ("おじいさん", "おじいさん"): ["grandfather", "old man"],
+           ("おばあさん", "おばあさん"): ["grandmother", "old woman"],
+           ("明るい", "あかるい"): ["bright", "light", "cheerful"],
+           ("曲る", "まがる"): ["to turn", "to bend", "to curve"],
+           ("在る", "ある"): ["to be", "to exist", "to have"],
+           ("吸う", "すう"): ["to smoke", "to breathe in", "to suck"],
+           ("美味しい", "おいしい"): ["delicious", "tasty"],
            # Found when bracket stripping exposed them (PR: rule 8 drops).
            ("鳥", "とり"): ["bird", "bird meat (esp. chicken meat)", "fowl"],
            ("欲しい", "ほしい"): ["want", "wanted", "desired"],
@@ -131,7 +143,13 @@ MEANING_CAP = 22  # characters; from the first snapshots: 22 fits, 28 truncated
 
 def lock_screen_meanings(glosses):
     full = glosses[:3]
-    short = re.sub(r"\s*\([^)]*\)", "", full[0]).strip()
+    short = full[0]
+    while True:  # innermost first, so "dog (Canis (lupus) familiaris)" -> "dog"
+        nxt = re.sub(r"\s*\([^()]*\)", "", short)
+        if nxt == short:
+            break
+        short = nxt
+    short = short.strip()
     if short and short != full[0]:
         return [short] + full
     return full
