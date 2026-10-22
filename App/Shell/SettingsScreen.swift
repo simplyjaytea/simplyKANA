@@ -7,9 +7,11 @@ import KanaCore
 /// interval's checkmark is the screen's one accent.
 struct SettingsScreen: View {
     @StateObject private var model = SettingsModel(store: SettingsStore())
+    @State private var showsCredits = false
 
     var body: some View {
-        ScrollView { SettingsContent(model: model) }
+        ScrollView { SettingsContent(model: model, openCredits: { showsCredits = true }) }
+            .navigationDestination(isPresented: $showsCredits) { CreditsScreen() }
             .background(Ink.paper.ignoresSafeArea())
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
@@ -93,7 +95,10 @@ final class SettingsModel: ObservableObject {
 
 struct SettingsContent: View {
     @ObservedObject var model: SettingsModel
-    var showsCredits = true
+    /// A plain button, not a NavigationLink: outside a navigation stack (as in
+    /// ImageRenderer snapshots) a NavigationLink draws as disabled grey, and the
+    /// snapshot must show what the user sees.
+    var openCredits: () -> Void = {}
 
     var body: some View {
         VStack(alignment: .leading, spacing: 32) {
@@ -130,9 +135,8 @@ struct SettingsContent: View {
                 ValueRow(label: "Level", value: SettingsCopy.level(model.settings.level))
             }
 
-            if showsCredits {
                 SettingsSection(title: "About", footer: nil) {
-                    NavigationLink { CreditsScreen() } label: {
+                    Button(action: openCredits) {
                         HStack {
                             Text("Credits").foregroundStyle(Ink.ink)
                             Spacer()
@@ -145,8 +149,8 @@ struct SettingsContent: View {
                         .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
+                    .accessibilityAddTraits(.isButton)
                 }
-            }
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 24)
