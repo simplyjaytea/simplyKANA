@@ -58,8 +58,15 @@ your free Apple ID and installs it over USB:
 - **Or [AltStore](https://altstore.io)**, via AltServer on Windows or Mac. It can
   refresh the app over Wi-Fi, but AltStore itself takes one of your three app slots.
 
+**Keep the app extensions.** The Lock Screen widget *is* an app extension. If the
+tool offers to remove app extensions (Sideloadly's *Remove app extensions* option,
+or AltStore's prompt when you're short of app IDs), say no. Removing them installs
+the app with no widget at all. If AltStore says you're out of app IDs, wait for
+old ones to expire (*My Apps → View App IDs*) rather than removing extensions.
+
 Then, on the iPhone: turn on *Settings → Privacy & Security → Developer Mode*, trust
-your Apple ID under *Settings → General → VPN & Device Management*, and add the
+your Apple ID under *Settings → General → VPN & Device Management*, **open simplyKANA
+once** (iOS often doesn't list a new app's widgets until it has run), and add the
 widget from the Lock Screen (step 6 above).
 
 **Limits of a free Apple ID:**
@@ -70,7 +77,9 @@ widget from the Lock Screen (step 6 above).
 | 10 new app IDs per 7 days, 3 sideloaded apps at once | simplyKANA uses **two** app IDs: the app and its widget. |
 | App Groups may not survive re-signing | The app then shows that the widget uses the defaults (hourly, quiet 22:00–07:00), and the app uses them too, so they always agree. |
 
-If it fails, send the tool's exact error text.
+If it fails, send the tool's exact error text. If the app installs but simplyKANA
+isn't in the Lock Screen widget list, say which tool you used and whether it
+mentioned extensions.
 
 ## What's where
 
