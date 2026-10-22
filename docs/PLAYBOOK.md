@@ -1,6 +1,6 @@
 # SimplyKANA Playbook
 
-Last updated: 2026-10-22 (evening) by Ian. Whoever changes a rule or an owner updates this file and the copy in the repo (`docs/PLAYBOOK.md`) in the same session.
+Last updated: 2026-10-22 (late) by Ian. Whoever changes a rule or an owner updates this file and the copy in the repo (`docs/PLAYBOOK.md`) in the same session.
 
 ## 1. What we are building
 
@@ -65,9 +65,34 @@ The user (simplyjaytee) owns the GitHub account, the Apple side (no Developer ac
 3. Read the newest messages in the SimplyKANA room before acting; the schedule lives in Mira's tracker, not here.
 4. Work in your own workspace or a clean clone. Open a PR. Tell the room the result, not the process.
 
-## 8. Open items as of 2026-10-22
+## 8. Alpha: the finish line (user, 2026-10-22: "keep working until it's ready for alpha test")
 
-- PRs #2 (release checklist), #3 (design direction), #4 (bundle rules, kana handling): docs, awaiting Rachel's merge.
-- Fri 23 Oct: Poppy's word data PR (92 kana + 697 N5, hand-reviewed, spacing sort, credits data last). Rachel gates by Mon 26 Oct with four bundle checks.
-- Mon 26 Oct: Poppy starts `previousDelivery`, `timeline`, `circularLines`, `spokenLabel`, then the widget extension and the `ImageRenderer` snapshot test. Dana starts the Word screen.
-- Release two (Chinese, Korean): scoped in `word-data-spec.md` §7, no date, licence checks are a start condition.
+Alpha means the user can open the project in Xcode on a Mac, run it on their
+own iPhone with a free personal profile, add the Lock Screen widget, and see a
+word change on schedule. Checklist, all proven in CI or simulator before the
+user is asked to try:
+
+1. Lock Screen widget, three families, real bundle, 781 words. **Done, on main.**
+2. Word screen and Credits screen in the app. Dana, PR in progress.
+3. Rule 8 drops, 22-character first-meaning cap, 枚 fixed. Poppy, PR #15 at the gate.
+4. One human reading pass over all 781 first meanings by someone other than Poppy. Rachel. Before the first phone run.
+5. Settings: interval, quiet hours, pack and level rows, App Group storage, one-commit-per-edit, `isSatisfiable` refusal. Poppy then Dana, from `docs/settings-spec.md`. Phone-only: whether the widget reads the App Group under a free profile.
+6. Polish pass on the widget renders and the app screens. Dana.
+7. Release checklist: every simulator-provable box checked, every phone-only line listed with its bound. Rachel.
+8. A `README` section the user can follow: clone, `xcodegen`, open, select team, run on device. Poppy.
+
+Not alpha: Home Screen widget, Chinese and Korean packs, daily cadence, notifications, audio, sync.
+
+## 9. Open items as of 2026-10-22 (evening, one list, from Mira's tracker)
+
+| Item | Owner | Next |
+|---|---|---|
+| PR #15 gate (781 words, 22-char cap) | Rachel | next in queue |
+| Word and Credits screens, then polish pass | Dana | PR now; skeleton is on main |
+| Rule 8 table corrections (日 にち stays, 年 ねん drops) | Ian → Poppy | in PR #11; two-line change to #15 |
+| Settings spec #13 (swap-on-change, commit-once) | Ian | fixed; Rachel merges |
+| Settings build | Poppy, then Dana | after #15 and the first Word screen are green |
+| Meanings reading pass (781) | Rachel | before first phone run |
+| App Group under free profile | Poppy | check before "settings work" is said |
+| Time zone change on device | phone-only, bound ≈ one day on hourly | logged |
+| Code licence (open or all rights reserved) | user | this week |
