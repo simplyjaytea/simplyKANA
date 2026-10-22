@@ -26,7 +26,7 @@ struct RootView: View {
                     .animation(.easeInOut(duration: 0.24), value: word.id)
             }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .navigationBarTrailing) // .topBarTrailing is iOS 17 {
                     // Temporary home for Credits until the Settings screen
                     // exists (settings spec, PR #13). Quiet, secondary ink.
                     Button { showsCredits = true } label: {
@@ -42,7 +42,7 @@ struct RootView: View {
         }
         .tint(Ink.ink)
         .onOpenURL { url in pinned = word(from: url) }
-        .onChange(of: scenePhase) { _, phase in
+        .onChange(of: scenePhase) { phase in // iOS 16 form
             if phase == .background { pinned = nil }
         }
     }
