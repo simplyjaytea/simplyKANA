@@ -139,10 +139,46 @@ Determinism rule for `pickWord`: `words[slot.modulo(words.count)]`, but ordered 
 the drip reads naturally (kana foundation first, then N5). `isCommon` sorts within
 a level; exact ordering is Poppy's to implement, the guarantee is determinism.
 
-**Uniqueness (2026-10-22):** one entry per (orthography, reading). 人 ひと, 人 にん
-and 一日 ついたち are different words and each shows its own reading. Suffix-only
-and prefix-only senses (お, 人 じん "-ian", 中 じゅう "all through") are dropped;
-nobody learns an affix as the word of the day.
+**Uniqueness (2026-10-22):** one entry per (orthography, reading). 人 ひと and
+一日 ついたち are different words and each shows its own reading.
+
+**Affix rule (rule 8, decided 2026-10-22 evening, refined after Poppy's
+counter question):** an entry is dropped when it is (a) a pure grammatical
+morpheme (honorific prefix or suffix, plural or verb suffix, particle), or
+(b) an affix *sense* of a character that already has a standalone entry
+(人 にん when 人 ひと exists). **Counters that are the character's only entry
+stay** (枚, 回, 階, 台 and the rest): they are N5 vocabulary with a meaning of
+their own. Loanword units used as nouns stay. The gate is this literal list,
+not the prose:
+
+| Dropped | Why |
+|---|---|
+| お | honorific prefix |
+| さん, たち, がる | suffixes (honorific, plural, verb) |
+| 人 じん "-ian", 人 にん counter | affix senses of 人; 人 ひと stays |
+| 中 じゅう, 中 ちゅう | suffix senses of 中 |
+| 屋 や | "-shop" suffix; the shops themselves (本屋) stay |
+| 時 じ, 年 ねん | counter senses with a standalone sibling; 時 とき and 年 とし stay |
+| ずつ, だけ, など | particles |
+
+| Allowed | Why |
+|---|---|
+| キロ | used alone as a noun ("5キロ") |
+| 日 にち | the N5 list has no 日 ひ, so にち is 日's only entry (corrected 2026-10-22 after Poppy's check) |
+| 枚, 回, 階 and every other counter with no standalone sibling entry | the character's only entry; N5 vocabulary |
+
+Expected count after the list: 781 (not a multiple of 24; にち restored, ねん dropped). Any new drop or
+restore changes this table first and the bundle second.
+
+**First-meaning length (2026-10-22, from the first widget snapshots):** the
+Lock Screen shows only `meanings[0]`, and it must fit the rectangular widget
+on the smallest supported phone without truncation. Rachel's gate wins over
+the "truncate the meaning first" wording in the widget spec: that wording
+covers the inline family only. The build script enforces a character cap on
+`meanings[0]` (Poppy sets the number from the snapshot measurement, with the
+longest counter as the worst case) and fails when exceeded. Long glosses are
+shortened by hand for position 0 (枚 → "flat things (counter)", one shared short form for every counter) and the full
+JMdict gloss moves to `meanings[1]`, so the Word screen still shows it.
 
 **Spacing rule (2026-10-22):** entries that share an orthography are placed at
 least 24 slots apart in the ordered list, measured circularly (the list wraps,
