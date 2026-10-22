@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "KanaCore", targets: ["KanaCore"])
     ],
     targets: [
-        .target(name: "KanaCore"),
+        .target(name: "KanaCore", resources: [.copy("Resources/words-ja.json")]),
         .testTarget(name: "KanaCoreTests", dependencies: ["KanaCore"])
     ]
 )
