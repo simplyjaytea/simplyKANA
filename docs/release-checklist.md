@@ -22,8 +22,8 @@ moved to "Accepted risks" with an owner. Updated 2026-10-22 (late).
 - [x] Settings: commit once per edit, refusal leaves the store untouched, Done saves and swipe cancels (#18, #19).
 - [x] Without the App Group, the app runs on the defaults like the widget, so tapping the widget opens the word on the Lock Screen (#24).
 - [x] Minimum iOS 16.0; CI compiles against it (#24).
-- [ ] Unsigned IPA (#25): device build, widget inside, minimum iOS, word bundle; check proven able to fail; published only after tests pass and only for the latest main.
-- [ ] Public IPA link downloads without a login, and the downloaded file passes the same checks (Rachel, after #25).
+- [x] Unsigned IPA (#26): device build, widget inside, minimum iOS, word bundle; check proven able to fail; published only after tests pass and only for the latest main.
+- [x] Public IPA link downloads without a login (HTTP 200, 337,924 bytes, sha256 5bea8682…4328, built from main 500be65). App and widget: iphoneos, arm64, minimum iOS 16.0, 781 words each (Rachel, 2026-10-22).
 
 ## Licensing
 
@@ -39,7 +39,7 @@ moved to "Accepted risks" with an owner. Updated 2026-10-22 (late).
 | Check | Expected | Bound / fallback if it fails |
 |---|---|---|
 | App installs with a free Apple ID (Xcode or Sideloadly/AltStore) | Installs and opens | Send the exact error text |
-| App Group under a free profile or after re-signing | Settings reach the widget | Widget and app both use defaults (hourly, quiet 22:00–07:00); Settings shows a note |
+| App Group under a free profile or after re-signing | Settings reach the widget (Xcode route only; the unsigned IPA carries no entitlements, so the sideload route will run on defaults) | Widget and app both use defaults (hourly, quiet 22:00–07:00); Settings shows a note |
 | Widget refresh cadence | New word each hour, none in quiet hours | Depends on iOS refresh budget; timeline holds 24 entries |
 | Settings change reaches the Lock Screen | Within a minute or two | Lock and unlock, or re-add the widget |
 | Phone changes time zone | Quiet hours follow the new zone | Up to about one day on hourly, until the next timeline reload |
@@ -47,6 +47,7 @@ moved to "Accepted risks" with an owner. Updated 2026-10-22 (late).
 | Tap routing | Opens the app on the Lock Screen's word | — |
 | Japanese VoiceOver voice | Japanese parts read in Japanese | `ja` tag is CI-tested; the voice is not |
 | Real iOS 16 device | Same as above | CI compiles for 16, simulator runs newer iOS |
+| App icon | None yet: the app has no icon asset, so it shows a blank icon | Cosmetic, not a bug for this alpha |
 | Free-profile expiry | App stops opening after 7 days | Re-install or refresh |
 
 ## Process rules
