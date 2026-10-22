@@ -1234,6 +1234,7 @@
   "orthography": "開く",
   "reading": "あく",
   "meanings": [
+   "to open",
    "to open (e.g. doors)"
   ],
   "partOfSpeech": "verb",
@@ -1248,6 +1249,7 @@
   "orthography": "開ける",
   "reading": "あける",
   "meanings": [
+   "to open",
    "to open (a door, etc.)",
    "to unwrap (e.g. parcel, package)",
    "to unlock"
@@ -1264,6 +1266,7 @@
   "orthography": "上げる",
   "reading": "あげる",
   "meanings": [
+   "to raise",
    "to raise (one's gaze)",
    "to lift up (one's face)",
    "to look up"
@@ -1368,26 +1371,12 @@
   "orthography": "遊ぶ",
   "reading": "あそぶ",
   "meanings": [
+   "to play",
    "to play (games, sports)",
    "to enjoy oneself",
    "to have a good time"
   ],
   "partOfSpeech": "verb",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": true
- },
- {
-  "id": "jmdict:2842390",
-  "language": "ja",
-  "orthography": "私",
-  "reading": "わたくし",
-  "meanings": [
-   "I (formal)",
-   "me"
-  ],
-  "partOfSpeech": "noun",
   "level": {
    "jlpt": 5
   },
@@ -1404,6 +1393,21 @@
    "(pleasantly) hot"
   ],
   "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2842390",
+  "language": "ja",
+  "orthography": "私",
+  "reading": "わたくし",
+  "meanings": [
+   "I (formal)",
+   "me"
+  ],
+  "partOfSpeech": "noun",
   "level": {
    "jlpt": 5
   },
@@ -1477,6 +1481,7 @@
   "orthography": "熱い",
   "reading": "あつい",
   "meanings": [
+   "hot",
    "hot (to the touch)"
   ],
   "partOfSpeech": "adjective",
@@ -1645,6 +1650,7 @@
   "orthography": "余り",
   "reading": "あまり",
   "meanings": [
+   "very",
    "(not) very",
    "(not) much"
   ],
@@ -1674,6 +1680,7 @@
   "orthography": "飴",
   "reading": "あめ",
   "meanings": [
+   "candy",
    "(hard) candy",
    "toffee"
   ],
@@ -2022,6 +2029,7 @@
   "orthography": "一緒",
   "reading": "いっしょ",
   "meanings": [
+   "together",
    "(doing) together"
   ],
   "partOfSpeech": "noun",
@@ -2066,6 +2074,7 @@
   "orthography": "犬",
   "reading": "いぬ",
   "meanings": [
+   "dog familiaris)",
    "dog (Canis (lupus) familiaris)",
    "canine"
   ],
@@ -2159,6 +2168,7 @@
   "orthography": "居る",
   "reading": "いる",
   "meanings": [
+   "to be (living things)",
    "to be (of animate objects)",
    "to exist"
   ],
@@ -2270,6 +2280,7 @@
   "orthography": "薄い",
   "reading": "うすい",
   "meanings": [
+   "thin",
    "thin (of an object)"
   ],
   "partOfSpeech": "adjective",
@@ -2452,6 +2463,7 @@
   "orthography": "英語",
   "reading": "えいご",
   "meanings": [
+   "English",
    "English (language)"
   ],
   "partOfSpeech": "noun",
@@ -2512,6 +2524,7 @@
   "orthography": "円",
   "reading": "えん",
   "meanings": [
+   "yen",
    "yen (currency of Japan)"
   ],
   "partOfSpeech": "noun",
@@ -2526,6 +2539,7 @@
   "orthography": "鉛筆",
   "reading": "えんぴつ",
   "meanings": [
+   "pencil",
    "(wooden) pencil"
   ],
   "partOfSpeech": "noun",
@@ -2540,6 +2554,7 @@
   "orthography": "美味しい",
   "reading": "おいしい",
   "meanings": [
+   "good",
    "good(-tasting)",
    "nice",
    "delicious"
@@ -2742,6 +2757,7 @@
   "orthography": "押す",
   "reading": "おす",
   "meanings": [
+   "to press",
    "to press (down)",
    "to push (e.g. a button)",
    "to exert pressure on"
@@ -2772,6 +2788,7 @@
   "orthography": "お茶",
   "reading": "おちゃ",
   "meanings": [
+   "tea",
    "tea (esp. green or barley)"
   ],
   "partOfSpeech": "noun",
@@ -3089,6 +3106,7 @@
   "orthography": "降りる",
   "reading": "おりる",
   "meanings": [
+   "to alight",
    "to alight (e.g. from bus)",
    "to get off",
    "to disembark"
@@ -3166,6 +3184,7 @@
   "orthography": "回",
   "reading": "かい",
   "meanings": [
+   "times (counter)",
    "counter for occurrences"
   ],
   "partOfSpeech": "counter",
@@ -3180,6 +3199,7 @@
   "orthography": "階",
   "reading": "かい",
   "meanings": [
+   "floors (counter)",
    "counter for storeys and floors of a building"
   ],
   "partOfSpeech": "counter",
@@ -3286,6 +3306,7 @@
   "orthography": "返す",
   "reading": "かえす",
   "meanings": [
+   "to return",
    "to return (something)",
    "to restore",
    "to put back"
@@ -3334,6 +3355,7 @@
   "orthography": "かかる",
   "reading": "かかる",
   "meanings": [
+   "to take (time, money)",
    "to take (a resource, e.g. time or money)"
   ],
   "partOfSpeech": "verb",
@@ -3378,6 +3400,7 @@
   "orthography": "学生",
   "reading": "がくせい",
   "meanings": [
+   "student",
    "student (esp. a university student)"
   ],
   "partOfSpeech": "noun",
@@ -3392,6 +3415,7 @@
   "orthography": "か月",
   "reading": "かげつ",
   "meanings": [
+   "months (counter)",
    "counter for months"
   ],
   "partOfSpeech": "counter",
@@ -3406,6 +3430,7 @@
   "orthography": "掛ける",
   "reading": "かける",
   "meanings": [
+   "to hang up",
    "to hang up (e.g. a coat, a picture on the wall)",
    "to let hang",
    "to suspend (from)"
@@ -3468,6 +3493,7 @@
   "orthography": "風邪",
   "reading": "かぜ",
   "meanings": [
+   "cold",
    "(common) cold",
    "influenza",
    "flu"
@@ -3528,6 +3554,7 @@
   "orthography": "月",
   "reading": "がつ",
   "meanings": [
+   "month",
    "month (of the year)"
   ],
   "partOfSpeech": "noun",
@@ -3556,6 +3583,7 @@
   "orthography": "カップ",
   "reading": "カップ",
   "meanings": [
+   "cup",
    "cup (drinking vessel, measure, brassiere, prize, etc.)"
   ],
   "partOfSpeech": "noun",
@@ -3617,6 +3645,7 @@
   "orthography": "花瓶",
   "reading": "かびん",
   "meanings": [
+   "vase",
    "(flower) vase"
   ],
   "partOfSpeech": "noun",
@@ -3631,6 +3660,7 @@
   "orthography": "かぶる",
   "reading": "かぶる",
   "meanings": [
+   "to put on",
    "to put on (one's head)",
    "to wear",
    "to have on"
@@ -3791,6 +3821,7 @@
   "orthography": "側",
   "reading": "がわ",
   "meanings": [
+   "side",
    "side (of something, or taking someone's side)",
    "part"
   ],
@@ -3971,6 +4002,7 @@
   "orthography": "切手",
   "reading": "きって",
   "meanings": [
+   "stamp",
    "stamp (postage)"
   ],
   "partOfSpeech": "noun",
@@ -4042,6 +4074,7 @@
   "orthography": "牛乳",
   "reading": "ぎゅうにゅう",
   "meanings": [
+   "milk",
    "(cow's) milk"
   ],
   "partOfSpeech": "noun",
@@ -4146,6 +4179,7 @@
   "orthography": "着る",
   "reading": "きる",
   "meanings": [
+   "to wear",
    "to wear (from the shoulders down)",
    "to put on"
   ],
@@ -4237,6 +4271,7 @@
   "orthography": "下さい",
   "reading": "ください",
   "meanings": [
+   "please",
    "please (do for me)"
   ],
   "partOfSpeech": "expression",
@@ -4402,6 +4437,7 @@
   "orthography": "来る",
   "reading": "くる",
   "meanings": [
+   "to come",
    "to come (spatially or temporally)",
    "to approach",
    "to arrive"
@@ -4584,6 +4620,7 @@
   "orthography": "個",
   "reading": "こ",
   "meanings": [
+   "small items (counter)",
    "counter for (small) things or pieces"
   ],
   "partOfSpeech": "counter",
@@ -4628,6 +4665,7 @@
   "orthography": "公園",
   "reading": "こうえん",
   "meanings": [
+   "park",
    "(public) park"
   ],
   "partOfSpeech": "noun",
@@ -4832,6 +4870,7 @@
   "orthography": "コップ",
   "reading": "コップ",
   "meanings": [
+   "glass",
    "glass (drinking vessel)",
    "tumbler"
   ],
@@ -4966,6 +5005,7 @@
   "orthography": "ころ",
   "reading": "ころ",
   "meanings": [
+   "time",
    "(approximate) time",
    "around",
    "about"
@@ -5041,6 +5081,7 @@
   "orthography": "さあ",
   "reading": "さあ",
   "meanings": [
+   "come",
    "come (on)",
    "come now",
    "come along"
@@ -5134,6 +5175,7 @@
   "orthography": "作文",
   "reading": "さくぶん",
   "meanings": [
+   "writing",
    "writing (an essay, prose, etc.)",
    "composition"
   ],
@@ -5149,9 +5191,8 @@
   "orthography": "差す",
   "reading": "さす",
   "meanings": [
-   "to hold up (an umbrella, etc.)",
-   "to put up",
-   "to raise"
+   "to open (umbrella)",
+   "to hold up (an umbrella, etc.)"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -5165,6 +5206,7 @@
   "orthography": "冊",
   "reading": "さつ",
   "meanings": [
+   "books (counter)",
    "counter for books"
   ],
   "partOfSpeech": "counter",
@@ -5209,6 +5251,7 @@
   "orthography": "寒い",
   "reading": "さむい",
   "meanings": [
+   "cold",
    "cold (e.g. weather)"
   ],
   "partOfSpeech": "adjective",
@@ -5271,21 +5314,6 @@
    "4"
   ],
   "partOfSpeech": "number",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": true
- },
- {
-  "id": "jmdict:2020680",
-  "language": "ja",
-  "orthography": "時",
-  "reading": "じ",
-  "meanings": [
-   "o'clock",
-   "hour"
-  ],
-  "partOfSpeech": "suffix",
   "level": {
    "jlpt": 5
   },
@@ -5589,6 +5617,7 @@
   "orthography": "シャツ",
   "reading": "シャツ",
   "meanings": [
+   "shirt",
    "shirt (undergarment)",
    "undershirt",
    "singlet"
@@ -5845,6 +5874,7 @@
   "orthography": "好き",
   "reading": "すき",
   "meanings": [
+   "liking",
    "liking (romantically)",
    "being in love with",
    "beloved"
@@ -5934,26 +5964,12 @@
   "isCommon": true
  },
  {
-  "id": "jmdict:2006560",
-  "language": "ja",
-  "orthography": "ずつ",
-  "reading": "ずつ",
-  "meanings": [
-   "at a time",
-   "piecemeal"
-  ],
-  "partOfSpeech": "suffix",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": true
- },
- {
   "id": "jmdict:1070790",
   "language": "ja",
   "orthography": "ストーブ",
   "reading": "ストーブ",
   "meanings": [
+   "heater",
    "(room) heater",
    "stove"
   ],
@@ -6013,6 +6029,7 @@
   "orthography": "住む",
   "reading": "すむ",
   "meanings": [
+   "to live",
    "to live (of humans)",
    "to reside",
    "to inhabit"
@@ -6045,6 +6062,7 @@
   "orthography": "座る",
   "reading": "すわる",
   "meanings": [
+   "to sit",
    "to sit (down)",
    "to have a seat",
    "to be seated"
@@ -6305,6 +6323,7 @@
   "orthography": "そこ",
   "reading": "そこ",
   "meanings": [
+   "there",
    "there (place just mentioned)",
    "that place"
   ],
@@ -6364,6 +6383,7 @@
   "orthography": "そば",
   "reading": "そば",
   "meanings": [
+   "near by",
    "(place) near by",
    "(place) close by",
    "(place) right next to"
@@ -6442,6 +6462,7 @@
   "orthography": "台",
   "reading": "だい",
   "meanings": [
+   "machines (counter)",
    "counter for machines and vehicles"
   ],
   "partOfSpeech": "counter",
@@ -6573,22 +6594,6 @@
   "isCommon": true
  },
  {
-  "id": "jmdict:1007340",
-  "language": "ja",
-  "orthography": "だけ",
-  "reading": "だけ",
-  "meanings": [
-   "only",
-   "just",
-   "merely"
-  ],
-  "partOfSpeech": "particle",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": true
- },
- {
   "id": "jmdict:1415870",
   "language": "ja",
   "orthography": "沢山",
@@ -6639,6 +6644,7 @@
   "orthography": "立つ",
   "reading": "たつ",
   "meanings": [
+   "to stand",
    "to stand (up)",
    "to rise",
    "to get to one's feet"
@@ -6900,6 +6906,7 @@
   "orthography": "違う",
   "reading": "ちがう",
   "meanings": [
+   "to differ",
    "to differ (from)",
    "to be different",
    "to be distinct"
@@ -7005,22 +7012,6 @@
   "isCommon": true
  },
  {
-  "id": "jmdict:1620400",
-  "language": "ja",
-  "orthography": "中",
-  "reading": "ちゅう",
-  "meanings": [
-   "during",
-   "while",
-   "in (the course of)"
-  ],
-  "partOfSpeech": "suffix",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": true
- },
- {
   "id": "jmdict:1427340",
   "language": "ja",
   "orthography": "丁度",
@@ -7073,6 +7064,7 @@
   "orthography": "使う",
   "reading": "つかう",
   "meanings": [
+   "to use",
    "to use (a tool, method, etc.)",
    "to make use of",
    "to put to use"
@@ -7166,6 +7158,7 @@
   "orthography": "つける",
   "reading": "つける",
   "meanings": [
+   "to turn on",
    "to turn on (a light)"
   ],
   "partOfSpeech": "verb",
@@ -7180,6 +7173,7 @@
   "orthography": "勤める",
   "reading": "つとめる",
   "meanings": [
+   "to work",
    "to work (for, at, in)",
    "to be employed (at)",
    "to serve (as)"
@@ -7212,6 +7206,7 @@
   "orthography": "冷たい",
   "reading": "つめたい",
   "meanings": [
+   "cold",
    "cold (to the touch)",
    "chilly",
    "icy"
@@ -7301,6 +7296,7 @@
   "orthography": "出かける",
   "reading": "でかける",
   "meanings": [
+   "to go out",
    "to go out (e.g. on an excursion or outing)",
    "to leave",
    "to depart"
@@ -7363,6 +7359,7 @@
   "orthography": "テスト",
   "reading": "テスト",
   "meanings": [
+   "test",
    "test (of ability, knowledge, etc.)",
    "exam",
    "examination"
@@ -7470,6 +7467,7 @@
   "orthography": "電気",
   "reading": "でんき",
   "meanings": [
+   "light",
    "(electric) light"
   ],
   "partOfSpeech": "noun",
@@ -7514,6 +7512,7 @@
   "orthography": "戸",
   "reading": "と",
   "meanings": [
+   "door",
    "door (esp. Japanese-style)"
   ],
   "partOfSpeech": "noun",
@@ -7528,7 +7527,9 @@
   "orthography": "度",
   "reading": "ど",
   "meanings": [
-   "counter for occurrences"
+   "times; degrees",
+   "counter for occurrences",
+   "degree (angle, temperature, scale, etc.)"
   ],
   "partOfSpeech": "counter",
   "level": {
@@ -7879,6 +7880,7 @@
   "orthography": "止まる",
   "reading": "とまる",
   "meanings": [
+   "to stop",
    "to stop (doing, working, being supplied)",
    "to come to a halt",
    "to cease"
@@ -7924,9 +7926,9 @@
   "orthography": "鳥",
   "reading": "とり",
   "meanings": [
+   "bird",
    "bird meat (esp. chicken meat)",
-   "fowl",
-   "poultry"
+   "fowl"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -7970,6 +7972,7 @@
   "orthography": "撮る",
   "reading": "とる",
   "meanings": [
+   "to take",
    "to take (a photograph)"
   ],
   "partOfSpeech": "verb",
@@ -7984,6 +7987,7 @@
   "orthography": "どれ",
   "reading": "どれ",
   "meanings": [
+   "which",
    "which (of three or more)"
   ],
   "partOfSpeech": "noun",
@@ -8058,6 +8062,7 @@
   "orthography": "長い",
   "reading": "ながい",
   "meanings": [
+   "long",
    "long (distance, length)"
   ],
   "partOfSpeech": "adjective",
@@ -8072,6 +8077,7 @@
   "orthography": "鳴く",
   "reading": "なく",
   "meanings": [
+   "to make sound",
    "to make sound (of an animal)",
    "to call",
    "to cry"
@@ -8088,6 +8094,7 @@
   "orthography": "無くす",
   "reading": "なくす",
   "meanings": [
+   "to lose",
    "to lose (something)"
   ],
   "partOfSpeech": "verb",
@@ -8136,22 +8143,6 @@
    "summer holiday"
   ],
   "partOfSpeech": "noun",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": true
- },
- {
-  "id": "jmdict:1582300",
-  "language": "ja",
-  "orthography": "など",
-  "reading": "など",
-  "meanings": [
-   "et cetera",
-   "etc.",
-   "and the like"
-  ],
-  "partOfSpeech": "particle",
   "level": {
    "jlpt": 5
   },
@@ -8336,20 +8327,6 @@
   "isCommon": true
  },
  {
-  "id": "jmdict:2083100",
-  "language": "ja",
-  "orthography": "日",
-  "reading": "にち",
-  "meanings": [
-   "nth day (of the month)"
-  ],
-  "partOfSpeech": "suffix",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": true
- },
- {
   "id": "jmdict:1464900",
   "language": "ja",
   "orthography": "日曜日",
@@ -8410,25 +8387,12 @@
   "isCommon": true
  },
  {
-  "id": "jmdict:2149890",
-  "language": "ja",
-  "orthography": "人",
-  "reading": "にん",
-  "meanings": [
-   "counter for people"
-  ],
-  "partOfSpeech": "counter",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": true
- },
- {
   "id": "jmdict:1416400",
   "language": "ja",
   "orthography": "脱ぐ",
   "reading": "ぬぐ",
   "meanings": [
+   "to take off",
    "to take off (clothes, shoes, etc.)",
    "to undress"
   ],
@@ -8474,6 +8438,7 @@
   "orthography": "猫",
   "reading": "ねこ",
   "meanings": [
+   "cat",
    "cat (esp. the domestic cat, Felis catus)",
    "feline"
   ],
@@ -8582,6 +8547,7 @@
   "orthography": "乗る",
   "reading": "のる",
   "meanings": [
+   "to get on",
    "to get on (train, plane, bus, ship, etc.)",
    "to get in",
    "to board"
@@ -8613,6 +8579,7 @@
   "orthography": "パーティー",
   "reading": "パーティー",
   "meanings": [
+   "party",
    "party (social gathering)"
   ],
   "partOfSpeech": "noun",
@@ -8686,6 +8653,7 @@
   "orthography": "はく",
   "reading": "はく",
   "meanings": [
+   "to put on",
    "to put on (lower-body clothing, e.g. pants, skirt, footwear)",
    "to wear"
   ],
@@ -9075,6 +9043,7 @@
   "orthography": "番",
   "reading": "ばん",
   "meanings": [
+   "number",
    "number (in a series)"
   ],
   "partOfSpeech": "noun",
@@ -9176,6 +9145,7 @@
   "orthography": "匹",
   "reading": "ひき",
   "meanings": [
+   "animals (counter)",
    "counter for small animals"
   ],
   "partOfSpeech": "counter",
@@ -9205,6 +9175,7 @@
   "orthography": "弾く",
   "reading": "ひく",
   "meanings": [
+   "to play",
    "to play (a stringed or keyboard instrument)"
   ],
   "partOfSpeech": "verb",
@@ -9219,6 +9190,7 @@
   "orthography": "低い",
   "reading": "ひくい",
   "meanings": [
+   "low",
    "low (rank, degree, value, content, quality, etc.)"
   ],
   "partOfSpeech": "adjective",
@@ -9370,6 +9342,7 @@
   "orthography": "病気",
   "reading": "びょうき",
   "meanings": [
+   "illness",
    "illness (usu. excluding minor ailments, e.g. common cold)",
    "disease",
    "sickness"
@@ -9475,6 +9448,7 @@
   "orthography": "プール",
   "reading": "プール",
   "meanings": [
+   "pool",
    "(swimming) pool"
   ],
   "partOfSpeech": "noun",
@@ -9503,6 +9477,7 @@
   "orthography": "吹く",
   "reading": "ふく",
   "meanings": [
+   "to blow",
    "to blow (of the wind)"
   ],
   "partOfSpeech": "verb",
@@ -9517,6 +9492,7 @@
   "orthography": "服",
   "reading": "ふく",
   "meanings": [
+   "clothes",
    "clothes (esp. Western clothes)",
    "clothing",
    "dress"
@@ -9620,6 +9596,7 @@
   "orthography": "降る",
   "reading": "ふる",
   "meanings": [
+   "to fall",
    "to fall (of rain, snow, ash, etc.)",
    "to come down"
   ],
@@ -9651,6 +9628,7 @@
   "orthography": "分",
   "reading": "ふん",
   "meanings": [
+   "minute",
    "minute (unit of time)"
   ],
   "partOfSpeech": "noun",
@@ -9841,6 +9819,7 @@
   "orthography": "外",
   "reading": "ほか",
   "meanings": [
+   "another",
    "another (person or thing)",
    "other",
    "different"
@@ -9871,7 +9850,9 @@
   "orthography": "欲しい",
   "reading": "ほしい",
   "meanings": [
-   "I want (you, them, etc.) to (do)"
+   "want",
+   "wanted",
+   "desired"
   ],
   "partOfSpeech": "adjective",
   "level": {
@@ -9916,6 +9897,7 @@
   "orthography": "ボタン",
   "reading": "ボタン",
   "meanings": [
+   "button",
    "button (clothing)"
   ],
   "partOfSpeech": "noun",
@@ -9992,6 +9974,7 @@
   "orthography": "枚",
   "reading": "まい",
   "meanings": [
+   "flat things (counter)",
    "counter for thin, flat objects (e.g. sheets of paper, plates, coins)"
   ],
   "partOfSpeech": "counter",
@@ -10095,6 +10078,7 @@
   "orthography": "前",
   "reading": "まえ",
   "meanings": [
+   "in front",
    "in front (of)",
    "before (e.g. a building)"
   ],
@@ -10126,6 +10110,7 @@
   "orthography": "まずい",
   "reading": "まずい",
   "meanings": [
+   "bad",
    "bad(-tasting)",
    "unpalatable",
    "unsavoury"
@@ -10204,6 +10189,7 @@
   "orthography": "まっすぐ",
   "reading": "まっすぐ",
   "meanings": [
+   "straight",
    "straight (ahead)",
    "direct",
    "upright"
@@ -10220,6 +10206,7 @@
   "orthography": "マッチ",
   "reading": "マッチ",
   "meanings": [
+   "match",
    "match (for lighting a fire)"
   ],
   "partOfSpeech": "noun",
@@ -10338,6 +10325,7 @@
   "orthography": "水",
   "reading": "みず",
   "meanings": [
+   "water",
    "water (esp. cool or cold)"
   ],
   "partOfSpeech": "noun",
@@ -10606,6 +10594,7 @@
   "orthography": "メートル",
   "reading": "メートル",
   "meanings": [
+   "metre",
    "metre (unit of length)",
    "meter"
   ],
@@ -10667,6 +10656,7 @@
   "orthography": "もしもし",
   "reading": "もしもし",
   "meanings": [
+   "hello",
    "hello (e.g. on phone)"
   ],
   "partOfSpeech": "interjection",
@@ -10681,6 +10671,7 @@
   "orthography": "持つ",
   "reading": "もつ",
   "meanings": [
+   "to hold",
    "to hold (in one's hand)",
    "to take",
    "to carry"
@@ -10697,6 +10688,7 @@
   "orthography": "もっと",
   "reading": "もっと",
   "meanings": [
+   "more",
    "(some) more",
    "even more",
    "longer"
@@ -10743,6 +10735,7 @@
   "orthography": "問題",
   "reading": "もんだい",
   "meanings": [
+   "question",
    "question (e.g. on a test)",
    "problem"
   ],
@@ -10894,6 +10887,7 @@
   "orthography": "夕方",
   "reading": "ゆうがた",
   "meanings": [
+   "early evening",
    "early evening (usu. from 3pm to 6pm)",
    "dusk"
   ],
@@ -11014,6 +11008,7 @@
   "orthography": "洋服",
   "reading": "ようふく",
   "meanings": [
+   "Western-style clothes",
    "Western-style clothes (cf. traditional Japanese clothes)"
   ],
   "partOfSpeech": "noun",
@@ -11044,9 +11039,9 @@
   "orthography": "横",
   "reading": "よこ",
   "meanings": [
-   "side-to-side (as opposed to front-to-back)",
-   "width",
-   "breadth"
+   "side",
+   "beside",
+   "width"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -11326,6 +11321,7 @@
   "orthography": "レコード",
   "reading": "レコード",
   "meanings": [
+   "record",
    "(phonograph) record"
   ],
   "partOfSpeech": "noun",
@@ -11340,6 +11336,7 @@
   "orthography": "レストラン",
   "reading": "レストラン",
   "meanings": [
+   "restaurant",
    "restaurant (esp. Western-style)"
   ],
   "partOfSpeech": "noun",
@@ -11401,6 +11398,7 @@
   "orthography": "ワイシャツ",
   "reading": "ワイシャツ",
   "meanings": [
+   "shirt",
    "(formal) shirt",
    "dress shirt",
    "business shirt"
@@ -11584,25 +11582,10 @@
   "orthography": "杯",
   "reading": "はい",
   "meanings": [
+   "cupfuls (counter)",
    "counter for cupfuls, bowlfuls, spoonfuls, etc."
   ],
   "partOfSpeech": "counter",
-  "level": {
-   "jlpt": 5
-  },
-  "isCommon": false
- },
- {
-  "id": "jmdict:2082160",
-  "language": "ja",
-  "orthography": "屋",
-  "reading": "や",
-  "meanings": [
-   "shop",
-   "store",
-   "restaurant"
-  ],
-  "partOfSpeech": "suffix",
   "level": {
    "jlpt": 5
   },

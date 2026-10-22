@@ -30,7 +30,7 @@ final class LockScreenSnapshotTests: XCTestCase {
     }
 
     func testEveryFamilyRendersNamedCases() throws {
-        let names = ["日", "テープレコーダー", "パーティー", "ワイシャツ", "あ"]
+        let names = ["水", "枚", "テープレコーダー", "パーティー", "ワイシャツ", "あ"]
         for o in names {
             let w = try XCTUnwrap(appWords.first { $0.orthography == o }, o)
             _ = try render(RectangularWordView(word: w), Self.rectangular, "rect-\(o)")
@@ -59,6 +59,19 @@ final class LockScreenSnapshotTests: XCTestCase {
         }
     }
 
+    /// Every first meaning fits one line of the rectangular family on the smallest
+    /// supported phone (iPhone SE, about 150pt wide), at the caption font the view uses.
+    func testEveryFirstMeaningFitsRectangular() {
+        let width: CGFloat = 150
+        let font = UIFont.preferredFont(forTextStyle: .caption1,
+                                        compatibleWith: UITraitCollection(preferredContentSizeCategory: .large))
+        for w in appWords {
+            let m = w.meanings.first ?? ""
+            let measured = (m as NSString).size(withAttributes: [.font: font]).width
+            XCTAssertLessThanOrEqual(measured, width, "\(w.orthography): \"\(m)\" is \(measured)pt")
+        }
+    }
+
     /// The rectangular family's longest first meaning, rendered for review.
     func testLongestFirstMeaningRenders() throws {
         let w = try XCTUnwrap(appWords.max { ($0.meanings.first?.count ?? 0) < ($1.meanings.first?.count ?? 0) })
@@ -66,7 +79,7 @@ final class LockScreenSnapshotTests: XCTestCase {
     }
 
     func testVoiceOverTagsJapanese() throws {
-        let w = try XCTUnwrap(appWords.first { $0.orthography == "日" && $0.reading == "にち" } ?? appWords.first)
+        let w = try XCTUnwrap(appWords.first { $0.orthography == "水" && $0.reading == "みず" } ?? appWords.first)
         let label = spokenText(for: w)
         let tagged = label.runs.filter { $0.languageIdentifier == "ja" }.map { String(label[$0.range].characters) }
         XCTAssertTrue(tagged.contains(w.orthography))

@@ -188,7 +188,7 @@ private func qh(_ s: Int, _ e: Int) -> QuietHours {
 private let bundle: [Word] = try! bundledWords()
 
 @Test func bundleCountIsNotAMultipleOf24() {
-    #expect(bundle.count == 789)
+    #expect(bundle.count == 781)
     #expect(bundle.count % 24 != 0)
 }
 
@@ -221,7 +221,9 @@ private let bundle: [Word] = try! bundledWords()
 @Test func bundleDroppedAffixes() {
     // N5 part only: hiragana お is a kana entry, and stays.
     let pairs = Set(bundle.dropFirst(92).map { "\($0.orthography)|\($0.reading)" })
-    for p in ["お|お", "人|じん", "中|じゅう", "たち|たち", "がる|がる", "さん|さん"] {
+    // The literal rule 8 table in docs/word-data-spec.md.
+    for p in ["お|お", "さん|さん", "たち|たち", "がる|がる", "人|じん", "人|にん", "中|じゅう", "中|ちゅう",
+              "屋|や", "日|にち", "時|じ", "ずつ|ずつ", "だけ|だけ", "など|など"] {
         #expect(!pairs.contains(p), "\(p)")
     }
 }
@@ -261,4 +263,18 @@ private let bundle: [Word] = try! bundledWords()
     #expect(json.contains("\"level\":{\"hsk\":1}"))
     #expect(try JSONDecoder().decode(Word.self, from: Data(json.utf8)) == w)
     #expect(throws: (any Error).self) { try decodeWords(from: Data(#"[{"id":"x","language":"ja","orthography":"a","reading":"a","meanings":[],"isCommon":true,"level":{"jlpt":5,"hsk":1}}]"#.utf8)) }
+}
+
+@Test func bundleKeepsAllowedEntries() {
+    let pairs = Set(bundle.map { "\($0.orthography)|\($0.reading)" })
+    for p in ["キロ|キロ", "枚|まい", "回|かい", "階|かい", "人|ひと", "時|とき", "年|とし"] {
+        #expect(pairs.contains(p), "\(p)")
+    }
+}
+
+@Test func bundleFirstMeaningsFitTheLockScreen() {
+    // word-data-spec: meanings[0] is all the Lock Screen shows; it must not truncate.
+    for w in bundle {
+        #expect(w.meanings[0].count <= 22, "\(w.orthography): \(w.meanings[0])")
+    }
 }
