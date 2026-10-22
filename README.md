@@ -43,6 +43,35 @@ for this.
 
 Every time `project.yml` changes (after `git pull`), run `xcodegen generate` again.
 
+## Install the IPA without a Mac (alpha)
+
+Every green build of `main` publishes an unsigned IPA here, always at the same link:
+
+**https://github.com/simplyjaytea/simplyKANA/releases/download/alpha/SimplyKANA.ipa**
+
+It isn't signed, so it can't be tapped to install. A sideloading tool signs it with
+your free Apple ID and installs it over USB:
+
+- **Windows or Mac: [Sideloadly](https://sideloadly.io).** Install iTunes and iCloud
+  from Apple's website first (not the Microsoft Store versions) if you're on Windows.
+  Plug in the iPhone, drop `SimplyKANA.ipa` on Sideloadly, sign in with your Apple ID, *Start*.
+- **Or [AltStore](https://altstore.io)**, via AltServer on Windows or Mac. It can
+  refresh the app over Wi-Fi, but AltStore itself takes one of your three app slots.
+
+Then, on the iPhone: turn on *Settings → Privacy & Security → Developer Mode*, trust
+your Apple ID under *Settings → General → VPN & Device Management*, and add the
+widget from the Lock Screen (step 6 above).
+
+**Limits of a free Apple ID:**
+
+| Limit | What it means here |
+|---|---|
+| The app stops opening 7 days after install | Re-install with the same tool (AltStore can refresh it for you). |
+| 10 new app IDs per 7 days, 3 sideloaded apps at once | simplyKANA uses **two** app IDs: the app and its widget. |
+| App Groups may not survive re-signing | The app then shows that the widget uses the defaults (hourly, quiet 22:00–07:00), and the app uses them too, so they always agree. |
+
+If it fails, send the tool's exact error text.
+
 ## What's where
 
 | Path | What |
