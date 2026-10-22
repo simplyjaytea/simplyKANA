@@ -83,16 +83,19 @@ user is asked to try:
 
 Not alpha: Home Screen widget, Chinese and Korean packs, daily cadence, notifications, audio, sync.
 
-## 9. Open items as of 2026-10-22 (evening, one list, from Mira's tracker)
+## 9. Open items as of 2026-10-22 (late, after #18; one list, Mira's)
+
+On main: #15 (781-word bundle, reading pass done), #16 (Word + Credits
+screens), #18 (settings core, alpha README). Alpha items 1, 2, 3, 4, 8 done.
 
 | Item | Owner | Next |
 |---|---|---|
-| PR #15 gate (781 words, 22-char cap) | Rachel | next in queue |
-| Word and Credits screens, then polish pass | Dana | PR now; skeleton is on main |
-| Rule 8 table corrections (日 にち stays, 年 ねん drops) | Ian → Poppy | in PR #11; two-line change to #15 |
-| Settings spec #13 (swap-on-change, commit-once) | Ian | fixed; Rachel merges |
-| Settings build | Poppy, then Dana | after #15 and the first Word screen are green |
-| Meanings reading pass (781) | Rachel | before first phone run |
-| App Group under free profile | Poppy | check before "settings work" is said |
-| Time zone change on device | phone-only, bound ≈ one day on hourly | logged |
+| #19 settings screen (draft): rebase, re-run snapshots, Credits row not grey, app falls back to defaults when the App Group is missing | Dana | then Rachel gates |
+| #20 widget polish (dimmer reading): approved on design and code | Rachel | merge |
+| Word screen "also:" line for `meanings[1...]` (docs PR open) | Dana | in #19 or follow-up |
+| Credits screen background not proven by snapshot | Dana | fix snapshot |
+| Release checklist: every phone-only line with its bound (App Group on free profile, time zone change ≈ one day on hourly, Japanese VoiceOver voice, Always-On, dimmed reading on a real Lock Screen) | Rachel | alpha item 7, before handover |
+| Handover to the user: README's five steps plus one line on what to report | Mira | after #19 and the checklist |
+| Settings-in-widget fallback (press and hold): scoped on #18, about a day, build only if the user's free profile cannot share settings | Poppy | on the user's report |
 | Code licence (open or all rights reserved) | user | this week |
+| Playbook §8 alpha items 5, 6, 7 | Dana, Dana + Poppy, Rachel | see above |
