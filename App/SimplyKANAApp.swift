@@ -26,7 +26,7 @@ struct RootView: View {
                     .animation(.easeInOut(duration: 0.24), value: word.id)
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) // .topBarTrailing is iOS 17 {
+                ToolbarItem(placement: .navigationBarTrailing) { // .topBarTrailing is iOS 17
                     // Temporary home for Credits until the Settings screen
                     // exists (settings spec, PR #13). Quiet, secondary ink.
                     Button { showsCredits = true } label: {
