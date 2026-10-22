@@ -94,7 +94,7 @@ public struct Schedule: Equatable, Sendable {
     }
 }
 
-private let epoch = Date(timeIntervalSinceReferenceDate: 0) // 2001-01-01Z
+let epoch = Date(timeIntervalSinceReferenceDate: 0) // 2001-01-01Z
 
 /// Monotonic slot index from 2001-01-01Z. Pure epoch arithmetic; no timezone.
 public func slot(for date: Date, intervalMinutes: Int) -> Int {
