@@ -51,7 +51,10 @@ for _, el in ET.iterparse(jm_path, events=("end",)):
 
 # ---------------------------------------------------------------- hand decisions
 # Not words of the day (playbook rule 8): prefixes and affix-only senses.
+# Rule 8, the literal table in docs/word-data-spec.md (PR #11). Table first, bundle second.
 DROP = {("お", "お"), ("人", "じん"), ("中", "じゅう"),
+        ("人", "にん"), ("中", "ちゅう"), ("屋", "や"), ("年", "ねん"), ("時", "じ"),  # 日 にち stays: 日 has no other entry
+        ("ずつ", "ずつ"), ("だけ", "だけ"), ("など", "など"),
         ("たち", "たち"), ("がる", "がる"), ("さん", "さん")}  # grammatical suffixes
 # Rows that do not match JMdict as written: list form -> JMdict form.
 FIX = {("十", "(〜を) とお"): ("十", "とお"),
@@ -64,8 +67,38 @@ PIN = {("コート", "コート"): ("1049000", 0),   # coat, not court
        ("すぎ", "すぎ"): ("1195960", 0)}       # "past, after"
 # First meaning written by hand where JMdict's best sense reads wrong on its own.
 MEANING = {("キロ", "キロ"): ["kilogram", "kilometre"],
-           ("時", "じ"): ["o'clock", "hour"],
-           ("年", "ねん"): ["year", "counter for years"],
+           ("日", "にち"): ["day of the month", "nth day (of the month)", "for ... days"],
+           # Counters: one short form, "<things> (counter)", so the Lock Screen fits
+           # (cap below). The JMdict gloss follows for the Word screen.
+           ("回", "かい"): ["times (counter)", "counter for occurrences"],
+           ("階", "かい"): ["floors (counter)", "counter for storeys and floors of a building"],
+           ("個", "こ"): ["small items (counter)", "counter for (small) things or pieces"],
+           ("台", "だい"): ["machines (counter)", "counter for machines and vehicles"],
+           ("度", "ど"): ["times; degrees", "counter for occurrences", "degree (angle, temperature, scale, etc.)"],
+           ("杯", "はい"): ["cupfuls (counter)", "counter for cupfuls, bowlfuls, spoonfuls, etc."],
+           ("匹", "ひき"): ["animals (counter)", "counter for small animals"],
+           ("枚", "まい"): ["flat things (counter)", "counter for thin, flat objects (e.g. sheets of paper, plates, coins)"],
+           ("冊", "さつ"): ["books (counter)", "counter for books"],
+           ("か月", "かげつ"): ["months (counter)", "counter for months"],
+           # Rachel's reading pass over all 689 N5 first meanings (PR #15).
+           ("呼ぶ", "よぶ"): ["to call", "to call out (to)", "to invite"],
+           ("軽い", "かるい"): ["light", "not heavy"],
+           ("余り", "あまり"): ["not very", "remainder", "too much"],
+           ("皆さん", "みなさん"): ["everyone", "all"],
+           ("おじいさん", "おじいさん"): ["grandfather", "old man"],
+           ("おばあさん", "おばあさん"): ["grandmother", "old woman"],
+           ("明るい", "あかるい"): ["bright", "light", "cheerful"],
+           ("曲る", "まがる"): ["to turn", "to bend", "to curve"],
+           ("在る", "ある"): ["to be", "to exist", "to have"],
+           ("吸う", "すう"): ["to smoke", "to breathe in", "to suck"],
+           ("美味しい", "おいしい"): ["delicious", "tasty"],
+           # Found when bracket stripping exposed them (PR: rule 8 drops).
+           ("鳥", "とり"): ["bird", "bird meat (esp. chicken meat)", "fowl"],
+           ("欲しい", "ほしい"): ["want", "wanted", "desired"],
+           ("横", "よこ"): ["side", "beside", "width"],
+           ("差す", "さす"): ["to open (umbrella)", "to hold up (an umbrella, etc.)"],
+           ("居る", "いる"): ["to be (living things)", "to be (of animate objects)", "to exist"],
+           ("かかる", "かかる"): ["to take (time, money)", "to take (a resource, e.g. time or money)"],
            # Rachel's review of PR #8: these led with a sense that teaches the wrong word.
            ("いいえ", "いいえ"): ["no", "not at all"],
            ("一つ", "ひとつ"): ["one (thing)", "one"],
@@ -103,6 +136,24 @@ POS_SHORT = [("noun", "noun"), ("pronoun", "pronoun"), ("verb", "verb"),
              ("interjection", "interjection"), ("counter", "counter"),
              ("numeric", "number"), ("expression", "expression"),
              ("suffix", "suffix"), ("prefix", "prefix"), ("particle", "particle")]
+# The Lock Screen shows meanings[0] only, and it must fit the rectangular widget
+# without truncation (word-data-spec, first-meaning length). JMdict's bracketed
+# notes come off position 0; the full gloss moves to position 1 for the Word screen.
+MEANING_CAP = 22  # characters; from the first snapshots: 22 fits, 28 truncated
+
+def lock_screen_meanings(glosses):
+    full = glosses[:3]
+    short = full[0]
+    while True:  # innermost first, so "dog (Canis (lupus) familiaris)" -> "dog"
+        nxt = re.sub(r"\s*\([^()]*\)", "", short)
+        if nxt == short:
+            break
+        short = nxt
+    short = short.strip()
+    if short and short != full[0]:
+        return [short] + full
+    return full
+
 def short_pos(p):
     if not p:
         return None
@@ -149,7 +200,7 @@ with open(n5_path, encoding="utf-8") as f:
             seq, i = PIN[(expr, reading)]
             e = next(c for c in cands if c["seq"] == seq)
         sense = e["senses"][i]
-        meanings = MEANING.get((expr, reading), sense["glosses"][:3])
+        meanings = MEANING.get((expr, reading)) or lock_screen_meanings(sense["glosses"])
         wid = "jmdict:" + e["seq"]
         if wid in seen_ids or (expr, reading) in seen_pairs:
             continue
@@ -177,6 +228,10 @@ if "--write-reviewed" in sys.argv:
 reviewed = set(open(REVIEWED_NO_OVERLAP_FILE, encoding="utf-8").read().split())
 new = sorted(set(no_overlap) - reviewed)
 assert not new, f"first meanings nobody has reviewed: {new}"
+
+too_long = [f"{w['orthography']}|{w['reading']}: {w['meanings'][0]}" for w in words
+            if len(w["meanings"][0]) > MEANING_CAP]
+assert not too_long, f"first meanings over {MEANING_CAP} characters: {too_long}"
 
 # ---------------------------------------------------------------- order
 # Common first within N5 (spec §3), stable by source order otherwise.
