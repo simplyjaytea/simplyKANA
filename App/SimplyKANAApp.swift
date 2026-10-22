@@ -1,8 +1,55 @@
 import SwiftUI
+import KanaCore
 
 @main
 struct SimplyKANAApp: App {
     var body: some Scene {
-        WindowGroup { ContentView() }
+        WindowGroup { RootView() }
+    }
+}
+
+/// The app opens on the word that is on the Lock Screen now. A widget tap
+/// (simplykana://word/<id>) opens that word instead, until the app is left.
+struct RootView: View {
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var pinned: Word?
+    @State private var showsCredits = false
+
+    var body: some View {
+        NavigationStack {
+            // Re-evaluated every minute so the page turns with the drip.
+            TimelineView(.everyMinute) { context in
+                let word = pinned ?? currentWord(at: context.date)
+                WordScreen(word: word)
+                    .id(word.id)
+                    .transition(.opacity)
+                    .animation(.easeInOut(duration: 0.24), value: word.id)
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    // Temporary home for Credits until the Settings screen
+                    // exists (settings spec, PR #13). Quiet, secondary ink.
+                    Button { showsCredits = true } label: {
+                        Image(systemName: "info.circle")
+                            .foregroundStyle(Ink.secondary)
+                            .frame(minWidth: 44, minHeight: 44)
+                    }
+                    .accessibilityLabel("Credits")
+                }
+            }
+            .toolbarBackground(.hidden, for: .navigationBar)
+            .navigationDestination(isPresented: $showsCredits) { CreditsScreen() }
+        }
+        .tint(Ink.ink)
+        .onOpenURL { url in pinned = word(from: url) }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .background { pinned = nil }
+        }
+    }
+
+    private func word(from url: URL) -> Word? {
+        guard url.scheme == "simplykana", url.host == "word" else { return nil }
+        let id = url.path.dropFirst().removingPercentEncoding ?? ""
+        return appWords.first { $0.id == id }
     }
 }
