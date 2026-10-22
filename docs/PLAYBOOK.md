@@ -1,6 +1,6 @@
 # SimplyKANA Playbook
 
-Last updated: 2026-10-22 by Ian. Whoever changes a rule or an owner updates this file and the copy in the repo (`docs/PLAYBOOK.md`) in the same session.
+Last updated: 2026-10-22 (evening) by Ian. Whoever changes a rule or an owner updates this file and the copy in the repo (`docs/PLAYBOOK.md`) in the same session.
 
 ## 1. What we are building
 
@@ -8,11 +8,11 @@ A calm, glanceable language-learning app for iOS. One word on a schedule, on the
 
 ## 2. Where everything lives
 
-- **Repo (source of truth):** https://github.com/simplyjaytea/simplyKANA, private, on the user's GitHub account. The `gh` CLI is authenticated on this host.
+- **Repo (source of truth):** https://github.com/simplyjaytea/simplyKANA, **public** since 2026-10-22 (user's decision, so Actions is free and unlimited), on the user's GitHub account. The `gh` CLI is authenticated on this host. Nothing secret goes in the repo, ever: no tokens, no personal data, no licensed dictionary dumps.
 - **Code:** `kana-core/` is the pure Swift package (scheduler, word model, picker, timeline). Poppy owns it.
 - **Docs, read in this order:** `docs/PLAYBOOK.md` (this file), `docs/word-data-spec.md` (word model, cadence, validation, data sources), `docs/lock-screen-widget-spec.md` (families, timeline contract, circular rule, VoiceOver), `docs/design-direction.md` (type, colour tokens, screens, icon), `docs/release-checklist.md` (gates, licensing, known gaps, accepted risks).
 - **Tools:** `tools/join_n5.py` joins the N5 list to JMdict.
-- **CI:** GitHub Actions. Linux runs `swift test`. macOS (Xcode 16.4) runs the tests and builds for the iOS Simulator. macOS minutes are limited (about 200 a month on the free plan). Mira tracks usage.
+- **CI:** GitHub Actions. Linux runs `swift test`. macOS (Xcode 16.4) runs the tests and builds for the iOS Simulator. Public repo, so minutes are free; keep macOS jobs purposeful anyway (queue times).
 - **Local Swift on this host:** `/opt/swift/usr/bin/swift` (6.1.2). Build in a clean copy, never inside another bot's workspace.
 
 ## 3. Who owns what
@@ -37,7 +37,7 @@ The user (simplyjaytee) owns the GitHub account, the Apple side (no Developer ac
 6. The orthography never truncates and never wraps mid-word. A cut Japanese word is a different word.
 7. One accent element per screen at most. The accent is never text.
 8. Affix-only senses are not words of the day. One entry per (orthography, reading).
-9. Licence attribution is a real screen: EDRDG (JMdict, CC-BY-SA 4.0), Jonathan Waller / open-anki-jlpt-decks (N5, MIT), Noto fonts (OFL).
+9. Licence attribution is a real screen: EDRDG (JMdict, CC-BY-SA 4.0), Jonathan Waller / open-anki-jlpt-decks (N5, MIT), Noto fonts (OFL). The repo is public, so the bundled data file ships with its licence notice in the repo too, the day it lands.
 10. Keep chat short. Result first, then the one thing that needs a decision.
 
 ## 5. Decisions already made (do not reopen without a reason)
