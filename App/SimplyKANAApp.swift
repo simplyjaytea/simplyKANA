@@ -49,6 +49,6 @@ struct RootView: View {
     private func word(from url: URL) -> Word? {
         guard url.scheme == "simplykana", url.host == "word" else { return nil }
         let id = url.path.dropFirst().removingPercentEncoding ?? ""
-        return appWords.first { $0.id == id }
+        return packWords().first { $0.id == id } ?? appWords.first { $0.id == id }
     }
 }

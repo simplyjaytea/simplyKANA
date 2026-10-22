@@ -30,6 +30,23 @@ set like a line of poetry on good paper, and nothing asking for anything.
 | Meaning, UI, labels | SF Pro (system) | Dynamic Type throughout. Never serif for English UI. |
 | Chinese / Korean (release two) | Noto Serif SC / Noto Serif KR | Same roles, same weights, so the three languages feel like one family. |
 
+**The face follows the word's language, never the device's (Dana, 2026-10-22).**
+Chinese, Japanese and Korean share code points but draw some differently
+(直, 骨, 角). A Chinese word set in a Japanese face teaches the Japanese shape.
+Every view that draws an orthography or reading picks its face from
+`Shared/ScriptFonts.swift` by `Word.language`, with explicit font names
+(`.typesettingLanguage` is iOS 17; we target 16). First installed wins:
+
+| Language | Orthography | Reading |
+|---|---|---|
+| Japanese | Noto Serif JP 500 → Hiragino Mincho W6 → Hiragino Sans W6 | Noto Serif JP 400 → Hiragino Mincho W3 → Hiragino Sans W3 |
+| Chinese (Simplified) | Noto Serif SC 500 → Songti SC Bold → PingFang SC Medium | Pinyin is Latin: Noto Serif → Georgia |
+| Korean | Noto Serif KR 500 → AppleMyungjo → Apple SD Gothic Neo Medium | Noto Serif KR 400 → AppleMyungjo → Apple SD Gothic Neo |
+
+The last face in each row is a sans iOS always ships for that script. Right
+shapes beat a serif: if no serif is installed, the sans is correct and the
+serif is not. The Lock Screen widget uses the same table.
+
 Rule: the orthography never truncates and never wraps in the app. It scales
 down to a floor of 40 pt; the rest of the layout yields to it.
 

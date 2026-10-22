@@ -31,7 +31,7 @@ struct SettingsScreen: View {
 @MainActor
 final class SettingsModel: ObservableObject {
     enum QuietEnd: String, Identifiable { case start, end; var id: String { rawValue } }
-    enum Section { case interval, quiet }
+    enum Section { case interval, quiet, language }
 
     let store: SettingsStore
     private let now: () -> Date
@@ -45,10 +45,31 @@ final class SettingsModel: ObservableObject {
     @Published private(set) var refusalSection: Section?
     private var open: QuietEnd?
 
-    init(store: SettingsStore, now: @escaping () -> Date = Date.init, calendar: Calendar = .current) {
+    /// Languages whose word list is in this build, in a fixed order.
+    let packs: [Language]
+
+    init(store: SettingsStore, now: @escaping () -> Date = Date.init, calendar: Calendar = .current,
+         packs: [Language] = installedPacks) {
         self.store = store
         self.now = now
         self.calendar = calendar
+        self.packs = packs
+    }
+
+    /// The pack in use: the stored one if it is installed, else the first.
+    var language: Language {
+        let stored = Language(rawValue: settings.languagePack)
+        return stored.flatMap { packs.contains($0) ? $0 : nil } ?? packs.first ?? .japanese
+    }
+
+    /// Switching language swaps the word on screen at once (settings-spec §2);
+    /// the level follows the pack, since each pack ships one tier.
+    func select(language: Language) {
+        guard language != self.language else { return }
+        var s = settings
+        s.languagePack = language.rawValue
+        s.level = SettingsCopy.levelKey(language)
+        commit(s, .language)
     }
 
     var settings: Settings { store.settings }
@@ -114,7 +135,7 @@ struct SettingsContent: View {
             SettingsSection(title: "New word every", footer: model.refusal(in: .interval)) {
                 ForEach(Array(Settings.offeredIntervals.enumerated()), id: \.element) { index, minutes in
                     if index > 0 { Hairline() }
-                    IntervalRow(label: SettingsCopy.interval(minutes),
+                    SelectRow(label: SettingsCopy.interval(minutes),
                                 selected: model.settings.intervalMinutes == minutes) {
                         model.select(interval: minutes)
                     }
@@ -139,9 +160,21 @@ struct SettingsContent: View {
 
             SettingsSection(title: "Words", footer: SettingsStore.isShared ? nil
                             : "On this install the Lock Screen widget can't read these settings, so it keeps the defaults.") {
-                ValueRow(label: "Language", value: SettingsCopy.language(model.settings.languagePack))
+                // A picker only when there is a real choice (Ian, 2026-10-22):
+                // with one pack the row states the value and does nothing.
+                if model.packs.count > 1 {
+                    ForEach(Array(model.packs.enumerated()), id: \.element) { index, pack in
+                        if index > 0 { Hairline() }
+                        SelectRow(label: SettingsCopy.language(pack.rawValue),
+                                  selected: model.language == pack) {
+                            model.select(language: pack)
+                        }
+                    }
+                } else {
+                    ValueRow(label: "Language", value: SettingsCopy.language(model.language.rawValue))
+                }
                 Hairline()
-                ValueRow(label: "Level", value: SettingsCopy.level(model.settings.level))
+                ValueRow(label: "Level", value: SettingsCopy.levelLabel(model.language))
             }
 
                 SettingsSection(title: "About", footer: nil) {
@@ -196,7 +229,10 @@ struct SettingsSection<Content: View>: View {
     }
 }
 
-struct IntervalRow: View {
+/// One option in a single-select list. The checkmark is ink, not the accent:
+/// Settings can hold two selection lists, and two vermilion marks would break
+/// the one-accent rule. A shape plus the .isSelected trait, never colour alone.
+struct SelectRow: View {
     let label: String
     let selected: Bool
     let action: () -> Void
@@ -207,11 +243,10 @@ struct IntervalRow: View {
                 Text(label).foregroundStyle(Ink.ink)
                 Spacer()
                 if selected {
-                    // The one accent. A shape, not text, and backed by the
-                    // .isSelected trait, so colour is never the only signal.
                     Image(systemName: "checkmark")
                         .font(.body.weight(.semibold))
-                        .foregroundStyle(Ink.accent)
+                        .foregroundStyle(Ink.ink)
+                        .accessibilityHidden(true)
                 }
             }
             .rowPadding()
@@ -404,7 +439,26 @@ enum SettingsCopy {
         }
     }
 
-    static func level(_ level: String) -> String {
-        level.hasPrefix("N") ? "JLPT \(level)" : level
+    /// What each pack ships. One tier per pack, so Level is a plain row.
+    static func levelLabel(_ language: Language) -> String {
+        switch language {
+        case .japanese: return "JLPT N5"
+        case .chinese: return "HSK 1–3"
+        case .korean: return "Beginner"
+        }
     }
+
+    static func levelKey(_ language: Language) -> String {
+        switch language {
+        case .japanese: return "N5"
+        case .chinese: return "HSK1-3"
+        case .korean: return "beginner"
+        }
+    }
+}
+
+/// Languages whose word list loads in this build. Japanese today; Chinese and
+/// Korean appear here, and in Settings, the day their bundles land.
+let installedPacks: [Language] = [.japanese, .chinese, .korean].filter {
+    ((try? bundledWords($0))?.isEmpty == false)
 }

@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import KanaCore
 
 // Design tokens from docs/design-direction.md §2–3. Tokens, not hex, in views.
 
@@ -24,23 +25,18 @@ enum Ink {
 }
 
 enum Typeface {
-    /// Noto Serif JP when bundled; Hiragino Mincho (ships with iOS) until then.
-    /// Both are Japanese serif faces, so the page reads the same either way.
-    static func serif(size: CGFloat, medium: Bool) -> Font {
-        if let name = fontName(medium: medium) { return .custom(name, fixedSize: size) }
-        return .system(size: size, weight: medium ? .medium : .regular, design: .serif)
+    /// The word's own face, chosen by its language (Shared/ScriptFonts.swift).
+    static func orthography(_ language: Language, size: CGFloat) -> Font {
+        face(language, .orthography, size: size)
     }
 
-    static func uiSerif(size: CGFloat, medium: Bool) -> UIFont {
-        if let name = fontName(medium: medium), let font = UIFont(name: name, size: size) { return font }
-        return .systemFont(ofSize: size, weight: medium ? .medium : .regular)
+    static func reading(_ language: Language, size: CGFloat) -> Font {
+        face(language, .reading, size: size)
     }
 
-    private static func fontName(medium: Bool) -> String? {
-        let candidates = medium
-            ? ["NotoSerifJP-Medium", "HiraMinProN-W6"]
-            : ["NotoSerifJP-Regular", "HiraMinProN-W3"]
-        return candidates.first { UIFont(name: $0, size: 12) != nil }
+    private static func face(_ language: Language, _ role: ScriptFonts.Role, size: CGFloat) -> Font {
+        if let name = ScriptFonts.name(language, role) { return .custom(name, fixedSize: size) }
+        return .system(size: size, weight: role == .orthography ? .medium : .regular, design: .serif)
     }
 }
 
@@ -53,8 +49,8 @@ enum OrthographyMetrics {
     static let maxDisplay: CGFloat = 96
     static let floor: CGFloat = 40
     /// Measured width of the orthography at `size` in the face we render with.
-    static func width(of text: String, size: CGFloat) -> CGFloat {
-        let font = Typeface.uiSerif(size: size, medium: true)
+    static func width(of text: String, size: CGFloat, language: Language = .japanese) -> CGFloat {
+        let font = ScriptFonts.uiFont(language, .orthography, size: size)
         return ceil((text as NSString).size(withAttributes: [.font: font]).width)
     }
 
@@ -64,14 +60,16 @@ enum OrthographyMetrics {
         min(max(scaledLargeTitle * (84.0 / 34.0), minDisplay), maxDisplay)
     }
 
-    static func fittedSize(for text: String, width: CGFloat, display: CGFloat) -> CGFloat {
-        let natural = Self.width(of: text, size: display)
+    static func fittedSize(for text: String, width: CGFloat, display: CGFloat,
+                           language: Language = .japanese) -> CGFloat {
+        let natural = Self.width(of: text, size: display, language: language)
         guard natural > width else { return display }
         // Width scales linearly with point size.
         return max((display * width / natural).rounded(.down), floor)
     }
 
-    static func needsScroll(for text: String, width: CGFloat, size: CGFloat) -> Bool {
-        Self.width(of: text, size: size) > width
+    static func needsScroll(for text: String, width: CGFloat, size: CGFloat,
+                            language: Language = .japanese) -> Bool {
+        Self.width(of: text, size: size, language: language) > width
     }
 }
