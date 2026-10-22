@@ -60,10 +60,13 @@ If a screen has two red things, one of them is wrong.
 ## 4. Screens (MVP)
 
 **Word (the only screen that matters).** Reached by tapping the widget.
-Reading small above, orthography huge in the centre, first meaning below in
+Reading small above, orthography huge in the centre, `meanings[0]` below in
 secondary ink, part of speech and level as a single quiet line at the bottom
-(`noun · N5`). Swipe down to dismiss. Nothing else. No share button, no
-favourite star, no audio icon in MVP.
+(`noun · N5`). When `meanings[1...]` exist, one further line in secondary ink
+at a smaller size, "also: …", joining them with " · " (decided 2026-10-22 to
+reconcile with the word-data spec: the short gloss leads, the full JMdict
+gloss is never lost). Swipe down to dismiss. Nothing else. No share button,
+no favourite star, no audio icon in MVP.
 
 **Today.** The list of words delivered so far today, newest at the top, each
 row orthography + meaning. A hairline between rows. The top of the list shows
