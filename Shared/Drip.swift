@@ -2,11 +2,11 @@ import Foundation
 import KanaCore
 
 /// The user's schedule, from settings (defaults until they change something).
-var currentSchedule: Schedule { Schedule.from(settings: SettingsStore.load()) }
+var currentSchedule: Schedule { Schedule.from(settings: SettingsStore.effective()) }
 
 /// Words for the chosen pack. Falls back to Japanese if a stored pack isn't bundled;
 /// an empty list means the bundle failed to load, and timeline() shows the fallback word.
-func packWords(_ settings: Settings = SettingsStore.load()) -> [Word] {
+func packWords(_ settings: Settings = SettingsStore.effective()) -> [Word] {
     let lang = Language(rawValue: settings.languagePack) ?? .japanese
     return (try? bundledWords(lang)) ?? (try? bundledWords(.japanese)) ?? []
 }
