@@ -10,8 +10,8 @@ on:
     paths-ignore: ['docs/**']
 
 concurrency:
-  group: ci-macos-${{ github.ref }}
-  cancel-in-progress: true
+  group: ci-macos-${{ github.event_name == 'pull_request' && github.ref || github.sha }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   core-macos:
