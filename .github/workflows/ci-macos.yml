@@ -48,10 +48,26 @@ jobs:
           set -o pipefail
           UDID=$(xcrun simctl list devices available -j | python3 -c "import json,sys; d=json.load(sys.stdin)['devices']; print(next(x['udid'] for k in sorted(d, reverse=True) if 'iOS' in k for x in d[k] if x['name'].startswith('iPhone')))")
           echo "Simulator: $UDID"
+          echo "UDID=$UDID" >> "$GITHUB_ENV"
           mkdir -p "$RUNNER_TEMP/snapshots"
           TEST_RUNNER_SNAPSHOT_DIR="$RUNNER_TEMP/snapshots" xcodebuild test \
             -project SimplyKANA.xcodeproj -scheme SimplyKANA \
             -destination "id=$UDID" CODE_SIGNING_ALLOWED=NO 2>&1 | tail -150
+      - name: Widget registers with iOS after install
+        # The first phone run found no widget in the Lock Screen list. This checks
+        # our side: installed on a simulator, does iOS register the extension?
+        run: |
+          xcrun simctl boot "$UDID" 2>/dev/null || true
+          APP=$(find ~/Library/Developer/Xcode/DerivedData -path '*Debug-iphonesimulator/SimplyKANA.app' -maxdepth 6 | head -1)
+          echo "App: $APP"
+          ls "$APP/PlugIns"
+          xcrun simctl install "$UDID" "$APP"
+          xcrun simctl launch "$UDID" com.simplyjaytea.simplyKANA || true
+          sleep 8
+          xcrun simctl spawn "$UDID" pluginkit -mAvvv -p com.apple.widgetkit-extension | tee "$RUNNER_TEMP/plugins.txt"
+          grep -q "com.simplyjaytea.simplyKANA.widget" "$RUNNER_TEMP/plugins.txt" \
+            || { echo "WIDGET NOT REGISTERED"; exit 1; }
+          echo "ok: widget extension registered"
       - name: Upload snapshots
         if: always()
         uses: actions/upload-artifact@v4
