@@ -13,7 +13,7 @@ struct SimplyKANAApp: App {
 struct RootView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var pinned: Word?
-    @State private var showsCredits = false
+    @State private var showsSettings = false
 
     var body: some View {
         NavigationStack {
@@ -27,18 +27,17 @@ struct RootView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) { // .topBarTrailing is iOS 17
-                    // Temporary home for Credits until the Settings screen
-                    // exists (settings spec, PR #13). Quiet, secondary ink.
-                    Button { showsCredits = true } label: {
-                        Image(systemName: "info.circle")
+                    // Quiet, secondary ink. Credits lives inside Settings.
+                    Button { showsSettings = true } label: {
+                        Image(systemName: "gearshape")
                             .foregroundStyle(Ink.secondary)
                             .frame(minWidth: 44, minHeight: 44)
                     }
-                    .accessibilityLabel("Credits")
+                    .accessibilityLabel("Settings")
                 }
             }
             .toolbarBackground(.hidden, for: .navigationBar)
-            .navigationDestination(isPresented: $showsCredits) { CreditsScreen() }
+            .navigationDestination(isPresented: $showsSettings) { SettingsScreen() }
         }
         .tint(Ink.ink)
         .onOpenURL { url in pinned = word(from: url) }
