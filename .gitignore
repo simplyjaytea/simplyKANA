@@ -6,3 +6,7 @@ DerivedData/
 .DS_Store
 # raw dictionary dumps are fetched, not committed
 tools/JMdict_e*
+
+# XcodeGen output
+SimplyKANA.xcodeproj/
+Generated/
