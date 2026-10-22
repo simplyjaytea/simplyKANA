@@ -46,9 +46,18 @@ why when it refuses. Nothing here may produce a dead widget.
 - The widget reads them when building its timeline. Missing keys mean the
   defaults above, so a fresh install and a pre-settings install behave the
   same.
-- Saving calls `WidgetCenter.shared.reloadAllTimelines()`. The next entry is
-  recomputed from the new schedule with `previousDelivery` for entry 0, so the
-  word on screen does not change on save unless the schedule says it should.
+- Saving calls `WidgetCenter.shared.reloadAllTimelines()`. Entry 0 is
+  recomputed from the new schedule with `previousDelivery`, which means
+  **changing the interval or the language pack swaps the word on screen
+  immediately** (a different grid or a different list gives a different word
+  for "now"). Changing quiet hours alone keeps the current word unless the
+  current time is now inside the window. Rachel tests both. The screen does
+  not warn about the swap; it is the expected result of the change.
+- **Save once, on finish.** A control commits when editing ends, not on every
+  tick: the interval list on selection, the toggle on flip, the time pickers
+  when the picker is dismissed or loses focus (`onEditingChanged` / the
+  picker's commit), with the previous value held until then. A half-finished
+  change is never saved and never validated. Validation runs once per commit.
 - `Schedule` and `QuietHours` are built from these values by one function in
   KanaCore, `Schedule.from(settings:)`, tested on Linux. The screen never
   builds a `Schedule` by hand.
@@ -78,12 +87,18 @@ control, not refused after the fact.
    interval) == 1`, and a one-year simulation at that interval shows every
    word at least once.
 4. A refused save leaves the previous settings in `UserDefaults` unchanged
-   (unit test on the view model).
+   (unit test on the view model). Scrolling a time picker from 22:00 to 08:00
+   produces exactly one save or one refusal, never one per step.
+4b. Changing interval or pack changes entry 0; changing quiet hours outside
+   the window does not (timeline tests on Linux).
 5. Snapshots of the screen in light and dark at default and largest
    accessibility size, including the refusal state. The accent appears at
    most once (the selected interval's mark).
 6. Phone-only, logged as a known gap: that `reloadAllTimelines` actually
-   refreshes the Lock Screen promptly.
+   refreshes the Lock Screen promptly, and that the widget reads the App Group
+   at all. CI builds are unsigned, so the App Group cannot be exercised in the
+   simulator from CI. Poppy checks whether a free personal Xcode profile
+   supports App Groups before anyone tells the user "settings work".
 
 ## 5. Design notes (Dana)
 
