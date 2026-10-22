@@ -178,7 +178,9 @@ covers the inline family only. The build script enforces a character cap on
 `meanings[0]` (Poppy sets the number from the snapshot measurement, with the
 longest counter as the worst case) and fails when exceeded. Long glosses are
 shortened by hand for position 0 (枚 → "flat things (counter)", one shared short form for every counter) and the full
-JMdict gloss moves to `meanings[1]`, so the Word screen still shows it.
+JMdict gloss moves to `meanings[1]`. The Word screen leads with `meanings[0]`
+and shows `meanings[1...]` as one quieter "also: …" line (design direction §4),
+so the full gloss is reachable without ever leading.
 
 **Spacing rule (2026-10-22):** entries that share an orthography are placed at
 least 24 slots apart in the ordered list, measured circularly (the list wraps,
