@@ -20,8 +20,9 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<WordEntry>) -> Void) {
-        let t = timeline(after: Date(), schedule: defaultSchedule, words: appWords, calendar: .current)
-        if appWords.isEmpty { NSLog("simplyKANA: word bundle failed to load; showing fallback") }
+        let words = packWords()
+        let t = timeline(after: Date(), schedule: currentSchedule, words: words, calendar: .current)
+        if words.isEmpty { NSLog("simplyKANA: word bundle failed to load; showing fallback") }
         completion(Timeline(entries: t.entries.map { WordEntry(date: $0.date, word: $0.word) },
                             policy: .after(t.reloadAt)))
     }
