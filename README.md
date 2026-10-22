@@ -5,7 +5,7 @@ with quiet hours. Japanese first (92 kana, then JLPT N5), Chinese and Korean lat
 
 ## Run it on your iPhone (alpha)
 
-You need a Mac with Xcode 16 or newer, an iPhone on iOS 17 or newer, a USB cable,
+You need a Mac with Xcode 16 or newer, an iPhone on iOS 16 or newer, a USB cable,
 and an Apple ID. A free Apple ID works; the paid developer account is not needed
 for this.
 

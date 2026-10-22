@@ -40,7 +40,7 @@ struct WordWidgetView: View {
             }
         }
         .widgetURL(wordURL(entry.word))
-        .containerBackground(for: .widget) { Color.clear }
+        .widgetBackground()
     }
 }
 
@@ -58,4 +58,15 @@ struct KanaLockScreenWidget: Widget {
 @main
 struct KanaWidgetBundle: WidgetBundle {
     var body: some Widget { KanaLockScreenWidget() }
+}
+
+extension View {
+    /// iOS 17 requires a container background for widgets; iOS 16 has no such API.
+    @ViewBuilder func widgetBackground() -> some View {
+        if #available(iOS 17.0, *) {
+            containerBackground(for: .widget) { Color.clear }
+        } else {
+            self
+        }
+    }
 }
