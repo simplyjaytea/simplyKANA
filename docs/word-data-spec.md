@@ -142,11 +142,14 @@ a level; exact ordering is Poppy's to implement, the guarantee is determinism.
 **Uniqueness (2026-10-22):** one entry per (orthography, reading). 人 ひと and
 一日 ついたち are different words and each shows its own reading.
 
-**Affix rule (rule 8, decided 2026-10-22 evening):** an entry is dropped when it
-cannot stand alone as something a learner would say by itself: honorific
-prefixes and suffixes, plural and verb suffixes, counters, and particles.
-Loanword units that are used as nouns on their own stay. The gate is this
-literal list, not the prose:
+**Affix rule (rule 8, decided 2026-10-22 evening, refined after Poppy's
+counter question):** an entry is dropped when it is (a) a pure grammatical
+morpheme (honorific prefix or suffix, plural or verb suffix, particle), or
+(b) an affix *sense* of a character that already has a standalone entry
+(人 にん when 人 ひと exists). **Counters that are the character's only entry
+stay** (枚, 回, 階, 台 and the rest): they are N5 vocabulary with a meaning of
+their own. Loanword units used as nouns stay. The gate is this literal list,
+not the prose:
 
 | Dropped | Why |
 |---|---|
@@ -156,14 +159,25 @@ literal list, not the prose:
 | 中 じゅう, 中 ちゅう | suffix senses of 中 |
 | 屋 や | "-shop" suffix; the shops themselves (本屋) stay |
 | 日 にち, 時 じ | counters; 日 ひ and 時 とき stay |
-| ずつ | particle |
+| ずつ, だけ, など | particles |
 
 | Allowed | Why |
 |---|---|
 | キロ | used alone as a noun ("5キロ") |
+| 枚, 回, 階 and every other counter with no standalone sibling entry | the character's only entry; N5 vocabulary |
 
-Expected count after the list: 783 (not a multiple of 24). Any new drop or
+Expected count after the list: 781 (not a multiple of 24). Any new drop or
 restore changes this table first and the bundle second.
+
+**First-meaning length (2026-10-22, from the first widget snapshots):** the
+Lock Screen shows only `meanings[0]`, and it must fit the rectangular widget
+on the smallest supported phone without truncation. Rachel's gate wins over
+the "truncate the meaning first" wording in the widget spec: that wording
+covers the inline family only. The build script enforces a character cap on
+`meanings[0]` (Poppy sets the number from the snapshot measurement, with the
+longest counter as the worst case) and fails when exceeded. Long glosses are
+shortened by hand for position 0 (枚 → "counter for flat things") and the full
+JMdict gloss moves to `meanings[1]`, so the Word screen still shows it.
 
 **Spacing rule (2026-10-22):** entries that share an orthography are placed at
 least 24 slots apart in the ordered list, measured circularly (the list wraps,
