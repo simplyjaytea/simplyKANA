@@ -42,3 +42,4 @@ moved to "Accepted risks" with an owner.
 
 - Timezone rules are only as current as the phone's tz database. (Mira, accepted.)
 - A daily cadence can skip a day without being flagged. Unreachable in MVP (fixed hourly cadence). Revisit before any cadence >= 12h is exposed. (Ian.)
+- Picker aliasing: an interval whose slots-per-day divides the word count starves words. Safe at fixed hourly with a count not divisible by 24. Fix in the picker before config ships. (Poppy.)
