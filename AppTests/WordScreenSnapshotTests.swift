@@ -71,10 +71,12 @@ final class WordScreenSnapshotTests: XCTestCase {
         let width = Self.se.width - WordPage.margin * 2
         for largeTitle in [CGFloat(34), 60] {
             let display = OrthographyMetrics.displaySize(scaledLargeTitle: largeTitle)
-            for word in appWords {
-                let size = OrthographyMetrics.fittedSize(for: word.orthography, width: width, display: display)
+            // Every installed pack, measured in its own face.
+            for word in installedPacks.flatMap({ (try? bundledWords($0)) ?? [] }) {
+                let lang = word.language
+                let size = OrthographyMetrics.fittedSize(for: word.orthography, width: width, display: display, language: lang)
                 XCTAssertGreaterThanOrEqual(size, OrthographyMetrics.floor, word.orthography)
-                XCTAssertFalse(OrthographyMetrics.needsScroll(for: word.orthography, width: width, size: size),
+                XCTAssertFalse(OrthographyMetrics.needsScroll(for: word.orthography, width: width, size: size, language: lang),
                                "\(word.orthography) at \(size) pt is wider than \(width) pt")
             }
         }
