@@ -140,6 +140,10 @@ The rectangular family renders it as a single `—` line.
 ## 5. Accessibility
 
 - VoiceOver label: "`<orthography>`, read `<reading>`, means `<meaning>`".
+  When `reading == orthography` the "read …" clause is dropped.
+  Kana (`partOfSpeech` is `hiragana` or `katakana`): "`<kana>`, `<script>`,
+  romaji `<meaning>`", so あ reads "あ, hiragana, romaji a" (Dana's rule; the
+  app's Word screen uses the same one).
   The fallback word's label is "No word available".
 - Dynamic Type: rectangular honours it up to the point the orthography would
   truncate, then stops scaling. The word wins.

@@ -154,7 +154,8 @@ pair of entries with equal orthography, circular distance ≥ 24.
 
 - Foundation kana: 46 hiragana + 46 katakana. Each is a `Word` with
   `orthography == reading == kana`, `meaning = romaji`, `language = .japanese`, `level = nil`,
-  `partOfSpeech = "kana"`.
+  `partOfSpeech = "hiragana"` or `"katakana"` (revised 2026-10-22, was `"kana"`:
+  the UI and VoiceOver name the script, so the data must carry it).
 - JLPT vocabulary is a **join of two sources** (revised 2026-10-22; JMdict
   carries no JLPT tags, and the JLPT stopped publishing official lists in 2010):
   - **Level membership** comes from the open-anki-jlpt-decks N5 list
