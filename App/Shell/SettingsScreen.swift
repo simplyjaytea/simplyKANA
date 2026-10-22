@@ -1,0 +1,372 @@
+import SwiftUI
+import UIKit
+import KanaCore
+
+/// Settings (docs/settings-spec.md §1, §5). Paper, hairlines, no icons, no
+/// Save button. Each control commits once, when its edit ends. The selected
+/// interval's checkmark is the screen's one accent.
+struct SettingsScreen: View {
+    @StateObject private var model = SettingsModel(store: SettingsStore())
+
+    var body: some View {
+        ScrollView { SettingsContent(model: model) }
+            .background(Ink.paper.ignoresSafeArea())
+            .navigationTitle("Settings")
+            .navigationBarTitleDisplayMode(.inline)
+            .sheet(item: $model.editing, onDismiss: model.finishEditing) { end in
+                QuietTimeSheet(title: end == .start ? "Quiet from" : "Quiet until",
+                               minutes: $model.draftMinutes,
+                               done: { model.editing = nil })
+                    .presentationDetents([.height(320)])
+            }
+    }
+}
+
+// MARK: - Model
+
+/// Holds the half-finished edit (a time picker being scrolled) so it is
+/// never saved or validated until the sheet closes (settings-spec §2).
+@MainActor
+final class SettingsModel: ObservableObject {
+    enum QuietEnd: String, Identifiable { case start, end; var id: String { rawValue } }
+    enum Section { case interval, quiet }
+
+    let store: SettingsStore
+    private let now: () -> Date
+    private let calendar: Calendar
+
+    /// The time sheet that is open. Kept in `open` too, because SwiftUI clears
+    /// `editing` before the sheet's onDismiss runs.
+    @Published var editing: QuietEnd? { didSet { if let e = editing { open = e } } }
+    @Published var draftMinutes = 0
+    /// Which section the last refusal belongs to, so the sentence sits under it.
+    @Published private(set) var refusalSection: Section?
+    private var open: QuietEnd?
+
+    init(store: SettingsStore, now: @escaping () -> Date = Date.init, calendar: Calendar = .current) {
+        self.store = store
+        self.now = now
+        self.calendar = calendar
+    }
+
+    var settings: Settings { store.settings }
+
+    func refusal(in section: Section) -> String? {
+        refusalSection == section ? store.lastRefusal?.message : nil
+    }
+
+    func select(interval: Int) {
+        guard interval != settings.intervalMinutes else { return }
+        var s = settings; s.intervalMinutes = interval
+        commit(s, .interval)
+    }
+
+    func setQuiet(enabled: Bool) {
+        guard enabled != settings.quietEnabled else { return }
+        var s = settings; s.quietEnabled = enabled
+        commit(s, .quiet)
+    }
+
+    func beginEditing(_ end: QuietEnd) {
+        draftMinutes = end == .start ? settings.quietStartMinutes : settings.quietEndMinutes
+        editing = end
+    }
+
+    /// Called once when the time sheet closes. An unchanged time saves nothing.
+    func finishEditing() {
+        guard let which = open else { return }
+        open = nil
+        var s = settings
+        if which == .start { s.quietStartMinutes = draftMinutes } else { s.quietEndMinutes = draftMinutes }
+        guard s != settings else { return }
+        commit(s, .quiet)
+    }
+
+    private func commit(_ s: Settings, _ section: Section) {
+        let refused = store.commit(s, now: now(), calendar: calendar)
+        refusalSection = refused == nil ? nil : section
+        objectWillChange.send()
+    }
+}
+
+// MARK: - Content (no ScrollView, so ImageRenderer can snapshot it)
+
+struct SettingsContent: View {
+    @ObservedObject var model: SettingsModel
+    var showsCredits = true
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 32) {
+            SettingsSection(title: "New word every", footer: model.refusal(in: .interval)) {
+                ForEach(Array(Settings.offeredIntervals.enumerated()), id: \.element) { index, minutes in
+                    if index > 0 { Hairline() }
+                    IntervalRow(label: SettingsCopy.interval(minutes),
+                                selected: model.settings.intervalMinutes == minutes) {
+                        model.select(interval: minutes)
+                    }
+                }
+            }
+
+            SettingsSection(title: "Quiet hours", footer: model.refusal(in: .quiet)
+                            ?? (model.settings.quietEnabled ? "No new words arrive in this window. The last word stays on the Lock Screen." : nil)) {
+                Toggle(isOn: Binding(get: { model.settings.quietEnabled },
+                                     set: { model.setQuiet(enabled: $0) })) {
+                    Text("Quiet hours").foregroundStyle(Ink.ink)
+                }
+                .toggleStyle(InkToggleStyle())
+                .rowPadding()
+                if model.settings.quietEnabled {
+                    Hairline()
+                    TimeRow(label: "From", minutes: model.settings.quietStartMinutes) { model.beginEditing(.start) }
+                    Hairline()
+                    TimeRow(label: "Until", minutes: model.settings.quietEndMinutes) { model.beginEditing(.end) }
+                }
+            }
+
+            SettingsSection(title: "Words", footer: SettingsStore.isShared ? nil
+                            : "On this install the Lock Screen widget can't read these settings, so it keeps the defaults.") {
+                ValueRow(label: "Language", value: SettingsCopy.language(model.settings.languagePack))
+                Hairline()
+                ValueRow(label: "Level", value: SettingsCopy.level(model.settings.level))
+            }
+
+            if showsCredits {
+                SettingsSection(title: "About", footer: nil) {
+                    NavigationLink { CreditsScreen() } label: {
+                        HStack {
+                            Text("Credits").foregroundStyle(Ink.ink)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(.footnote.weight(.semibold))
+                                .foregroundStyle(Ink.secondary)
+                                .accessibilityHidden(true)
+                        }
+                        .rowPadding()
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+        }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 24)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Ink.paper)
+    }
+}
+
+// MARK: - Rows
+
+struct SettingsSection<Content: View>: View {
+    let title: String
+    let footer: String?
+    @ViewBuilder let content: Content
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.footnote)
+                .foregroundStyle(Ink.secondary)
+                .accessibilityAddTraits(.isHeader)
+            VStack(spacing: 0) {
+                Hairline()
+                content
+                Hairline()
+            }
+            if let footer {
+                Text(footer)
+                    .font(.footnote)
+                    .foregroundStyle(Ink.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+    }
+}
+
+struct IntervalRow: View {
+    let label: String
+    let selected: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack {
+                Text(label).foregroundStyle(Ink.ink)
+                Spacer()
+                if selected {
+                    // The one accent. A shape, not text, and backed by the
+                    // .isSelected trait, so colour is never the only signal.
+                    Image(systemName: "checkmark")
+                        .font(.body.weight(.semibold))
+                        .foregroundStyle(Ink.accent)
+                }
+            }
+            .rowPadding()
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityAddTraits(selected ? [.isSelected] : [])
+    }
+}
+
+struct TimeRow: View {
+    let label: String
+    let minutes: Int
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack {
+                Text(label).foregroundStyle(Ink.ink)
+                Spacer()
+                Text(SettingsCopy.time(minutes))
+                    .monospacedDigit()
+                    .foregroundStyle(Ink.secondary)
+            }
+            .rowPadding()
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("\(label) \(SettingsCopy.time(minutes))")
+        .accessibilityHint("Opens a time picker")
+    }
+}
+
+struct ValueRow: View {
+    let label: String
+    let value: String
+
+    var body: some View {
+        HStack {
+            Text(label).foregroundStyle(Ink.ink)
+            Spacer()
+            Text(value).foregroundStyle(Ink.secondary)
+        }
+        .rowPadding()
+        .accessibilityElement(children: .combine)
+    }
+}
+
+struct Hairline: View {
+    var body: some View { Rectangle().fill(Ink.rule).frame(height: 1).accessibilityHidden(true) }
+}
+
+/// Ink on paper instead of the system green, which would be a second colour.
+struct InkToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        Button { configuration.isOn.toggle() } label: {
+            HStack {
+                configuration.label
+                Spacer()
+                ZStack(alignment: configuration.isOn ? .trailing : .leading) {
+                    Capsule()
+                        .fill(configuration.isOn ? Ink.ink : Ink.rule)
+                        .frame(width: 51, height: 31)
+                    Circle()
+                        .fill(Ink.paper)
+                        .padding(2)
+                        .frame(width: 31, height: 31)
+                }
+                .animation(.easeInOut(duration: 0.2), value: configuration.isOn)
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(Text("Quiet hours"))
+        .accessibilityValue(configuration.isOn ? "On" : "Off")
+        .accessibilityAddTraits(.isToggle)
+    }
+}
+
+private extension View {
+    /// 44 pt minimum tap height at every text size.
+    func rowPadding() -> some View {
+        frame(minHeight: 44).padding(.vertical, 4)
+    }
+}
+
+// MARK: - Time sheet
+
+struct QuietTimeSheet: View {
+    let title: String
+    @Binding var minutes: Int
+    let done: () -> Void
+
+    var body: some View {
+        NavigationStack {
+            QuarterHourPicker(minutes: $minutes)
+                .frame(maxWidth: .infinity)
+                .background(Ink.paper.ignoresSafeArea())
+                .navigationTitle(title)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Done", action: done).foregroundStyle(Ink.ink)
+                    }
+                }
+        }
+    }
+}
+
+/// A wheel time picker in 15-minute steps. SwiftUI's DatePicker has no
+/// minute interval, so this wraps UIDatePicker.
+struct QuarterHourPicker: UIViewRepresentable {
+    @Binding var minutes: Int
+
+    func makeUIView(context: Context) -> UIDatePicker {
+        let picker = UIDatePicker()
+        picker.datePickerMode = .time
+        picker.preferredDatePickerStyle = .wheels
+        picker.minuteInterval = 15
+        picker.timeZone = TimeZone(identifier: "UTC")
+        picker.addTarget(context.coordinator, action: #selector(Coordinator.changed(_:)), for: .valueChanged)
+        return picker
+    }
+
+    func updateUIView(_ picker: UIDatePicker, context: Context) {
+        picker.date = Date(timeIntervalSinceReferenceDate: TimeInterval(minutes * 60))
+    }
+
+    func makeCoordinator() -> Coordinator { Coordinator(minutes: $minutes) }
+
+    final class Coordinator: NSObject {
+        let minutes: Binding<Int>
+        init(minutes: Binding<Int>) { self.minutes = minutes }
+        @objc func changed(_ picker: UIDatePicker) {
+            var utc = Calendar(identifier: .gregorian)
+            utc.timeZone = TimeZone(identifier: "UTC")!
+            let c = utc.dateComponents([.hour, .minute], from: picker.date)
+            minutes.wrappedValue = (c.hour ?? 0) * 60 + (c.minute ?? 0)
+        }
+    }
+}
+
+// MARK: - Copy
+
+enum SettingsCopy {
+    static func interval(_ minutes: Int) -> String {
+        switch minutes {
+        case 30: return "30 minutes"
+        case 60: return "1 hour"
+        default: return "\(minutes / 60) hours"
+        }
+    }
+
+    static func time(_ minutes: Int) -> String {
+        String(format: "%02d:%02d", minutes / 60, minutes % 60)
+    }
+
+    static func language(_ pack: String) -> String {
+        switch Language(rawValue: pack) {
+        case .japanese: return "Japanese"
+        case .chinese: return "Chinese"
+        case .korean: return "Korean"
+        case nil: return pack
+        }
+    }
+
+    static func level(_ level: String) -> String {
+        level.hasPrefix("N") ? "JLPT \(level)" : level
+    }
+}
