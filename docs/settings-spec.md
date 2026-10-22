@@ -14,18 +14,21 @@ why when it refuses. Nothing here may produce a dead widget.
 
 | Row | Options (MVP of this milestone) | Default |
 |---|---|---|
-| New word every | 30 min · 1 h · 2 h · 3 h · 6 h · 12 h | 1 h |
+| New word every | 30 min · 1 h · 2 h · 3 h · 6 h | 1 h |
 | Quiet hours | On/off, start, end (15-minute steps) | On, 22:00–07:00 |
 | Language pack | Japanese (only pack installed today); the row shows every pack present in the bundle, no "coming soon" items | Japanese |
 | Level | N5 (only level today); same rule, shows what the pack contains | N5 |
 | Credits | pushes the Credits screen | — |
 
-- **Daily is not on the list yet.** It waits for the two config-milestone
-  preconditions in the playbook: the wall-clock grid (so "daily" means the
-  same hour every day across DST) and the picker aliasing fix. When both land,
-  "Daily" and "Twice a day" are added as rows and nothing else changes.
+- **Daily and twice a day (12 h) are not on the list yet.** Both wait for
+  the two config-milestone preconditions in the playbook: the wall-clock grid
+  (so "daily" means the same hour every day across DST) and the picker
+  aliasing fix. 12 h has the same daily-skip exposure as daily (the bound
+  allows a full slot to vanish unflagged), so it waits with it. When both
+  preconditions land, "Daily" and "Twice a day" are added as rows and nothing
+  else changes.
 - **Why those intervals:** each divides 24 h, so the slot grid reads naturally
-  on a clock, and none of 48, 24, 12, 8, 4, 2 slots-per-day divides the
+  on a clock, and none of 48, 24, 12, 8, 4 slots-per-day divides the
   bundle count (781 = 11 × 71), so no word is ever hidden by aliasing. The
   bundle gate already checks "not a multiple of 24"; it grows to "no common
   factor with any offered slots-per-day" (see §4).
