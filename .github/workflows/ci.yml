@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  core-linux:
+    name: KanaCore (Linux)
+    runs-on: ubuntu-latest
+    container: swift:6.1
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        working-directory: kana-core
+        run: swift test
+
+  core-macos:
+    name: KanaCore (macOS / Xcode)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app || sudo xcode-select -s "$(ls -d /Applications/Xcode_16*.app | tail -1)"
+      - name: Toolchain
+        run: swift --version && xcodebuild -version
+      - name: Test
+        working-directory: kana-core
+        run: swift test
+      - name: Build for iOS Simulator
+        working-directory: kana-core
+        run: |
+          xcodebuild -scheme KanaCore \
+            -destination 'generic/platform=iOS Simulator' \
+            -skipPackagePluginValidation \
+            build

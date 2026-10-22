@@ -1,0 +1,8 @@
+.build/
+.swiftpm/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+.DS_Store
+# raw dictionary dumps are fetched, not committed
+tools/JMdict_e*
