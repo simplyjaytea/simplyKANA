@@ -1,45 +1,62 @@
-# Release checklist (MVP: Japanese, Lock Screen widget)
+# Release checklist (alpha: Japanese, Lock Screen widget)
 
 Owner: Rachel (QA). Nothing ships until every box is checked or explicitly
-moved to "Accepted risks" with an owner.
+moved to "Accepted risks" with an owner. Updated 2026-10-22 (late).
 
-## Gates
+## Gates (proven in CI or the iOS Simulator)
 
-- [x] Scheduler core (slot, quiet hours, nextDelivery, isSatisfiable with anchor). Gated 2026-10-22 at 19 tests, mutation-checked. (Main is at 21 after the model change; those two are gated with the word data.)
-- [ ] Language-neutral `Word` model and `.topik` -> `.nikl` rename. Gate with Friday's word data PR.
-- [ ] Word data: 92 kana + N5 list, hand-checked multi-matches, loader tests on Linux **and** macOS. Bundle checks:
-  - [ ] No orthography or reading contains a space, bracket, `;` or `～`.
-  - [ ] Unique (orthography, reading). Affix-only senses (お, 人 じん, 中 じゅう) absent.
-  - [ ] Equal orthographies at least 24 slots apart, measured circularly.
-  - [ ] Word count (kana + N5 combined) is not a multiple of 24. Planned 789.
-  - [ ] One-year simulation of the default schedule shows every word at least once.
-  - [ ] Count of 5+ character words reported (11 expected); count of 9+ reported.
-  - [ ] Kana carry `hiragana` / `katakana` as part of speech.
-  - Each of these re-runs per language bundle before release two.
-- [ ] `previousDelivery(atOrBefore:)`, `timeline`, `circularLines`, `spokenLabel` in KanaCore (lock-screen-widget-spec §7.1-7.2, §5). `spokenLabel` parts: every Japanese part tagged `ja`.
-- [ ] Widget extension builds for iOS Simulator; all three families pass the `ImageRenderer` snapshot test (previews do not run in CI). Includes every circular two-line case, the `語` fallback, and the longest first meaning in the rectangular family.
-- [ ] Host app builds in CI with Word screen and Credits screen (minimum to install a widget).
+- [x] Scheduler core: slot, quiet hours, nextDelivery, isSatisfiable with anchor. Mutation-checked.
+- [x] Language-neutral `Word` model, `.nikl` level. Gated with the word data (#8).
+- [x] Word data, 781 words (92 kana + N5), hand-reviewed (#8, #15). Bundle checks, all as tests:
+  - [x] No orthography or reading contains a space, bracket, `;` or `～`.
+  - [x] Unique (orthography, reading); rule 8 table applied (word-data-spec).
+  - [x] Equal orthographies at least 24 slots apart (actual minimum: 120).
+  - [x] Count has no common factor with any offered slots-per-day (781 = 11 × 71).
+  - [x] One-year simulation at every offered interval shows every word.
+  - [x] First meaning at most 22 characters, balanced brackets, fits the rectangular widget on an iPhone SE.
+  - [x] Human reading pass over all first meanings (Rachel, 2026-10-22). Repeat on every bundle change.
+  - Each re-runs per language pack before release two.
+- [x] `previousDelivery`, `timeline`, `circularLines`, `spokenLabel` (#14). Every Japanese VoiceOver part tagged `ja`.
+- [x] Widget extension builds; all three families pass the `ImageRenderer` snapshots, including every circular two-line case and `語` (#12).
+- [x] Host app with Word, Credits and Settings screens (#16, #19). Light and dark, default and AX5 text, SE and standard width.
+- [x] Settings: commit once per edit, refusal leaves the store untouched, Done saves and swipe cancels (#18, #19).
+- [x] Without the App Group, the app runs on the defaults like the widget, so tapping the widget opens the word on the Lock Screen (#24).
+- [x] Minimum iOS 16.0; CI compiles against it (#24).
+- [x] Unsigned IPA (#26): device build, widget inside, minimum iOS, word bundle; check proven able to fail; published only after tests pass and only for the latest main.
+- [x] Public IPA link downloads without a login (HTTP 200, 337,924 bytes, sha256 5bea8682…4328, built from main 500be65). App and widget: iphoneos, arm64, minimum iOS 16.0, 781 words each (Rachel, 2026-10-22).
 
-## Process rules (not enforced by GitHub on the free plan)
+## Licensing
 
-- Every change lands by pull request. No merge on red CI.
-- macOS CI runs on any change to `kana-core/**`, bundled data, or the workflow. Only `docs/**` skips it.
+- [x] Credits screen names EDRDG (JMdict, CC-BY-SA 4.0) and open-anki-jlpt-decks / Jonathan Waller (MIT).
+- [x] `tools/DATA-LICENSES.md` carries the data licence notice in the repo.
+- [ ] Rachel: one-paragraph confirmation of what share-alike covers (data only vs app code). Before any public release beyond alpha.
+- [ ] Code licence for the public repo: user's decision (open licence or all rights reserved).
+- [ ] Noto fonts credited (OFL) when Noto Serif JP is bundled. Today the app uses the system's Hiragino.
+- [ ] Release two: marketing may say "covers TOPIK I vocabulary"; data and UI use NIKL grades.
 
-## Licensing (must be confirmed before release)
+## Phone-only (cannot be proven by the team; check on the first real install)
 
-- [ ] Rachel: read the EDRDG licence page and CC-BY-SA 4.0, write a one-paragraph confirmation here of what share-alike covers (data only vs app code).
-- [ ] Credits screen names EDRDG (JMdict, CC-BY-SA 4.0) and Jonathan Waller (N5 list, via open-anki-jlpt-decks, MIT).
-- [ ] Bundled data file carries its licence notice.
-- [ ] Marketing may say "covers TOPIK I vocabulary". The data and the UI may not use TOPIK levels; Korean uses NIKL grades. (Release two, recorded now.)
+| Check | Expected | Bound / fallback if it fails |
+|---|---|---|
+| App installs with a free Apple ID (Xcode or Sideloadly/AltStore) | Installs and opens | Send the exact error text |
+| App Group under a free profile or after re-signing | Settings reach the widget (Xcode route only; the unsigned IPA carries no entitlements, so the sideload route will run on defaults) | Widget and app both use defaults (hourly, quiet 22:00–07:00); Settings shows a note |
+| Widget refresh cadence | New word each hour, none in quiet hours | Depends on iOS refresh budget; timeline holds 24 entries |
+| Settings change reaches the Lock Screen | Within a minute or two | Lock and unlock, or re-add the widget |
+| Phone changes time zone | Quiet hours follow the new zone | Up to about one day on hourly, until the next timeline reload |
+| Vibrant Lock Screen rendering, dimmed reading, Always-On | All three families legible | Snapshot cannot show vibrancy |
+| Tap routing | Opens the app on the Lock Screen's word | — |
+| Japanese VoiceOver voice | Japanese parts read in Japanese | `ja` tag is CI-tested; the voice is not |
+| Real iOS 16 device | Same as above | CI compiles for 16, simulator runs newer iOS |
+| App icon | None yet: the app has no icon asset, so it shows a blank icon | Cosmetic, not a bug for this alpha |
+| Free-profile expiry | App stops opening after 7 days | Re-install or refresh |
 
-## Known gaps (cannot be verified by the team)
+## Process rules
 
-- **No real-phone testing.** The user has no Apple Developer account and will load the app later. What the team can prove is Linux + macOS CI and the iOS Simulator. Nothing on a physical iPhone.
-- **Phone-only widget behaviour:** real refresh cadence, Lock Screen vibrant rendering, Always-On dimming, tap routing, and how the Japanese VoiceOver voice sounds (the `ja` tag itself is CI-tested). Expect bugs on the first phone run; plan a fix window after it.
-- **Install path undecided:** free personal team in Xcode (re-sign every 7 days) or the $99 account. Decide before the first widget is ready for a phone.
+- Every change lands by pull request. No merge on red CI. Stacked PRs: never delete a base branch with dependents.
+- macOS CI runs on any change except `docs/**`.
 
 ## Accepted risks
 
-- Timezone rules are only as current as the phone's tz database. (Mira, accepted.)
-- A daily cadence can skip a day without being flagged. Unreachable in MVP (fixed hourly cadence). Revisit before any cadence >= 12h is exposed. (Ian.)
-- Picker aliasing: an interval whose slots-per-day divides the word count starves words. Safe at fixed hourly with a count not divisible by 24. Fix in the picker before config ships. (Poppy.)
+- Time zone rules are only as current as the phone's tz database. (Mira)
+- Daily and 12 h cadences are not offered until the wall-clock grid and picker aliasing fix land. (Ian, Poppy)
+- Word meanings are checked by people, not proven by tests; three wrong meanings were found by reading after both automated checks passed. (Rachel)
