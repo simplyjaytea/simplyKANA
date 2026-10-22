@@ -65,7 +65,24 @@ PIN = {("コート", "コート"): ("1049000", 0),   # coat, not court
 # First meaning written by hand where JMdict's best sense reads wrong on its own.
 MEANING = {("キロ", "キロ"): ["kilogram", "kilometre"],
            ("時", "じ"): ["o'clock", "hour"],
-           ("年", "ねん"): ["year", "counter for years"]}
+           ("年", "ねん"): ["year", "counter for years"],
+           # Rachel's review of PR #8: these led with a sense that teaches the wrong word.
+           ("いいえ", "いいえ"): ["no", "not at all"],
+           ("一つ", "ひとつ"): ["one (thing)", "one"],
+           ("切る", "きる"): ["to cut", "to cut through"],
+           ("私", "わたくし"): ["I (formal)", "me"],
+           ("どうも", "どうも"): ["thanks", "very", "much"],
+           ("方", "かた"): ["person (polite)", "direction"],
+           ("先", "さき"): ["ahead", "tip", "future"],
+           ("引く", "ひく"): ["to pull", "to draw"],
+           ("浴びる", "あびる"): ["to bathe", "to shower"],
+           ("よく", "よく"): ["often", "well", "frequently"],
+           ("たて", "たて"): ["length", "height", "vertical"],
+           ("先生", "せんせい"): ["teacher", "instructor", "sensei"],
+           # Poppy, same review: technically right, but not what a learner needs first.
+           ("大丈夫", "だいじょうぶ"): ["all right", "OK", "safe"],
+           ("本当", "ほんとう"): ["truth", "reality", "really"],
+           ("ない", "ない"): ["there isn't", "nonexistent"]}
 
 STOP = set("a an the to of e g eg etc be is in on for or and as at by".split())
 def toks(s):
@@ -98,6 +115,7 @@ def short_pos(p):
     return None
 
 words, unmatched, report = [], [], []
+used_meaning, no_overlap = set(), []
 seen_ids, seen_pairs = set(), set()
 with open(n5_path, encoding="utf-8") as f:
     for row in csv.DictReader(f):
@@ -137,11 +155,28 @@ with open(n5_path, encoding="utf-8") as f:
             continue
         seen_ids.add(wid)
         seen_pairs.add((expr, reading))
+        if (expr, reading) in MEANING:
+            used_meaning.add((expr, reading))
+        elif not (want & toks(meanings[0])):
+            no_overlap.append(f"{expr}|{reading}")
         if len(cands) > 1:
             report.append(f"{expr}\t{reading}\tlist: {row['meaning']}\t-> {e['seq']} {sense['glosses'][:3]}")
         words.append({"id": wid, "language": "ja", "orthography": expr, "reading": reading,
                       "meanings": meanings, "partOfSpeech": short_pos(sense["pos"]),
                       "level": {"jlpt": 5}, "isCommon": e["common"]})
+
+unused = set(MEANING) - used_meaning
+assert not unused, f"MEANING overrides that match no row: {unused}"
+
+# First meanings that share no word with the N5 list's own meaning. Each one
+# was read by a person (Rachel and Poppy, PR #8 review) and is a fine synonym. A new
+# entry here fails the build until someone reads it.
+REVIEWED_NO_OVERLAP_FILE = __file__.replace("build_bundle.py", "reviewed_meanings.txt")
+if "--write-reviewed" in sys.argv:
+    open(REVIEWED_NO_OVERLAP_FILE, "w", encoding="utf-8").write("\n".join(sorted(no_overlap)) + "\n")
+reviewed = set(open(REVIEWED_NO_OVERLAP_FILE, encoding="utf-8").read().split())
+new = sorted(set(no_overlap) - reviewed)
+assert not new, f"first meanings nobody has reviewed: {new}"
 
 # ---------------------------------------------------------------- order
 # Common first within N5 (spec §3), stable by source order otherwise.

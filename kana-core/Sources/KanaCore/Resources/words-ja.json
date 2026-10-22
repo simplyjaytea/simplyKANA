@@ -1384,8 +1384,8 @@
   "orthography": "私",
   "reading": "わたくし",
   "meanings": [
-   "personal (affairs, etc.)",
-   "private"
+   "I (formal)",
+   "me"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -1598,9 +1598,8 @@
   "orthography": "浴びる",
   "reading": "あびる",
   "meanings": [
-   "to dash over oneself (e.g. water)",
-   "to take (e.g. shower)",
-   "to bask in (e.g. the sun)"
+   "to bathe",
+   "to shower"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -1765,9 +1764,8 @@
   "orthography": "いいえ",
   "reading": "いいえ",
   "meanings": [
-   "you're welcome",
-   "not at all",
-   "don't mention it"
+   "no",
+   "not at all"
   ],
   "partOfSpeech": "interjection",
   "level": {
@@ -3486,8 +3484,8 @@
   "orthography": "方",
   "reading": "かた",
   "meanings": [
-   "direction",
-   "way"
+   "person (polite)",
+   "direction"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -4133,9 +4131,8 @@
   "orthography": "切る",
   "reading": "きる",
   "meanings": [
-   "to terminate (e.g. a conversation)",
-   "to hang up (the phone)",
-   "to disconnect"
+   "to cut",
+   "to cut through"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -5105,9 +5102,9 @@
   "orthography": "先",
   "reading": "さき",
   "meanings": [
-   "previous",
-   "prior",
-   "former"
+   "ahead",
+   "tip",
+   "future"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -6214,8 +6211,9 @@
   "orthography": "先生",
   "reading": "せんせい",
   "meanings": [
-   "sensei",
-   "title or form of address for a teacher, master, doctor, lawyer, etc."
+   "teacher",
+   "instructor",
+   "sensei"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -6487,9 +6485,9 @@
   "orthography": "大丈夫",
   "reading": "だいじょうぶ",
   "meanings": [
-   "safe",
-   "secure",
-   "sound"
+   "all right",
+   "OK",
+   "safe"
   ],
   "partOfSpeech": "na-adjective",
   "level": {
@@ -6657,8 +6655,9 @@
   "orthography": "たて",
   "reading": "たて",
   "meanings": [
-   "the vertical",
-   "height"
+   "length",
+   "height",
+   "vertical"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -7635,9 +7634,9 @@
   "orthography": "どうも",
   "reading": "どうも",
   "meanings": [
-   "in spite of oneself",
-   "try as one might",
-   "no matter how hard one may try (to, not to)"
+   "thanks",
+   "very",
+   "much"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -8015,8 +8014,8 @@
   "orthography": "ない",
   "reading": "ない",
   "meanings": [
-   "nonexistent",
-   "not being (there)"
+   "there isn't",
+   "nonexistent"
   ],
   "partOfSpeech": "adjective",
   "level": {
@@ -9191,9 +9190,8 @@
   "orthography": "引く",
   "reading": "ひく",
   "meanings": [
-   "to draw back (e.g. one's hand)",
-   "to draw in (one's chin, stomach, etc.)",
-   "to pull in"
+   "to pull",
+   "to draw"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -9282,7 +9280,8 @@
   "orthography": "一つ",
   "reading": "ひとつ",
   "meanings": [
-   "for one thing"
+   "one (thing)",
+   "one"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -9977,9 +9976,9 @@
   "orthography": "本当",
   "reading": "ほんとう",
   "meanings": [
-   "genuine",
-   "authentic",
-   "real"
+   "truth",
+   "reality",
+   "really"
   ],
   "partOfSpeech": "noun",
   "level": {
@@ -11029,9 +11028,9 @@
   "orthography": "よく",
   "reading": "よく",
   "meanings": [
-   "nicely",
-   "properly",
-   "well"
+   "often",
+   "well",
+   "frequently"
   ],
   "partOfSpeech": "verb",
   "level": {
