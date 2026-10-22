@@ -36,14 +36,34 @@ word.)
 |---|---|
 | 1–2 chars | One line, full size. |
 | 3–4 chars | One line, shrink with `minimumScaleFactor` floor 0.6. |
-| 5–8 chars | **Two lines**, at most 4 chars per line, floor 0.5. Split at `ceil(n/2)`; if the second line would start with a kinsoku character (ー, っ, ゃ, ゅ, ょ, ぁ, ぃ, ぅ, ぇ, ぉ or their katakana forms, ん), move the split one character right. テープレコーダー → テープレ / コーダー. おじいさん → おじい / さん. |
+| 5–8 chars | **Two lines**, at most 4 chars per line, floor 0.5. Split rule below. テープレコーダー → テープレ / コーダー. パーティー → パー / ティー. ワイシャツ → ワイ / シャツ. おじいさん → おじい / さん. |
 | 9+ chars | Does not fit honestly. Show the **brand glyph** `語` alone, full size. It means "a word is waiting" and is the same for every such word, so it is never a wrong word. The rectangular and inline families still show the word in full. |
+
+**Split rule (revised after Rachel's review; moving right broke パーティー).**
+Kinsoku set `K` = ー, small kana (っ ゃ ゅ ょ ぁ ぃ ぅ ぇ ぉ and katakana
+forms), ん, ン, ゎ, ヮ, ヵ, ヶ. A line never starts with a character in `K`.
+
+1. Candidate split `s = ceil(n/2)`. Valid positions are `max(1, n-4) ... min(4, n-1)`
+   so both lines are 1–4 characters.
+2. If `w[s]` is in `K`, move the split **left** one position and re-check.
+   Repeat while in range, so runs of kinsoku characters (ティー, シャツ) are
+   handled. パーティー: s=3 → ィ, left → s=2 → テ, valid: パー / ティー.
+3. If no leftward position is valid, try rightward positions in the range.
+4. If no position in the range is valid, the word does not fit honestly:
+   show the brand glyph `語` (same as 9+).
+
+Reference implementation is a 15-line function; it lives in KanaCore as
+`circularLines(for: String) -> [String]?` (nil means "show 語") so Linux CI
+tests it against the whole bundle, not just the snapshot.
 
 - The N5 bundle has 11 words of 5+ characters and none above 8, so the 9+
   branch is defined but unreachable in MVP. The word-data gate reports the
   count of 9+ words in any bundle; it does not reject them.
-- Gate (§6, §7.3): all 11 words of 5+ characters render in the circular
-  snapshot test without clipping, with テープレコーダー as the worst case.
+- Gate (§6, §7.3): every bundle word of 5+ characters (count comes from the
+  joined bundle, not the raw list, which has multi-form entries like 伯父;
+  叔父さん) renders in the circular snapshot test without clipping. Named
+  cases: テープレコーダー (longest), パーティー and ワイシャツ (kinsoku runs),
+  and a synthetic word with no valid split (expects `語`).
 
 ## 2. Timeline (the contract with the scheduler)
 
@@ -142,8 +162,15 @@ The rectangular family renders it as a single `—` line.
 
 1. `previousDelivery(atOrBefore:)` is in KanaCore with tests: at-or-before,
    skips quiet hours backwards, crosses midnight, nil within the guard, and
-   the mirror property `previousDelivery(atOrBefore: nextDelivery(after: t)) == nextDelivery(after: t)`
-   for non-quiet `t`.
+   the **no-skip property** (Rachel's correction: the old "mirror" property
+   returned `t` itself for non-quiet `t` and could not fail). For `t` inside
+   quiet hours, across midnight, and on both DST change nights:
+   `p = previousDelivery(atOrBefore: t)` is non-nil, outside quiet hours,
+   `p <= t`, and `nextDelivery(after: p) > t` (no delivery between `p` and `t`
+   was skipped).
+   Plus `circularLines(for:)` tests: the four named §1 cases, every 5+ word in
+   the bundle yields two lines of 1–4 with neither starting in `K`, and 1–4
+   char words yield one line.
 2. `timeline` is in KanaCore with tests:
    - `entries[0].date <= after` and `entries[1].date > after`;
    - reload at 23:30 inside quiet 22:00–07:00 returns the 21:00 word as
@@ -154,6 +181,7 @@ The rectangular family renders it as a single `—` line.
    - empty `words` returns the fallback word and a bounded `reloadAt`;
    - same inputs, same output (determinism across reloads).
 3. The widget extension builds for the iOS Simulator in CI, and the
-   `ImageRenderer` snapshot test passes for all three families, including the
-   11 circular two-line cases and the `語` glyph for a synthetic 9-char word.
+   `ImageRenderer` snapshot test passes for all three families, including
+   every circular two-line case from the bundle and the `語` glyph for a
+   synthetic word with no valid split.
 4. Rachel has gated 1–3, and the release checklist records the phone-only gap.
