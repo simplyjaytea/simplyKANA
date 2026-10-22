@@ -115,19 +115,4 @@ jobs:
       - name: Publish only if this commit is still the newest on main
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          LATEST=$(git ls-remote origin refs/heads/main | cut -f1)
-          if [ "$LATEST" != "$GITHUB_SHA" ]; then
-            echo "main has moved on to $LATEST; not publishing $GITHUB_SHA"; exit 0
-          fi
-          SHORT=${GITHUB_SHA::7}
-          TITLE="Alpha $(date -u +%Y-%m-%d) ($SHORT)"
-          NOTES="Unsigned alpha build of main at $SHORT. Install with Sideloadly or AltStore: see the README section 'Install the IPA without a Mac'. Expires 7 days after install with a free Apple ID."
-          # Move the tag to this commit, then replace the file in place: the link never 404s.
-          git tag -f alpha "$GITHUB_SHA" && git push -f origin refs/tags/alpha
-          if gh release view alpha >/dev/null 2>&1; then
-            gh release upload alpha SimplyKANA.ipa --clobber
-            gh release edit alpha --title "$TITLE" --notes "$NOTES" --prerelease
-          else
-            gh release create alpha SimplyKANA.ipa --prerelease --verify-tag --title "$TITLE" --notes "$NOTES"
-          fi
+        run: tools/publish_alpha.sh SimplyKANA.ipa alpha "$GITHUB_SHA"
