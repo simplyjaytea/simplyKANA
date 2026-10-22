@@ -36,7 +36,7 @@ final class SettingsScreenTests: XCTestCase {
         m.beginEditing(.start)
         for step in 0...40 { m.draftMinutes = (22 * 60 + step * 15) % 1440 }
         XCTAssertEqual(SettingsStore.load(from: d).quietStartMinutes, 22 * 60, "saved before the edit ended")
-        m.editing = nil
+        m.done()
         m.finishEditing()
         XCTAssertEqual(SettingsStore.load(from: d).quietStartMinutes, 8 * 60)
         XCTAssertEqual(reloads.count, 1)
@@ -47,8 +47,26 @@ final class SettingsScreenTests: XCTestCase {
         let reloads = Counter()
         let m = model(d, reloads: reloads)
         m.beginEditing(.end)
-        m.editing = nil
+        m.done()
         m.finishEditing()
+        XCTAssertEqual(reloads.count, 0)
+    }
+
+    /// Swiping the sheet down (or Cancel) discards the scrolled time.
+    func testSwipingTheSheetAwayDiscardsTheEdit() {
+        let d = fresh()
+        let reloads = Counter()
+        let m = model(d, reloads: reloads)
+        m.beginEditing(.start)
+        m.draftMinutes = 23 * 60
+        m.editing = nil          // what a swipe-down does
+        m.finishEditing()
+        XCTAssertEqual(SettingsStore.load(from: d).quietStartMinutes, 22 * 60)
+        m.beginEditing(.start)
+        m.draftMinutes = 23 * 60
+        m.cancel()
+        m.finishEditing()
+        XCTAssertEqual(SettingsStore.load(from: d).quietStartMinutes, 22 * 60)
         XCTAssertEqual(reloads.count, 0)
     }
 
@@ -66,8 +84,8 @@ final class SettingsScreenTests: XCTestCase {
         let d = fresh()
         let m = model(d)
         m.select(interval: 360)
-        m.beginEditing(.start); m.draftMinutes = 60; m.editing = nil; m.finishEditing()
-        m.beginEditing(.end); m.draftMinutes = 0; m.editing = nil; m.finishEditing()
+        m.beginEditing(.start); m.draftMinutes = 60; m.done(); m.finishEditing()
+        m.beginEditing(.end); m.draftMinutes = 0; m.done(); m.finishEditing()
         XCTAssertNotNil(m.refusal(in: .quiet))
         XCTAssertNil(m.refusal(in: .interval))
         XCTAssertEqual(SettingsStore.load(from: d).quietEndMinutes, 7 * 60)
@@ -84,8 +102,8 @@ final class SettingsScreenTests: XCTestCase {
     func testSnapshots() throws {
         let refused = model(fresh())
         refused.select(interval: 360)
-        refused.beginEditing(.end); refused.draftMinutes = 0; refused.editing = nil; refused.finishEditing()
-        refused.beginEditing(.start); refused.draftMinutes = 60; refused.editing = nil; refused.finishEditing()
+        refused.beginEditing(.end); refused.draftMinutes = 0; refused.done(); refused.finishEditing()
+        refused.beginEditing(.start); refused.draftMinutes = 60; refused.done(); refused.finishEditing()
         XCTAssertNotNil(refused.refusal(in: .quiet))
 
         let states: [(String, SettingsModel)] = [("default", model(fresh())), ("refused", refused)]

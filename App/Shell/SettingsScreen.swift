@@ -18,7 +18,7 @@ struct SettingsScreen: View {
             .sheet(item: $model.editing, onDismiss: model.finishEditing) { end in
                 QuietTimeSheet(title: end == .start ? "Quiet from" : "Quiet until",
                                minutes: $model.draftMinutes,
-                               done: { model.editing = nil })
+                               done: model.done, cancel: model.cancel)
                     .presentationDetents([.height(320)])
             }
     }
@@ -74,10 +74,19 @@ final class SettingsModel: ObservableObject {
         editing = end
     }
 
-    /// Called once when the time sheet closes. An unchanged time saves nothing.
+    /// Done saves; Cancel and swiping the sheet away both discard
+    /// (most thumbs swipe to escape, not to save).
+    func done() { saveOnClose = true; editing = nil }
+    func cancel() { saveOnClose = false; editing = nil }
+    private var saveOnClose = false
+
+    /// Called once when the time sheet closes, however it closed. Only Done
+    /// saves, and an unchanged time saves nothing.
     func finishEditing() {
         guard let which = open else { return }
         open = nil
+        defer { saveOnClose = false }
+        guard saveOnClose else { return }
         var s = settings
         if which == .start { s.quietStartMinutes = draftMinutes } else { s.quietEndMinutes = draftMinutes }
         guard s != settings else { return }
@@ -293,7 +302,14 @@ struct InkToggleStyle: ToggleStyle {
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(Text("Pause new words during quiet hours"))
         .accessibilityValue(configuration.isOn ? "On" : "Off")
-        .accessibilityAddTraits(.isToggle)
+        .toggleTrait()
+    }
+}
+
+private extension View {
+    /// `.isToggle` is iOS 17; on 16 VoiceOver still reads the On/Off value.
+    @ViewBuilder func toggleTrait() -> some View {
+        if #available(iOS 17, *) { accessibilityAddTraits(.isToggle) } else { self }
     }
 }
 
@@ -310,6 +326,7 @@ struct QuietTimeSheet: View {
     let title: String
     @Binding var minutes: Int
     let done: () -> Void
+    let cancel: () -> Void
 
     var body: some View {
         NavigationStack {
@@ -319,8 +336,11 @@ struct QuietTimeSheet: View {
                 .navigationTitle(title)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Cancel", action: cancel).foregroundStyle(Ink.secondary)
+                    }
                     ToolbarItem(placement: .confirmationAction) {
-                        Button("Done", action: done).foregroundStyle(Ink.ink)
+                        Button("Done", action: done).foregroundStyle(Ink.ink).fontWeight(.semibold)
                     }
                 }
         }

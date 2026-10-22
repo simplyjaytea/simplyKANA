@@ -26,7 +26,7 @@ struct RootView: View {
                     .animation(.easeInOut(duration: 0.24), value: word.id)
             }
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItem(placement: .navigationBarTrailing) { // .topBarTrailing is iOS 17
                     // Quiet, secondary ink. Credits lives inside Settings.
                     Button { showsSettings = true } label: {
                         Image(systemName: "gearshape")
@@ -41,7 +41,7 @@ struct RootView: View {
         }
         .tint(Ink.ink)
         .onOpenURL { url in pinned = word(from: url) }
-        .onChange(of: scenePhase) { _, phase in
+        .onChange(of: scenePhase) { phase in // iOS 16 form
             if phase == .background { pinned = nil }
         }
     }
