@@ -139,11 +139,23 @@ Determinism rule for `pickWord`: `words[slot.modulo(words.count)]`, but ordered 
 the drip reads naturally (kana foundation first, then N5). `isCommon` sorts within
 a level; exact ordering is Poppy's to implement, the guarantee is determinism.
 
+**Uniqueness (2026-10-22):** one entry per (orthography, reading). 人 ひと, 人 にん
+and 一日 ついたち are different words and each shows its own reading. Suffix-only
+and prefix-only senses (お, 人 じん "-ian", 中 じゅう "all through") are dropped;
+nobody learns an affix as the word of the day.
+
+**Spacing rule (2026-10-22):** entries that share an orthography are placed at
+least 24 slots apart in the ordered list, measured circularly (the list wraps,
+so the last and first entries are neighbours). The picker stays pure; the
+constraint lives in the bundle's order and is gated there. Gate test: for every
+pair of entries with equal orthography, circular distance ≥ 24.
+
 ## 4. Data source
 
 - Foundation kana: 46 hiragana + 46 katakana. Each is a `Word` with
   `orthography == reading == kana`, `meaning = romaji`, `language = .japanese`, `level = nil`,
-  `partOfSpeech = "kana"`.
+  `partOfSpeech = "hiragana"` or `"katakana"` (revised 2026-10-22, was `"kana"`:
+  the UI and VoiceOver name the script, so the data must carry it).
 - JLPT vocabulary is a **join of two sources** (revised 2026-10-22; JMdict
   carries no JLPT tags, and the JLPT stopped publishing official lists in 2010):
   - **Level membership** comes from the open-anki-jlpt-decks N5 list

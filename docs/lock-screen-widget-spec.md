@@ -140,7 +140,27 @@ The rectangular family renders it as a single `—` line.
 ## 5. Accessibility
 
 - VoiceOver label: "`<orthography>`, read `<reading>`, means `<meaning>`".
+  When `reading == orthography` the "read …" clause is dropped.
+  Kana (`partOfSpeech` is `hiragana` or `katakana`): "`<kana>`, `<script>`,
+  romaji `<meaning>`", so あ reads "あ, hiragana, romaji a" (Dana's rule; the
+  app's Word screen uses the same one).
   The fallback word's label is "No word available".
+- **One function, in parts (Poppy and Dana, 2026-10-22).** The wording lives
+  once in KanaCore and returns parts so the language tag survives:
+
+  ```swift
+  struct SpokenPart: Equatable { let text: String; let language: String? } // "ja", or nil for the phone's language
+  func spokenLabel(for word: Word) -> [SpokenPart]
+  ```
+
+  あ → `[("あ", "ja"), (", hiragana, romaji a", nil)]`. 日 → `[("日", "ja"),
+  (", read ", nil), ("にち", "ja"), (", means day", nil)]`. The widget and the
+  Word screen each build an `AttributedString` from the parts and tag each
+  part's `languageIdentifier`, so VoiceOver switches to a Japanese voice for
+  the Japanese text. Linux CI tests the wording and that every Japanese part
+  is tagged `ja`. How the Japanese voice actually sounds is the only
+  phone-only line. `spokenLabel` is Monday's work, with the widget, not
+  Friday's.
 - Dynamic Type: rectangular honours it up to the point the orthography would
   truncate, then stops scaling. The word wins.
 
