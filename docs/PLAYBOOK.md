@@ -10,10 +10,10 @@ A calm, glanceable language-learning app for iOS. One word on a schedule, on the
 
 - **Repo (source of truth):** https://github.com/simplyjaytea/simplyKANA, **public** since 2026-10-22 (user's decision, so Actions is free and unlimited), on the user's GitHub account. The `gh` CLI is authenticated on this host. Nothing secret goes in the repo, ever: no tokens, no personal data, no licensed dictionary dumps.
 - **Code:** `kana-core/` is the pure Swift package (scheduler, word model, picker, timeline). Poppy owns it.
-- **Docs, read in this order:** `docs/PLAYBOOK.md` (this file), `docs/word-data-spec.md` (word model, cadence, validation, data sources), `docs/lock-screen-widget-spec.md` (families, timeline contract, circular rule, VoiceOver), `docs/design-direction.md` (type, colour tokens, screens, icon), `docs/release-checklist.md` (gates, licensing, known gaps, accepted risks).
+- **Docs, in order:** `docs/PLAYBOOK.md`, `word-data-spec.md`, `lock-screen-widget-spec.md`, `design-direction.md`, `settings-spec.md`, `release-checklist.md`.
 - **Tools:** `tools/join_n5.py` joins the N5 list to JMdict.
 - **CI:** GitHub Actions. Linux runs `swift test`. macOS (Xcode 16.4) runs the tests and builds for the iOS Simulator. Public repo, so minutes are free; keep macOS jobs purposeful anyway (queue times).
-- **Local Swift on this host:** `/opt/swift/usr/bin/swift` (6.1.2). Build in a clean copy, never inside another bot's workspace.
+- **Local Swift:** `/opt/swift/usr/bin/swift`. Build in a clean copy, never in another bot's workspace.
 
 ## 3. Who owns what
 
@@ -43,27 +43,28 @@ The user (simplyjaytee) owns the GitHub account, the Apple side (no Developer ac
 ## 5. Decisions already made (do not reopen without a reason)
 
 - Lock Screen widget first; Home Screen after it ships.
-- Slot grid is epoch-absolute from 2001-01-01Z; wall-clock grid is a precondition of the config milestone.
-- `isSatisfiable` bound = 2 × interval + quiet span + 1 h, walked 366 days from an `anchor` the caller supplies (the current date).
+- Epoch-absolute slot grid; wall-clock grid is a precondition of daily cadence.
+- `isSatisfiable` bound = 2 × interval + quiet span + 1 h, 366 days from a caller-supplied `anchor`.
 - Word model is language-neutral: `language`, `Level` enum (`.jlpt`, `.hsk`, `.nikl`).
-- Bundle order: kana first, then N5; equal orthographies at least 24 slots apart; count never a multiple of 24 (planned 789).
-- Circular widget: whole word or the glyph `語`. 5–8 chars on two lines with a kinsoku-aware leftward split.
+- Bundle: kana then N5, 781 words; equal orthographies ≥ 24 slots apart; count coprime with every offered slots-per-day.
+- Circular widget: whole word or `語`; 5–8 chars on two lines, kinsoku-aware leftward split.
 - `spokenLabel(for:)` returns language-tagged parts; screens build the attributed string.
 - Repo name `simplyKANA` approved by the user.
+- **Minimum iOS: 16.0** (user, 2026-10-22). Lock Screen widgets need 16; nothing we use needs 17 except `containerBackground(for: .widget)`, which is shimmed with `#available`. CI compiles at the 16.0 target.
 
 ## 6. Accepted risks and known gaps
 
 - Time zone verdicts are only as current as the phone's tz database.
-- A daily cadence can skip a day unflagged. Unreachable in MVP. Precondition of config milestone, with the picker aliasing fix (interval divisors of the word count).
-- No real-phone testing until the user loads the app. Refresh cadence, vibrant rendering, Always-On, tap routing, the Japanese VoiceOver voice.
+- Daily and 12 h cadences wait on the wall-clock grid and the picker aliasing fix.
+- Phone-only until the user installs: refresh cadence, vibrant rendering, Always-On, tap routing, Japanese VoiceOver voice, App Group under a free profile, time zone change (bound ≈ one day).
 - Install path undecided: free personal Xcode profile (7-day) or the $99 account.
 
 ## 7. How to start a session
 
 1. Read this file.
 2. `gh pr list --repo simplyjaytea/simplyKANA` to see what is open and whose it is.
-3. Read the newest messages in the SimplyKANA room before acting; the schedule lives in Mira's tracker, not here.
-4. Work in your own workspace or a clean clone. Open a PR. Tell the room the result, not the process.
+3. Read the newest room messages; the schedule is Mira's tracker, not this file.
+4. Work in a clean clone. Open a PR. Tell the room the result, not the process.
 
 ## 8. Alpha: the finish line (user, 2026-10-22: "keep working until it's ready for alpha test")
 
@@ -83,16 +84,19 @@ user is asked to try:
 
 Not alpha: Home Screen widget, Chinese and Korean packs, daily cadence, notifications, audio, sync.
 
-## 9. Open items as of 2026-10-22 (evening, one list, from Mira's tracker)
+## 9. Open items as of 2026-10-22 (late, after #18; one list, Mira's)
+
+On main: #15 (781-word bundle, reading pass done), #16 (Word + Credits
+screens), #18 (settings core, alpha README). Alpha items 1, 2, 3, 4, 8 done.
 
 | Item | Owner | Next |
 |---|---|---|
-| PR #15 gate (781 words, 22-char cap) | Rachel | next in queue |
-| Word and Credits screens, then polish pass | Dana | PR now; skeleton is on main |
-| Rule 8 table corrections (日 にち stays, 年 ねん drops) | Ian → Poppy | in PR #11; two-line change to #15 |
-| Settings spec #13 (swap-on-change, commit-once) | Ian | fixed; Rachel merges |
-| Settings build | Poppy, then Dana | after #15 and the first Word screen are green |
-| Meanings reading pass (781) | Rachel | before first phone run |
-| App Group under free profile | Poppy | check before "settings work" is said |
-| Time zone change on device | phone-only, bound ≈ one day on hourly | logged |
+| #19 settings screen (draft): rebase, re-run snapshots, Credits row not grey, app falls back to defaults when the App Group is missing | Dana | then Rachel gates |
+| #20 widget polish (dimmer reading): approved on design and code | Rachel | merge |
+| Word screen "also:" line for `meanings[1...]` (docs PR open) | Dana | in #19 or follow-up |
+| Credits screen background not proven by snapshot | Dana | fix snapshot |
+| Release checklist: every phone-only line with its bound (App Group on free profile, time zone change ≈ one day on hourly, Japanese VoiceOver voice, Always-On, dimmed reading on a real Lock Screen) | Rachel | alpha item 7, before handover |
+| Handover to the user: README's five steps plus one line on what to report | Mira | after #19 and the checklist |
+| Settings-in-widget fallback (press and hold): scoped on #18, about a day, build only if the user's free profile cannot share settings | Poppy | on the user's report |
 | Code licence (open or all rights reserved) | user | this week |
+| Playbook §8 alpha items 5, 6, 7 | Dana, Dana + Poppy, Rachel | see above |
