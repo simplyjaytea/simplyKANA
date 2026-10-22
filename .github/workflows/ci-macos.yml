@@ -33,3 +33,29 @@ jobs:
             -destination 'generic/platform=iOS Simulator' \
             -skipPackagePluginValidation \
             build
+
+  app:
+    name: App + widget (iOS Simulator)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app || sudo xcode-select -s "$(ls -d /Applications/Xcode_16*.app | tail -1)"
+      - name: Generate project
+        run: brew install xcodegen && xcodegen generate
+      - name: Build and test on the iOS Simulator
+        run: |
+          set -o pipefail
+          UDID=$(xcrun simctl list devices available -j | python3 -c "import json,sys; d=json.load(sys.stdin)['devices']; print(next(x['udid'] for k in sorted(d, reverse=True) if 'iOS' in k for x in d[k] if x['name'].startswith('iPhone')))")
+          echo "Simulator: $UDID"
+          mkdir -p "$RUNNER_TEMP/snapshots"
+          TEST_RUNNER_SNAPSHOT_DIR="$RUNNER_TEMP/snapshots" xcodebuild test \
+            -project SimplyKANA.xcodeproj -scheme SimplyKANA \
+            -destination "id=$UDID" CODE_SIGNING_ALLOWED=NO 2>&1 | tail -150
+      - name: Upload snapshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapshots
+          path: ${{ runner.temp }}/snapshots
+          if-no-files-found: warn
