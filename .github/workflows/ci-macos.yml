@@ -1,0 +1,35 @@
+name: CI (macOS)
+
+# macOS minutes count ~10x against the free allowance. Playbook rule 3:
+# run on any change to kana-core/**, bundled data or workflows; skip docs only.
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['docs/**']
+  pull_request:
+    paths-ignore: ['docs/**']
+
+concurrency:
+  group: ci-macos-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  core-macos:
+    name: KanaCore (macOS / Xcode)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode_16.4.app || sudo xcode-select -s "$(ls -d /Applications/Xcode_16*.app | tail -1)"
+      - name: Toolchain
+        run: swift --version && xcodebuild -version
+      - name: Test
+        working-directory: kana-core
+        run: swift test
+      - name: Build for iOS Simulator
+        working-directory: kana-core
+        run: |
+          xcodebuild -scheme KanaCore \
+            -destination 'generic/platform=iOS Simulator' \
+            -skipPackagePluginValidation \
+            build
