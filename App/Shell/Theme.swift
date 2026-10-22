@@ -59,8 +59,9 @@ enum OrthographyMetrics {
     }
 
     static func displaySize(scaledLargeTitle: CGFloat) -> CGFloat {
-        // .largeTitle is 34 pt at the default size; 64 pt is our default display size.
-        min(max(scaledLargeTitle * (64.0 / 34.0), minDisplay), maxDisplay)
+        // .largeTitle is 34 pt at the default size; 84 pt is our default display size.
+        // 64 read as a label, not a hero, in the first snapshots (PR #16).
+        min(max(scaledLargeTitle * (84.0 / 34.0), minDisplay), maxDisplay)
     }
 
     static func fittedSize(for text: String, width: CGFloat, display: CGFloat) -> CGFloat {

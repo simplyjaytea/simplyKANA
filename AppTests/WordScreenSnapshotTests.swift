@@ -82,7 +82,7 @@ final class WordScreenSnapshotTests: XCTestCase {
 
     func testDisplaySizeClamp() {
         XCTAssertEqual(OrthographyMetrics.displaySize(scaledLargeTitle: 10), 56)
-        XCTAssertEqual(OrthographyMetrics.displaySize(scaledLargeTitle: 34), 64, accuracy: 0.01)
+        XCTAssertEqual(OrthographyMetrics.displaySize(scaledLargeTitle: 34), 84, accuracy: 0.01)
         XCTAssertEqual(OrthographyMetrics.displaySize(scaledLargeTitle: 200), 96)
     }
 
