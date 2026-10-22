@@ -139,10 +139,31 @@ Determinism rule for `pickWord`: `words[slot.modulo(words.count)]`, but ordered 
 the drip reads naturally (kana foundation first, then N5). `isCommon` sorts within
 a level; exact ordering is Poppy's to implement, the guarantee is determinism.
 
-**Uniqueness (2026-10-22):** one entry per (orthography, reading). 人 ひと, 人 にん
-and 一日 ついたち are different words and each shows its own reading. Suffix-only
-and prefix-only senses (お, 人 じん "-ian", 中 じゅう "all through") are dropped;
-nobody learns an affix as the word of the day.
+**Uniqueness (2026-10-22):** one entry per (orthography, reading). 人 ひと and
+一日 ついたち are different words and each shows its own reading.
+
+**Affix rule (rule 8, decided 2026-10-22 evening):** an entry is dropped when it
+cannot stand alone as something a learner would say by itself: honorific
+prefixes and suffixes, plural and verb suffixes, counters, and particles.
+Loanword units that are used as nouns on their own stay. The gate is this
+literal list, not the prose:
+
+| Dropped | Why |
+|---|---|
+| お | honorific prefix |
+| さん, たち, がる | suffixes (honorific, plural, verb) |
+| 人 じん "-ian", 人 にん counter | affix senses of 人; 人 ひと stays |
+| 中 じゅう, 中 ちゅう | suffix senses of 中 |
+| 屋 や | "-shop" suffix; the shops themselves (本屋) stay |
+| 日 にち, 時 じ | counters; 日 ひ and 時 とき stay |
+| ずつ | particle |
+
+| Allowed | Why |
+|---|---|
+| キロ | used alone as a noun ("5キロ") |
+
+Expected count after the list: 783 (not a multiple of 24). Any new drop or
+restore changes this table first and the bundle second.
 
 **Spacing rule (2026-10-22):** entries that share an orthography are placed at
 least 24 slots apart in the ordered list, measured circularly (the list wraps,
