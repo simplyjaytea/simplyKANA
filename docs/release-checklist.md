@@ -46,6 +46,7 @@ moved to "Accepted risks" with an owner. Updated 2026-10-22 (late).
 | Vibrant Lock Screen rendering, dimmed reading, Always-On | All three families legible | Snapshot cannot show vibrancy |
 | Tap routing | Opens the app on the Lock Screen's word | — |
 | Japanese VoiceOver voice | Japanese parts read in Japanese | `ja` tag is CI-tested; the voice is not |
+| Chinese and Japanese character shapes on the Lock Screen (release two) | 直, 骨, 角 show the Chinese forms in a Chinese word and the Japanese forms in a Japanese word | Snapshots prove the app; the widget's font on a real Lock Screen is phone-only |
 | Real iOS 16 device | Same as above | CI compiles for 16, simulator runs newer iOS |
 | App icon | None yet: the app has no icon asset, so it shows a blank icon | Cosmetic, not a bug for this alpha |
 | Free-profile expiry | App stops opening after 7 days | Re-install or refresh |
