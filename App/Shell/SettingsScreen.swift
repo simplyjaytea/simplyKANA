@@ -111,7 +111,7 @@ struct SettingsContent: View {
                             ?? (model.settings.quietEnabled ? "No new words arrive in this window. The last word stays on the Lock Screen." : nil)) {
                 Toggle(isOn: Binding(get: { model.settings.quietEnabled },
                                      set: { model.setQuiet(enabled: $0) })) {
-                    Text("Quiet hours").foregroundStyle(Ink.ink)
+                    Text("Pause new words").foregroundStyle(Ink.ink)
                 }
                 .toggleStyle(InkToggleStyle())
                 .rowPadding()
@@ -209,6 +209,30 @@ struct IntervalRow: View {
     }
 }
 
+/// Label and value side by side; stacked at accessibility sizes so neither
+/// word gets hyphenated ("Ja-panese" in the first AX3 snapshot).
+struct LabelValue: View {
+    let label: String
+    let value: String
+    @Environment(\.dynamicTypeSize) private var typeSize
+
+    var body: some View {
+        if typeSize.isAccessibilitySize {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(label).foregroundStyle(Ink.ink)
+                Text(value).monospacedDigit().foregroundStyle(Ink.secondary)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        } else {
+            HStack {
+                Text(label).foregroundStyle(Ink.ink)
+                Spacer()
+                Text(value).monospacedDigit().foregroundStyle(Ink.secondary)
+            }
+        }
+    }
+}
+
 struct TimeRow: View {
     let label: String
     let minutes: Int
@@ -216,14 +240,8 @@ struct TimeRow: View {
 
     var body: some View {
         Button(action: action) {
-            HStack {
-                Text(label).foregroundStyle(Ink.ink)
-                Spacer()
-                Text(SettingsCopy.time(minutes))
-                    .monospacedDigit()
-                    .foregroundStyle(Ink.secondary)
-            }
-            .rowPadding()
+            LabelValue(label: label, value: SettingsCopy.time(minutes))
+                .rowPadding()
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
@@ -237,12 +255,8 @@ struct ValueRow: View {
     let value: String
 
     var body: some View {
-        HStack {
-            Text(label).foregroundStyle(Ink.ink)
-            Spacer()
-            Text(value).foregroundStyle(Ink.secondary)
-        }
-        .rowPadding()
+        LabelValue(label: label, value: value)
+            .rowPadding()
         .accessibilityElement(children: .combine)
     }
 }
@@ -273,7 +287,7 @@ struct InkToggleStyle: ToggleStyle {
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(Text("Quiet hours"))
+        .accessibilityLabel(Text("Pause new words during quiet hours"))
         .accessibilityValue(configuration.isOn ? "On" : "Off")
         .accessibilityAddTraits(.isToggle)
     }
