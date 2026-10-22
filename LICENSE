@@ -4,8 +4,9 @@ The source code in this repository is made visible for reference only. No
 licence is granted to use, copy, modify, or distribute it, in whole or in part,
 without written permission from the copyright holder.
 
-Bundled language data is licensed separately by its own authors and is NOT
-covered by this notice. See tools/DATA-LICENSES.md: the Japanese bundle derives
-from JMdict (EDRDG, CC-BY-SA 4.0) and the open-anki-jlpt-decks N5 list (MIT);
-later packs carry their own notices there. Those terms continue to apply to
-that data wherever it appears.
+Language data is licensed separately by its own authors and is NOT covered by
+this notice, whether it appears inside the app bundle or as source lists and
+derived files under tools/. See tools/DATA-LICENSES.md: the Japanese bundle
+derives from JMdict (EDRDG, CC-BY-SA 4.0) and the open-anki-jlpt-decks N5 list
+(MIT, including the copy kept under tools/); later packs carry their own
+notices there. Those terms continue to apply to that data wherever it appears.
