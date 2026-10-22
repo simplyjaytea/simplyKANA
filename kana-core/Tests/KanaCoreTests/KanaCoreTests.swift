@@ -182,3 +182,83 @@ private func qh(_ s: Int, _ e: Int) -> QuietHours {
     #expect(!isSatisfiable(schedule: s, calendar: cal, anchor: anchor2026))
 }
 
+
+// MARK: - Word bundle gate (Rachel, Friday 23 Oct)
+
+private let bundle: [Word] = try! bundledWords()
+
+@Test func bundleCountIsNotAMultipleOf24() {
+    #expect(bundle.count == 789)
+    #expect(bundle.count % 24 != 0)
+}
+
+@Test func bundleStartsWith92KanaThenN5() {
+    let kana = bundle.prefix(92)
+    #expect(kana.allSatisfy { $0.partOfSpeech == "hiragana" || $0.partOfSpeech == "katakana" })
+    #expect(kana.allSatisfy { $0.level == nil && $0.orthography == $0.reading })
+    #expect(kana.filter { $0.partOfSpeech == "hiragana" }.count == 46)
+    #expect(bundle.dropFirst(92).allSatisfy { $0.level == .jlpt(5) && $0.language == .japanese })
+}
+
+@Test func bundleOrthographyReadingPairsAndIdsAreUnique() {
+    #expect(Set(bundle.map { "\($0.orthography)|\($0.reading)" }).count == bundle.count)
+    #expect(Set(bundle.map(\.id)).count == bundle.count)
+}
+
+@Test func bundleTextHasNoListFormatting() {
+    let banned = CharacterSet(charactersIn: " ()（）;；～〜").union(.whitespacesAndNewlines)
+    for w in bundle {
+        #expect(w.orthography.rangeOfCharacter(from: banned) == nil, "\(w.orthography)")
+        #expect(w.reading.rangeOfCharacter(from: banned) == nil, "\(w.reading)")
+        #expect(!w.meanings.isEmpty && !w.meanings[0].isEmpty, "\(w.orthography)")
+    }
+}
+
+@Test func bundleHasExactly11LongWords() {
+    #expect(bundle.filter { $0.orthography.count >= 5 }.count == 11)
+}
+
+@Test func bundleDroppedAffixes() {
+    // N5 part only: hiragana お is a kana entry, and stays.
+    let pairs = Set(bundle.dropFirst(92).map { "\($0.orthography)|\($0.reading)" })
+    for p in ["お|お", "人|じん", "中|じゅう", "たち|たち", "がる|がる", "さん|さん"] {
+        #expect(!pairs.contains(p), "\(p)")
+    }
+}
+
+@Test func bundleEqualOrthographiesAre24SlotsApart() {
+    var at: [String: [Int]] = [:]
+    for (i, w) in bundle.enumerated() { at[w.orthography, default: []].append(i) }
+    let n = bundle.count
+    for (o, ps) in at where ps.count > 1 {
+        for a in 0..<ps.count { for b in (a + 1)..<ps.count {
+            let d = abs(ps[a] - ps[b])
+            #expect(min(d, n - d) >= 24, "\(o) at \(ps[a]) and \(ps[b])")
+        } }
+    }
+}
+
+@Test func everyBundleWordIsShownWithinAYear() {
+    // Default schedule: hourly, quiet 22:00-07:00, in a DST zone and a non-DST zone.
+    let s = Schedule(intervalMinutes: 60, quietHours: qh(22 * 60, 7 * 60))
+    for z in ["America/New_York", "Asia/Tokyo"] {
+        let cal = utcCalendar(z)
+        var seen = Set<String>()
+        var cur = anchor2026
+        let end = anchor2026.addingTimeInterval(366 * 86_400)
+        while cur < end, let next = nextDelivery(after: cur, schedule: s, calendar: cal) {
+            seen.insert(pickWord(for: slot(for: next, intervalMinutes: 60), from: bundle)!.id)
+            cur = next
+        }
+        #expect(seen.count == bundle.count, "\(z): \(bundle.count - seen.count) words never shown")
+    }
+}
+
+@Test func levelRoundTripsInBundleFormat() throws {
+    let w = Word(id: "x", language: .chinese, orthography: "你", reading: "nǐ", meanings: ["you"],
+                 partOfSpeech: "pronoun", level: .hsk(1), isCommon: true)
+    let json = String(decoding: try JSONEncoder().encode(w), as: UTF8.self)
+    #expect(json.contains("\"level\":{\"hsk\":1}"))
+    #expect(try JSONDecoder().decode(Word.self, from: Data(json.utf8)) == w)
+    #expect(throws: (any Error).self) { try decodeWords(from: Data(#"[{"id":"x","language":"ja","orthography":"a","reading":"a","meanings":[],"isCommon":true,"level":{"jlpt":5,"hsk":1}}]"#.utf8)) }
+}

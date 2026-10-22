@@ -1,0 +1,11612 @@
+[
+ {
+  "id": "kana:hiragana:a",
+  "language": "ja",
+  "orthography": "あ",
+  "reading": "あ",
+  "meanings": [
+   "a"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:i",
+  "language": "ja",
+  "orthography": "い",
+  "reading": "い",
+  "meanings": [
+   "i"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:u",
+  "language": "ja",
+  "orthography": "う",
+  "reading": "う",
+  "meanings": [
+   "u"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:e",
+  "language": "ja",
+  "orthography": "え",
+  "reading": "え",
+  "meanings": [
+   "e"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:o",
+  "language": "ja",
+  "orthography": "お",
+  "reading": "お",
+  "meanings": [
+   "o"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ka",
+  "language": "ja",
+  "orthography": "か",
+  "reading": "か",
+  "meanings": [
+   "ka"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ki",
+  "language": "ja",
+  "orthography": "き",
+  "reading": "き",
+  "meanings": [
+   "ki"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ku",
+  "language": "ja",
+  "orthography": "く",
+  "reading": "く",
+  "meanings": [
+   "ku"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ke",
+  "language": "ja",
+  "orthography": "け",
+  "reading": "け",
+  "meanings": [
+   "ke"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ko",
+  "language": "ja",
+  "orthography": "こ",
+  "reading": "こ",
+  "meanings": [
+   "ko"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:sa",
+  "language": "ja",
+  "orthography": "さ",
+  "reading": "さ",
+  "meanings": [
+   "sa"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:shi",
+  "language": "ja",
+  "orthography": "し",
+  "reading": "し",
+  "meanings": [
+   "shi"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:su",
+  "language": "ja",
+  "orthography": "す",
+  "reading": "す",
+  "meanings": [
+   "su"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:se",
+  "language": "ja",
+  "orthography": "せ",
+  "reading": "せ",
+  "meanings": [
+   "se"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:so",
+  "language": "ja",
+  "orthography": "そ",
+  "reading": "そ",
+  "meanings": [
+   "so"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ta",
+  "language": "ja",
+  "orthography": "た",
+  "reading": "た",
+  "meanings": [
+   "ta"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:chi",
+  "language": "ja",
+  "orthography": "ち",
+  "reading": "ち",
+  "meanings": [
+   "chi"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:tsu",
+  "language": "ja",
+  "orthography": "つ",
+  "reading": "つ",
+  "meanings": [
+   "tsu"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:te",
+  "language": "ja",
+  "orthography": "て",
+  "reading": "て",
+  "meanings": [
+   "te"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:to",
+  "language": "ja",
+  "orthography": "と",
+  "reading": "と",
+  "meanings": [
+   "to"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:na",
+  "language": "ja",
+  "orthography": "な",
+  "reading": "な",
+  "meanings": [
+   "na"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ni",
+  "language": "ja",
+  "orthography": "に",
+  "reading": "に",
+  "meanings": [
+   "ni"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:nu",
+  "language": "ja",
+  "orthography": "ぬ",
+  "reading": "ぬ",
+  "meanings": [
+   "nu"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ne",
+  "language": "ja",
+  "orthography": "ね",
+  "reading": "ね",
+  "meanings": [
+   "ne"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:no",
+  "language": "ja",
+  "orthography": "の",
+  "reading": "の",
+  "meanings": [
+   "no"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ha",
+  "language": "ja",
+  "orthography": "は",
+  "reading": "は",
+  "meanings": [
+   "ha"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:hi",
+  "language": "ja",
+  "orthography": "ひ",
+  "reading": "ひ",
+  "meanings": [
+   "hi"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:fu",
+  "language": "ja",
+  "orthography": "ふ",
+  "reading": "ふ",
+  "meanings": [
+   "fu"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:he",
+  "language": "ja",
+  "orthography": "へ",
+  "reading": "へ",
+  "meanings": [
+   "he"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ho",
+  "language": "ja",
+  "orthography": "ほ",
+  "reading": "ほ",
+  "meanings": [
+   "ho"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ma",
+  "language": "ja",
+  "orthography": "ま",
+  "reading": "ま",
+  "meanings": [
+   "ma"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:mi",
+  "language": "ja",
+  "orthography": "み",
+  "reading": "み",
+  "meanings": [
+   "mi"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:mu",
+  "language": "ja",
+  "orthography": "む",
+  "reading": "む",
+  "meanings": [
+   "mu"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:me",
+  "language": "ja",
+  "orthography": "め",
+  "reading": "め",
+  "meanings": [
+   "me"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:mo",
+  "language": "ja",
+  "orthography": "も",
+  "reading": "も",
+  "meanings": [
+   "mo"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ya",
+  "language": "ja",
+  "orthography": "や",
+  "reading": "や",
+  "meanings": [
+   "ya"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:yu",
+  "language": "ja",
+  "orthography": "ゆ",
+  "reading": "ゆ",
+  "meanings": [
+   "yu"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:yo",
+  "language": "ja",
+  "orthography": "よ",
+  "reading": "よ",
+  "meanings": [
+   "yo"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ra",
+  "language": "ja",
+  "orthography": "ら",
+  "reading": "ら",
+  "meanings": [
+   "ra"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ri",
+  "language": "ja",
+  "orthography": "り",
+  "reading": "り",
+  "meanings": [
+   "ri"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ru",
+  "language": "ja",
+  "orthography": "る",
+  "reading": "る",
+  "meanings": [
+   "ru"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:re",
+  "language": "ja",
+  "orthography": "れ",
+  "reading": "れ",
+  "meanings": [
+   "re"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:ro",
+  "language": "ja",
+  "orthography": "ろ",
+  "reading": "ろ",
+  "meanings": [
+   "ro"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:wa",
+  "language": "ja",
+  "orthography": "わ",
+  "reading": "わ",
+  "meanings": [
+   "wa"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:wo",
+  "language": "ja",
+  "orthography": "を",
+  "reading": "を",
+  "meanings": [
+   "wo"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:hiragana:n",
+  "language": "ja",
+  "orthography": "ん",
+  "reading": "ん",
+  "meanings": [
+   "n"
+  ],
+  "partOfSpeech": "hiragana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:a",
+  "language": "ja",
+  "orthography": "ア",
+  "reading": "ア",
+  "meanings": [
+   "a"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:i",
+  "language": "ja",
+  "orthography": "イ",
+  "reading": "イ",
+  "meanings": [
+   "i"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:u",
+  "language": "ja",
+  "orthography": "ウ",
+  "reading": "ウ",
+  "meanings": [
+   "u"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:e",
+  "language": "ja",
+  "orthography": "エ",
+  "reading": "エ",
+  "meanings": [
+   "e"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:o",
+  "language": "ja",
+  "orthography": "オ",
+  "reading": "オ",
+  "meanings": [
+   "o"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ka",
+  "language": "ja",
+  "orthography": "カ",
+  "reading": "カ",
+  "meanings": [
+   "ka"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ki",
+  "language": "ja",
+  "orthography": "キ",
+  "reading": "キ",
+  "meanings": [
+   "ki"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ku",
+  "language": "ja",
+  "orthography": "ク",
+  "reading": "ク",
+  "meanings": [
+   "ku"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ke",
+  "language": "ja",
+  "orthography": "ケ",
+  "reading": "ケ",
+  "meanings": [
+   "ke"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ko",
+  "language": "ja",
+  "orthography": "コ",
+  "reading": "コ",
+  "meanings": [
+   "ko"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:sa",
+  "language": "ja",
+  "orthography": "サ",
+  "reading": "サ",
+  "meanings": [
+   "sa"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:shi",
+  "language": "ja",
+  "orthography": "シ",
+  "reading": "シ",
+  "meanings": [
+   "shi"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:su",
+  "language": "ja",
+  "orthography": "ス",
+  "reading": "ス",
+  "meanings": [
+   "su"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:se",
+  "language": "ja",
+  "orthography": "セ",
+  "reading": "セ",
+  "meanings": [
+   "se"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:so",
+  "language": "ja",
+  "orthography": "ソ",
+  "reading": "ソ",
+  "meanings": [
+   "so"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ta",
+  "language": "ja",
+  "orthography": "タ",
+  "reading": "タ",
+  "meanings": [
+   "ta"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:chi",
+  "language": "ja",
+  "orthography": "チ",
+  "reading": "チ",
+  "meanings": [
+   "chi"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:tsu",
+  "language": "ja",
+  "orthography": "ツ",
+  "reading": "ツ",
+  "meanings": [
+   "tsu"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:te",
+  "language": "ja",
+  "orthography": "テ",
+  "reading": "テ",
+  "meanings": [
+   "te"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:to",
+  "language": "ja",
+  "orthography": "ト",
+  "reading": "ト",
+  "meanings": [
+   "to"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:na",
+  "language": "ja",
+  "orthography": "ナ",
+  "reading": "ナ",
+  "meanings": [
+   "na"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ni",
+  "language": "ja",
+  "orthography": "ニ",
+  "reading": "ニ",
+  "meanings": [
+   "ni"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:nu",
+  "language": "ja",
+  "orthography": "ヌ",
+  "reading": "ヌ",
+  "meanings": [
+   "nu"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ne",
+  "language": "ja",
+  "orthography": "ネ",
+  "reading": "ネ",
+  "meanings": [
+   "ne"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:no",
+  "language": "ja",
+  "orthography": "ノ",
+  "reading": "ノ",
+  "meanings": [
+   "no"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ha",
+  "language": "ja",
+  "orthography": "ハ",
+  "reading": "ハ",
+  "meanings": [
+   "ha"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:hi",
+  "language": "ja",
+  "orthography": "ヒ",
+  "reading": "ヒ",
+  "meanings": [
+   "hi"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:fu",
+  "language": "ja",
+  "orthography": "フ",
+  "reading": "フ",
+  "meanings": [
+   "fu"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:he",
+  "language": "ja",
+  "orthography": "ヘ",
+  "reading": "ヘ",
+  "meanings": [
+   "he"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ho",
+  "language": "ja",
+  "orthography": "ホ",
+  "reading": "ホ",
+  "meanings": [
+   "ho"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ma",
+  "language": "ja",
+  "orthography": "マ",
+  "reading": "マ",
+  "meanings": [
+   "ma"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:mi",
+  "language": "ja",
+  "orthography": "ミ",
+  "reading": "ミ",
+  "meanings": [
+   "mi"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:mu",
+  "language": "ja",
+  "orthography": "ム",
+  "reading": "ム",
+  "meanings": [
+   "mu"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:me",
+  "language": "ja",
+  "orthography": "メ",
+  "reading": "メ",
+  "meanings": [
+   "me"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:mo",
+  "language": "ja",
+  "orthography": "モ",
+  "reading": "モ",
+  "meanings": [
+   "mo"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ya",
+  "language": "ja",
+  "orthography": "ヤ",
+  "reading": "ヤ",
+  "meanings": [
+   "ya"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:yu",
+  "language": "ja",
+  "orthography": "ユ",
+  "reading": "ユ",
+  "meanings": [
+   "yu"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:yo",
+  "language": "ja",
+  "orthography": "ヨ",
+  "reading": "ヨ",
+  "meanings": [
+   "yo"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ra",
+  "language": "ja",
+  "orthography": "ラ",
+  "reading": "ラ",
+  "meanings": [
+   "ra"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ri",
+  "language": "ja",
+  "orthography": "リ",
+  "reading": "リ",
+  "meanings": [
+   "ri"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ru",
+  "language": "ja",
+  "orthography": "ル",
+  "reading": "ル",
+  "meanings": [
+   "ru"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:re",
+  "language": "ja",
+  "orthography": "レ",
+  "reading": "レ",
+  "meanings": [
+   "re"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:ro",
+  "language": "ja",
+  "orthography": "ロ",
+  "reading": "ロ",
+  "meanings": [
+   "ro"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:wa",
+  "language": "ja",
+  "orthography": "ワ",
+  "reading": "ワ",
+  "meanings": [
+   "wa"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:wo",
+  "language": "ja",
+  "orthography": "ヲ",
+  "reading": "ヲ",
+  "meanings": [
+   "wo"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "kana:katakana:n",
+  "language": "ja",
+  "orthography": "ン",
+  "reading": "ン",
+  "meanings": [
+   "n"
+  ],
+  "partOfSpeech": "katakana",
+  "level": null,
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1565440",
+  "language": "ja",
+  "orthography": "ああ",
+  "reading": "ああ",
+  "meanings": [
+   "ah!",
+   "oh!",
+   "alas!"
+  ],
+  "partOfSpeech": "interjection",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1198180",
+  "language": "ja",
+  "orthography": "会う",
+  "reading": "あう",
+  "meanings": [
+   "to meet",
+   "to encounter",
+   "to see"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1381380",
+  "language": "ja",
+  "orthography": "青",
+  "reading": "あお",
+  "meanings": [
+   "blue",
+   "azure"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1381390",
+  "language": "ja",
+  "orthography": "青い",
+  "reading": "あおい",
+  "meanings": [
+   "blue",
+   "azure"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2013900",
+  "language": "ja",
+  "orthography": "赤",
+  "reading": "あか",
+  "meanings": [
+   "red",
+   "crimson",
+   "scarlet"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1383240",
+  "language": "ja",
+  "orthography": "赤い",
+  "reading": "あかい",
+  "meanings": [
+   "red",
+   "crimson",
+   "scarlet"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1532350",
+  "language": "ja",
+  "orthography": "明るい",
+  "reading": "あかるい",
+  "meanings": [
+   "cheerful",
+   "bright",
+   "spirited"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1332650",
+  "language": "ja",
+  "orthography": "秋",
+  "reading": "あき",
+  "meanings": [
+   "autumn",
+   "fall"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1586270",
+  "language": "ja",
+  "orthography": "開く",
+  "reading": "あく",
+  "meanings": [
+   "to open (e.g. doors)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1202450",
+  "language": "ja",
+  "orthography": "開ける",
+  "reading": "あける",
+  "meanings": [
+   "to open (a door, etc.)",
+   "to unwrap (e.g. parcel, package)",
+   "to unlock"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1352320",
+  "language": "ja",
+  "orthography": "上げる",
+  "reading": "あげる",
+  "meanings": [
+   "to raise (one's gaze)",
+   "to lift up (one's face)",
+   "to look up"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1428280",
+  "language": "ja",
+  "orthography": "朝",
+  "reading": "あさ",
+  "meanings": [
+   "morning"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1586330",
+  "language": "ja",
+  "orthography": "朝御飯",
+  "reading": "あさごはん",
+  "meanings": [
+   "breakfast"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1584640",
+  "language": "ja",
+  "orthography": "明後日",
+  "reading": "あさって",
+  "meanings": [
+   "day after tomorrow"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1404630",
+  "language": "ja",
+  "orthography": "足",
+  "reading": "あし",
+  "meanings": [
+   "foot",
+   "paw",
+   "arm (of an octopus, squid, etc.)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1584660",
+  "language": "ja",
+  "orthography": "明日",
+  "reading": "あした",
+  "meanings": [
+   "tomorrow"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1000320",
+  "language": "ja",
+  "orthography": "あそこ",
+  "reading": "あそこ",
+  "meanings": [
+   "there",
+   "over there",
+   "that place"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1542160",
+  "language": "ja",
+  "orthography": "遊ぶ",
+  "reading": "あそぶ",
+  "meanings": [
+   "to play (games, sports)",
+   "to enjoy oneself",
+   "to have a good time"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2842390",
+  "language": "ja",
+  "orthography": "私",
+  "reading": "わたくし",
+  "meanings": [
+   "personal (affairs, etc.)",
+   "private"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1586420",
+  "language": "ja",
+  "orthography": "暖かい",
+  "reading": "あたたかい",
+  "meanings": [
+   "warm",
+   "mild",
+   "(pleasantly) hot"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1582310",
+  "language": "ja",
+  "orthography": "頭",
+  "reading": "あたま",
+  "meanings": [
+   "head"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1361490",
+  "language": "ja",
+  "orthography": "新しい",
+  "reading": "あたらしい",
+  "meanings": [
+   "new",
+   "novel",
+   "fresh"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1483185",
+  "language": "ja",
+  "orthography": "あちら",
+  "reading": "あちら",
+  "meanings": [
+   "that way",
+   "that direction",
+   "over there"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1343460",
+  "language": "ja",
+  "orthography": "暑い",
+  "reading": "あつい",
+  "meanings": [
+   "hot",
+   "warm",
+   "sultry"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1467720",
+  "language": "ja",
+  "orthography": "熱い",
+  "reading": "あつい",
+  "meanings": [
+   "hot (to the touch)"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1275320",
+  "language": "ja",
+  "orthography": "厚い",
+  "reading": "あつい",
+  "meanings": [
+   "thick",
+   "deep",
+   "heavy"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1269320",
+  "language": "ja",
+  "orthography": "後",
+  "reading": "あと",
+  "meanings": [
+   "after",
+   "later"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1223615",
+  "language": "ja",
+  "orthography": "あなた",
+  "reading": "あなた",
+  "meanings": [
+   "you"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1249900",
+  "language": "ja",
+  "orthography": "兄",
+  "reading": "あに",
+  "meanings": [
+   "older brother",
+   "elder brother"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1307630",
+  "language": "ja",
+  "orthography": "姉",
+  "reading": "あね",
+  "meanings": [
+   "older sister",
+   "elder sister"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1017760",
+  "language": "ja",
+  "orthography": "アパート",
+  "reading": "アパート",
+  "meanings": [
+   "apartment building",
+   "apartment block",
+   "apartment house"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1000420",
+  "language": "ja",
+  "orthography": "あの",
+  "reading": "あの",
+  "meanings": [
+   "that",
+   "those",
+   "the"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1547450",
+  "language": "ja",
+  "orthography": "浴びる",
+  "reading": "あびる",
+  "meanings": [
+   "to dash over oneself (e.g. water)",
+   "to take (e.g. shower)",
+   "to bask in (e.g. the sun)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1218380",
+  "language": "ja",
+  "orthography": "危ない",
+  "reading": "あぶない",
+  "meanings": [
+   "dangerous",
+   "risky",
+   "hazardous"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1213400",
+  "language": "ja",
+  "orthography": "甘い",
+  "reading": "あまい",
+  "meanings": [
+   "sweet-tasting",
+   "sweet",
+   "sugary"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1584930",
+  "language": "ja",
+  "orthography": "余り",
+  "reading": "あまり",
+  "meanings": [
+   "(not) very",
+   "(not) much"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1171900",
+  "language": "ja",
+  "orthography": "雨",
+  "reading": "あめ",
+  "meanings": [
+   "rain"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1153520",
+  "language": "ja",
+  "orthography": "飴",
+  "reading": "あめ",
+  "meanings": [
+   "(hard) candy",
+   "toffee"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1390930",
+  "language": "ja",
+  "orthography": "洗う",
+  "reading": "あらう",
+  "meanings": [
+   "to wash",
+   "to cleanse",
+   "to rinse"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1296400",
+  "language": "ja",
+  "orthography": "在る",
+  "reading": "ある",
+  "meanings": [
+   "to have"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1514320",
+  "language": "ja",
+  "orthography": "歩く",
+  "reading": "あるく",
+  "meanings": [
+   "to walk"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1000580",
+  "language": "ja",
+  "orthography": "あれ",
+  "reading": "あれ",
+  "meanings": [
+   "that",
+   "that thing"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2820690",
+  "language": "ja",
+  "orthography": "いい",
+  "reading": "いい",
+  "meanings": [
+   "good",
+   "excellent",
+   "fine"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1583250",
+  "language": "ja",
+  "orthography": "いいえ",
+  "reading": "いいえ",
+  "meanings": [
+   "you're welcome",
+   "not at all",
+   "don't mention it"
+  ],
+  "partOfSpeech": "interjection",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1587040",
+  "language": "ja",
+  "orthography": "言う",
+  "reading": "いう",
+  "meanings": [
+   "to say",
+   "to utter",
+   "to declare"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1191730",
+  "language": "ja",
+  "orthography": "家",
+  "reading": "いえ",
+  "meanings": [
+   "house",
+   "residence",
+   "dwelling"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2845606",
+  "language": "ja",
+  "orthography": "いかが",
+  "reading": "いかが",
+  "meanings": [
+   "how",
+   "in what way",
+   "how about"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1578850",
+  "language": "ja",
+  "orthography": "行く",
+  "reading": "いく",
+  "meanings": [
+   "to go",
+   "to move (towards)",
+   "to head (towards)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1219960",
+  "language": "ja",
+  "orthography": "いくつ",
+  "reading": "いくつ",
+  "meanings": [
+   "how many"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1219980",
+  "language": "ja",
+  "orthography": "いくら",
+  "reading": "いくら",
+  "meanings": [
+   "how much"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1421700",
+  "language": "ja",
+  "orthography": "池",
+  "reading": "いけ",
+  "meanings": [
+   "pond"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1159980",
+  "language": "ja",
+  "orthography": "医者",
+  "reading": "いしゃ",
+  "meanings": [
+   "doctor",
+   "physician"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1157070",
+  "language": "ja",
+  "orthography": "椅子",
+  "reading": "いす",
+  "meanings": [
+   "chair",
+   "seat",
+   "stool"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1519290",
+  "language": "ja",
+  "orthography": "忙しい",
+  "reading": "いそがしい",
+  "meanings": [
+   "busy",
+   "occupied",
+   "hectic"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1432680",
+  "language": "ja",
+  "orthography": "痛い",
+  "reading": "いたい",
+  "meanings": [
+   "painful",
+   "sore"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1160790",
+  "language": "ja",
+  "orthography": "一",
+  "reading": "いち",
+  "meanings": [
+   "one",
+   "1"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1576260",
+  "language": "ja",
+  "orthography": "一日",
+  "reading": "いちにち",
+  "meanings": [
+   "one day"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1165970",
+  "language": "ja",
+  "orthography": "一番",
+  "reading": "いちばん",
+  "meanings": [
+   "number one",
+   "first",
+   "first place"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1188760",
+  "language": "ja",
+  "orthography": "いつ",
+  "reading": "いつ",
+  "meanings": [
+   "when",
+   "at what time",
+   "how soon"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1268570",
+  "language": "ja",
+  "orthography": "五日",
+  "reading": "いつか",
+  "meanings": [
+   "5th day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1163400",
+  "language": "ja",
+  "orthography": "一緒",
+  "reading": "いっしょ",
+  "meanings": [
+   "(doing) together"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1268070",
+  "language": "ja",
+  "orthography": "五つ",
+  "reading": "いつつ",
+  "meanings": [
+   "five"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1188890",
+  "language": "ja",
+  "orthography": "いつも",
+  "reading": "いつも",
+  "meanings": [
+   "always",
+   "all the time",
+   "at all times"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1258330",
+  "language": "ja",
+  "orthography": "犬",
+  "reading": "いぬ",
+  "meanings": [
+   "dog (Canis (lupus) familiaris)",
+   "canine"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1288850",
+  "language": "ja",
+  "orthography": "今",
+  "reading": "いま",
+  "meanings": [
+   "now",
+   "the present time",
+   "just now"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1156800",
+  "language": "ja",
+  "orthography": "意味",
+  "reading": "いみ",
+  "meanings": [
+   "meaning",
+   "significance",
+   "sense"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1524590",
+  "language": "ja",
+  "orthography": "妹",
+  "reading": "いもうと",
+  "meanings": [
+   "younger sister"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1587610",
+  "language": "ja",
+  "orthography": "嫌",
+  "reading": "いや",
+  "meanings": [
+   "unpleasant",
+   "disagreeable",
+   "nasty"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1582820",
+  "language": "ja",
+  "orthography": "入口",
+  "reading": "いりぐち",
+  "meanings": [
+   "entrance",
+   "entry",
+   "gate"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1577980",
+  "language": "ja",
+  "orthography": "居る",
+  "reading": "いる",
+  "meanings": [
+   "to be (of animate objects)",
+   "to exist"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1546640",
+  "language": "ja",
+  "orthography": "要る",
+  "reading": "いる",
+  "meanings": [
+   "to be needed",
+   "to be necessary",
+   "to be required"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1465610",
+  "language": "ja",
+  "orthography": "入れる",
+  "reading": "いれる",
+  "meanings": [
+   "to put in",
+   "to let in",
+   "to take in"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1357600",
+  "language": "ja",
+  "orthography": "色",
+  "reading": "いろ",
+  "meanings": [
+   "colour",
+   "color",
+   "hue"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1587850",
+  "language": "ja",
+  "orthography": "色々",
+  "reading": "いろいろ",
+  "meanings": [
+   "various",
+   "a variety of",
+   "all sorts of"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1352130",
+  "language": "ja",
+  "orthography": "上",
+  "reading": "うえ",
+  "meanings": [
+   "above",
+   "over",
+   "up"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1269410",
+  "language": "ja",
+  "orthography": "後ろ",
+  "reading": "うしろ",
+  "meanings": [
+   "back",
+   "behind",
+   "rear"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1475480",
+  "language": "ja",
+  "orthography": "薄い",
+  "reading": "うすい",
+  "meanings": [
+   "thin (of an object)"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1193180",
+  "language": "ja",
+  "orthography": "歌",
+  "reading": "うた",
+  "meanings": [
+   "song",
+   "singing"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1588120",
+  "language": "ja",
+  "orthography": "歌う",
+  "reading": "うたう",
+  "meanings": [
+   "to sing"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1191740",
+  "language": "ja",
+  "orthography": "うち",
+  "reading": "うち",
+  "meanings": [
+   "one's house",
+   "one's home",
+   "one's family"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1378690",
+  "language": "ja",
+  "orthography": "生まれる",
+  "reading": "うまれる",
+  "meanings": [
+   "to be born"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1201190",
+  "language": "ja",
+  "orthography": "海",
+  "reading": "うみ",
+  "meanings": [
+   "sea",
+   "ocean",
+   "waters"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1473950",
+  "language": "ja",
+  "orthography": "売る",
+  "reading": "うる",
+  "meanings": [
+   "to sell"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1481920",
+  "language": "ja",
+  "orthography": "うるさい",
+  "reading": "うるさい",
+  "meanings": [
+   "noisy",
+   "loud"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1580340",
+  "language": "ja",
+  "orthography": "上着",
+  "reading": "うわぎ",
+  "meanings": [
+   "coat",
+   "jacket",
+   "outerwear"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1202270",
+  "language": "ja",
+  "orthography": "絵",
+  "reading": "え",
+  "meanings": [
+   "picture",
+   "drawing",
+   "painting"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1173720",
+  "language": "ja",
+  "orthography": "映画",
+  "reading": "えいが",
+  "meanings": [
+   "movie",
+   "film",
+   "motion picture"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1173750",
+  "language": "ja",
+  "orthography": "映画館",
+  "reading": "えいがかん",
+  "meanings": [
+   "movie theatre",
+   "movie theater",
+   "cinema"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1174420",
+  "language": "ja",
+  "orthography": "英語",
+  "reading": "えいご",
+  "meanings": [
+   "English (language)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1001140",
+  "language": "ja",
+  "orthography": "ええ",
+  "reading": "ええ",
+  "meanings": [
+   "yes",
+   "that is correct",
+   "right"
+  ],
+  "partOfSpeech": "interjection",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1175140",
+  "language": "ja",
+  "orthography": "駅",
+  "reading": "えき",
+  "meanings": [
+   "railway station",
+   "train station"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1030630",
+  "language": "ja",
+  "orthography": "エレベーター",
+  "reading": "エレベーター",
+  "meanings": [
+   "elevator",
+   "lift"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1175570",
+  "language": "ja",
+  "orthography": "円",
+  "reading": "えん",
+  "meanings": [
+   "yen (currency of Japan)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1178590",
+  "language": "ja",
+  "orthography": "鉛筆",
+  "reading": "えんぴつ",
+  "meanings": [
+   "(wooden) pencil"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1486650",
+  "language": "ja",
+  "orthography": "美味しい",
+  "reading": "おいしい",
+  "meanings": [
+   "good(-tasting)",
+   "nice",
+   "delicious"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1407460",
+  "language": "ja",
+  "orthography": "多い",
+  "reading": "おおい",
+  "meanings": [
+   "many",
+   "numerous",
+   "a lot"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1588880",
+  "language": "ja",
+  "orthography": "大きい",
+  "reading": "おおきい",
+  "meanings": [
+   "big",
+   "large",
+   "great"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1412890",
+  "language": "ja",
+  "orthography": "大きな",
+  "reading": "おおきな",
+  "meanings": [
+   "big",
+   "large",
+   "great"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1414220",
+  "language": "ja",
+  "orthography": "大勢",
+  "reading": "おおぜい",
+  "meanings": [
+   "crowd of people",
+   "great number of people"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1002650",
+  "language": "ja",
+  "orthography": "お母さん",
+  "reading": "おかあさん",
+  "meanings": [
+   "mother",
+   "mom",
+   "mum"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1001710",
+  "language": "ja",
+  "orthography": "お菓子",
+  "reading": "おかし",
+  "meanings": [
+   "confections",
+   "sweets",
+   "candy"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1001820",
+  "language": "ja",
+  "orthography": "お金",
+  "reading": "おかね",
+  "meanings": [
+   "money"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1223640",
+  "language": "ja",
+  "orthography": "起きる",
+  "reading": "おきる",
+  "meanings": [
+   "to get up",
+   "to rise",
+   "to blaze up (fire)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1421850",
+  "language": "ja",
+  "orthography": "置く",
+  "reading": "おく",
+  "meanings": [
+   "to put",
+   "to place"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1179330",
+  "language": "ja",
+  "orthography": "奥さん",
+  "reading": "おくさん",
+  "meanings": [
+   "wife",
+   "your wife",
+   "his wife"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1002320",
+  "language": "ja",
+  "orthography": "おじいさん",
+  "reading": "おじいさん",
+  "meanings": [
+   "male senior-citizen",
+   "old man"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1236900",
+  "language": "ja",
+  "orthography": "教える",
+  "reading": "おしえる",
+  "meanings": [
+   "to teach",
+   "to instruct"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1180470",
+  "language": "ja",
+  "orthography": "押す",
+  "reading": "おす",
+  "meanings": [
+   "to press (down)",
+   "to push (e.g. a button)",
+   "to exert pressure on"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1421970",
+  "language": "ja",
+  "orthography": "遅い",
+  "reading": "おそい",
+  "meanings": [
+   "slow"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1002430",
+  "language": "ja",
+  "orthography": "お茶",
+  "reading": "おちゃ",
+  "meanings": [
+   "tea (esp. green or barley)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1002100",
+  "language": "ja",
+  "orthography": "お手洗い",
+  "reading": "おてあらい",
+  "meanings": [
+   "toilet",
+   "restroom",
+   "lavatory"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1002590",
+  "language": "ja",
+  "orthography": "お父さん",
+  "reading": "おとうさん",
+  "meanings": [
+   "father",
+   "dad",
+   "papa"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1581930",
+  "language": "ja",
+  "orthography": "弟",
+  "reading": "おとうと",
+  "meanings": [
+   "younger brother",
+   "little brother",
+   "kid brother"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1419990",
+  "language": "ja",
+  "orthography": "男",
+  "reading": "おとこ",
+  "meanings": [
+   "man",
+   "male"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1420010",
+  "language": "ja",
+  "orthography": "男の子",
+  "reading": "おとこのこ",
+  "meanings": [
+   "boy",
+   "son",
+   "baby boy"
+  ],
+  "partOfSpeech": "expression",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1576050",
+  "language": "ja",
+  "orthography": "一昨日",
+  "reading": "おととい",
+  "meanings": [
+   "day before yesterday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1576060",
+  "language": "ja",
+  "orthography": "おととし",
+  "reading": "おととし",
+  "meanings": [
+   "year before last"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1414170",
+  "language": "ja",
+  "orthography": "大人",
+  "reading": "おとな",
+  "meanings": [
+   "adult",
+   "grown-up"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1002610",
+  "language": "ja",
+  "orthography": "お腹",
+  "reading": "おなか",
+  "meanings": [
+   "belly",
+   "abdomen",
+   "stomach"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1451750",
+  "language": "ja",
+  "orthography": "同じ",
+  "reading": "おなじ",
+  "meanings": [
+   "same",
+   "identical",
+   "equal"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1001830",
+  "language": "ja",
+  "orthography": "お兄さん",
+  "reading": "おにいさん",
+  "meanings": [
+   "older brother",
+   "elder brother"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1001990",
+  "language": "ja",
+  "orthography": "お姉さん",
+  "reading": "おねえさん",
+  "meanings": [
+   "older sister",
+   "elder sister"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1002330",
+  "language": "ja",
+  "orthography": "おばあさん",
+  "reading": "おばあさん",
+  "meanings": [
+   "old woman",
+   "female senior citizen"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2220600",
+  "language": "ja",
+  "orthography": "お風呂",
+  "reading": "おふろ",
+  "meanings": [
+   "bath"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1513065",
+  "language": "ja",
+  "orthography": "お弁当",
+  "reading": "おべんとう",
+  "meanings": [
+   "bento",
+   "Japanese box lunch"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1206050",
+  "language": "ja",
+  "orthography": "覚える",
+  "reading": "おぼえる",
+  "meanings": [
+   "to memorize",
+   "to memorise",
+   "to commit to memory"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1002120",
+  "language": "ja",
+  "orthography": "おまわりさん",
+  "reading": "おまわりさん",
+  "meanings": [
+   "police officer"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1335750",
+  "language": "ja",
+  "orthography": "重い",
+  "reading": "おもい",
+  "meanings": [
+   "heavy",
+   "weighty"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1533580",
+  "language": "ja",
+  "orthography": "面白い",
+  "reading": "おもしろい",
+  "meanings": [
+   "interesting",
+   "fascinating",
+   "intriguing"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1174340",
+  "language": "ja",
+  "orthography": "泳ぐ",
+  "reading": "およぐ",
+  "meanings": [
+   "to swim"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1589500",
+  "language": "ja",
+  "orthography": "降りる",
+  "reading": "おりる",
+  "meanings": [
+   "to alight (e.g. from bus)",
+   "to get off",
+   "to disembark"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1589600",
+  "language": "ja",
+  "orthography": "終る",
+  "reading": "おわる",
+  "meanings": [
+   "to end",
+   "to come to an end",
+   "to finish"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1183720",
+  "language": "ja",
+  "orthography": "音楽",
+  "reading": "おんがく",
+  "meanings": [
+   "music"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1344930",
+  "language": "ja",
+  "orthography": "女",
+  "reading": "おんな",
+  "meanings": [
+   "woman",
+   "female"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1344970",
+  "language": "ja",
+  "orthography": "女の子",
+  "reading": "おんなのこ",
+  "meanings": [
+   "girl",
+   "daughter",
+   "baby girl"
+  ],
+  "partOfSpeech": "expression",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1199330",
+  "language": "ja",
+  "orthography": "回",
+  "reading": "かい",
+  "meanings": [
+   "counter for occurrences"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1203020",
+  "language": "ja",
+  "orthography": "階",
+  "reading": "かい",
+  "meanings": [
+   "counter for storeys and floors of a building"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1203620",
+  "language": "ja",
+  "orthography": "外国",
+  "reading": "がいこく",
+  "meanings": [
+   "foreign country"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1203650",
+  "language": "ja",
+  "orthography": "外国人",
+  "reading": "がいこくじん",
+  "meanings": [
+   "foreigner",
+   "foreign citizen",
+   "foreign national"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1198550",
+  "language": "ja",
+  "orthography": "会社",
+  "reading": "かいしゃ",
+  "meanings": [
+   "company",
+   "corporation",
+   "firm"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1203090",
+  "language": "ja",
+  "orthography": "階段",
+  "reading": "かいだん",
+  "meanings": [
+   "stairs",
+   "stairway",
+   "staircase"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1589730",
+  "language": "ja",
+  "orthography": "買い物",
+  "reading": "かいもの",
+  "meanings": [
+   "shopping",
+   "purchased goods"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1473740",
+  "language": "ja",
+  "orthography": "買う",
+  "reading": "かう",
+  "meanings": [
+   "to buy",
+   "to purchase"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1512130",
+  "language": "ja",
+  "orthography": "返す",
+  "reading": "かえす",
+  "meanings": [
+   "to return (something)",
+   "to restore",
+   "to put back"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1221270",
+  "language": "ja",
+  "orthography": "帰る",
+  "reading": "かえる",
+  "meanings": [
+   "to return",
+   "to come home",
+   "to go home"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1217730",
+  "language": "ja",
+  "orthography": "顔",
+  "reading": "かお",
+  "meanings": [
+   "face",
+   "visage",
+   "looks"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1207590",
+  "language": "ja",
+  "orthography": "かかる",
+  "reading": "かかる",
+  "meanings": [
+   "to take (a resource, e.g. time or money)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1260490",
+  "language": "ja",
+  "orthography": "鍵",
+  "reading": "かぎ",
+  "meanings": [
+   "key"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1343950",
+  "language": "ja",
+  "orthography": "書く",
+  "reading": "かく",
+  "meanings": [
+   "to write",
+   "to compose",
+   "to pen"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1206900",
+  "language": "ja",
+  "orthography": "学生",
+  "reading": "がくせい",
+  "meanings": [
+   "student (esp. a university student)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1194480",
+  "language": "ja",
+  "orthography": "か月",
+  "reading": "かげつ",
+  "meanings": [
+   "counter for months"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1207610",
+  "language": "ja",
+  "orthography": "掛ける",
+  "reading": "かける",
+  "meanings": [
+   "to hang up (e.g. a coat, a picture on the wall)",
+   "to let hang",
+   "to suspend (from)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1301940",
+  "language": "ja",
+  "orthography": "傘",
+  "reading": "かさ",
+  "meanings": [
+   "umbrella",
+   "parasol"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1411160",
+  "language": "ja",
+  "orthography": "貸す",
+  "reading": "かす",
+  "meanings": [
+   "to lend",
+   "to loan"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1499720",
+  "language": "ja",
+  "orthography": "風",
+  "reading": "かぜ",
+  "meanings": [
+   "wind",
+   "breeze",
+   "draught"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1583720",
+  "language": "ja",
+  "orthography": "風邪",
+  "reading": "かぜ",
+  "meanings": [
+   "(common) cold",
+   "influenza",
+   "flu"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1516925",
+  "language": "ja",
+  "orthography": "方",
+  "reading": "かた",
+  "meanings": [
+   "direction",
+   "way"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1192150",
+  "language": "ja",
+  "orthography": "家族",
+  "reading": "かぞく",
+  "meanings": [
+   "family"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1511600",
+  "language": "ja",
+  "orthography": "片仮名",
+  "reading": "かたかな",
+  "meanings": [
+   "katakana",
+   "angular Japanese syllabary used primarily for loanwords"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2871532",
+  "language": "ja",
+  "orthography": "月",
+  "reading": "がつ",
+  "meanings": [
+   "month (of the year)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1206730",
+  "language": "ja",
+  "orthography": "学校",
+  "reading": "がっこう",
+  "meanings": [
+   "school"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1037670",
+  "language": "ja",
+  "orthography": "カップ",
+  "reading": "カップ",
+  "meanings": [
+   "cup (drinking vessel, measure, brassiere, prize, etc.)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1192280",
+  "language": "ja",
+  "orthography": "家庭",
+  "reading": "かてい",
+  "meanings": [
+   "home",
+   "household",
+   "family"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1206110",
+  "language": "ja",
+  "orthography": "角",
+  "reading": "かど",
+  "meanings": [
+   "corner",
+   "edge"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1208910",
+  "language": "ja",
+  "orthography": "かばん",
+  "reading": "かばん",
+  "meanings": [
+   "bag",
+   "satchel",
+   "briefcase"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1194870",
+  "language": "ja",
+  "orthography": "花瓶",
+  "reading": "かびん",
+  "meanings": [
+   "(flower) vase"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1484330",
+  "language": "ja",
+  "orthography": "かぶる",
+  "reading": "かぶる",
+  "meanings": [
+   "to put on (one's head)",
+   "to wear",
+   "to have on"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1311530",
+  "language": "ja",
+  "orthography": "紙",
+  "reading": "かみ",
+  "meanings": [
+   "paper"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1038350",
+  "language": "ja",
+  "orthography": "カメラ",
+  "reading": "カメラ",
+  "meanings": [
+   "camera"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1194290",
+  "language": "ja",
+  "orthography": "火曜日",
+  "reading": "かようび",
+  "meanings": [
+   "Tuesday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1365850",
+  "language": "ja",
+  "orthography": "辛い",
+  "reading": "からい",
+  "meanings": [
+   "spicy",
+   "hot"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1409140",
+  "language": "ja",
+  "orthography": "体",
+  "reading": "からだ",
+  "meanings": [
+   "body"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1323560",
+  "language": "ja",
+  "orthography": "借りる",
+  "reading": "かりる",
+  "meanings": [
+   "to borrow"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1252560",
+  "language": "ja",
+  "orthography": "軽い",
+  "reading": "かるい",
+  "meanings": [
+   "non-serious",
+   "minor",
+   "unimportant"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1039140",
+  "language": "ja",
+  "orthography": "カレー",
+  "reading": "カレー",
+  "meanings": [
+   "rice and curry"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1039220",
+  "language": "ja",
+  "orthography": "カレンダー",
+  "reading": "カレンダー",
+  "meanings": [
+   "calendar"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1390020",
+  "language": "ja",
+  "orthography": "川",
+  "reading": "かわ",
+  "meanings": [
+   "river",
+   "stream"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1581310",
+  "language": "ja",
+  "orthography": "側",
+  "reading": "がわ",
+  "meanings": [
+   "side (of something, or taking someone's side)",
+   "part"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1577200",
+  "language": "ja",
+  "orthography": "可愛い",
+  "reading": "かわいい",
+  "meanings": [
+   "cute",
+   "adorable",
+   "charming"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1213170",
+  "language": "ja",
+  "orthography": "漢字",
+  "reading": "かんじ",
+  "meanings": [
+   "kanji",
+   "Chinese character"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1534520",
+  "language": "ja",
+  "orthography": "木",
+  "reading": "き",
+  "meanings": [
+   "wood",
+   "timber"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1576760",
+  "language": "ja",
+  "orthography": "黄色",
+  "reading": "きいろ",
+  "meanings": [
+   "yellow",
+   "amber"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1182030",
+  "language": "ja",
+  "orthography": "黄色い",
+  "reading": "きいろい",
+  "meanings": [
+   "yellow"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1350040",
+  "language": "ja",
+  "orthography": "消える",
+  "reading": "きえる",
+  "meanings": [
+   "to disappear",
+   "to vanish",
+   "to go out of sight"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1591110",
+  "language": "ja",
+  "orthography": "聞く",
+  "reading": "きく",
+  "meanings": [
+   "to hear"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1520670",
+  "language": "ja",
+  "orthography": "北",
+  "reading": "きた",
+  "meanings": [
+   "north"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1042820",
+  "language": "ja",
+  "orthography": "ギター",
+  "reading": "ギター",
+  "meanings": [
+   "guitar"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1178940",
+  "language": "ja",
+  "orthography": "汚い",
+  "reading": "きたない",
+  "meanings": [
+   "dirty",
+   "filthy",
+   "foul"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1226440",
+  "language": "ja",
+  "orthography": "喫茶店",
+  "reading": "きっさてん",
+  "meanings": [
+   "coffee shop",
+   "tearoom",
+   "coffee lounge"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1385070",
+  "language": "ja",
+  "orthography": "切手",
+  "reading": "きって",
+  "meanings": [
+   "stamp (postage)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1385170",
+  "language": "ja",
+  "orthography": "切符",
+  "reading": "きっぷ",
+  "meanings": [
+   "ticket"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1579260",
+  "language": "ja",
+  "orthography": "昨日",
+  "reading": "きのう",
+  "meanings": [
+   "yesterday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1578150",
+  "language": "ja",
+  "orthography": "九",
+  "reading": "きゅう",
+  "meanings": [
+   "nine",
+   "9"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1231580",
+  "language": "ja",
+  "orthography": "牛肉",
+  "reading": "ぎゅうにく",
+  "meanings": [
+   "beef"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1231590",
+  "language": "ja",
+  "orthography": "牛乳",
+  "reading": "ぎゅうにゅう",
+  "meanings": [
+   "(cow's) milk"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1579110",
+  "language": "ja",
+  "orthography": "今日",
+  "reading": "きょう",
+  "meanings": [
+   "today",
+   "this day"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1237150",
+  "language": "ja",
+  "orthography": "教室",
+  "reading": "きょうしつ",
+  "meanings": [
+   "classroom",
+   "lecture room"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1249960",
+  "language": "ja",
+  "orthography": "兄弟",
+  "reading": "きょうだい",
+  "meanings": [
+   "brothers and sisters",
+   "siblings"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1231690",
+  "language": "ja",
+  "orthography": "去年",
+  "reading": "きょねん",
+  "meanings": [
+   "last year"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1257240",
+  "language": "ja",
+  "orthography": "嫌い",
+  "reading": "きらい",
+  "meanings": [
+   "disliking",
+   "hating",
+   "detesting"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1384830",
+  "language": "ja",
+  "orthography": "切る",
+  "reading": "きる",
+  "meanings": [
+   "to terminate (e.g. a conversation)",
+   "to hang up (the phone)",
+   "to disconnect"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1423000",
+  "language": "ja",
+  "orthography": "着る",
+  "reading": "きる",
+  "meanings": [
+   "to wear (from the shoulders down)",
+   "to put on"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1591900",
+  "language": "ja",
+  "orthography": "綺麗",
+  "reading": "きれい",
+  "meanings": [
+   "clean",
+   "clear",
+   "pure"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1042610",
+  "language": "ja",
+  "orthography": "キロ",
+  "reading": "キロ",
+  "meanings": [
+   "kilogram",
+   "kilometre"
+  ],
+  "partOfSpeech": "prefix",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1243490",
+  "language": "ja",
+  "orthography": "銀行",
+  "reading": "ぎんこう",
+  "meanings": [
+   "bank",
+   "banking institution"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1243320",
+  "language": "ja",
+  "orthography": "金曜日",
+  "reading": "きんようび",
+  "meanings": [
+   "Friday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1538160",
+  "language": "ja",
+  "orthography": "薬",
+  "reading": "くすり",
+  "meanings": [
+   "medicine",
+   "pharmaceuticals",
+   "(legal) drugs"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1184270",
+  "language": "ja",
+  "orthography": "下さい",
+  "reading": "ください",
+  "meanings": [
+   "please (do for me)"
+  ],
+  "partOfSpeech": "expression",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1193060",
+  "language": "ja",
+  "orthography": "果物",
+  "reading": "くだもの",
+  "meanings": [
+   "fruit"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1275640",
+  "language": "ja",
+  "orthography": "口",
+  "reading": "くち",
+  "meanings": [
+   "mouth"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1246700",
+  "language": "ja",
+  "orthography": "靴",
+  "reading": "くつ",
+  "meanings": [
+   "shoe",
+   "shoes",
+   "boots"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1246740",
+  "language": "ja",
+  "orthography": "靴下",
+  "reading": "くつした",
+  "meanings": [
+   "socks",
+   "sock",
+   "stockings"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1592250",
+  "language": "ja",
+  "orthography": "国",
+  "reading": "くに",
+  "meanings": [
+   "country",
+   "state"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1592340",
+  "language": "ja",
+  "orthography": "曇り",
+  "reading": "くもり",
+  "meanings": [
+   "cloudiness",
+   "cloudy weather"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1457560",
+  "language": "ja",
+  "orthography": "曇る",
+  "reading": "くもる",
+  "meanings": [
+   "to get cloudy",
+   "to cloud over",
+   "to become overcast"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1154330",
+  "language": "ja",
+  "orthography": "暗い",
+  "reading": "くらい",
+  "meanings": [
+   "dark",
+   "gloomy",
+   "murky"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1044070",
+  "language": "ja",
+  "orthography": "クラス",
+  "reading": "クラス",
+  "meanings": [
+   "class"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1046810",
+  "language": "ja",
+  "orthography": "グラム",
+  "reading": "グラム",
+  "meanings": [
+   "gram",
+   "gramme"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1547720",
+  "language": "ja",
+  "orthography": "来る",
+  "reading": "くる",
+  "meanings": [
+   "to come (spatially or temporally)",
+   "to approach",
+   "to arrive"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1323080",
+  "language": "ja",
+  "orthography": "車",
+  "reading": "くるま",
+  "meanings": [
+   "car",
+   "automobile",
+   "vehicle"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1287410",
+  "language": "ja",
+  "orthography": "黒",
+  "reading": "くろ",
+  "meanings": [
+   "black"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1287420",
+  "language": "ja",
+  "orthography": "黒い",
+  "reading": "くろい",
+  "meanings": [
+   "black"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1252330",
+  "language": "ja",
+  "orthography": "警官",
+  "reading": "けいかん",
+  "meanings": [
+   "police officer",
+   "policeman",
+   "constable"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1579100",
+  "language": "ja",
+  "orthography": "今朝",
+  "reading": "けさ",
+  "meanings": [
+   "this morning"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1350110",
+  "language": "ja",
+  "orthography": "消す",
+  "reading": "けす",
+  "meanings": [
+   "to erase",
+   "to rub out",
+   "to rub off"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1254760",
+  "language": "ja",
+  "orthography": "結構",
+  "reading": "けっこう",
+  "meanings": [
+   "splendid",
+   "nice",
+   "wonderful"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1254790",
+  "language": "ja",
+  "orthography": "結婚",
+  "reading": "けっこん",
+  "meanings": [
+   "marriage"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1255890",
+  "language": "ja",
+  "orthography": "月曜日",
+  "reading": "げつようび",
+  "meanings": [
+   "Monday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1263400",
+  "language": "ja",
+  "orthography": "玄関",
+  "reading": "げんかん",
+  "meanings": [
+   "entrance",
+   "front door",
+   "entryway"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1260720",
+  "language": "ja",
+  "orthography": "元気",
+  "reading": "げんき",
+  "meanings": [
+   "lively",
+   "full of spirit",
+   "energetic"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1264740",
+  "language": "ja",
+  "orthography": "個",
+  "reading": "こ",
+  "meanings": [
+   "counter for (small) things or pieces"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1268060",
+  "language": "ja",
+  "orthography": "五",
+  "reading": "ご",
+  "meanings": [
+   "five",
+   "5"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1270910",
+  "language": "ja",
+  "orthography": "語",
+  "reading": "ご",
+  "meanings": [
+   "word",
+   "term"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1273270",
+  "language": "ja",
+  "orthography": "公園",
+  "reading": "こうえん",
+  "meanings": [
+   "(public) park"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1592970",
+  "language": "ja",
+  "orthography": "交差点",
+  "reading": "こうさてん",
+  "meanings": [
+   "crossing",
+   "intersection"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1280770",
+  "language": "ja",
+  "orthography": "紅茶",
+  "reading": "こうちゃ",
+  "meanings": [
+   "black tea"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1272500",
+  "language": "ja",
+  "orthography": "交番",
+  "reading": "こうばん",
+  "meanings": [
+   "police box",
+   "koban",
+   "small neighborhood police station"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1380440",
+  "language": "ja",
+  "orthography": "声",
+  "reading": "こえ",
+  "meanings": [
+   "voice"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1049000",
+  "language": "ja",
+  "orthography": "コート",
+  "reading": "コート",
+  "meanings": [
+   "coat"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1049180",
+  "language": "ja",
+  "orthography": "コーヒー",
+  "reading": "コーヒー",
+  "meanings": [
+   "coffee"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1288810",
+  "language": "ja",
+  "orthography": "ここ",
+  "reading": "ここ",
+  "meanings": [
+   "here",
+   "this place"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1268990",
+  "language": "ja",
+  "orthography": "午後",
+  "reading": "ごご",
+  "meanings": [
+   "afternoon",
+   "p.m."
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1243850",
+  "language": "ja",
+  "orthography": "九日",
+  "reading": "ここのか",
+  "meanings": [
+   "9th day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1243600",
+  "language": "ja",
+  "orthography": "九つ",
+  "reading": "ここのつ",
+  "meanings": [
+   "nine"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1269060",
+  "language": "ja",
+  "orthography": "午前",
+  "reading": "ごぜん",
+  "meanings": [
+   "morning",
+   "a.m."
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1449540",
+  "language": "ja",
+  "orthography": "答える",
+  "reading": "こたえる",
+  "meanings": [
+   "to answer",
+   "to reply"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1004500",
+  "language": "ja",
+  "orthography": "こちら",
+  "reading": "こちら",
+  "meanings": [
+   "this way",
+   "this direction"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1050390",
+  "language": "ja",
+  "orthography": "コップ",
+  "reading": "コップ",
+  "meanings": [
+   "glass (drinking vessel)",
+   "tumbler"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1579130",
+  "language": "ja",
+  "orthography": "今年",
+  "reading": "ことし",
+  "meanings": [
+   "this year"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1264540",
+  "language": "ja",
+  "orthography": "言葉",
+  "reading": "ことば",
+  "meanings": [
+   "word",
+   "phrase",
+   "expression"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1307850",
+  "language": "ja",
+  "orthography": "子供",
+  "reading": "こども",
+  "meanings": [
+   "child",
+   "children"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1582920",
+  "language": "ja",
+  "orthography": "この",
+  "reading": "この",
+  "meanings": [
+   "this"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1270590",
+  "language": "ja",
+  "orthography": "御飯",
+  "reading": "ごはん",
+  "meanings": [
+   "cooked rice"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1050590",
+  "language": "ja",
+  "orthography": "コピー",
+  "reading": "コピー",
+  "meanings": [
+   "copy",
+   "photocopy"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1289590",
+  "language": "ja",
+  "orthography": "困る",
+  "reading": "こまる",
+  "meanings": [
+   "to be troubled",
+   "to have difficulty",
+   "to be in a fix"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1628530",
+  "language": "ja",
+  "orthography": "これ",
+  "reading": "これ",
+  "meanings": [
+   "this",
+   "this one"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1579080",
+  "language": "ja",
+  "orthography": "ころ",
+  "reading": "ころ",
+  "meanings": [
+   "(approximate) time",
+   "around",
+   "about"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1289100",
+  "language": "ja",
+  "orthography": "今月",
+  "reading": "こんげつ",
+  "meanings": [
+   "this month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1289220",
+  "language": "ja",
+  "orthography": "今週",
+  "reading": "こんしゅう",
+  "meanings": [
+   "this week"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1004880",
+  "language": "ja",
+  "orthography": "こんな",
+  "reading": "こんな",
+  "meanings": [
+   "this sort of",
+   "this kind of",
+   "like this"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1289470",
+  "language": "ja",
+  "orthography": "今晩",
+  "reading": "こんばん",
+  "meanings": [
+   "tonight",
+   "this evening"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1005110",
+  "language": "ja",
+  "orthography": "さあ",
+  "reading": "さあ",
+  "meanings": [
+   "come (on)",
+   "come now",
+   "come along"
+  ],
+  "partOfSpeech": "interjection",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1294940",
+  "language": "ja",
+  "orthography": "歳",
+  "reading": "さい",
+  "meanings": [
+   "... years old",
+   "age (of) ..."
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1296970",
+  "language": "ja",
+  "orthography": "財布",
+  "reading": "さいふ",
+  "meanings": [
+   "wallet",
+   "purse",
+   "coin purse"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1578010",
+  "language": "ja",
+  "orthography": "魚",
+  "reading": "さかな",
+  "meanings": [
+   "fish"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1387210",
+  "language": "ja",
+  "orthography": "先",
+  "reading": "さき",
+  "meanings": [
+   "previous",
+   "prior",
+   "former"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1297210",
+  "language": "ja",
+  "orthography": "咲く",
+  "reading": "さく",
+  "meanings": [
+   "to bloom",
+   "to flower",
+   "to blossom"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1297960",
+  "language": "ja",
+  "orthography": "作文",
+  "reading": "さくぶん",
+  "meanings": [
+   "writing (an essay, prose, etc.)",
+   "composition"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1291330",
+  "language": "ja",
+  "orthography": "差す",
+  "reading": "さす",
+  "meanings": [
+   "to hold up (an umbrella, etc.)",
+   "to put up",
+   "to raise"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1298520",
+  "language": "ja",
+  "orthography": "冊",
+  "reading": "さつ",
+  "meanings": [
+   "counter for books"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1299400",
+  "language": "ja",
+  "orthography": "雑誌",
+  "reading": "ざっし",
+  "meanings": [
+   "magazine",
+   "journal",
+   "periodical"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1291600",
+  "language": "ja",
+  "orthography": "砂糖",
+  "reading": "さとう",
+  "meanings": [
+   "sugar"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1210360",
+  "language": "ja",
+  "orthography": "寒い",
+  "reading": "さむい",
+  "meanings": [
+   "cold (e.g. weather)"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1293660",
+  "language": "ja",
+  "orthography": "さ来年",
+  "reading": "さらいねん",
+  "meanings": [
+   "year after next"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1579350",
+  "language": "ja",
+  "orthography": "三",
+  "reading": "さん",
+  "meanings": [
+   "three",
+   "3"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1303620",
+  "language": "ja",
+  "orthography": "散歩",
+  "reading": "さんぽ",
+  "meanings": [
+   "walk",
+   "stroll"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1579470",
+  "language": "ja",
+  "orthography": "四",
+  "reading": "し",
+  "meanings": [
+   "four",
+   "4"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2020680",
+  "language": "ja",
+  "orthography": "時",
+  "reading": "じ",
+  "meanings": [
+   "o'clock",
+   "hour"
+  ],
+  "partOfSpeech": "suffix",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1576630",
+  "language": "ja",
+  "orthography": "塩",
+  "reading": "しお",
+  "meanings": [
+   "salt",
+   "common salt",
+   "table salt"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1505990",
+  "language": "ja",
+  "orthography": "しかし",
+  "reading": "しかし",
+  "meanings": [
+   "however",
+   "but"
+  ],
+  "partOfSpeech": "conjunction",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1315920",
+  "language": "ja",
+  "orthography": "時間",
+  "reading": "じかん",
+  "meanings": [
+   "time"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1304970",
+  "language": "ja",
+  "orthography": "仕事",
+  "reading": "しごと",
+  "meanings": [
+   "work",
+   "job",
+   "labor"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1318970",
+  "language": "ja",
+  "orthography": "辞書",
+  "reading": "じしょ",
+  "meanings": [
+   "dictionary",
+   "lexicon"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1381820",
+  "language": "ja",
+  "orthography": "静か",
+  "reading": "しずか",
+  "meanings": [
+   "quiet",
+   "silent"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1184140",
+  "language": "ja",
+  "orthography": "下",
+  "reading": "した",
+  "meanings": [
+   "below",
+   "down",
+   "under"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1319210",
+  "language": "ja",
+  "orthography": "七",
+  "reading": "しち",
+  "meanings": [
+   "seven"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1320760",
+  "language": "ja",
+  "orthography": "質問",
+  "reading": "しつもん",
+  "meanings": [
+   "question",
+   "inquiry",
+   "enquiry"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1318290",
+  "language": "ja",
+  "orthography": "自転車",
+  "reading": "じてんしゃ",
+  "meanings": [
+   "bicycle",
+   "bike"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1318400",
+  "language": "ja",
+  "orthography": "自動車",
+  "reading": "じどうしゃ",
+  "meanings": [
+   "car",
+   "automobile",
+   "motorcar"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1310730",
+  "language": "ja",
+  "orthography": "死ぬ",
+  "reading": "しぬ",
+  "meanings": [
+   "to die",
+   "to pass away"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1315140",
+  "language": "ja",
+  "orthography": "字引",
+  "reading": "じびき",
+  "meanings": [
+   "dictionary"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1318610",
+  "language": "ja",
+  "orthography": "自分",
+  "reading": "じぶん",
+  "meanings": [
+   "myself",
+   "yourself",
+   "oneself"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1436560",
+  "language": "ja",
+  "orthography": "閉まる",
+  "reading": "しまる",
+  "meanings": [
+   "to be shut",
+   "to close",
+   "to be closed"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1508590",
+  "language": "ja",
+  "orthography": "閉める",
+  "reading": "しめる",
+  "meanings": [
+   "to close",
+   "to shut"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1436570",
+  "language": "ja",
+  "orthography": "締める",
+  "reading": "しめる",
+  "meanings": [
+   "to tie",
+   "to fasten",
+   "to tighten"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1005900",
+  "language": "ja",
+  "orthography": "じゃ",
+  "reading": "じゃ",
+  "meanings": [
+   "then",
+   "well",
+   "so"
+  ],
+  "partOfSpeech": "conjunction",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1321900",
+  "language": "ja",
+  "orthography": "写真",
+  "reading": "しゃしん",
+  "meanings": [
+   "photograph",
+   "photo",
+   "picture"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1061520",
+  "language": "ja",
+  "orthography": "シャツ",
+  "reading": "シャツ",
+  "meanings": [
+   "shirt (undergarment)",
+   "undershirt",
+   "singlet"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1061820",
+  "language": "ja",
+  "orthography": "シャワー",
+  "reading": "シャワー",
+  "meanings": [
+   "shower"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1579840",
+  "language": "ja",
+  "orthography": "十",
+  "reading": "じゅう",
+  "meanings": [
+   "ten",
+   "10"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1333500",
+  "language": "ja",
+  "orthography": "週間",
+  "reading": "しゅうかん",
+  "meanings": [
+   "week"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1330290",
+  "language": "ja",
+  "orthography": "授業",
+  "reading": "じゅぎょう",
+  "meanings": [
+   "lesson",
+   "class",
+   "teaching"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1337270",
+  "language": "ja",
+  "orthography": "宿題",
+  "reading": "しゅくだい",
+  "meanings": [
+   "homework",
+   "assignment"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1353320",
+  "language": "ja",
+  "orthography": "上手",
+  "reading": "じょうず",
+  "meanings": [
+   "skillful",
+   "skilled",
+   "proficient"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1580480",
+  "language": "ja",
+  "orthography": "丈夫",
+  "reading": "じょうぶ",
+  "meanings": [
+   "healthy",
+   "robust",
+   "strong"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1595020",
+  "language": "ja",
+  "orthography": "醤油",
+  "reading": "しょうゆ",
+  "meanings": [
+   "soy sauce",
+   "soya sauce",
+   "shoyu"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1358550",
+  "language": "ja",
+  "orthography": "食堂",
+  "reading": "しょくどう",
+  "meanings": [
+   "dining room",
+   "dining hall",
+   "cafeteria"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1420470",
+  "language": "ja",
+  "orthography": "知る",
+  "reading": "しる",
+  "meanings": [
+   "to know",
+   "to be aware (of)",
+   "to be conscious (of)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1474900",
+  "language": "ja",
+  "orthography": "白",
+  "reading": "しろ",
+  "meanings": [
+   "white"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1474910",
+  "language": "ja",
+  "orthography": "白い",
+  "reading": "しろい",
+  "meanings": [
+   "white"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1362360",
+  "language": "ja",
+  "orthography": "新聞",
+  "reading": "しんぶん",
+  "meanings": [
+   "newspaper"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1372190",
+  "language": "ja",
+  "orthography": "水曜日",
+  "reading": "すいようび",
+  "meanings": [
+   "Wednesday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1228260",
+  "language": "ja",
+  "orthography": "吸う",
+  "reading": "すう",
+  "meanings": [
+   "to breathe in",
+   "to inhale",
+   "to smoke (a cigarette, etc.)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1067470",
+  "language": "ja",
+  "orthography": "スカート",
+  "reading": "スカート",
+  "meanings": [
+   "skirt"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1277450",
+  "language": "ja",
+  "orthography": "好き",
+  "reading": "すき",
+  "meanings": [
+   "liking (romantically)",
+   "being in love with",
+   "beloved"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1195960",
+  "language": "ja",
+  "orthography": "すぎ",
+  "reading": "すぎ",
+  "meanings": [
+   "past",
+   "after"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1348910",
+  "language": "ja",
+  "orthography": "少ない",
+  "reading": "すくない",
+  "meanings": [
+   "few",
+   "little",
+   "small (amount)"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1430620",
+  "language": "ja",
+  "orthography": "すぐに",
+  "reading": "すぐに",
+  "meanings": [
+   "immediately",
+   "right away",
+   "at once"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1348870",
+  "language": "ja",
+  "orthography": "少し",
+  "reading": "すこし",
+  "meanings": [
+   "a little",
+   "a bit",
+   "a small amount"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1554370",
+  "language": "ja",
+  "orthography": "涼しい",
+  "reading": "すずしい",
+  "meanings": [
+   "cool",
+   "refreshing"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2006560",
+  "language": "ja",
+  "orthography": "ずつ",
+  "reading": "ずつ",
+  "meanings": [
+   "at a time",
+   "piecemeal"
+  ],
+  "partOfSpeech": "suffix",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1070790",
+  "language": "ja",
+  "orthography": "ストーブ",
+  "reading": "ストーブ",
+  "meanings": [
+   "(room) heater",
+   "stove"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1072590",
+  "language": "ja",
+  "orthography": "スプーン",
+  "reading": "スプーン",
+  "meanings": [
+   "spoon"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1073210",
+  "language": "ja",
+  "orthography": "スポーツ",
+  "reading": "スポーツ",
+  "meanings": [
+   "sport",
+   "sports"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1074260",
+  "language": "ja",
+  "orthography": "ズボン",
+  "reading": "ズボン",
+  "meanings": [
+   "trousers",
+   "pants"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1334040",
+  "language": "ja",
+  "orthography": "住む",
+  "reading": "すむ",
+  "meanings": [
+   "to live (of humans)",
+   "to reside",
+   "to inhabit"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1157170",
+  "language": "ja",
+  "orthography": "する",
+  "reading": "する",
+  "meanings": [
+   "to do",
+   "to carry out",
+   "to perform"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1291800",
+  "language": "ja",
+  "orthography": "座る",
+  "reading": "すわる",
+  "meanings": [
+   "to sit (down)",
+   "to have a seat",
+   "to be seated"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1472650",
+  "language": "ja",
+  "orthography": "背",
+  "reading": "せい",
+  "meanings": [
+   "height",
+   "stature"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1379380",
+  "language": "ja",
+  "orthography": "生徒",
+  "reading": "せいと",
+  "meanings": [
+   "pupil",
+   "student",
+   "schoolchild"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1074270",
+  "language": "ja",
+  "orthography": "セーター",
+  "reading": "セーター",
+  "meanings": [
+   "sweater",
+   "jumper"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1382590",
+  "language": "ja",
+  "orthography": "石鹸",
+  "reading": "せっけん",
+  "meanings": [
+   "soap"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1472740",
+  "language": "ja",
+  "orthography": "背広",
+  "reading": "せびろ",
+  "meanings": [
+   "business suit"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1237680",
+  "language": "ja",
+  "orthography": "狭い",
+  "reading": "せまい",
+  "meanings": [
+   "narrow",
+   "confined",
+   "small"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2839962",
+  "language": "ja",
+  "orthography": "ゼロ",
+  "reading": "ゼロ",
+  "meanings": [
+   "zero",
+   "0",
+   "nought"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1388740",
+  "language": "ja",
+  "orthography": "千",
+  "reading": "せん",
+  "meanings": [
+   "thousand",
+   "1,000"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1387500",
+  "language": "ja",
+  "orthography": "先月",
+  "reading": "せんげつ",
+  "meanings": [
+   "last month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1387870",
+  "language": "ja",
+  "orthography": "先週",
+  "reading": "せんしゅう",
+  "meanings": [
+   "last week",
+   "the week before"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1387990",
+  "language": "ja",
+  "orthography": "先生",
+  "reading": "せんせい",
+  "meanings": [
+   "sensei",
+   "title or form of address for a teacher, master, doctor, lawyer, etc."
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1390980",
+  "language": "ja",
+  "orthography": "洗濯",
+  "reading": "せんたく",
+  "meanings": [
+   "washing",
+   "laundry"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1396130",
+  "language": "ja",
+  "orthography": "全部",
+  "reading": "ぜんぶ",
+  "meanings": [
+   "all",
+   "entire",
+   "whole"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2137720",
+  "language": "ja",
+  "orthography": "そう",
+  "reading": "そう",
+  "meanings": [
+   "so",
+   "the same",
+   "that's the case"
+  ],
+  "partOfSpeech": "interjection",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1399790",
+  "language": "ja",
+  "orthography": "掃除",
+  "reading": "そうじ",
+  "meanings": [
+   "cleaning",
+   "sweeping",
+   "dusting"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1612860",
+  "language": "ja",
+  "orthography": "そうして",
+  "reading": "そうして",
+  "meanings": [
+   "and",
+   "like that"
+  ],
+  "partOfSpeech": "conjunction",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1006670",
+  "language": "ja",
+  "orthography": "そこ",
+  "reading": "そこ",
+  "meanings": [
+   "there (place just mentioned)",
+   "that place"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1006780",
+  "language": "ja",
+  "orthography": "そちら",
+  "reading": "そちら",
+  "meanings": [
+   "there"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1203250",
+  "language": "ja",
+  "orthography": "外",
+  "reading": "そと",
+  "meanings": [
+   "outside",
+   "exterior"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1006830",
+  "language": "ja",
+  "orthography": "その",
+  "reading": "その",
+  "meanings": [
+   "that",
+   "the"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1403830",
+  "language": "ja",
+  "orthography": "そば",
+  "reading": "そば",
+  "meanings": [
+   "(place) near by",
+   "(place) close by",
+   "(place) right next to"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1245290",
+  "language": "ja",
+  "orthography": "空",
+  "reading": "そら",
+  "meanings": [
+   "sky",
+   "the air",
+   "the heavens"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1006970",
+  "language": "ja",
+  "orthography": "それ",
+  "reading": "それ",
+  "meanings": [
+   "that",
+   "it"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1006980",
+  "language": "ja",
+  "orthography": "それから",
+  "reading": "それから",
+  "meanings": [
+   "and then",
+   "after that"
+  ],
+  "partOfSpeech": "expression",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1406050",
+  "language": "ja",
+  "orthography": "それでは",
+  "reading": "それでは",
+  "meanings": [
+   "well, ...",
+   "right, ...",
+   "now, ..."
+  ],
+  "partOfSpeech": "conjunction",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1412560",
+  "language": "ja",
+  "orthography": "台",
+  "reading": "だい",
+  "meanings": [
+   "counter for machines and vehicles"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1413240",
+  "language": "ja",
+  "orthography": "大学",
+  "reading": "だいがく",
+  "meanings": [
+   "university",
+   "college"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1413890",
+  "language": "ja",
+  "orthography": "大使館",
+  "reading": "たいしかん",
+  "meanings": [
+   "embassy"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1414150",
+  "language": "ja",
+  "orthography": "大丈夫",
+  "reading": "だいじょうぶ",
+  "meanings": [
+   "safe",
+   "secure",
+   "sound"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1413660",
+  "language": "ja",
+  "orthography": "大好き",
+  "reading": "だいすき",
+  "meanings": [
+   "liking very much",
+   "loving (something or someone)",
+   "adoring"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1414340",
+  "language": "ja",
+  "orthography": "大切",
+  "reading": "たいせつ",
+  "meanings": [
+   "important",
+   "significant",
+   "serious"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1412640",
+  "language": "ja",
+  "orthography": "台所",
+  "reading": "だいどころ",
+  "meanings": [
+   "kitchen"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1415000",
+  "language": "ja",
+  "orthography": "大変",
+  "reading": "たいへん",
+  "meanings": [
+   "difficult",
+   "hard",
+   "challenging"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1283190",
+  "language": "ja",
+  "orthography": "高い",
+  "reading": "たかい",
+  "meanings": [
+   "high",
+   "tall"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1007340",
+  "language": "ja",
+  "orthography": "だけ",
+  "reading": "だけ",
+  "meanings": [
+   "only",
+   "just",
+   "merely"
+  ],
+  "partOfSpeech": "particle",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1415870",
+  "language": "ja",
+  "orthography": "沢山",
+  "reading": "たくさん",
+  "meanings": [
+   "a lot",
+   "lots",
+   "plenty"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1076190",
+  "language": "ja",
+  "orthography": "タクシー",
+  "reading": "タクシー",
+  "meanings": [
+   "taxi"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1338180",
+  "language": "ja",
+  "orthography": "出す",
+  "reading": "だす",
+  "meanings": [
+   "to take out",
+   "to get out"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1597040",
+  "language": "ja",
+  "orthography": "立つ",
+  "reading": "たつ",
+  "meanings": [
+   "to stand (up)",
+   "to rise",
+   "to get to one's feet"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1335640",
+  "language": "ja",
+  "orthography": "たて",
+  "reading": "たて",
+  "meanings": [
+   "the vertical",
+   "height"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1257540",
+  "language": "ja",
+  "orthography": "建物",
+  "reading": "たてもの",
+  "meanings": [
+   "building"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1207240",
+  "language": "ja",
+  "orthography": "楽しい",
+  "reading": "たのしい",
+  "meanings": [
+   "enjoyable",
+   "fun",
+   "pleasant"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1548370",
+  "language": "ja",
+  "orthography": "頼む",
+  "reading": "たのむ",
+  "meanings": [
+   "to request",
+   "to beg",
+   "to ask"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1597150",
+  "language": "ja",
+  "orthography": "たばこ",
+  "reading": "たばこ",
+  "meanings": [
+   "tobacco",
+   "cigarette",
+   "cigar"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1407980",
+  "language": "ja",
+  "orthography": "多分",
+  "reading": "たぶん",
+  "meanings": [
+   "probably",
+   "likely",
+   "perhaps"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1358340",
+  "language": "ja",
+  "orthography": "食べ物",
+  "reading": "たべもの",
+  "meanings": [
+   "food"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1358280",
+  "language": "ja",
+  "orthography": "食べる",
+  "reading": "たべる",
+  "meanings": [
+   "to eat"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1549140",
+  "language": "ja",
+  "orthography": "卵",
+  "reading": "たまご",
+  "meanings": [
+   "eggs",
+   "egg",
+   "spawn"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1416830",
+  "language": "ja",
+  "orthography": "誰",
+  "reading": "だれ",
+  "meanings": [
+   "who"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1416840",
+  "language": "ja",
+  "orthography": "誰か",
+  "reading": "だれか",
+  "meanings": [
+   "someone",
+   "somebody"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1419110",
+  "language": "ja",
+  "orthography": "誕生日",
+  "reading": "たんじょうび",
+  "meanings": [
+   "birthday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1597350",
+  "language": "ja",
+  "orthography": "段々",
+  "reading": "だんだん",
+  "meanings": [
+   "gradually",
+   "by degrees",
+   "little by little"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1347750",
+  "language": "ja",
+  "orthography": "小さい",
+  "reading": "ちいさい",
+  "meanings": [
+   "small",
+   "little",
+   "tiny"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2136180",
+  "language": "ja",
+  "orthography": "小さな",
+  "reading": "ちいさな",
+  "meanings": [
+   "small",
+   "little",
+   "tiny"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1242130",
+  "language": "ja",
+  "orthography": "近い",
+  "reading": "ちかい",
+  "meanings": [
+   "near",
+   "close",
+   "short (distance)"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1158880",
+  "language": "ja",
+  "orthography": "違う",
+  "reading": "ちがう",
+  "meanings": [
+   "to differ (from)",
+   "to be different",
+   "to be distinct"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1242160",
+  "language": "ja",
+  "orthography": "近く",
+  "reading": "ちかく",
+  "meanings": [
+   "near",
+   "neighbourhood",
+   "neighborhood"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1420900",
+  "language": "ja",
+  "orthography": "地下鉄",
+  "reading": "ちかてつ",
+  "meanings": [
+   "subway",
+   "metro",
+   "underground (railway)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1421290",
+  "language": "ja",
+  "orthography": "地図",
+  "reading": "ちず",
+  "meanings": [
+   "map",
+   "atlas",
+   "chart"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1497610",
+  "language": "ja",
+  "orthography": "父",
+  "reading": "ちち",
+  "meanings": [
+   "father"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1422720",
+  "language": "ja",
+  "orthography": "茶色",
+  "reading": "ちゃいろ",
+  "meanings": [
+   "brown",
+   "light brown",
+   "tawny"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1597530",
+  "language": "ja",
+  "orthography": "茶碗",
+  "reading": "ちゃわん",
+  "meanings": [
+   "rice bowl",
+   "tea cup",
+   "teacup"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1620400",
+  "language": "ja",
+  "orthography": "中",
+  "reading": "ちゅう",
+  "meanings": [
+   "during",
+   "while",
+   "in (the course of)"
+  ],
+  "partOfSpeech": "suffix",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1427340",
+  "language": "ja",
+  "orthography": "丁度",
+  "reading": "ちょうど",
+  "meanings": [
+   "exactly",
+   "precisely",
+   "just"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1163940",
+  "language": "ja",
+  "orthography": "ちょっと",
+  "reading": "ちょっと",
+  "meanings": [
+   "a little",
+   "a bit",
+   "slightly"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2225040",
+  "language": "ja",
+  "orthography": "一日",
+  "reading": "ついたち",
+  "meanings": [
+   "first day of the month",
+   "the first of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1305990",
+  "language": "ja",
+  "orthography": "使う",
+  "reading": "つかう",
+  "meanings": [
+   "to use (a tool, method, etc.)",
+   "to make use of",
+   "to put to use"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1483740",
+  "language": "ja",
+  "orthography": "疲れる",
+  "reading": "つかれる",
+  "meanings": [
+   "to get tired",
+   "to tire",
+   "to get fatigued"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1316380",
+  "language": "ja",
+  "orthography": "次",
+  "reading": "つぎ",
+  "meanings": [
+   "next",
+   "following",
+   "subsequent"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1422970",
+  "language": "ja",
+  "orthography": "着く",
+  "reading": "つく",
+  "meanings": [
+   "to arrive at",
+   "to reach"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1220210",
+  "language": "ja",
+  "orthography": "机",
+  "reading": "つくえ",
+  "meanings": [
+   "desk"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1597890",
+  "language": "ja",
+  "orthography": "作る",
+  "reading": "つくる",
+  "meanings": [
+   "to make",
+   "to produce",
+   "to manufacture"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1495770",
+  "language": "ja",
+  "orthography": "つける",
+  "reading": "つける",
+  "meanings": [
+   "to turn on (a light)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1240825",
+  "language": "ja",
+  "orthography": "勤める",
+  "reading": "つとめる",
+  "meanings": [
+   "to work (for, at, in)",
+   "to be employed (at)",
+   "to serve (as)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1008190",
+  "language": "ja",
+  "orthography": "つまらない",
+  "reading": "つまらない",
+  "meanings": [
+   "dull",
+   "uninteresting",
+   "boring"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1556730",
+  "language": "ja",
+  "orthography": "冷たい",
+  "reading": "つめたい",
+  "meanings": [
+   "cold (to the touch)",
+   "chilly",
+   "icy"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1236070",
+  "language": "ja",
+  "orthography": "強い",
+  "reading": "つよい",
+  "meanings": [
+   "strong",
+   "brawny",
+   "powerful"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1327190",
+  "language": "ja",
+  "orthography": "手",
+  "reading": "て",
+  "meanings": [
+   "hand",
+   "arm"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1078750",
+  "language": "ja",
+  "orthography": "テープ",
+  "reading": "テープ",
+  "meanings": [
+   "tape"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1078810",
+  "language": "ja",
+  "orthography": "テープレコーダー",
+  "reading": "テープレコーダー",
+  "meanings": [
+   "tape recorder"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1078630",
+  "language": "ja",
+  "orthography": "テーブル",
+  "reading": "テーブル",
+  "meanings": [
+   "table"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1598550",
+  "language": "ja",
+  "orthography": "出かける",
+  "reading": "でかける",
+  "meanings": [
+   "to go out (e.g. on an excursion or outing)",
+   "to leave",
+   "to depart"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1327720",
+  "language": "ja",
+  "orthography": "手紙",
+  "reading": "てがみ",
+  "meanings": [
+   "letter",
+   "note"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1340450",
+  "language": "ja",
+  "orthography": "できる",
+  "reading": "できる",
+  "meanings": [
+   "to be able to do",
+   "to be possible",
+   "to be permitted (to do)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1338850",
+  "language": "ja",
+  "orthography": "出口",
+  "reading": "でぐち",
+  "meanings": [
+   "exit",
+   "way out"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1079760",
+  "language": "ja",
+  "orthography": "テスト",
+  "reading": "テスト",
+  "meanings": [
+   "test (of ability, knowledge, etc.)",
+   "exam",
+   "examination"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1008450",
+  "language": "ja",
+  "orthography": "では",
+  "reading": "では",
+  "meanings": [
+   "then",
+   "well",
+   "so"
+  ],
+  "partOfSpeech": "conjunction",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1083590",
+  "language": "ja",
+  "orthography": "デパート",
+  "reading": "デパート",
+  "meanings": [
+   "department store"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1008460",
+  "language": "ja",
+  "orthography": "でも",
+  "reading": "でも",
+  "meanings": [
+   "but",
+   "however",
+   "though"
+  ],
+  "partOfSpeech": "conjunction",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1338240",
+  "language": "ja",
+  "orthography": "出る",
+  "reading": "でる",
+  "meanings": [
+   "to leave",
+   "to exit",
+   "to go out"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1080510",
+  "language": "ja",
+  "orthography": "テレビ",
+  "reading": "テレビ",
+  "meanings": [
+   "television",
+   "TV"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1438690",
+  "language": "ja",
+  "orthography": "天気",
+  "reading": "てんき",
+  "meanings": [
+   "weather"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1443000",
+  "language": "ja",
+  "orthography": "電気",
+  "reading": "でんき",
+  "meanings": [
+   "(electric) light"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1443530",
+  "language": "ja",
+  "orthography": "電車",
+  "reading": "でんしゃ",
+  "meanings": [
+   "train",
+   "electric train"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1443840",
+  "language": "ja",
+  "orthography": "電話",
+  "reading": "でんわ",
+  "meanings": [
+   "telephone call",
+   "phone call"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1266970",
+  "language": "ja",
+  "orthography": "戸",
+  "reading": "と",
+  "meanings": [
+   "door (esp. Japanese-style)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1445160",
+  "language": "ja",
+  "orthography": "度",
+  "reading": "ど",
+  "meanings": [
+   "counter for occurrences"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1087820",
+  "language": "ja",
+  "orthography": "ドア",
+  "reading": "ドア",
+  "meanings": [
+   "door"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1084810",
+  "language": "ja",
+  "orthography": "トイレ",
+  "reading": "トイレ",
+  "meanings": [
+   "toilet",
+   "restroom",
+   "bathroom"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1008910",
+  "language": "ja",
+  "orthography": "どう",
+  "reading": "どう",
+  "meanings": [
+   "how",
+   "in what way",
+   "how about"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1466940",
+  "language": "ja",
+  "orthography": "どうして",
+  "reading": "どうして",
+  "meanings": [
+   "why",
+   "for what reason",
+   "for what purpose"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1189130",
+  "language": "ja",
+  "orthography": "どうぞ",
+  "reading": "どうぞ",
+  "meanings": [
+   "by all means",
+   "certainly",
+   "of course"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1451470",
+  "language": "ja",
+  "orthography": "動物",
+  "reading": "どうぶつ",
+  "meanings": [
+   "animal"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1009000",
+  "language": "ja",
+  "orthography": "どうも",
+  "reading": "どうも",
+  "meanings": [
+   "in spite of oneself",
+   "try as one might",
+   "no matter how hard one may try (to, not to)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1177800",
+  "language": "ja",
+  "orthography": "遠い",
+  "reading": "とおい",
+  "meanings": [
+   "far",
+   "distant",
+   "far away"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1335000",
+  "language": "ja",
+  "orthography": "十日",
+  "reading": "とおか",
+  "meanings": [
+   "10th day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1315840",
+  "language": "ja",
+  "orthography": "時",
+  "reading": "とき",
+  "meanings": [
+   "time",
+   "hour",
+   "moment"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1598680",
+  "language": "ja",
+  "orthography": "時々",
+  "reading": "ときどき",
+  "meanings": [
+   "sometimes",
+   "occasionally",
+   "at times"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1316140",
+  "language": "ja",
+  "orthography": "時計",
+  "reading": "とけい",
+  "meanings": [
+   "clock",
+   "watch",
+   "timepiece"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1577140",
+  "language": "ja",
+  "orthography": "どこ",
+  "reading": "どこ",
+  "meanings": [
+   "where",
+   "what place"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1343100",
+  "language": "ja",
+  "orthography": "所",
+  "reading": "ところ",
+  "meanings": [
+   "place",
+   "spot",
+   "scene"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1468060",
+  "language": "ja",
+  "orthography": "年",
+  "reading": "とし",
+  "meanings": [
+   "year"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1370420",
+  "language": "ja",
+  "orthography": "図書館",
+  "reading": "としょかん",
+  "meanings": [
+   "library"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1189360",
+  "language": "ja",
+  "orthography": "どちら",
+  "reading": "どちら",
+  "meanings": [
+   "which way",
+   "which direction",
+   "where"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1008630",
+  "language": "ja",
+  "orthography": "とても",
+  "reading": "とても",
+  "meanings": [
+   "very",
+   "awfully",
+   "exceedingly"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1189370",
+  "language": "ja",
+  "orthography": "どなた",
+  "reading": "どなた",
+  "meanings": [
+   "who"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1555830",
+  "language": "ja",
+  "orthography": "隣",
+  "reading": "となり",
+  "meanings": [
+   "house next door",
+   "neighbouring house",
+   "next-door neighbour"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1920240",
+  "language": "ja",
+  "orthography": "どの",
+  "reading": "どの",
+  "meanings": [
+   "which",
+   "what (way)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1429700",
+  "language": "ja",
+  "orthography": "飛ぶ",
+  "reading": "とぶ",
+  "meanings": [
+   "to fly",
+   "to soar"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1310620",
+  "language": "ja",
+  "orthography": "止まる",
+  "reading": "とまる",
+  "meanings": [
+   "to stop (doing, working, being supplied)",
+   "to come to a halt",
+   "to cease"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1540170",
+  "language": "ja",
+  "orthography": "友達",
+  "reading": "ともだち",
+  "meanings": [
+   "friend",
+   "companion"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1445590",
+  "language": "ja",
+  "orthography": "土曜日",
+  "reading": "どようび",
+  "meanings": [
+   "Saturday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1430250",
+  "language": "ja",
+  "orthography": "鳥",
+  "reading": "とり",
+  "meanings": [
+   "bird meat (esp. chicken meat)",
+   "fowl",
+   "poultry"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1253020",
+  "language": "ja",
+  "orthography": "鶏肉",
+  "reading": "とりにく",
+  "meanings": [
+   "chicken meat"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1326980",
+  "language": "ja",
+  "orthography": "取る",
+  "reading": "とる",
+  "meanings": [
+   "to get",
+   "to obtain",
+   "to acquire"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1298790",
+  "language": "ja",
+  "orthography": "撮る",
+  "reading": "とる",
+  "meanings": [
+   "to take (a photograph)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1009290",
+  "language": "ja",
+  "orthography": "どれ",
+  "reading": "どれ",
+  "meanings": [
+   "which (of three or more)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1009330",
+  "language": "ja",
+  "orthography": "どんな",
+  "reading": "どんな",
+  "meanings": [
+   "what kind of",
+   "what sort of",
+   "what"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1529520",
+  "language": "ja",
+  "orthography": "ない",
+  "reading": "ない",
+  "meanings": [
+   "nonexistent",
+   "not being (there)"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1089890",
+  "language": "ja",
+  "orthography": "ナイフ",
+  "reading": "ナイフ",
+  "meanings": [
+   "knife"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1423310",
+  "language": "ja",
+  "orthography": "中",
+  "reading": "なか",
+  "meanings": [
+   "inside",
+   "interior"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1429750",
+  "language": "ja",
+  "orthography": "長い",
+  "reading": "ながい",
+  "meanings": [
+   "long (distance, length)"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1532870",
+  "language": "ja",
+  "orthography": "鳴く",
+  "reading": "なく",
+  "meanings": [
+   "to make sound (of an animal)",
+   "to call",
+   "to cry"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1529530",
+  "language": "ja",
+  "orthography": "無くす",
+  "reading": "なくす",
+  "meanings": [
+   "to lose (something)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1577120",
+  "language": "ja",
+  "orthography": "なぜ",
+  "reading": "なぜ",
+  "meanings": [
+   "why",
+   "how",
+   "for what reason"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1191320",
+  "language": "ja",
+  "orthography": "夏",
+  "reading": "なつ",
+  "meanings": [
+   "summer"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1191420",
+  "language": "ja",
+  "orthography": "夏休み",
+  "reading": "なつやすみ",
+  "meanings": [
+   "summer vacation",
+   "summer holiday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1582300",
+  "language": "ja",
+  "orthography": "など",
+  "reading": "など",
+  "meanings": [
+   "et cetera",
+   "etc.",
+   "and the like"
+  ],
+  "partOfSpeech": "particle",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1319220",
+  "language": "ja",
+  "orthography": "七つ",
+  "reading": "ななつ",
+  "meanings": [
+   "seven"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2846738",
+  "language": "ja",
+  "orthography": "何",
+  "reading": "なん",
+  "meanings": [
+   "what"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1579630",
+  "language": "ja",
+  "orthography": "七日",
+  "reading": "なのか",
+  "meanings": [
+   "7th day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1531710",
+  "language": "ja",
+  "orthography": "名前",
+  "reading": "なまえ",
+  "meanings": [
+   "name"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1333070",
+  "language": "ja",
+  "orthography": "習う",
+  "reading": "ならう",
+  "meanings": [
+   "to take lessons in",
+   "to be taught",
+   "to learn (from a teacher)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1508380",
+  "language": "ja",
+  "orthography": "並ぶ",
+  "reading": "ならぶ",
+  "meanings": [
+   "to line up",
+   "to stand in a line"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1508390",
+  "language": "ja",
+  "orthography": "並べる",
+  "reading": "ならべる",
+  "meanings": [
+   "to line up",
+   "to set up",
+   "to arrange in a line"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1375610",
+  "language": "ja",
+  "orthography": "なる",
+  "reading": "なる",
+  "meanings": [
+   "to become",
+   "to get",
+   "to grow"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1461140",
+  "language": "ja",
+  "orthography": "二",
+  "reading": "に",
+  "meanings": [
+   "two",
+   "2"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1463480",
+  "language": "ja",
+  "orthography": "にぎやか",
+  "reading": "にぎやか",
+  "meanings": [
+   "bustling",
+   "busy",
+   "crowded"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1463520",
+  "language": "ja",
+  "orthography": "肉",
+  "reading": "にく",
+  "meanings": [
+   "meat"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1380840",
+  "language": "ja",
+  "orthography": "西",
+  "reading": "にし",
+  "meanings": [
+   "west"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2083100",
+  "language": "ja",
+  "orthography": "日",
+  "reading": "にち",
+  "meanings": [
+   "nth day (of the month)"
+  ],
+  "partOfSpeech": "suffix",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1464900",
+  "language": "ja",
+  "orthography": "日曜日",
+  "reading": "にちようび",
+  "meanings": [
+   "Sunday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1195430",
+  "language": "ja",
+  "orthography": "荷物",
+  "reading": "にもつ",
+  "meanings": [
+   "luggage",
+   "baggage",
+   "package"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1091500",
+  "language": "ja",
+  "orthography": "ニュース",
+  "reading": "ニュース",
+  "meanings": [
+   "news"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1436130",
+  "language": "ja",
+  "orthography": "庭",
+  "reading": "にわ",
+  "meanings": [
+   "garden",
+   "yard",
+   "courtyard"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2149890",
+  "language": "ja",
+  "orthography": "人",
+  "reading": "にん",
+  "meanings": [
+   "counter for people"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1416400",
+  "language": "ja",
+  "orthography": "脱ぐ",
+  "reading": "ぬぐ",
+  "meanings": [
+   "to take off (clothes, shoes, etc.)",
+   "to undress"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1183300",
+  "language": "ja",
+  "orthography": "温い",
+  "reading": "ぬるい",
+  "meanings": [
+   "lukewarm",
+   "tepid"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1092820",
+  "language": "ja",
+  "orthography": "ネクタイ",
+  "reading": "ネクタイ",
+  "meanings": [
+   "tie",
+   "necktie"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1467640",
+  "language": "ja",
+  "orthography": "猫",
+  "reading": "ねこ",
+  "meanings": [
+   "cat (esp. the domestic cat, Felis catus)",
+   "feline"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1360010",
+  "language": "ja",
+  "orthography": "寝る",
+  "reading": "ねる",
+  "meanings": [
+   "to go to bed",
+   "to lie in bed"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2084840",
+  "language": "ja",
+  "orthography": "年",
+  "reading": "ねん",
+  "meanings": [
+   "year",
+   "counter for years"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1093450",
+  "language": "ja",
+  "orthography": "ノート",
+  "reading": "ノート",
+  "meanings": [
+   "notebook",
+   "copy-book",
+   "exercise book"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1352570",
+  "language": "ja",
+  "orthography": "登る",
+  "reading": "のぼる",
+  "meanings": [
+   "to ascend",
+   "to go up",
+   "to climb"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1600430",
+  "language": "ja",
+  "orthography": "飲み物",
+  "reading": "のみもの",
+  "meanings": [
+   "drink",
+   "beverage"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1169870",
+  "language": "ja",
+  "orthography": "飲む",
+  "reading": "のむ",
+  "meanings": [
+   "to drink",
+   "to swallow",
+   "to take (medicine)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1355120",
+  "language": "ja",
+  "orthography": "乗る",
+  "reading": "のる",
+  "meanings": [
+   "to get on (train, plane, bus, ship, etc.)",
+   "to get in",
+   "to board"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1313000",
+  "language": "ja",
+  "orthography": "歯",
+  "reading": "は",
+  "meanings": [
+   "tooth",
+   "teeth"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1100760",
+  "language": "ja",
+  "orthography": "パーティー",
+  "reading": "パーティー",
+  "meanings": [
+   "party (social gathering)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1010080",
+  "language": "ja",
+  "orthography": "はい",
+  "reading": "はい",
+  "meanings": [
+   "yes",
+   "that is correct"
+  ],
+  "partOfSpeech": "interjection",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1201940",
+  "language": "ja",
+  "orthography": "灰皿",
+  "reading": "はいざら",
+  "meanings": [
+   "ashtray"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1465590",
+  "language": "ja",
+  "orthography": "入る",
+  "reading": "はいる",
+  "meanings": [
+   "to enter",
+   "to come in",
+   "to go in"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1546590",
+  "language": "ja",
+  "orthography": "葉書",
+  "reading": "はがき",
+  "meanings": [
+   "postcard"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1607260",
+  "language": "ja",
+  "orthography": "はく",
+  "reading": "はく",
+  "meanings": [
+   "to put on (lower-body clothing, e.g. pants, skirt, footwear)",
+   "to wear"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1585650",
+  "language": "ja",
+  "orthography": "箱",
+  "reading": "はこ",
+  "meanings": [
+   "box",
+   "case",
+   "chest"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1237410",
+  "language": "ja",
+  "orthography": "橋",
+  "reading": "はし",
+  "meanings": [
+   "bridge"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1476410",
+  "language": "ja",
+  "orthography": "箸",
+  "reading": "はし",
+  "meanings": [
+   "chopsticks"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1307500",
+  "language": "ja",
+  "orthography": "始まる",
+  "reading": "はじまる",
+  "meanings": [
+   "to begin",
+   "to start",
+   "to commence"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1342540",
+  "language": "ja",
+  "orthography": "初め",
+  "reading": "はじめ",
+  "meanings": [
+   "beginning",
+   "start",
+   "outset"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1342550",
+  "language": "ja",
+  "orthography": "初めて",
+  "reading": "はじめて",
+  "meanings": [
+   "for the first time"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1402540",
+  "language": "ja",
+  "orthography": "走る",
+  "reading": "はしる",
+  "meanings": [
+   "to run"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1098390",
+  "language": "ja",
+  "orthography": "バス",
+  "reading": "バス",
+  "meanings": [
+   "bus"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1098620",
+  "language": "ja",
+  "orthography": "バター",
+  "reading": "バター",
+  "meanings": [
+   "butter"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1600790",
+  "language": "ja",
+  "orthography": "二十歳",
+  "reading": "はたち",
+  "meanings": [
+   "20 years old"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1451150",
+  "language": "ja",
+  "orthography": "働く",
+  "reading": "はたらく",
+  "meanings": [
+   "to work",
+   "to labor",
+   "to labour"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1583090",
+  "language": "ja",
+  "orthography": "八",
+  "reading": "はち",
+  "meanings": [
+   "eight",
+   "8"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1600850",
+  "language": "ja",
+  "orthography": "二十日",
+  "reading": "はつか",
+  "meanings": [
+   "20th day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1194500",
+  "language": "ja",
+  "orthography": "花",
+  "reading": "はな",
+  "meanings": [
+   "flower",
+   "blossom",
+   "bloom"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1486720",
+  "language": "ja",
+  "orthography": "鼻",
+  "reading": "はな",
+  "meanings": [
+   "nose"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1600900",
+  "language": "ja",
+  "orthography": "話",
+  "reading": "はなし",
+  "meanings": [
+   "talk",
+   "speech",
+   "chat"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1562350",
+  "language": "ja",
+  "orthography": "話す",
+  "reading": "はなす",
+  "meanings": [
+   "to talk",
+   "to speak",
+   "to converse"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1514990",
+  "language": "ja",
+  "orthography": "母",
+  "reading": "はは",
+  "meanings": [
+   "mother"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1404975",
+  "language": "ja",
+  "orthography": "早い",
+  "reading": "はやい",
+  "meanings": [
+   "early",
+   "soon",
+   "earlier than usual"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1341000",
+  "language": "ja",
+  "orthography": "春",
+  "reading": "はる",
+  "meanings": [
+   "spring",
+   "springtime"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1427900",
+  "language": "ja",
+  "orthography": "貼る",
+  "reading": "はる",
+  "meanings": [
+   "to stick",
+   "to paste",
+   "to affix"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1376460",
+  "language": "ja",
+  "orthography": "晴れ",
+  "reading": "はれ",
+  "meanings": [
+   "clear weather",
+   "fine weather"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1376470",
+  "language": "ja",
+  "orthography": "晴れる",
+  "reading": "はれる",
+  "meanings": [
+   "to clear up",
+   "to clear away",
+   "to be sunny"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1478750",
+  "language": "ja",
+  "orthography": "半",
+  "reading": "はん",
+  "meanings": [
+   "half-past"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1482110",
+  "language": "ja",
+  "orthography": "晩",
+  "reading": "ばん",
+  "meanings": [
+   "evening",
+   "night"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:2022640",
+  "language": "ja",
+  "orthography": "番",
+  "reading": "ばん",
+  "meanings": [
+   "number (in a series)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1103090",
+  "language": "ja",
+  "orthography": "パン",
+  "reading": "パン",
+  "meanings": [
+   "bread",
+   "(sweet) pastry"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1096420",
+  "language": "ja",
+  "orthography": "ハンカチ",
+  "reading": "ハンカチ",
+  "meanings": [
+   "handkerchief"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1482290",
+  "language": "ja",
+  "orthography": "番号",
+  "reading": "ばんごう",
+  "meanings": [
+   "number",
+   "series of digits"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1601340",
+  "language": "ja",
+  "orthography": "晩御飯",
+  "reading": "ばんごはん",
+  "meanings": [
+   "dinner",
+   "evening meal"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1479890",
+  "language": "ja",
+  "orthography": "半分",
+  "reading": "はんぶん",
+  "meanings": [
+   "half"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1447440",
+  "language": "ja",
+  "orthography": "東",
+  "reading": "ひがし",
+  "meanings": [
+   "east"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1583370",
+  "language": "ja",
+  "orthography": "匹",
+  "reading": "ひき",
+  "meanings": [
+   "counter for small animals"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1169250",
+  "language": "ja",
+  "orthography": "引く",
+  "reading": "ひく",
+  "meanings": [
+   "to draw back (e.g. one's hand)",
+   "to draw in (one's chin, stomach, etc.)",
+   "to pull in"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1419370",
+  "language": "ja",
+  "orthography": "弾く",
+  "reading": "ひく",
+  "meanings": [
+   "to play (a stringed or keyboard instrument)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1434180",
+  "language": "ja",
+  "orthography": "低い",
+  "reading": "ひくい",
+  "meanings": [
+   "low (rank, degree, value, content, quality, etc.)"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1485470",
+  "language": "ja",
+  "orthography": "飛行機",
+  "reading": "ひこうき",
+  "meanings": [
+   "airplane",
+   "aeroplane",
+   "plane"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1290800",
+  "language": "ja",
+  "orthography": "左",
+  "reading": "ひだり",
+  "meanings": [
+   "left",
+   "left-hand side"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1580640",
+  "language": "ja",
+  "orthography": "人",
+  "reading": "ひと",
+  "meanings": [
+   "person",
+   "someone",
+   "somebody"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1160820",
+  "language": "ja",
+  "orthography": "一つ",
+  "reading": "ひとつ",
+  "meanings": [
+   "for one thing"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1162130",
+  "language": "ja",
+  "orthography": "一月",
+  "reading": "ひとつき",
+  "meanings": [
+   "one month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1576150",
+  "language": "ja",
+  "orthography": "一人",
+  "reading": "ひとり",
+  "meanings": [
+   "one person"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1577280",
+  "language": "ja",
+  "orthography": "暇",
+  "reading": "ひま",
+  "meanings": [
+   "spare time",
+   "free time",
+   "leisure"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1488000",
+  "language": "ja",
+  "orthography": "百",
+  "reading": "ひゃく",
+  "meanings": [
+   "hundred",
+   "100"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1490220",
+  "language": "ja",
+  "orthography": "病院",
+  "reading": "びょういん",
+  "meanings": [
+   "hospital",
+   "clinic",
+   "doctor's office"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1490230",
+  "language": "ja",
+  "orthography": "病気",
+  "reading": "びょうき",
+  "meanings": [
+   "illness (usu. excluding minor ailments, e.g. common cold)",
+   "disease",
+   "sickness"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1507090",
+  "language": "ja",
+  "orthography": "平仮名",
+  "reading": "ひらがな",
+  "meanings": [
+   "hiragana",
+   "cursive Japanese syllabary used primarily for native Japanese words (esp. function words, inflections, etc.)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1426250",
+  "language": "ja",
+  "orthography": "昼",
+  "reading": "ひる",
+  "meanings": [
+   "noon",
+   "midday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1602340",
+  "language": "ja",
+  "orthography": "昼御飯",
+  "reading": "ひるごはん",
+  "meanings": [
+   "lunch",
+   "midday meal"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1278410",
+  "language": "ja",
+  "orthography": "広い",
+  "reading": "ひろい",
+  "meanings": [
+   "spacious",
+   "vast",
+   "wide"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1109380",
+  "language": "ja",
+  "orthography": "フィルム",
+  "reading": "フィルム",
+  "meanings": [
+   "film"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1499690",
+  "language": "ja",
+  "orthography": "封筒",
+  "reading": "ふうとう",
+  "meanings": [
+   "envelope"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1115150",
+  "language": "ja",
+  "orthography": "プール",
+  "reading": "プール",
+  "meanings": [
+   "(swimming) pool"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1110110",
+  "language": "ja",
+  "orthography": "フォーク",
+  "reading": "フォーク",
+  "meanings": [
+   "fork"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1370760",
+  "language": "ja",
+  "orthography": "吹く",
+  "reading": "ふく",
+  "meanings": [
+   "to blow (of the wind)"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1500940",
+  "language": "ja",
+  "orthography": "服",
+  "reading": "ふく",
+  "meanings": [
+   "clothes (esp. Western clothes)",
+   "clothing",
+   "dress"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1461160",
+  "language": "ja",
+  "orthography": "二つ",
+  "reading": "ふたつ",
+  "meanings": [
+   "two"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1457440",
+  "language": "ja",
+  "orthography": "豚肉",
+  "reading": "ぶたにく",
+  "meanings": [
+   "pork"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1582670",
+  "language": "ja",
+  "orthography": "二人",
+  "reading": "ふたり",
+  "meanings": [
+   "two persons",
+   "two people",
+   "pair"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1462900",
+  "language": "ja",
+  "orthography": "二日",
+  "reading": "ふつか",
+  "meanings": [
+   "2nd day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1408180",
+  "language": "ja",
+  "orthography": "太い",
+  "reading": "ふとい",
+  "meanings": [
+   "fat",
+   "thick"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1446070",
+  "language": "ja",
+  "orthography": "冬",
+  "reading": "ふゆ",
+  "meanings": [
+   "winter"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1282790",
+  "language": "ja",
+  "orthography": "降る",
+  "reading": "ふる",
+  "meanings": [
+   "to fall (of rain, snow, ash, etc.)",
+   "to come down"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1265070",
+  "language": "ja",
+  "orthography": "古い",
+  "reading": "ふるい",
+  "meanings": [
+   "old",
+   "aged",
+   "ancient"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1502840",
+  "language": "ja",
+  "orthography": "分",
+  "reading": "ふん",
+  "meanings": [
+   "minute (unit of time)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1505470",
+  "language": "ja",
+  "orthography": "文章",
+  "reading": "ぶんしょう",
+  "meanings": [
+   "sentence"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1120410",
+  "language": "ja",
+  "orthography": "ページ",
+  "reading": "ページ",
+  "meanings": [
+   "page"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1185200",
+  "language": "ja",
+  "orthography": "下手",
+  "reading": "へた",
+  "meanings": [
+   "unskillful",
+   "poor",
+   "awkward"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1119650",
+  "language": "ja",
+  "orthography": "ベッド",
+  "reading": "ベッド",
+  "meanings": [
+   "bed"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1120990",
+  "language": "ja",
+  "orthography": "ペット",
+  "reading": "ペット",
+  "meanings": [
+   "pet"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1499320",
+  "language": "ja",
+  "orthography": "部屋",
+  "reading": "へや",
+  "meanings": [
+   "room",
+   "chamber"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1512070",
+  "language": "ja",
+  "orthography": "辺",
+  "reading": "へん",
+  "meanings": [
+   "area",
+   "vicinity",
+   "region"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1121380",
+  "language": "ja",
+  "orthography": "ペン",
+  "reading": "ペン",
+  "meanings": [
+   "pen"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1512670",
+  "language": "ja",
+  "orthography": "勉強",
+  "reading": "べんきょう",
+  "meanings": [
+   "study"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1512610",
+  "language": "ja",
+  "orthography": "便利",
+  "reading": "べんり",
+  "meanings": [
+   "convenient",
+   "handy",
+   "useful"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1519170",
+  "language": "ja",
+  "orthography": "帽子",
+  "reading": "ぼうし",
+  "meanings": [
+   "hat",
+   "cap"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1123590",
+  "language": "ja",
+  "orthography": "ボールペン",
+  "reading": "ボールペン",
+  "meanings": [
+   "ball-point pen"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1203260",
+  "language": "ja",
+  "orthography": "外",
+  "reading": "ほか",
+  "meanings": [
+   "another (person or thing)",
+   "other",
+   "different"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1124970",
+  "language": "ja",
+  "orthography": "ポケット",
+  "reading": "ポケット",
+  "meanings": [
+   "pocket"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1547330",
+  "language": "ja",
+  "orthography": "欲しい",
+  "reading": "ほしい",
+  "meanings": [
+   "I want (you, them, etc.) to (do)"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1125150",
+  "language": "ja",
+  "orthography": "ポスト",
+  "reading": "ポスト",
+  "meanings": [
+   "post",
+   "position"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1295510",
+  "language": "ja",
+  "orthography": "細い",
+  "reading": "ほそい",
+  "meanings": [
+   "thin",
+   "slender",
+   "fine"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1123880",
+  "language": "ja",
+  "orthography": "ボタン",
+  "reading": "ボタン",
+  "meanings": [
+   "button (clothing)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1122650",
+  "language": "ja",
+  "orthography": "ホテル",
+  "reading": "ホテル",
+  "meanings": [
+   "hotel"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1522150",
+  "language": "ja",
+  "orthography": "本",
+  "reading": "ほん",
+  "meanings": [
+   "book",
+   "volume",
+   "script"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1522980",
+  "language": "ja",
+  "orthography": "本棚",
+  "reading": "ほんだな",
+  "meanings": [
+   "bookshelves",
+   "bookshelf",
+   "bookcase"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1523060",
+  "language": "ja",
+  "orthography": "本当",
+  "reading": "ほんとう",
+  "meanings": [
+   "genuine",
+   "authentic",
+   "real"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1524610",
+  "language": "ja",
+  "orthography": "枚",
+  "reading": "まい",
+  "meanings": [
+   "counter for thin, flat objects (e.g. sheets of paper, plates, coins)"
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1524700",
+  "language": "ja",
+  "orthography": "毎朝",
+  "reading": "まいあさ",
+  "meanings": [
+   "every morning"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1584350",
+  "language": "ja",
+  "orthography": "毎月",
+  "reading": "まいげつ",
+  "meanings": [
+   "every month",
+   "each month",
+   "monthly"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1524690",
+  "language": "ja",
+  "orthography": "毎週",
+  "reading": "まいしゅう",
+  "meanings": [
+   "every week"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1524720",
+  "language": "ja",
+  "orthography": "毎日",
+  "reading": "まいにち",
+  "meanings": [
+   "every day",
+   "daily"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1584360",
+  "language": "ja",
+  "orthography": "毎年",
+  "reading": "まいねん",
+  "meanings": [
+   "every year",
+   "yearly",
+   "annually"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1524730",
+  "language": "ja",
+  "orthography": "毎晩",
+  "reading": "まいばん",
+  "meanings": [
+   "every night"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1392580",
+  "language": "ja",
+  "orthography": "前",
+  "reading": "まえ",
+  "meanings": [
+   "in front (of)",
+   "before (e.g. a building)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1239730",
+  "language": "ja",
+  "orthography": "曲る",
+  "reading": "まがる",
+  "meanings": [
+   "to bend",
+   "to curve",
+   "to warp"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1495000",
+  "language": "ja",
+  "orthography": "まずい",
+  "reading": "まずい",
+  "meanings": [
+   "bad(-tasting)",
+   "unpalatable",
+   "unsavoury"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1524930",
+  "language": "ja",
+  "orthography": "また",
+  "reading": "また",
+  "meanings": [
+   "and",
+   "in addition",
+   "besides"
+  ],
+  "partOfSpeech": "conjunction",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1527110",
+  "language": "ja",
+  "orthography": "まだ",
+  "reading": "まだ",
+  "meanings": [
+   "still",
+   "as yet",
+   "only"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1603990",
+  "language": "ja",
+  "orthography": "町",
+  "reading": "まち",
+  "meanings": [
+   "town",
+   "block",
+   "neighbourhood"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1410590",
+  "language": "ja",
+  "orthography": "待つ",
+  "reading": "まつ",
+  "meanings": [
+   "to wait"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1580600",
+  "language": "ja",
+  "orthography": "まっすぐ",
+  "reading": "まっすぐ",
+  "meanings": [
+   "straight (ahead)",
+   "direct",
+   "upright"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1128430",
+  "language": "ja",
+  "orthography": "マッチ",
+  "reading": "マッチ",
+  "meanings": [
+   "match (for lighting a fire)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1401400",
+  "language": "ja",
+  "orthography": "窓",
+  "reading": "まど",
+  "meanings": [
+   "window"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1604230",
+  "language": "ja",
+  "orthography": "丸い",
+  "reading": "まるい",
+  "meanings": [
+   "round",
+   "circular",
+   "spherical"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1584460",
+  "language": "ja",
+  "orthography": "万",
+  "reading": "まん",
+  "meanings": [
+   "10,000",
+   "ten thousand"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1526360",
+  "language": "ja",
+  "orthography": "万年筆",
+  "reading": "まんねんひつ",
+  "meanings": [
+   "fountain pen"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1523940",
+  "language": "ja",
+  "orthography": "磨く",
+  "reading": "みがく",
+  "meanings": [
+   "to polish",
+   "to shine",
+   "to burnish"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1171010",
+  "language": "ja",
+  "orthography": "右",
+  "reading": "みぎ",
+  "meanings": [
+   "right",
+   "right-hand side"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1418620",
+  "language": "ja",
+  "orthography": "短い",
+  "reading": "みじかい",
+  "meanings": [
+   "short"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1371260",
+  "language": "ja",
+  "orthography": "水",
+  "reading": "みず",
+  "meanings": [
+   "water (esp. cool or cold)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1582120",
+  "language": "ja",
+  "orthography": "店",
+  "reading": "みせ",
+  "meanings": [
+   "store",
+   "shop",
+   "establishment"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1259210",
+  "language": "ja",
+  "orthography": "見せる",
+  "reading": "みせる",
+  "meanings": [
+   "to show",
+   "to display"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1454080",
+  "language": "ja",
+  "orthography": "道",
+  "reading": "みち",
+  "meanings": [
+   "road",
+   "path",
+   "street"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1301330",
+  "language": "ja",
+  "orthography": "三日",
+  "reading": "みっか",
+  "meanings": [
+   "3rd day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1299740",
+  "language": "ja",
+  "orthography": "三つ",
+  "reading": "みっつ",
+  "meanings": [
+   "three"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1555300",
+  "language": "ja",
+  "orthography": "緑",
+  "reading": "みどり",
+  "meanings": [
+   "green"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1202170",
+  "language": "ja",
+  "orthography": "皆さん",
+  "reading": "みなさん",
+  "meanings": [
+   "all",
+   "everyone",
+   "everybody"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1459870",
+  "language": "ja",
+  "orthography": "南",
+  "reading": "みなみ",
+  "meanings": [
+   "south"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1317170",
+  "language": "ja",
+  "orthography": "耳",
+  "reading": "みみ",
+  "meanings": [
+   "ear"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1259290",
+  "language": "ja",
+  "orthography": "見る",
+  "reading": "みる",
+  "meanings": [
+   "to see",
+   "to look",
+   "to watch"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1202150",
+  "language": "ja",
+  "orthography": "みんな",
+  "reading": "みんな",
+  "meanings": [
+   "everyone",
+   "everybody",
+   "all"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1561470",
+  "language": "ja",
+  "orthography": "六日",
+  "reading": "むいか",
+  "meanings": [
+   "6th day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1277140",
+  "language": "ja",
+  "orthography": "向こう",
+  "reading": "むこう",
+  "meanings": [
+   "over there",
+   "ahead",
+   "beyond"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1460850",
+  "language": "ja",
+  "orthography": "難しい",
+  "reading": "むずかしい",
+  "meanings": [
+   "difficult",
+   "hard",
+   "troublesome"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1585315",
+  "language": "ja",
+  "orthography": "六つ",
+  "reading": "むっつ",
+  "meanings": [
+   "six"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1406820",
+  "language": "ja",
+  "orthography": "村",
+  "reading": "むら",
+  "meanings": [
+   "village"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1604890",
+  "language": "ja",
+  "orthography": "目",
+  "reading": "め",
+  "meanings": [
+   "eye",
+   "eyeball"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1132570",
+  "language": "ja",
+  "orthography": "メートル",
+  "reading": "メートル",
+  "meanings": [
+   "metre (unit of length)",
+   "meter"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1577670",
+  "language": "ja",
+  "orthography": "眼鏡",
+  "reading": "めがね",
+  "meanings": [
+   "glasses",
+   "eyeglasses",
+   "spectacles"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1012480",
+  "language": "ja",
+  "orthography": "もう",
+  "reading": "もう",
+  "meanings": [
+   "already",
+   "yet",
+   "by now"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1534890",
+  "language": "ja",
+  "orthography": "木曜日",
+  "reading": "もくようび",
+  "meanings": [
+   "Thursday"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1012550",
+  "language": "ja",
+  "orthography": "もしもし",
+  "reading": "もしもし",
+  "meanings": [
+   "hello (e.g. on phone)"
+  ],
+  "partOfSpeech": "interjection",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1315720",
+  "language": "ja",
+  "orthography": "持つ",
+  "reading": "もつ",
+  "meanings": [
+   "to hold (in one's hand)",
+   "to take",
+   "to carry"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1012620",
+  "language": "ja",
+  "orthography": "もっと",
+  "reading": "もっと",
+  "meanings": [
+   "(some) more",
+   "even more",
+   "longer"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1502390",
+  "language": "ja",
+  "orthography": "物",
+  "reading": "もの",
+  "meanings": [
+   "thing",
+   "object",
+   "article"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1584800",
+  "language": "ja",
+  "orthography": "門",
+  "reading": "もん",
+  "meanings": [
+   "gate"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1536010",
+  "language": "ja",
+  "orthography": "問題",
+  "reading": "もんだい",
+  "meanings": [
+   "question (e.g. on a test)",
+   "problem"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1476960",
+  "language": "ja",
+  "orthography": "八百屋",
+  "reading": "やおや",
+  "meanings": [
+   "greengrocer",
+   "fruit and vegetable shop"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1537370",
+  "language": "ja",
+  "orthography": "野菜",
+  "reading": "やさい",
+  "meanings": [
+   "vegetable"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1157000",
+  "language": "ja",
+  "orthography": "易しい",
+  "reading": "やさしい",
+  "meanings": [
+   "easy",
+   "plain",
+   "simple"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1153670",
+  "language": "ja",
+  "orthography": "安い",
+  "reading": "やすい",
+  "meanings": [
+   "cheap",
+   "inexpensive"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1227500",
+  "language": "ja",
+  "orthography": "休み",
+  "reading": "やすみ",
+  "meanings": [
+   "vacation",
+   "holiday",
+   "absence"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1227560",
+  "language": "ja",
+  "orthography": "休む",
+  "reading": "やすむ",
+  "meanings": [
+   "to rest",
+   "to have a break"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1583095",
+  "language": "ja",
+  "orthography": "八つ",
+  "reading": "やっつ",
+  "meanings": [
+   "eight"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1302680",
+  "language": "ja",
+  "orthography": "山",
+  "reading": "やま",
+  "meanings": [
+   "mountain",
+   "hill"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1012980",
+  "language": "ja",
+  "orthography": "やる",
+  "reading": "やる",
+  "meanings": [
+   "to do",
+   "to undertake",
+   "to perform"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1542790",
+  "language": "ja",
+  "orthography": "夕方",
+  "reading": "ゆうがた",
+  "meanings": [
+   "early evening (usu. from 3pm to 6pm)",
+   "dusk"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1584910",
+  "language": "ja",
+  "orthography": "夕飯",
+  "reading": "ゆうはん",
+  "meanings": [
+   "evening meal",
+   "dinner",
+   "supper"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1542430",
+  "language": "ja",
+  "orthography": "郵便局",
+  "reading": "ゆうびんきょく",
+  "meanings": [
+   "post office"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1542640",
+  "language": "ja",
+  "orthography": "昨夜",
+  "reading": "ゆうべ",
+  "meanings": [
+   "last night",
+   "yesterday evening"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1541620",
+  "language": "ja",
+  "orthography": "有名",
+  "reading": "ゆうめい",
+  "meanings": [
+   "famous",
+   "well-known"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1386500",
+  "language": "ja",
+  "orthography": "雪",
+  "reading": "ゆき",
+  "meanings": [
+   "snow",
+   "snowfall"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1013050",
+  "language": "ja",
+  "orthography": "ゆっくり",
+  "reading": "ゆっくり",
+  "meanings": [
+   "slowly",
+   "unhurriedly",
+   "without haste"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1476920",
+  "language": "ja",
+  "orthography": "八日",
+  "reading": "ようか",
+  "meanings": [
+   "8th day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1546020",
+  "language": "ja",
+  "orthography": "洋服",
+  "reading": "ようふく",
+  "meanings": [
+   "Western-style clothes (cf. traditional Japanese clothes)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1605870",
+  "language": "ja",
+  "orthography": "よく",
+  "reading": "よく",
+  "meanings": [
+   "nicely",
+   "properly",
+   "well"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1180570",
+  "language": "ja",
+  "orthography": "横",
+  "reading": "よこ",
+  "meanings": [
+   "side-to-side (as opposed to front-to-back)",
+   "width",
+   "breadth"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1307320",
+  "language": "ja",
+  "orthography": "四日",
+  "reading": "よっか",
+  "meanings": [
+   "4th day of the month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1307040",
+  "language": "ja",
+  "orthography": "四つ",
+  "reading": "よっつ",
+  "meanings": [
+   "four",
+   "4"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1266440",
+  "language": "ja",
+  "orthography": "呼ぶ",
+  "reading": "よぶ",
+  "meanings": [
+   "to take as one's wife"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1456360",
+  "language": "ja",
+  "orthography": "読む",
+  "reading": "よむ",
+  "meanings": [
+   "to read"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1536350",
+  "language": "ja",
+  "orthography": "夜",
+  "reading": "よる",
+  "meanings": [
+   "night",
+   "evening"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1324520",
+  "language": "ja",
+  "orthography": "弱い",
+  "reading": "よわい",
+  "meanings": [
+   "weak",
+   "frail",
+   "delicate"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1547900",
+  "language": "ja",
+  "orthography": "来月",
+  "reading": "らいげつ",
+  "meanings": [
+   "next month"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1548010",
+  "language": "ja",
+  "orthography": "来週",
+  "reading": "らいしゅう",
+  "meanings": [
+   "next week"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1548220",
+  "language": "ja",
+  "orthography": "来年",
+  "reading": "らいねん",
+  "meanings": [
+   "next year"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1138860",
+  "language": "ja",
+  "orthography": "ラジオ",
+  "reading": "ラジオ",
+  "meanings": [
+   "radio"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1138960",
+  "language": "ja",
+  "orthography": "ラジカセ",
+  "reading": "ラジカセ",
+  "meanings": [
+   "radio-cassette player"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1551790",
+  "language": "ja",
+  "orthography": "りっぱ",
+  "reading": "りっぱ",
+  "meanings": [
+   "splendid",
+   "fine",
+   "handsome"
+  ],
+  "partOfSpeech": "na-adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1552750",
+  "language": "ja",
+  "orthography": "留学生",
+  "reading": "りゅうがくせい",
+  "meanings": [
+   "overseas student",
+   "exchange student"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1602710",
+  "language": "ja",
+  "orthography": "両親",
+  "reading": "りょうしん",
+  "meanings": [
+   "parents",
+   "both parents"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1554310",
+  "language": "ja",
+  "orthography": "料理",
+  "reading": "りょうり",
+  "meanings": [
+   "cooking",
+   "cookery",
+   "cuisine"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1553170",
+  "language": "ja",
+  "orthography": "旅行",
+  "reading": "りょこう",
+  "meanings": [
+   "travel",
+   "trip",
+   "journey"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1557630",
+  "language": "ja",
+  "orthography": "零",
+  "reading": "れい",
+  "meanings": [
+   "zero",
+   "nought"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1557110",
+  "language": "ja",
+  "orthography": "冷蔵庫",
+  "reading": "れいぞうこ",
+  "meanings": [
+   "refrigerator",
+   "fridge"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1144940",
+  "language": "ja",
+  "orthography": "レコード",
+  "reading": "レコード",
+  "meanings": [
+   "(phonograph) record"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1145310",
+  "language": "ja",
+  "orthography": "レストラン",
+  "reading": "レストラン",
+  "meanings": [
+   "restaurant (esp. Western-style)"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1559160",
+  "language": "ja",
+  "orthography": "練習",
+  "reading": "れんしゅう",
+  "meanings": [
+   "practice",
+   "training",
+   "drill"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1560670",
+  "language": "ja",
+  "orthography": "廊下",
+  "reading": "ろうか",
+  "meanings": [
+   "corridor",
+   "hallway",
+   "passageway"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1585310",
+  "language": "ja",
+  "orthography": "六",
+  "reading": "ろく",
+  "meanings": [
+   "six",
+   "6"
+  ],
+  "partOfSpeech": "number",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1148640",
+  "language": "ja",
+  "orthography": "ワイシャツ",
+  "reading": "ワイシャツ",
+  "meanings": [
+   "(formal) shirt",
+   "dress shirt",
+   "business shirt"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1324300",
+  "language": "ja",
+  "orthography": "若い",
+  "reading": "わかい",
+  "meanings": [
+   "young",
+   "youthful"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1606560",
+  "language": "ja",
+  "orthography": "分かる",
+  "reading": "わかる",
+  "meanings": [
+   "to understand",
+   "to comprehend",
+   "to grasp"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1519210",
+  "language": "ja",
+  "orthography": "忘れる",
+  "reading": "わすれる",
+  "meanings": [
+   "to forget",
+   "to leave carelessly",
+   "to be forgetful of"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1311110",
+  "language": "ja",
+  "orthography": "私",
+  "reading": "わたし",
+  "meanings": [
+   "I",
+   "me"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1444610",
+  "language": "ja",
+  "orthography": "渡す",
+  "reading": "わたす",
+  "meanings": [
+   "to hand over",
+   "to hand in",
+   "to pass"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1444680",
+  "language": "ja",
+  "orthography": "渡る",
+  "reading": "わたる",
+  "meanings": [
+   "to cross over",
+   "to go across"
+  ],
+  "partOfSpeech": "verb",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1151260",
+  "language": "ja",
+  "orthography": "悪い",
+  "reading": "わるい",
+  "meanings": [
+   "bad",
+   "poor",
+   "undesirable"
+  ],
+  "partOfSpeech": "adjective",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": true
+ },
+ {
+  "id": "jmdict:1329015",
+  "language": "ja",
+  "orthography": "お酒",
+  "reading": "おさけ",
+  "meanings": [
+   "alcohol",
+   "sake"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": false
+ },
+ {
+  "id": "jmdict:1299685",
+  "language": "ja",
+  "orthography": "お皿",
+  "reading": "おさら",
+  "meanings": [
+   "plate",
+   "dish"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": false
+ },
+ {
+  "id": "jmdict:2261490",
+  "language": "ja",
+  "orthography": "叔父さん",
+  "reading": "おじさん",
+  "meanings": [
+   "uncle"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": false
+ },
+ {
+  "id": "jmdict:2261500",
+  "language": "ja",
+  "orthography": "伯母さん",
+  "reading": "おばさん",
+  "meanings": [
+   "aunt"
+  ],
+  "partOfSpeech": "noun",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": false
+ },
+ {
+  "id": "jmdict:2019640",
+  "language": "ja",
+  "orthography": "杯",
+  "reading": "はい",
+  "meanings": [
+   "counter for cupfuls, bowlfuls, spoonfuls, etc."
+  ],
+  "partOfSpeech": "counter",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": false
+ },
+ {
+  "id": "jmdict:2082160",
+  "language": "ja",
+  "orthography": "屋",
+  "reading": "や",
+  "meanings": [
+   "shop",
+   "store",
+   "restaurant"
+  ],
+  "partOfSpeech": "suffix",
+  "level": {
+   "jlpt": 5
+  },
+  "isCommon": false
+ }
+]

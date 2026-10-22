@@ -15,9 +15,36 @@ public enum Level: Equatable, Hashable, Sendable, Codable {
     case jlpt(Int)
     case hsk(Int)
     case nikl(Int)
+
+    // Bundle format is a one-key object, e.g. {"jlpt": 5}. Written by hand so the
+    // format doesn't depend on Swift's synthesized enum coding ({"jlpt":{"_0":5}}).
+    private enum Key: String, CodingKey { case jlpt, hsk, nikl }
+
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: Key.self)
+        guard c.allKeys.count == 1, let k = c.allKeys.first else {
+            throw DecodingError.dataCorrupted(.init(codingPath: c.codingPath,
+                debugDescription: "level must have exactly one of jlpt, hsk, nikl"))
+        }
+        let n = try c.decode(Int.self, forKey: k)
+        switch k {
+        case .jlpt: self = .jlpt(n)
+        case .hsk: self = .hsk(n)
+        case .nikl: self = .nikl(n)
+        }
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: Key.self)
+        switch self {
+        case .jlpt(let n): try c.encode(n, forKey: .jlpt)
+        case .hsk(let n): try c.encode(n, forKey: .hsk)
+        case .nikl(let n): try c.encode(n, forKey: .nikl)
+        }
+    }
 }
 
-public struct Word: Identifiable, Equatable, Hashable, Sendable {
+public struct Word: Identifiable, Equatable, Hashable, Sendable, Codable {
     public let id: String          // stable source id, e.g. "jmdict:1000000"
     public let language: Language
     public let orthography: String
