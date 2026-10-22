@@ -1,18 +1,22 @@
 import Foundation
 import KanaCore
 
-/// MVP defaults (word-data-spec §5): hourly, quiet 22:00–07:00. No config screen yet.
-let defaultSchedule = Schedule(intervalMinutes: 60,
-                               quietHours: QuietHours(start: TimeOfDay(minutes: 22 * 60),
-                                                      end: TimeOfDay(minutes: 7 * 60)))
+/// The user's schedule, from settings (defaults until they change something).
+var currentSchedule: Schedule { Schedule.from(settings: SettingsStore.load()) }
 
-/// Loaded once per process. An empty list means the bundle failed to load;
-/// timeline() then shows the fallback word instead of crashing.
+/// Words for the chosen pack. Falls back to Japanese if a stored pack isn't bundled;
+/// an empty list means the bundle failed to load, and timeline() shows the fallback word.
+func packWords(_ settings: Settings = SettingsStore.load()) -> [Word] {
+    let lang = Language(rawValue: settings.languagePack) ?? .japanese
+    return (try? bundledWords(lang)) ?? (try? bundledWords(.japanese)) ?? []
+}
+
+/// The Japanese bundle, loaded once (tests and placeholders).
 let appWords: [Word] = (try? bundledWords()) ?? []
 
 /// The word that is on screen now, the same one the widget shows.
 func currentWord(at date: Date = Date(), calendar: Calendar = .current) -> Word {
-    timeline(after: date, schedule: defaultSchedule, words: appWords, calendar: calendar, limit: 0)
+    timeline(after: date, schedule: currentSchedule, words: packWords(), calendar: calendar, limit: 0)
         .entries[0].word
 }
 

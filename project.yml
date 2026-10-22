@@ -11,7 +11,11 @@ settings:
     SWIFT_VERSION: "5.0"
     MARKETING_VERSION: "0.1"
     CURRENT_PROJECT_VERSION: "1"
-    CODE_SIGNING_ALLOWED: "NO"   # simulator only until there is an Apple account
+    CODE_SIGN_STYLE: Automatic
+    # Change this one line if Xcode says the bundle ID is taken. Everything else
+    # (widget ID, App Group) is derived from it. CI passes CODE_SIGNING_ALLOWED=NO.
+    BUNDLE_ID_BASE: com.simplyjaytea.simplyKANA
+    APP_GROUP: group.$(BUNDLE_ID_BASE)
 packages:
   KanaCore:
     path: kana-core
@@ -30,9 +34,14 @@ targets:
         UILaunchScreen: {}
         CFBundleURLTypes:
           - CFBundleURLSchemes: [simplykana]
+        AppGroup: $(APP_GROUP)
+    entitlements:
+      path: Generated/App.entitlements
+      properties:
+        com.apple.security.application-groups: [$(APP_GROUP)]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.simplyjaytea.simplyKANA
+        PRODUCT_BUNDLE_IDENTIFIER: $(BUNDLE_ID_BASE)
   SimplyKANAWidget:
     type: app-extension
     platform: iOS
@@ -47,9 +56,14 @@ targets:
         CFBundleDisplayName: simplyKANA
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        AppGroup: $(APP_GROUP)
+    entitlements:
+      path: Generated/Widget.entitlements
+      properties:
+        com.apple.security.application-groups: [$(APP_GROUP)]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.simplyjaytea.simplyKANA.widget
+        PRODUCT_BUNDLE_IDENTIFIER: $(BUNDLE_ID_BASE).widget
   SimplyKANATests:
     type: bundle.unit-test
     platform: iOS
