@@ -5,11 +5,20 @@ moved to "Accepted risks" with an owner.
 
 ## Gates
 
-- [x] Scheduler core (slot, quiet hours, nextDelivery, isSatisfiable with anchor). Gated 2026-10-22, 19 tests, mutation-checked.
+- [x] Scheduler core (slot, quiet hours, nextDelivery, isSatisfiable with anchor). Gated 2026-10-22 at 19 tests, mutation-checked. (Main is at 21 after the model change; those two are gated with the word data.)
 - [ ] Language-neutral `Word` model and `.topik` -> `.nikl` rename. Gate with Friday's word data PR.
-- [ ] Word data: 92 kana + N5 list, hand-checked multi-matches, loader tests on Linux **and** macOS.
-- [ ] `timeline` in KanaCore (lock-screen-widget-spec §7.1).
-- [ ] Widget extension builds for iOS Simulator; all three families render in previews (§7.2).
+- [ ] Word data: 92 kana + N5 list, hand-checked multi-matches, loader tests on Linux **and** macOS. Bundle checks:
+  - [ ] No orthography or reading contains a space, bracket, `;` or `～`.
+  - [ ] Unique (orthography, reading). Affix-only senses (お, 人 じん, 中 じゅう) absent.
+  - [ ] Equal orthographies at least 24 slots apart, measured circularly.
+  - [ ] Word count (kana + N5 combined) is not a multiple of 24. Planned 789.
+  - [ ] One-year simulation of the default schedule shows every word at least once.
+  - [ ] Count of 5+ character words reported (11 expected); count of 9+ reported.
+  - [ ] Kana carry `hiragana` / `katakana` as part of speech.
+  - Each of these re-runs per language bundle before release two.
+- [ ] `previousDelivery(atOrBefore:)`, `timeline`, `circularLines`, `spokenLabel` in KanaCore (lock-screen-widget-spec §7.1-7.2, §5). `spokenLabel` parts: every Japanese part tagged `ja`.
+- [ ] Widget extension builds for iOS Simulator; all three families pass the `ImageRenderer` snapshot test (previews do not run in CI). Includes every circular two-line case, the `語` fallback, and the longest first meaning in the rectangular family.
+- [ ] Host app builds in CI with Word screen and Credits screen (minimum to install a widget).
 
 ## Process rules (not enforced by GitHub on the free plan)
 
@@ -26,7 +35,7 @@ moved to "Accepted risks" with an owner.
 ## Known gaps (cannot be verified by the team)
 
 - **No real-phone testing.** The user has no Apple Developer account and will load the app later. What the team can prove is Linux + macOS CI and the iOS Simulator. Nothing on a physical iPhone.
-- **Phone-only widget behaviour:** real refresh cadence, Lock Screen vibrant rendering, Always-On dimming, tap routing. Expect bugs on the first phone run; plan a fix window after it.
+- **Phone-only widget behaviour:** real refresh cadence, Lock Screen vibrant rendering, Always-On dimming, tap routing, and how the Japanese VoiceOver voice sounds (the `ja` tag itself is CI-tested). Expect bugs on the first phone run; plan a fix window after it.
 - **Install path undecided:** free personal team in Xcode (re-sign every 7 days) or the $99 account. Decide before the first widget is ready for a phone.
 
 ## Accepted risks
