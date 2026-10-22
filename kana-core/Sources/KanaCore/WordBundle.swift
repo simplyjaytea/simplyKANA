@@ -9,14 +9,16 @@ public func decodeWords(from data: Data) throws -> [Word] {
     try JSONDecoder().decode([Word].self, from: data)
 }
 
-/// The bundled Japanese list: 92 kana, then JLPT N5, in drip order.
+/// The bundled lists, in drip order. Japanese: 92 kana, then JLPT N5.
+/// Chinese: HSK 3.0 levels 1-3 (tools/build_zh.py; CC-CEDICT, CC-BY-SA 4.0).
 /// Built by tools/build_bundle.py. Data: JMdict (EDRDG, CC-BY-SA 4.0) and the
 /// open-anki-jlpt-decks N5 list (MIT, from Jonathan Waller's lists).
 public func bundledWords(_ language: Language = .japanese) throws -> [Word] {
     let name: String
     switch language {
     case .japanese: name = "words-ja"
-    case .chinese, .korean: throw WordBundleError.missing(language.rawValue)
+    case .chinese: name = "words-zh"
+    case .korean: throw WordBundleError.missing(language.rawValue)
     }
     guard let url = Bundle.module.url(forResource: name, withExtension: "json") else {
         throw WordBundleError.missing(name)
