@@ -158,15 +158,16 @@ not the prose:
 | 人 じん "-ian", 人 にん counter | affix senses of 人; 人 ひと stays |
 | 中 じゅう, 中 ちゅう | suffix senses of 中 |
 | 屋 や | "-shop" suffix; the shops themselves (本屋) stay |
-| 日 にち, 時 じ | counters; 日 ひ and 時 とき stay |
+| 時 じ, 年 ねん | counter senses with a standalone sibling; 時 とき and 年 とし stay |
 | ずつ, だけ, など | particles |
 
 | Allowed | Why |
 |---|---|
 | キロ | used alone as a noun ("5キロ") |
+| 日 にち | the N5 list has no 日 ひ, so にち is 日's only entry (corrected 2026-10-22 after Poppy's check) |
 | 枚, 回, 階 and every other counter with no standalone sibling entry | the character's only entry; N5 vocabulary |
 
-Expected count after the list: 781 (not a multiple of 24). Any new drop or
+Expected count after the list: 781 (not a multiple of 24; にち restored, ねん dropped). Any new drop or
 restore changes this table first and the bundle second.
 
 **First-meaning length (2026-10-22, from the first widget snapshots):** the
@@ -176,7 +177,7 @@ the "truncate the meaning first" wording in the widget spec: that wording
 covers the inline family only. The build script enforces a character cap on
 `meanings[0]` (Poppy sets the number from the snapshot measurement, with the
 longest counter as the worst case) and fails when exceeded. Long glosses are
-shortened by hand for position 0 (枚 → "counter for flat things") and the full
+shortened by hand for position 0 (枚 → "flat things (counter)", one shared short form for every counter) and the full
 JMdict gloss moves to `meanings[1]`, so the Word screen still shows it.
 
 **Spacing rule (2026-10-22):** entries that share an orthography are placed at
