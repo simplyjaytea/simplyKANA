@@ -16,7 +16,10 @@ struct RectangularWordView: View {
                     .font(.system(.title3, weight: .semibold))
                     .lineLimit(1).minimumScaleFactor(0.7) // shrinks; never truncates
                 if word.reading != word.orthography {
+                    // Secondary, so the glance goes word -> meaning; the
+                    // reading is there when you look for it.
                     Text(word.reading).font(.caption).lineLimit(1)
+                        .foregroundStyle(.secondary)
                 }
                 Text(word.meanings.first ?? "").font(.caption).lineLimit(1)
             }
