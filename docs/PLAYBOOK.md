@@ -50,6 +50,7 @@ The user (simplyjaytee) owns the GitHub account, the Apple side (no Developer ac
 - Circular widget: whole word or `語`; 5–8 chars on two lines, kinsoku-aware leftward split.
 - `spokenLabel(for:)` returns language-tagged parts; screens build the attributed string.
 - Repo name `simplyKANA` approved by the user.
+- **One Lock Screen widget per language** (2026-10-22, user approved): language is chosen by which widget is added; no shared storage; Settings' Language row is app-only.
 - **Minimum iOS: 16.0** (user, 2026-10-22). Lock Screen widgets need 16; nothing we use needs 17 except `containerBackground(for: .widget)`, which is shimmed with `#available`. CI compiles at the 16.0 target.
 
 ## 6. Accepted risks and known gaps
@@ -84,19 +85,19 @@ user is asked to try:
 
 Not alpha: Home Screen widget, Chinese and Korean packs, daily cadence, notifications, audio, sync.
 
-## 9. Open items as of 2026-10-22 (late, after #18; one list, Mira's)
+## 9. Open items as of 2026-10-22 (night; alpha handed to the user)
 
-On main: #15 (781-word bundle, reading pass done), #16 (Word + Credits
-screens), #18 (settings core, alpha README). Alpha items 1, 2, 3, 4, 8 done.
+On main: iOS 16 minimum, Settings screen, defaults fallback without App Group,
+unsigned IPA published by CI to one rolling link:
+https://github.com/simplyjaytea/simplyKANA/releases/download/alpha/SimplyKANA.ipa
+Alpha items 1–6, 8, 9 done. Item 7 (checklist, PR #27) at the gate.
 
 | Item | Owner | Next |
 |---|---|---|
-| #19 settings screen (draft): rebase, re-run snapshots, Credits row not grey, app falls back to defaults when the App Group is missing | Dana | then Rachel gates |
-| #20 widget polish (dimmer reading): approved on design and code | Rachel | merge |
-| Word screen "also:" line for `meanings[1...]` (docs PR open) | Dana | in #19 or follow-up |
-| Credits screen background not proven by snapshot | Dana | fix snapshot |
-| Release checklist: every phone-only line with its bound (App Group on free profile, time zone change ≈ one day on hourly, Japanese VoiceOver voice, Always-On, dimmed reading on a real Lock Screen) | Rachel | alpha item 7, before handover |
-| Handover to the user: README's five steps plus one line on what to report | Mira | after #19 and the checklist |
-| Settings-in-widget fallback (press and hold): scoped on #18, about a day, build only if the user's free profile cannot share settings | Poppy | on the user's report |
+| Release checklist #27: close the two IPA boxes, merge | Rachel | now |
+| User's bug report from the first phone run | user → Mira triages | after install |
+| Settings-in-widget fallback (press and hold): build only if the user reports the App Group error | Poppy | on report |
 | Code licence (open or all rights reserved) | user | this week |
-| Playbook §8 alpha items 5, 6, 7 | Dana, Dana + Poppy, Rachel | see above |
+| Home Screen widget, daily cadence, Chinese/Korean packs | after alpha feedback | no date |
+
+Process notes: never delete a branch another PR is stacked on (cost us #9 and #25). The publish step runs only on main; a dry run of `tools/publish_alpha.sh` against a throwaway tag is how to test it.

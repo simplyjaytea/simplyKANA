@@ -65,6 +65,47 @@ tests it against the whole bundle, not just the snapshot.
   cases: テープレコーダー (longest), パーティー and ワイシャツ (kinsoku runs),
   and a synthetic word with no valid split (expects `語`).
 
+## 1b. One widget per language (decided 2026-10-22, Rachel's proposal, user approved)
+
+The sideload route has no shared storage, so a language chosen in the app
+cannot reach the widget. Rather than a picker that looks like it works, the
+language is chosen by **which widget the user adds**:
+
+- The extension registers one widget kind per installed pack:
+  "simplyKANA · Japanese", "simplyKANA · Chinese", later "· Korean". Same
+  three families each. iOS lists them side by side in the widget gallery.
+- Each kind's timeline draws from its own pack. No storage, no App Group,
+  no disagreement possible between what is on the Lock Screen and what a
+  tap opens: the deep link carries the language and the word id
+  (`simplykana://word/<lang>/<id>`), and the app opens exactly that word.
+- The widget never reads a "current language" from anywhere. The pack is
+  the kind.
+- Interval and quiet hours stay on the defaults on the sideload route until
+  press-and-hold configuration (milestone 2 fallback) exists.
+
+Consequence for Settings: the Language row controls the **app only** (the
+Word screen opened directly, the Today list) and says so in one line of
+secondary ink: "Widgets show the language you chose when adding them." It
+stays a plain row until two packs are installed.
+
+Two rules Rachel added on review (2026-10-23):
+- **The app reads its own language setting from its own `UserDefaults`,
+  never from the App Group.** The #24 fallback to defaults applies to
+  interval and quiet hours only, because those are the settings a widget
+  must share. Language has no widget consumer any more, so it works on the
+  sideload route without shared storage.
+- **Deep links without a language segment still open.** `simplykana://word/<id>`
+  (the pre-#38 form, which an already-added widget may still send) is
+  treated as Japanese. Unknown language segments open the app on its current
+  word rather than failing.
+
+Gates: each kind registers (the #34 check runs per kind); a Chinese widget
+never shows a Japanese word and vice versa (Linux, timeline per pack); the
+deep link round-trips language and id, and the legacy form opens as
+Japanese; the app opens the tapped word even when its own Language row says
+otherwise (simulator); changing the Language row with no App Group present
+changes the app's word (simulator, the sideload case).
+
 ## 2. Timeline (the contract with the scheduler)
 
 All timeline logic is **pure and lives in KanaCore**, so it is tested on Linux.
