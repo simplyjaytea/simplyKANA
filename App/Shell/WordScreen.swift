@@ -54,13 +54,14 @@ struct WordBlock: View {
 
     var body: some View {
         let display = OrthographyMetrics.displaySize(scaledLargeTitle: largeTitle)
-        let size = OrthographyMetrics.fittedSize(for: word.orthography, width: width, display: display)
-        let scrolls = OrthographyMetrics.needsScroll(for: word.orthography, width: width, size: size)
+        let lang = word.language
+        let size = OrthographyMetrics.fittedSize(for: word.orthography, width: width, display: display, language: lang)
+        let scrolls = OrthographyMetrics.needsScroll(for: word.orthography, width: width, size: size, language: lang)
 
         VStack(spacing: size * 0.18) {
             if WordFormatting.showsReading(word) {
                 Text(word.reading)
-                    .font(Typeface.serif(size: size * 0.42, medium: false))
+                    .font(Typeface.reading(word.language, size: size * 0.42))
                     .tracking(size * 0.42 * 0.02)
                     .foregroundStyle(Ink.secondary)
                     .lineLimit(1)
@@ -85,7 +86,7 @@ struct WordBlock: View {
     @ViewBuilder
     private func orthography(size: CGFloat, scrolls: Bool) -> some View {
         let text = Text(word.orthography)
-            .font(Typeface.serif(size: size, medium: true))
+            .font(Typeface.orthography(word.language, size: size))
             .foregroundStyle(Ink.ink)
             .lineLimit(1)
             .fixedSize()            // never truncate, never wrap

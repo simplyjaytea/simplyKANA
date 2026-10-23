@@ -93,8 +93,8 @@ control, not refused after the fact.
 4b. Changing interval or pack changes entry 0; changing quiet hours outside
    the window does not (timeline tests on Linux).
 5. Snapshots of the screen in light and dark at default and largest
-   accessibility size, including the refusal state. The accent appears at
-   most once (the selected interval's mark).
+   accessibility size, including the refusal state. The accent does not
+   appear on this screen (checkmarks are ink).
 6. Phone-only, logged as a known gap: that `reloadAllTimelines` actually
    refreshes the Lock Screen promptly, and that the widget reads the App Group
    at all. CI builds are unsigned, so the App Group cannot be exercised in the
@@ -104,8 +104,10 @@ control, not refused after the fact.
 ## 5. Design notes (Dana)
 
 - Plain grouped list on paper. Section headers in secondary ink, no icons.
-- The interval row is a single-select list, not a stepper or slider;
-  the selected row carries the accent mark, which is the screen's one accent.
+- Interval and Language are single-select lists, not steppers or sliders.
+  The selected row carries an **ink** checkmark plus the `.isSelected` trait.
+  (Changed by Dana, 2026-10-22: with two selection lists on one screen, two
+  vermilion marks would break the one-accent rule. Settings has no accent.)
 - Quiet hours uses two system time pickers in a row, 15-minute steps, with a
   single toggle above them. When off, the pickers are hidden, not disabled.
 - No "Save" button. Changes apply when the control changes, after validation.

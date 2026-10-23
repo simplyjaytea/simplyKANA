@@ -23,9 +23,38 @@ final class SettingsScreenTests: XCTestCase {
 
     final class Counter { var count = 0 }
 
-    private func model(_ d: UserDefaults, reloads: Counter = Counter()) -> SettingsModel {
+    private func model(_ d: UserDefaults, reloads: Counter = Counter(),
+                       packs: [Language] = [.japanese]) -> SettingsModel {
         let store = SettingsStore(defaults: d, reload: { reloads.count += 1 })
-        return SettingsModel(store: store, now: { self.anchor }, calendar: tokyo)
+        return SettingsModel(store: store, now: { self.anchor }, calendar: tokyo, packs: packs)
+    }
+
+    /// §1b: the Language row is the app's own. It saves to the app's storage,
+    /// never the App Group, and reloads no widget.
+    func testSelectingALanguageSavesToAppStorageOnly() {
+        let shared = fresh(), app = fresh()
+        let reloads = Counter()
+        let store = SettingsStore(defaults: shared, reload: { reloads.count += 1 })
+        let m = SettingsModel(store: store, now: { self.anchor }, calendar: tokyo,
+                              packs: [.japanese, .chinese], appDefaults: app)
+        XCTAssertEqual(m.language, .japanese)
+        m.select(language: .chinese)
+        XCTAssertEqual(m.language, .chinese)
+        XCTAssertEqual(app.string(forKey: AppLanguage.key), "zh-Hans")
+        XCTAssertEqual(SettingsStore.load(from: shared).languagePack, Settings.defaults.languagePack,
+                       "the shared store must not carry the app's language")
+        XCTAssertEqual(reloads.count, 0, "no widget reads the app's language")
+    }
+
+    /// A stored language whose pack isn't in this build reads as the first installed one.
+    func testMissingStoredPackFallsBackToFirstInstalled() {
+        let app = fresh()
+        app.set("ko", forKey: AppLanguage.key)
+        XCTAssertEqual(AppLanguage.current(app, packs: [.japanese]), .japanese)
+    }
+
+    func testThisBuildShipsJapanese() {
+        XCTAssertEqual(installedPacks.first, .japanese)
     }
 
     /// Scrolling the picker from 22:00 to 08:00 is 40 ticks and exactly one save.
@@ -95,7 +124,8 @@ final class SettingsScreenTests: XCTestCase {
         XCTAssertEqual(Settings.offeredIntervals.map(SettingsCopy.interval),
                        ["30 minutes", "1 hour", "2 hours", "3 hours", "6 hours"])
         XCTAssertEqual(SettingsCopy.time(7 * 60), "07:00")
-        XCTAssertEqual(SettingsCopy.level("N5"), "JLPT N5")
+        XCTAssertEqual(SettingsCopy.levelLabel(.japanese), "JLPT N5")
+        XCTAssertEqual(SettingsCopy.levelLabel(.chinese), "HSK 1–3")
         XCTAssertEqual(SettingsCopy.language("ja"), "Japanese")
     }
 
@@ -106,7 +136,8 @@ final class SettingsScreenTests: XCTestCase {
         refused.beginEditing(.start); refused.draftMinutes = 60; refused.done(); refused.finishEditing()
         XCTAssertNotNil(refused.refusal(in: .quiet))
 
-        let states: [(String, SettingsModel)] = [("default", model(fresh())), ("refused", refused)]
+        let states: [(String, SettingsModel)] = [("default", model(fresh())), ("refused", refused),
+                                                 ("two-packs", model(fresh(), packs: [.japanese, .chinese]))]
         for (state, m) in states {
             for scheme in [ColorScheme.light, .dark] {
                 for type in [DynamicTypeSize.large, .accessibility3] {

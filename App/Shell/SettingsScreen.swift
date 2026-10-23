@@ -45,10 +45,30 @@ final class SettingsModel: ObservableObject {
     @Published private(set) var refusalSection: Section?
     private var open: QuietEnd?
 
-    init(store: SettingsStore, now: @escaping () -> Date = Date.init, calendar: Calendar = .current) {
+    /// Languages whose word list is in this build, in a fixed order.
+    let packs: [Language]
+
+    /// The app's own storage for its language (never the App Group).
+    private let appDefaults: UserDefaults
+
+    init(store: SettingsStore, now: @escaping () -> Date = Date.init, calendar: Calendar = .current,
+         packs: [Language] = installedPacks, appDefaults: UserDefaults = .standard) {
         self.store = store
         self.now = now
         self.calendar = calendar
+        self.packs = packs
+        self.appDefaults = appDefaults
+    }
+
+    /// The app's language (lock-screen-widget-spec §1b). Widgets don't read it.
+    var language: Language { AppLanguage.current(appDefaults, packs: packs) }
+
+    /// Switches the app's word at once. No validation and no widget reload:
+    /// each widget's language is the widget kind the user added.
+    func select(language: Language) {
+        guard language != self.language else { return }
+        AppLanguage.set(language, appDefaults)
+        objectWillChange.send()
     }
 
     var settings: Settings { store.settings }
@@ -114,15 +134,17 @@ struct SettingsContent: View {
             SettingsSection(title: "New word every", footer: model.refusal(in: .interval)) {
                 ForEach(Array(Settings.offeredIntervals.enumerated()), id: \.element) { index, minutes in
                     if index > 0 { Hairline() }
-                    IntervalRow(label: SettingsCopy.interval(minutes),
+                    SelectRow(label: SettingsCopy.interval(minutes),
                                 selected: model.settings.intervalMinutes == minutes) {
                         model.select(interval: minutes)
                     }
                 }
             }
 
-            SettingsSection(title: "Quiet hours", footer: model.refusal(in: .quiet)
-                            ?? (model.settings.quietEnabled ? "No new words arrive in this window. The last word stays on the Lock Screen." : nil)) {
+            SettingsSection(title: "Quiet hours", footer: SettingsCopy.join(
+                                model.refusal(in: .quiet)
+                                    ?? (model.settings.quietEnabled ? "No new words arrive in this window. The last word stays on the Lock Screen." : nil),
+                                SettingsStore.isShared ? nil : SettingsCopy.scheduleNotShared)) {
                 Toggle(isOn: Binding(get: { model.settings.quietEnabled },
                                      set: { model.setQuiet(enabled: $0) })) {
                     Text("Pause new words").foregroundStyle(Ink.ink)
@@ -137,11 +159,22 @@ struct SettingsContent: View {
                 }
             }
 
-            SettingsSection(title: "Words", footer: SettingsStore.isShared ? nil
-                            : "On this install the Lock Screen widget can't read these settings, so it keeps the defaults.") {
-                ValueRow(label: "Language", value: SettingsCopy.language(model.settings.languagePack))
+            SettingsSection(title: "Words", footer: model.packs.count > 1 ? SettingsCopy.widgetsChooseOwnLanguage : nil) {
+                // A picker only when there is a real choice (Ian, 2026-10-22):
+                // with one pack the row states the value and does nothing.
+                if model.packs.count > 1 {
+                    ForEach(Array(model.packs.enumerated()), id: \.element) { index, pack in
+                        if index > 0 { Hairline() }
+                        SelectRow(label: SettingsCopy.language(pack.rawValue),
+                                  selected: model.language == pack) {
+                            model.select(language: pack)
+                        }
+                    }
+                } else {
+                    ValueRow(label: "Language", value: SettingsCopy.language(model.language.rawValue))
+                }
                 Hairline()
-                ValueRow(label: "Level", value: SettingsCopy.level(model.settings.level))
+                ValueRow(label: "Level", value: SettingsCopy.levelLabel(model.language))
             }
 
                 SettingsSection(title: "About", footer: nil) {
@@ -196,7 +229,10 @@ struct SettingsSection<Content: View>: View {
     }
 }
 
-struct IntervalRow: View {
+/// One option in a single-select list. The checkmark is ink, not the accent:
+/// Settings can hold two selection lists, and two vermilion marks would break
+/// the one-accent rule. A shape plus the .isSelected trait, never colour alone.
+struct SelectRow: View {
     let label: String
     let selected: Bool
     let action: () -> Void
@@ -207,11 +243,10 @@ struct IntervalRow: View {
                 Text(label).foregroundStyle(Ink.ink)
                 Spacer()
                 if selected {
-                    // The one accent. A shape, not text, and backed by the
-                    // .isSelected trait, so colour is never the only signal.
                     Image(systemName: "checkmark")
                         .font(.body.weight(.semibold))
-                        .foregroundStyle(Ink.accent)
+                        .foregroundStyle(Ink.ink)
+                        .accessibilityHidden(true)
                 }
             }
             .rowPadding()
@@ -391,6 +426,19 @@ enum SettingsCopy {
         }
     }
 
+    /// Interval and quiet hours are the only settings a widget must share
+    /// (lock-screen-widget-spec §1b); without the App Group both stay default.
+    static let scheduleNotShared =
+        "On this install the schedule can't reach the Lock Screen widget, so the app and the widget both keep hourly words with quiet hours 22:00–07:00."
+
+    /// Under the Language row (§1b): the row is the app's, not the widget's.
+    static let widgetsChooseOwnLanguage = "Widgets show the language you chose when adding them."
+
+    static func join(_ parts: String?...) -> String? {
+        let present = parts.compactMap { $0 }
+        return present.isEmpty ? nil : present.joined(separator: "\n\n")
+    }
+
     static func time(_ minutes: Int) -> String {
         String(format: "%02d:%02d", minutes / 60, minutes % 60)
     }
@@ -404,7 +452,26 @@ enum SettingsCopy {
         }
     }
 
-    static func level(_ level: String) -> String {
-        level.hasPrefix("N") ? "JLPT \(level)" : level
+    /// What each pack ships. One tier per pack, so Level is a plain row.
+    static func levelLabel(_ language: Language) -> String {
+        switch language {
+        case .japanese: return "JLPT N5"
+        case .chinese: return "HSK 1–3"
+        case .korean: return "Beginner"
+        }
     }
+
+    static func levelKey(_ language: Language) -> String {
+        switch language {
+        case .japanese: return "N5"
+        case .chinese: return "HSK1-3"
+        case .korean: return "beginner"
+        }
+    }
+}
+
+/// Languages whose word list loads in this build. Japanese today; Chinese and
+/// Korean appear here, and in Settings, the day their bundles land.
+let installedPacks: [Language] = [.japanese, .chinese, .korean].filter {
+    ((try? bundledWords($0))?.isEmpty == false)
 }
