@@ -33,16 +33,7 @@ enum AppLanguage {
     /// (treated as Japanese). Unknown language or id: nil, and the app shows its
     /// current word instead of failing.
     static func word(from url: URL) -> Word? {
-        guard url.scheme == "simplykana", url.host == "word" else { return nil }
-        let parts = url.path.split(separator: "/").map { String($0).removingPercentEncoding ?? String($0) }
-        let lang: Language, id: String
-        switch parts.count {
-        case 1: (lang, id) = (.japanese, parts[0])
-        case 2:
-            guard let l = Language(rawValue: parts[0]) else { return nil }
-            (lang, id) = (l, parts[1])
-        default: return nil
-        }
-        return words(lang).first { $0.id == id }
+        // One parser, in KanaCore, tested on Linux against every word in every pack.
+        parseWordLink(url).flatMap { KanaCore.word(for: $0) }
     }
 }

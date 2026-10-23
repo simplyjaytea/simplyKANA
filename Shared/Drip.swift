@@ -31,6 +31,5 @@ func spokenText(for word: Word) -> AttributedString {
     return out
 }
 
-func wordURL(_ word: Word) -> URL {
-    URL(string: "simplykana://word/\(word.id.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? "")")!
-}
+/// Kept for callers that still use the old name; the link carries language and id.
+func wordURL(_ word: Word) -> URL { wordLink(for: word) }
