@@ -107,12 +107,12 @@ public func spokenLabel(for word: Word) -> [SpokenPart] {
     if word.id == fallbackWord.id { return [SpokenPart("No word available", nil)] }
     let lang = word.language.rawValue
     let meaning = word.meanings.first ?? ""
-    if word.partOfSpeech == "hiragana" || word.partOfSpeech == "katakana" {
-        return [SpokenPart(word.orthography, lang), SpokenPart(", \(word.partOfSpeech!), romaji \(meaning)", nil)]
+    let manifest = PackLibrary.shared.manifest(for: word.language)
+    if let scripts = manifest?.scriptPartsOfSpeech, let pos = word.partOfSpeech, scripts.contains(pos) {
+        return [SpokenPart(word.orthography, lang), SpokenPart(", \(pos), romaji \(meaning)", nil)]
     }
-    if word.language == .chinese {
-        // The Chinese voice reads the characters; pinyin read aloud by any voice is
-        // noise. Tagged zh-Hans so VoiceOver doesn't use a Japanese voice.
+    if manifest?.speakReading == false {
+        // e.g. Chinese: the voice reads the characters; pinyin read aloud is noise.
         return [SpokenPart(word.orthography, lang), SpokenPart(", means \(meaning)", nil)]
     }
     if word.reading == word.orthography {

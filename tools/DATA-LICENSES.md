@@ -1,17 +1,17 @@
 # Data licences
 
-`kana-core/Sources/KanaCore/Resources/words-ja.json` is built by `tools/build_bundle.py` from:
+`kana-core/Sources/KanaCore/Resources/Packs/ja.pack.json` is built by `tools/build_pack.py ja` (join: `tools/build_bundle.py`) from:
 
 - **JMdict** (meanings, part of speech, ids, common flag). © Electronic Dictionary Research and Development Group (EDRDG). CC-BY-SA 4.0. https://www.edrdg.org/edrdg/licence.html
   The bundle is an adaptation of JMdict and is distributed under CC-BY-SA 4.0.
 - **JLPT N5 list** (`tools/n5.csv`, which words are N5). open-anki-jlpt-decks, © 2020 Jamie Sinclair, MIT. Based on Jonathan Waller's JLPT lists (tanos.co.uk).
 
 Rebuild: download `http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz`, gunzip, then
-`python3 -I tools/build_bundle.py JMdict_e tools/n5.csv kana-core/Sources/KanaCore/Resources/words-ja.json --report`
+put `JMdict_e` in `/tmp/packsrc/ja/`, then `python3 -I tools/build_pack.py ja`
 
 ## Chinese bundle
 
-`kana-core/Sources/KanaCore/Resources/words-zh.json` is built by `tools/build_zh.py`:
+`kana-core/Sources/KanaCore/Resources/Packs/zh-Hans.pack.json` is built by `tools/build_pack.py zh-Hans` (join: `tools/build_zh.py`):
 
 - **Which words, and their HSK band**: complete-hsk-vocabulary (MIT), levels `new-1`..`new-3`
   (HSK 3.0, GF 0025-2021), from elkmovie/hsk30 (MIT). Only the word list is used; the
@@ -24,7 +24,7 @@ Rebuild: download `http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz`, gunzip, then
 
 Rebuild: download `https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.zip`
 and complete-hsk-vocabulary's `complete.json`, then
-`python3 -I tools/build_zh.py complete.json cedict_ts.u8 kana-core/Sources/KanaCore/Resources/words-zh.json`
+put `complete.json` and `cedict_ts.u8` in `/tmp/packsrc/zh-Hans/`, then `python3 -I tools/build_pack.py zh-Hans`
 
 ## Release two: licence checks (Poppy, 2026-10-22)
 

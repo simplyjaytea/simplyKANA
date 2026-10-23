@@ -2,45 +2,54 @@ import Foundation
 
 // Pure Swift core: no UIKit, WidgetKit, or I/O.
 
-public enum Language: String, Equatable, Hashable, Sendable, Codable {
-    case japanese = "ja"
-    case chinese = "zh-Hans"
-    case korean = "ko"
+/// A language code (BCP-47), e.g. "ja", "zh-Hans", "ko". Open-ended: a new language
+/// is a new pack file, not a new case. The constants are conveniences, not a list.
+public struct Language: RawRepresentable, Hashable, Sendable, Codable, CustomStringConvertible {
+    public let rawValue: String
+    public init(rawValue: String) { self.rawValue = rawValue }
+    public init(_ code: String) { self.rawValue = code }
+    public var description: String { rawValue }
+
+    public static let japanese = Language("ja")
+    public static let chinese = Language("zh-Hans")
+    public static let korean = Language("ko")
+
+    public init(from decoder: Decoder) throws { rawValue = try decoder.singleValueContainer().decode(String.self) }
+    public func encode(to encoder: Encoder) throws { var c = encoder.singleValueContainer(); try c.encode(rawValue) }
 }
 
-/// Learner level. Numbers follow each exam's own scale:
-/// JLPT 5 (easiest) ... 1; HSK 3.0 1 (easiest) ... 9; NIKL 1 (beginner) ... 3.
-/// Korean uses NIKL learner grades: there is no official TOPIK word list.
-public enum Level: Equatable, Hashable, Sendable, Codable {
-    case jlpt(Int)
-    case hsk(Int)
-    case nikl(Int)
+/// Learner level on a pack's own scale: JLPT 5 (easiest) ... 1; HSK 1 (easiest) ... 9;
+/// NIKL 1 ... 3. Open-ended: the scale name comes from the pack. Labels for the UI
+/// come from the pack manifest, not from Swift.
+public struct Level: Hashable, Sendable, Codable {
+    public let scale: String
+    public let value: Int
+    public init(scale: String, value: Int) { self.scale = scale; self.value = value }
 
-    // Bundle format is a one-key object, e.g. {"jlpt": 5}. Written by hand so the
-    // format doesn't depend on Swift's synthesized enum coding ({"jlpt":{"_0":5}}).
-    private enum Key: String, CodingKey { case jlpt, hsk, nikl }
+    public static func jlpt(_ n: Int) -> Level { Level(scale: "jlpt", value: n) }
+    public static func hsk(_ n: Int) -> Level { Level(scale: "hsk", value: n) }
+    public static func nikl(_ n: Int) -> Level { Level(scale: "nikl", value: n) }
+
+    // Pack format is a one-key object, e.g. {"jlpt": 5}.
+    private struct Key: CodingKey {
+        let stringValue: String
+        init(stringValue: String) { self.stringValue = stringValue }
+        var intValue: Int? { nil }
+        init?(intValue: Int) { nil }
+    }
 
     public init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: Key.self)
         guard c.allKeys.count == 1, let k = c.allKeys.first else {
             throw DecodingError.dataCorrupted(.init(codingPath: c.codingPath,
-                debugDescription: "level must have exactly one of jlpt, hsk, nikl"))
+                debugDescription: "level must have exactly one key, the scale"))
         }
-        let n = try c.decode(Int.self, forKey: k)
-        switch k {
-        case .jlpt: self = .jlpt(n)
-        case .hsk: self = .hsk(n)
-        case .nikl: self = .nikl(n)
-        }
+        self.init(scale: k.stringValue, value: try c.decode(Int.self, forKey: k))
     }
 
     public func encode(to encoder: Encoder) throws {
         var c = encoder.container(keyedBy: Key.self)
-        switch self {
-        case .jlpt(let n): try c.encode(n, forKey: .jlpt)
-        case .hsk(let n): try c.encode(n, forKey: .hsk)
-        case .nikl(let n): try c.encode(n, forKey: .nikl)
-        }
+        try c.encode(value, forKey: Key(stringValue: scale))
     }
 }
 

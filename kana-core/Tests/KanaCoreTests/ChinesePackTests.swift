@@ -2,14 +2,14 @@ import Foundation
 import Testing
 @testable import KanaCore
 
-private let zh: [Word] = try! bundledWords(.chinese)
+private let zh: [Word] = try! parkedPacks.pack(.chinese).words  // parked: planned, not shipped
 private func cal(_ id: String) -> Calendar { var c = Calendar(identifier: .gregorian); c.timeZone = TimeZone(identifier: id)!; return c }
 
 @Test func chinesePackLoads() {
     #expect(zh.count == 2207)
     #expect(zh.allSatisfy { $0.language == .chinese })
     for lv in 1...3 { #expect(zh.contains { $0.level == .hsk(lv) }) }
-    #expect(zh.allSatisfy { if case .hsk(let n) = $0.level { return (1...3).contains(n) } else { return false } })
+    #expect(zh.allSatisfy { $0.level?.scale == "hsk" && (1...3).contains($0.level!.value) })
 }
 
 @Test func chineseCountIsSafeForEveryOfferedInterval() {

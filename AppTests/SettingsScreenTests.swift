@@ -125,7 +125,7 @@ final class SettingsScreenTests: XCTestCase {
                        ["30 minutes", "1 hour", "2 hours", "3 hours", "6 hours"])
         XCTAssertEqual(SettingsCopy.time(7 * 60), "07:00")
         XCTAssertEqual(SettingsCopy.levelLabel(.japanese), "JLPT N5")
-        XCTAssertEqual(SettingsCopy.levelLabel(.chinese), "HSK 1–3")
+        if installedPacks.contains(.chinese) { XCTAssertEqual(SettingsCopy.levelLabel(.chinese), "HSK 1–3") }
         XCTAssertEqual(SettingsCopy.language("ja"), "Japanese")
     }
 

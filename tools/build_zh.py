@@ -1,6 +1,6 @@
 """Build the Chinese bundle: HSK 3.0 (GF 0025-2021) bands 1-3, simplified.
 
-usage: python3 -I tools/build_zh.py complete.json cedict_ts.u8 kana-core/Sources/KanaCore/Resources/words-zh.json
+usage: python3 -I tools/build_zh.py complete.json cedict_ts.u8 out.json  (normally run via tools/build_pack.py zh-Hans)
 
 Sources (credits screen; see tools/DATA-LICENSES.md):
   - Which words, and their band: complete-hsk-vocabulary (MIT), levels new-1..new-3.
@@ -63,6 +63,7 @@ MEASURE = {l.split("#")[0].strip() for l in open(f"{here}/zh_measure_words.txt",
 
 # CC-CEDICT: simplified -> [(reading with tone marks, [senses])]
 cedict = {}
+entry_key = {}
 for line in open(cedict_path, encoding="utf-8"):
     if line.startswith("#"):
         continue
@@ -70,6 +71,10 @@ for line in open(cedict_path, encoding="utf-8"):
     if m:
         senses = [p.strip() for g in m.group(4).split("/") for p in g.split(";") if p.strip()]
         cedict.setdefault(m.group(2), []).append((marks(m.group(3)), senses))
+        # Stable id part: the entry's own numbered pinyin, never our corrected reading,
+        # so fixing a shown tone doesn't change a word's id (Rachel, #41).
+        entry_key.setdefault((m.group(2), marks(m.group(3))),
+                             m.group(3).replace(" ", "").replace("u:", "v").lower())
 
 def usable(senses):
     return [p for p in senses if not JUNK.match(p) and strip(p)]
@@ -91,6 +96,7 @@ for lv in LEVELS:
             used["manual"].add(o)
             rd, gloss = MANUAL[o][0], MANUAL[o][1]
             meanings = [gloss]
+            wid = f"hsk:{o}"
         elif len({r.lower() for r, _ in entries}) > 1:
             if o not in table:
                 problems.append(f"{o}: heteronym missing from zh_heteronyms.tsv "
@@ -107,12 +113,14 @@ for lv in LEVELS:
                 problems.append(f"{o} {entry_rd}: evidence '{evidence}' not in that entry")
                 continue
             used["table"].add(o)
+            wid = f"cedict:{o}:{entry_key[(o, entry_rd)]}"
             meanings = [gloss] + [p for s in chosen for p in usable(s) if p != gloss][:3]
         else:
             # One reading. Common-noun entries (lowercase pinyin) before surnames/brands.
             entries = sorted(entries, key=lambda e: e[0][:1].isupper())
             senses = [p for _, s in entries for p in usable(s)]
             rd = next((r for r, s in entries if usable(s)), entries[0][0])
+            wid = f"cedict:{o}:{entry_key[(o, rd)]}"
             if o in MEANING:
                 used["meaning"].add(o)
                 first = MEANING[o]
@@ -139,7 +147,7 @@ for lv in LEVELS:
             "y": "particle", "t": "noun", "f": "noun", "s": "noun", "vn": "verb", "an": "adjective",
             "nz": "noun", "ns": "noun", "nr": "noun", "nt": "noun", "o": "onomatopoeia", "i": "expression",
             "l": "expression", "j": "noun", "b": "adjective", "z": "adjective", "ad": "adverb", "vd": "verb"}) else None
-        words.append({"id": f"cedict:{o}:{rd}", "language": "zh-Hans", "orthography": o, "reading": rd,
+        words.append({"id": wid, "language": "zh-Hans", "orthography": o, "reading": rd,
                       "meanings": meanings, "partOfSpeech": pos, "level": {"hsk": lv}, "isCommon": True})
 
 for kind, rows in (("table", table), ("meaning", MEANING), ("manual", MANUAL)):
