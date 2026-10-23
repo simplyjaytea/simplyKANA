@@ -50,6 +50,7 @@ The user (simplyjaytee) owns the GitHub account, the Apple side (no Developer ac
 - Circular widget: whole word or `語`; 5–8 chars on two lines, kinsoku-aware leftward split.
 - `spokenLabel(for:)` returns language-tagged parts; screens build the attributed string.
 - Repo name `simplyKANA` approved by the user.
+- **Packs are one file per language** (user, 2026-10-23): `<lang>.pack.json` with words, manifest (fonts, voice, labels, widget slot) and licences; the app swaps by the Language preference; Swift names no language. Spec: `docs/pack-pipeline.md`. New language = one config + hand-judgement data files + Rachel's read.
 - **One Lock Screen widget per language** (2026-10-22, user approved): language is chosen by which widget is added; no shared storage; Settings' Language row is app-only.
 - **Minimum iOS: 16.0** (user, 2026-10-22). Lock Screen widgets need 16; nothing we use needs 17 except `containerBackground(for: .widget)`, which is shimmed with `#available`. CI compiles at the 16.0 target.
 
