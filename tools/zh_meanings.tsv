@@ -1,23 +1,19 @@
-# word	first meaning (Lock Screen, max 22 chars)
+# word	first meaning (Lock Screen, max 22 chars). Learner sense first.
 第	ordinal prefix (-th)
 放假	to have a holiday
 放学	school's out
 老	old
 楼	building; floor
-们	plural marker
 前天	day before yesterday
 请假	to ask for leave
 请问	excuse me, may I ask
 同学	classmate
-层	layer; floor
 打工	to work part-time
-份	portion; copy
 公交车	bus
 过年	to celebrate New Year
 回国	to return home
 开学	school starts
 看法	view; opinion
-辆	classifier: vehicles
 留学生	overseas student
 外地	other parts of country
 外卖	takeout
@@ -59,3 +55,169 @@
 考	to take an exam
 没事儿	it's nothing
 仅	only; merely
+# Rachel's meaning read (PR #36), blockers
+本	measure word: books
+等	to wait
+电	electricity
+跟	with; to follow
+关	to close; to turn off
+后	back; after
+话	words; speech
+回	to return
+里	inside
+奶	milk
+钱	money
+太	too (much)
+先生	Mr.; sir
+一块儿	together
+才	only then; just
+不错	not bad; pretty good
+打印	to print
+带	to bring; to take
+封	measure word: letters
+刚	just (now)
+克	gram
+酒店	hotel
+交通	traffic
+接下来	next
+让	to let; to make
+市	city
+挺	quite; very
+往	towards
+闻	to smell
+心里	in one's heart
+心中	in one's heart
+药	medicine
+一般	ordinary; usually
+云	cloud
+中餐	Chinese food
+周	week
+被	(passive marker) by
+布	cloth
+存	to deposit; to keep
+订	to book; to order
+顿	measure word: meals
+可乐	cola
+困	sleepy
+领	to lead; to receive
+录	to record
+木头	wood
+所	measure word: schools
+团	group
+修	to repair
+演	to act; to perform
+张	measure word: sheets
+证	certificate
+钟	clock
+遍	measure word: times
+开放	to open up
+叫	to be called; to call
+热	hot
+先	first
+# Rachel's meaning read, misleading
+班	class
+包	bag; to wrap
+很	very
+课	class; lesson
+块	piece; yuan
+门	door
+明白	to understand
+日	day; sun
+月	month; moon
+在	at; in
+字	character; word
+一起	together
+不过	but; however
+笔记	notes
+进	to enter
+正在	in the middle of
+店	shop
+队	team
+活动	activity
+或	or
+面	noodles; side
+篇	measure word: articles
+题	question
+天上	in the sky
+位	measure word: people
+响	loud; to ring
+校长	principal
+套	measure word: sets
+特别	especially
+收入	income
+算	to calculate
+答应	to agree
+方面	aspect
+满	full
+一直	always
+影片	film
+原来	so it turns out
+愿意	to be willing
+运动	sport
+装	to install; to pack
+主人	host
+组	group
+座	measure word: hills
+作用	effect
+不光	not only
+部	measure word: films
+城	city
+从事	to engage in
+代	generation
+地区	area; region
+电台	radio station
+丰富	rich
+架	measure word: planes
+较	relatively
+久	long (time)
+恐怕	I'm afraid; probably
+迷	fan
+牌子	brand
+配合	to cooperate
+全球	global
+束	measure word: bunches
+伟大	great
+由	by; from
+支	measure word: pens
+指	to point
+准	accurate
+总	always
+左右	about
+专门	specially
+双	measure word: pairs
+祝	to wish
+通常	usually
+相当	quite
+鸡	chicken
+# Erhua words (CC-CEDICT only cross-references the base word), and over-long glosses
+干活儿	to work
+快点儿	hurry up
+好玩儿	fun
+面条儿	noodles
+男孩儿	boy
+女孩儿	girl
+小孩儿	child
+一点儿	a little
+一下儿	a moment; once
+笑话儿	joke
+有空儿	to be free
+车票	ticket
+开会	to have a meeting
+球	ball
+午睡	nap
+白菜	Chinese cabbage
+好好	well; properly
+人民币	renminbi (RMB)
+员	member; staff
+请进	come in
+快乐	happy
+做法	method; way of doing
+底下	under; below
+# Measure words (tools/zh_measure_words.txt)
+层	measure word: floors
+段	measure word: sections
+份	measure word: portions
+件	measure word: items
+辆	measure word: vehicles
+条	measure word: strips
+群	measure word: groups

@@ -6,7 +6,7 @@ private let zh: [Word] = try! bundledWords(.chinese)
 private func cal(_ id: String) -> Calendar { var c = Calendar(identifier: .gregorian); c.timeZone = TimeZone(identifier: id)!; return c }
 
 @Test func chinesePackLoads() {
-    #expect(zh.count == 2209)
+    #expect(zh.count == 2207)
     #expect(zh.allSatisfy { $0.language == .chinese })
     for lv in 1...3 { #expect(zh.contains { $0.level == .hsk(lv) }) }
     #expect(zh.allSatisfy { if case .hsk(let n) = $0.level { return (1...3).contains(n) } else { return false } })
@@ -40,6 +40,7 @@ private func cal(_ id: String) -> Calendar { var c = Calendar(identifier: .grego
         #expect(w.meanings[0].filter { $0 == "(" }.count == w.meanings[0].filter { $0 == ")" }.count, "\(w.orthography)")
         #expect(w.orthography.count <= 8, "\(w.orthography) too long for the circular widget")
         #expect(!w.meanings.contains { $0.localizedCaseInsensitiveContains("(vulgar)") || $0.localizedCaseInsensitiveContains("euphemis") }, "\(w.orthography)")
+        #expect(w.reading.rangeOfCharacter(from: .decimalDigits) == nil, "\(w.orthography): \(w.reading)")
     }
 }
 
@@ -59,5 +60,17 @@ private func cal(_ id: String) -> Calendar { var c = Calendar(identifier: .grego
         let parts = spokenLabel(for: w)
         #expect(parts.first == SpokenPart(w.orthography, "zh-Hans"))
         #expect(!parts.contains { $0.language == "ja" })
+    }
+}
+
+@Test func chineseRachelsReadFixes() {
+    let byWord = Dictionary(uniqueKeysWithValues: zh.map { ($0.orthography, $0) })
+    #expect(byWord["子"] == nil && byWord["们"] == nil)             // rule 8
+    #expect(byWord["女儿"]?.reading == "nǚ'ér")                      // apostrophe
+    #expect(byWord["笑话儿"]?.reading == "xiàohuar")                 // no tone digit
+    #expect(byWord["好处"]?.reading == "hǎochù")                     // official tone wins
+    for (w, m) in [("药", "medicine"), ("后", "back; after"), ("云", "cloud"), ("钱", "money"),
+                   ("奶", "milk"), ("可乐", "cola"), ("本", "measure word: books"), ("称", "to call; to weigh")] {
+        #expect(byWord[w]?.meanings.first == m, "\(w)")
     }
 }

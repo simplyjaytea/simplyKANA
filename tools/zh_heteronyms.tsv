@@ -1,10 +1,10 @@
-# word	reading	first meaning (Lock Screen)	must appear in that reading's CC-CEDICT entry
+# word	reading shown (official HSK list wins on tones)	first meaning (Lock Screen)	must appear in the CC-CEDICT entry	CC-CEDICT entry reading, if it differs from the one shown
 吧	ba	suggestion particle	suggestion
 比	bǐ	to compare	to compare
 别	bié	don't; other	other
 差	chà	to lack; poor	to lack
 车	chē	car; vehicle	car
-出来	chūlái	to come out	to come out
+出来	chūlai	to come out	to come out	chūlái
 打	dǎ	to hit; to play	to hit
 大	dà	big	big
 地	dì	ground; earth	earth
@@ -18,13 +18,13 @@
 分	fēn	minute; to divide	to divide
 干	gàn	to do; to work	to work
 告诉	gàosu	to tell	to tell
-个	gè	general classifier	classifier used before
+个	gè	measure word (general)	classifier used before
 给	gěi	to give; for	to give
 过	guò	to pass; to cross	to cross
 还	hái	still; also	still
 好	hǎo	good	good
 好吃	hǎochī	tasty	tasty
-号	hào	number; date	ordinal number
+号	hào	number; date	number
 喝	hē	to drink	to drink
 和	hé	and; with	and
 会	huì	can; meeting	can
@@ -58,7 +58,6 @@
 正	zhèng	straight; just	straight
 中	zhōng	middle; in	middle
 重	zhòng	heavy	heavy
-子	zǐ	son; child	son
 啊	a	ah (particle)	particle
 背	bèi	back; to recite	back
 边	biān	side; edge	side
@@ -66,7 +65,7 @@
 草	cǎo	grass	grass
 查	chá	to check; to look up	to check
 场	chǎng	field; venue	large place
-称	chēng	to weigh; to call	to weigh
+称	chēng	to call; to weigh	to name
 当	dāng	to be; to serve as	to be
 当时	dāngshí	then; at that time	then
 倒	dǎo	to fall; to collapse	to fall
@@ -76,9 +75,9 @@
 高中	gāozhōng	senior high school	senior high school
 更	gèng	more; even more	more
 故事	gùshi	story	story
-过来	guòlái	to come over	to come over
+过来	guòlai	to come over	to come over	guòlái
 过去	guòqù	the past	past
-好处	hǎochu	benefit	benefit
+好处	hǎochù	benefit	benefit	hǎochu
 好事	hǎoshì	good thing	good action
 假	jiǎ	fake; false	fake
 角	jiǎo	corner; angle	angle
@@ -92,7 +91,7 @@
 凉	liáng	cool; cold	cool
 鸟	niǎo	bird	bird
 弄	nòng	to do; to make	to do
-片	piàn	slice; piece	thin piece
+片	piàn	measure word: slices	thin piece
 骑	qí	to ride	to ride
 省	shěng	province; to save	province
 数	shǔ	to count	to count
@@ -108,7 +107,7 @@
 长	cháng	long	long
 只	zhǐ	only	only
 重点	zhòngdiǎn	key point	important point
-把	bǎ	to hold	to hold
+把	bǎ	object marker; handful	object before the verb
 板	bǎn	board	board
 本事	běnshi	ability; skill	ability
 并	bìng	and; also	and
@@ -140,3 +139,15 @@
 种	zhǒng	kind; type	type
 转	zhuǎn	to turn; to change	to turn
 追	zhuī	to chase	to chase
+六	liù	six	six
+写	xiě	to write	to write
+南	nán	south	south
+台	tái	measure word: machines	classifier for vehicles or machine
+吵	chǎo	noisy; to quarrel	noisy
+拉	lā	to pull	to pull
+洗	xǐ	to wash	to wash
+派	pài	to send; group	faction
+猫	māo	cat	cat
+红	hóng	red	red
+绿	lǜ	green	green
+这	zhè	this	this
