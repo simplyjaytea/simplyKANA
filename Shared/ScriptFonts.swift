@@ -1,4 +1,5 @@
 import UIKit
+import CoreText
 import KanaCore
 
 /// Which face sets a word, by the word's language (design-direction §2).
@@ -23,8 +24,22 @@ enum ScriptFonts {
 
     /// The installed face for this language and role, or nil if none is.
     static func name(_ language: Language, _ role: Role) -> String? {
-        candidates(language, role).first { UIFont(name: $0, size: 12) != nil }
+        registerBundledFonts()
+        return candidates(language, role).first { UIFont(name: $0, size: 12) != nil }
     }
+
+    /// The Noto Serif subsets in Shared/Fonts (tools/make_fonts.py), registered
+    /// once per process. Shared/ is in both targets, so the app and the widget
+    /// each carry and register their own copy. No Info.plist entry needed.
+    static let bundledFontURLs: [URL] = Bundle.main.urls(forResourcesWithExtension: "ttf", subdirectory: nil) ?? []
+
+    private static let registration: Void = {
+        for url in bundledFontURLs {
+            CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
+        }
+    }()
+
+    static func registerBundledFonts() { _ = registration }
 
     static func uiFont(_ language: Language, _ role: Role, size: CGFloat) -> UIFont {
         if let n = name(language, role), let f = UIFont(name: n, size: size) { return f }
