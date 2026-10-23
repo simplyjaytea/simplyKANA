@@ -277,7 +277,7 @@ packs plus a language picker. Nothing in the scheduler changes.
 - Chinese ships **simplified** first. Traditional is a later toggle, stored as
   a second orthography on the same word, not a second word.
 - Korean foundation = the 40 hangul jamo (as kana are for Japanese), then
-  NIKL grade A vocabulary. Chinese has no foundation tier; HSK 1 is the entry.
+  NIKL beginner-level (초급) vocabulary. Chinese has no foundation tier; HSK 1 is the entry.
 
 **Candidate data sources (Poppy to verify licence and coverage before use)**
 - Chinese: CC-CEDICT (CC-BY-SA 4.0, credit MDBG/CC-CEDICT) for id, pinyin,
@@ -304,6 +304,74 @@ reading's entry); the build fails if a heteronym is missing from the table, if
 a row's reading isn't an entry of that word, or if its phrase isn't in that
 entry. Chinese: `tools/zh_heteronyms.tsv`, 141 rows, checked by Rachel against
 the official HSK 3.0 PDF. Korean inherits the rule when its pack is built.
+
+**Korean pack, first cut (user priority, 2026-10-23). What Poppy builds:**
+- **Scope:** the 40 hangul jamo as the foundation tier (`partOfSpeech =
+  "jamo"`, `level = nil`, meaning = the letter's sounds, both where it has
+  two: ㄱ "g / k", ㄹ "r / l", ㅇ "silent / ng"; single-sound letters show
+  one), then
+  NIKL dictionary **beginner level only** (초급, about 1,770 words after drops,
+  `level = .nikl(1)`, UI label "Beginner"). Grades B and C later.
+- **Sources (verified against the data, Ian, 2026-10-23):** the NIKL Basic
+  Korean Dictionary **alone**. Its XML carries a `vocabularyLevel` per entry
+  (초급 / 중급 / 고급), so the 2003 learner list is not needed and its site
+  is unreachable from our host anyway. Measured on the full dictionary
+  (54,828 entries, LMF XML, CC BY-SA 2.0 KR):
+  - 초급 entries: 1,940, **every one with an English equivalent**; 1,778
+    distinct spellings, 135 spellings with more than one entry (homonyms).
+  - Each entry has `id` (→ `krdict:<id>`), `homonym_number`, `partOfSpeech`,
+    `pronunciation` (e.g. 교ː육, strip the length mark ː), `vocabularyLevel`,
+    and senses with English `lemma` and `definition`.
+  - 101 초급 entries carry no pronunciation string; 97 are loanword nouns
+    (라디오, 메뉴, 바나나) read as spelt, 2 are the 접사 -되다 (dropped under
+    rule 8) and 2 are 의존 명사. Rule (Rachel's mechanical form): **no
+    pronunciation → romanize from the spelling only when no syllable before
+    the last ends in a consonant (no 받침 at any join); otherwise the build
+    fails on that word.** 라디오 passes, 커피숍 fails and is fixed by hand.
+  - Some entries list two pronunciations. **Take the first.** The build
+    fails on any pronunciation string containing anything other than
+    hangul syllables and the length mark ː, which is stripped.
+  - Beginner = `vocabularyLevel == 초급`. Expected count after drops: about
+    1,770 words plus 40 jamo. The count rule below then applies.
+  - 초급 parts of speech: 명사 1,160, 동사 290, 형용사 141, 부사 129,
+    관형사 71, 수사 49, 의존 명사 43 (counters and bound nouns, kept as
+    counters are for Chinese), 대명사 38, 감탄사 17, 접사 2 (dropped).
+  - Obtain the data from the official "사전 전체 내려받기" on
+    krdict.korean.go.kr first; if that needs an account nobody on the team
+    has, use the 2019 snapshot mirrored at
+    github.com/spellcheck-ko/korean-dict-nikl-krdict (same licence, recorded
+    as a snapshot date in the manifest). One file in that mirror has a stray
+    `<` inside an attribute; the build escapes it rather than editing the
+    source.
+  - kengdic stays as Rachel's independent second dictionary. Readings are Revised Romanization **generated from
+  the pronunciation NIKL lists for each entry**, not from the spelling:
+  Korean changes sounds at syllable joins (국물 gungmul, 같이 gachi, 좋다
+  jota), and a letter-by-letter converter gets every one of those wrong.
+  Deterministic, tested on Linux with a table of about 30 known sound-change
+  words (Rachel's gate). Where NIKL lists no pronunciation, the build fails
+  on that word rather than guessing.
+- **Homographs:** Korean has many identical spellings with unrelated meanings
+  (배 pear / boat / belly) and the romanization is identical too, so the
+  (orthography, reading) uniqueness key would collide. Rule for Korean:
+  **one entry per orthography**, leading with the sense NIKL marks for the
+  learner list; the other senses go to `meanings[1...]` as the "also:" line.
+  A learner sees 배 once, not three times.
+- **Affixes:** rule 8 applies: particles (은/는, 이/가, 을/를, 에, 에서…),
+  verb endings and honorific suffixes (-님, -씨) drop. Verbs and adjectives
+  keep NIKL's dictionary form (-다).
+- **Font:** Noto Serif KR subset, same build check as Chinese; AppleMyungjo
+  is not on iOS. Voice `ko-KR`; spoken text is the orthography.
+- **Rachel's read:** every first meaning, with kengdic as the independent
+  second dictionary. Expect fewer hand fixes than Chinese: NIKL's English is
+  written for learners, not inherited from a general dictionary.
+- **Licence:** CC BY-SA 2.0 KR, kept as its own notice, not relabelled 4.0.
+- **Word count:** 40 jamo plus about 1,770 beginner words lands near
+  1,810. The count must not be a multiple of 24 and must be coprime with
+  every offered slots-per-day (48, 24, 12, 8, 4). If the natural count
+  fails, **hold back one beginner word, not a jamo**, chosen in Rachel's
+  reading pass and recorded in
+  `drops.txt` with the reason "count". The build check enforces it; the
+  choice of word is human.
 
 **Done when**: a `Word` for each language loads through the same Swift loader,
 the same tests pass with `language` swapped, and the credits screen names each
