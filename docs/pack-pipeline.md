@@ -10,12 +10,32 @@ human judgement. Everything else is the same code for every language.
 
 ---
 
+## 0. The user's requirement (2026-10-23, verbatim intent)
+
+"Japanese is one file. Chinese is one file. Korean is one file. The app swaps
+between them according to user preferences." This spec makes that literally
+true:
+
+- **One pack = one file in the app:** `ja.pack.json`, `zh-Hans.pack.json`,
+  `ko.pack.json`. Words, manifest, licence text and display rules all inside
+  the one JSON. The subset font is the only companion asset, named by the
+  manifest.
+- **The app swaps packs by the user's Language preference.** The Word
+  screen, Today list and Credits all read the active pack. Nothing in Swift
+  names a language: fonts, voice code, level labels and script names come
+  from the pack's manifest, so a fourth language is a fourth file and zero
+  code.
+- **The widget follows the same preference wherever it can read it** (Xcode
+  installs with the App Group). Where it cannot (sideload), the user chooses
+  per widget, which is why the per-language widget kinds (#39) exist. Both
+  paths read the same pack files.
+
 ## 1. What a pack is
 
-A pack is a folder, `packs/<lang>/`, that the generic build turns into the
-`words-<lang>.json` the app and widget load. The app discovers packs by
-listing the bundle; nothing in Swift names a language except the font table
-and the voice code.
+A pack is a source folder, `packs/<lang>/`, that the generic build turns
+into the single `<lang>.pack.json` the app and widget load. The app
+discovers packs by listing `*.pack.json` in the bundle; nothing in Swift
+names a language.
 
 ```
 packs/zh/
@@ -71,8 +91,20 @@ no_digits_in_reading = true
    no digits in readings; measure-word rule; count not aliasing any offered
    interval; one-year simulation shows every word; 24-slot spacing for equal
    orthographies; every character present in the pack's font subset.
-5. Writes `words-<lang>.json` plus a `manifest.json` with counts, source
-   hashes, and the licence list the Credits screen renders.
+5. Writes one file, `<lang>.pack.json`:
+   ```json
+   {
+     "manifest": {
+       "language": "zh-Hans", "name": "Chinese", "levelScale": "hsk",
+       "font": "NotoSerifSC-Subset", "voice": "zh-CN",
+       "scriptLabels": {}, "count": 2207, "sources": [...], "licences": "...",
+       "builtFrom": { "list": "<sha256>", "dictionary": "<sha256>" }
+     },
+     "words": [ ... ]
+   }
+   ```
+   The Credits screen renders `licences` from the active pack. The font and
+   voice tables in Swift are deleted; the manifest is the table.
 
 The three hand files are **data**, reviewed like data, and are the whole of
 what "manual" means. For Japanese they are 15 overrides and 12 drops. For
@@ -101,6 +133,19 @@ can be fetched at runtime (not alpha), the app verifies the manifest's
 signature and hash, places the folder, and reloads. Nothing in the loader
 changes; only where the folder comes from. Not built now; the format is
 designed so it never needs a rewrite.
+
+## 4b. Refactor order (Poppy)
+
+1. Loader: discover `*.pack.json`, expose `Pack` (manifest + words), active
+   pack = the Language preference, default = first pack alphabetically by
+   name with Japanese pinned first for existing users.
+2. Move font, voice and level-label lookups from Swift tables to the
+   manifest. Delete the tables.
+3. Fold `build_bundle.py` and `build_zh.py` into `build_pack.py <lang>`;
+   move the six Chinese hand files into `packs/zh-Hans/` as the three named
+   files; same for Japanese.
+4. Gate: today's two bundles reproduce byte for byte from the new build.
+5. Then Korean is `packs/ko/pack.toml` and a reading pass.
 
 ## 5. Gates for the pipeline itself (Rachel)
 
