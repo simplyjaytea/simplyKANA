@@ -29,25 +29,28 @@ final class SettingsScreenTests: XCTestCase {
         return SettingsModel(store: store, now: { self.anchor }, calendar: tokyo, packs: packs)
     }
 
-    func testSelectingALanguageSavesItWithItsLevel() {
-        let d = fresh()
+    /// §1b: the Language row is the app's own. It saves to the app's storage,
+    /// never the App Group, and reloads no widget.
+    func testSelectingALanguageSavesToAppStorageOnly() {
+        let shared = fresh(), app = fresh()
         let reloads = Counter()
-        let m = model(d, reloads: reloads, packs: [.japanese, .chinese])
+        let store = SettingsStore(defaults: shared, reload: { reloads.count += 1 })
+        let m = SettingsModel(store: store, now: { self.anchor }, calendar: tokyo,
+                              packs: [.japanese, .chinese], appDefaults: app)
         XCTAssertEqual(m.language, .japanese)
         m.select(language: .chinese)
-        XCTAssertEqual(SettingsStore.load(from: d).languagePack, "zh-Hans")
-        XCTAssertEqual(SettingsStore.load(from: d).level, "HSK1-3")
         XCTAssertEqual(m.language, .chinese)
-        XCTAssertEqual(reloads.count, 1, "one save, one widget reload")
-        m.select(language: .chinese)
-        XCTAssertEqual(reloads.count, 1, "choosing the current language saves nothing")
+        XCTAssertEqual(app.string(forKey: AppLanguage.key), "zh-Hans")
+        XCTAssertEqual(SettingsStore.load(from: shared).languagePack, Settings.defaults.languagePack,
+                       "the shared store must not carry the app's language")
+        XCTAssertEqual(reloads.count, 0, "no widget reads the app's language")
     }
 
-    /// A stored pack that isn't in this build reads as the first installed one.
+    /// A stored language whose pack isn't in this build reads as the first installed one.
     func testMissingStoredPackFallsBackToFirstInstalled() {
-        let d = fresh()
-        d.set("ko", forKey: Settings.Key.languagePack)
-        XCTAssertEqual(model(d, packs: [.japanese]).language, .japanese)
+        let app = fresh()
+        app.set("ko", forKey: AppLanguage.key)
+        XCTAssertEqual(AppLanguage.current(app, packs: [.japanese]), .japanese)
     }
 
     func testThisBuildShipsJapanese() {

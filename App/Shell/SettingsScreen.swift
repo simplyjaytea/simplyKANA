@@ -31,7 +31,7 @@ struct SettingsScreen: View {
 @MainActor
 final class SettingsModel: ObservableObject {
     enum QuietEnd: String, Identifiable { case start, end; var id: String { rawValue } }
-    enum Section { case interval, quiet, language }
+    enum Section { case interval, quiet }
 
     let store: SettingsStore
     private let now: () -> Date
@@ -48,28 +48,27 @@ final class SettingsModel: ObservableObject {
     /// Languages whose word list is in this build, in a fixed order.
     let packs: [Language]
 
+    /// The app's own storage for its language (never the App Group).
+    private let appDefaults: UserDefaults
+
     init(store: SettingsStore, now: @escaping () -> Date = Date.init, calendar: Calendar = .current,
-         packs: [Language] = installedPacks) {
+         packs: [Language] = installedPacks, appDefaults: UserDefaults = .standard) {
         self.store = store
         self.now = now
         self.calendar = calendar
         self.packs = packs
+        self.appDefaults = appDefaults
     }
 
-    /// The pack in use: the stored one if it is installed, else the first.
-    var language: Language {
-        let stored = Language(rawValue: settings.languagePack)
-        return stored.flatMap { packs.contains($0) ? $0 : nil } ?? packs.first ?? .japanese
-    }
+    /// The app's language (lock-screen-widget-spec §1b). Widgets don't read it.
+    var language: Language { AppLanguage.current(appDefaults, packs: packs) }
 
-    /// Switching language swaps the word on screen at once (settings-spec §2);
-    /// the level follows the pack, since each pack ships one tier.
+    /// Switches the app's word at once. No validation and no widget reload:
+    /// each widget's language is the widget kind the user added.
     func select(language: Language) {
         guard language != self.language else { return }
-        var s = settings
-        s.languagePack = language.rawValue
-        s.level = SettingsCopy.levelKey(language)
-        commit(s, .language)
+        AppLanguage.set(language, appDefaults)
+        objectWillChange.send()
     }
 
     var settings: Settings { store.settings }
@@ -142,8 +141,10 @@ struct SettingsContent: View {
                 }
             }
 
-            SettingsSection(title: "Quiet hours", footer: model.refusal(in: .quiet)
-                            ?? (model.settings.quietEnabled ? "No new words arrive in this window. The last word stays on the Lock Screen." : nil)) {
+            SettingsSection(title: "Quiet hours", footer: SettingsCopy.join(
+                                model.refusal(in: .quiet)
+                                    ?? (model.settings.quietEnabled ? "No new words arrive in this window. The last word stays on the Lock Screen." : nil),
+                                SettingsStore.isShared ? nil : SettingsCopy.scheduleNotShared)) {
                 Toggle(isOn: Binding(get: { model.settings.quietEnabled },
                                      set: { model.setQuiet(enabled: $0) })) {
                     Text("Pause new words").foregroundStyle(Ink.ink)
@@ -158,8 +159,7 @@ struct SettingsContent: View {
                 }
             }
 
-            SettingsSection(title: "Words", footer: SettingsStore.isShared ? nil
-                            : "On this install the Lock Screen widget can't read these settings, so it keeps the defaults.") {
+            SettingsSection(title: "Words", footer: model.packs.count > 1 ? SettingsCopy.widgetsChooseOwnLanguage : nil) {
                 // A picker only when there is a real choice (Ian, 2026-10-22):
                 // with one pack the row states the value and does nothing.
                 if model.packs.count > 1 {
@@ -424,6 +424,19 @@ enum SettingsCopy {
         case 60: return "1 hour"
         default: return "\(minutes / 60) hours"
         }
+    }
+
+    /// Interval and quiet hours are the only settings a widget must share
+    /// (lock-screen-widget-spec §1b); without the App Group both stay default.
+    static let scheduleNotShared =
+        "On this install the schedule can't reach the Lock Screen widget, so the app and the widget both keep hourly words with quiet hours 22:00–07:00."
+
+    /// Under the Language row (§1b): the row is the app's, not the widget's.
+    static let widgetsChooseOwnLanguage = "Widgets show the language you chose when adding them."
+
+    static func join(_ parts: String?...) -> String? {
+        let present = parts.compactMap { $0 }
+        return present.isEmpty ? nil : present.joined(separator: "\n\n")
     }
 
     static func time(_ minutes: Int) -> String {
