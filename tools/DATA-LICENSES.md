@@ -9,6 +9,23 @@
 Rebuild: download `http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz`, gunzip, then
 `python3 -I tools/build_bundle.py JMdict_e tools/n5.csv kana-core/Sources/KanaCore/Resources/words-ja.json --report`
 
+## Chinese bundle
+
+`kana-core/Sources/KanaCore/Resources/words-zh.json` is built by `tools/build_zh.py`:
+
+- **Which words, and their HSK band**: complete-hsk-vocabulary (MIT), levels `new-1`..`new-3`
+  (HSK 3.0, GF 0025-2021), from elkmovie/hsk30 (MIT). Only the word list is used; the
+  packager's pinyin and glosses are not, because 8 of its glosses come from an unnamed source.
+- **Pinyin and meanings**: CC-CEDICT (MDBG, CC-BY-SA 4.0), read directly from
+  `cedict_ts.u8`. The bundle is an adaptation and is distributed under CC-BY-SA 4.0.
+- **Written by hand** (Poppy, reviewed by Rachel): `tools/zh_heteronyms.tsv`,
+  `tools/zh_meanings.tsv`, `tools/zh_manual.tsv` (8 HSK words CC-CEDICT lacks),
+  `tools/zh_measure_words.txt`.
+
+Rebuild: download `https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.zip`
+and complete-hsk-vocabulary's `complete.json`, then
+`python3 -I tools/build_zh.py complete.json cedict_ts.u8 kana-core/Sources/KanaCore/Resources/words-zh.json`
+
 ## Release two: licence checks (Poppy, 2026-10-22)
 
 Checked before any Chinese or Korean data is bundled (start condition, word-data-spec §7).

@@ -286,6 +286,16 @@ packs plus a language picker. Nothing in the scheduler changes.
   romanization, glosses; NIKL learner vocabulary list for grade membership.
   Licences for all three unconfirmed as of 2026-10-22 (Poppy, before release two).
 
+**Heteronym rule (Ian, 2026-10-22; applies to every pack).** A word with more
+than one reading in the dictionary takes its reading **and** its first meaning
+from the same dictionary entry, chosen by a person, never by a script. 行 read
+xíng is "to walk"; read háng it is "row". Each pack keeps a hand-written table
+(word, reading, Lock Screen meaning, a phrase that must appear in that
+reading's entry); the build fails if a heteronym is missing from the table, if
+a row's reading isn't an entry of that word, or if its phrase isn't in that
+entry. Chinese: `tools/zh_heteronyms.tsv`, 141 rows, checked by Rachel against
+the official HSK 3.0 PDF. Korean inherits the rule when its pack is built.
+
 **Done when**: a `Word` for each language loads through the same Swift loader,
 the same tests pass with `language` swapped, and the credits screen names each
 source. Owner: Ian (spec), Poppy (loader + data), Rachel (gate), Mira (dates

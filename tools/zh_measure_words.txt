@@ -1,0 +1,26 @@
+# One word per line. HSK 1-3 words whose learner sense is a measure word.
+个
+本
+张
+条
+件
+位
+辆
+台
+封
+顿
+所
+遍
+篇
+座
+部
+架
+支
+束
+套
+双
+份
+层
+段
+群
+片
