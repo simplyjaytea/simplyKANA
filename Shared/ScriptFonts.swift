@@ -15,16 +15,10 @@ import KanaCore
 enum ScriptFonts {
     enum Role { case orthography, reading }
 
+    /// The pack's ordered list for this role (pack.toml [fonts]); empty if no pack.
     static func candidates(_ language: Language, _ role: Role) -> [String] {
-        switch (language, role) {
-        case (.japanese, .orthography): return ["NotoSerifJP-Medium", "HiraMinProN-W6", "HiraginoSans-W6"]
-        case (.japanese, .reading):     return ["NotoSerifJP-Regular", "HiraMinProN-W3", "HiraginoSans-W3"]
-        case (.chinese, .orthography):  return ["NotoSerifSC-Medium", "STSongti-SC-Bold", "PingFangSC-Medium"]
-        // Pinyin is Latin with tone marks: a Latin serif, not a CJK face's Latin.
-        case (.chinese, .reading):      return ["NotoSerif-Regular", "Georgia"]
-        case (.korean, .orthography):   return ["NotoSerifKR-Medium", "AppleMyungjo", "AppleSDGothicNeo-Medium"]
-        case (.korean, .reading):       return ["NotoSerifKR-Regular", "AppleMyungjo", "AppleSDGothicNeo-Regular"]
-        }
+        guard let fonts = PackLibrary.shared.manifest(for: language)?.fonts else { return [] }
+        return role == .orthography ? fonts.orthography : fonts.reading
     }
 
     /// The installed face for this language and role, or nil if none is.

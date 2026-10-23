@@ -8,8 +8,18 @@
    "jlpt": "N{n}"
   },
   "levelSummary": "JLPT N5",
-  "font": "Hiragino Mincho ProN",
-  "fallbackFont": null,
+  "fonts": {
+   "orthography": [
+    "NotoSerifJP-Medium",
+    "HiraMinProN-W6",
+    "HiraginoSans-W6"
+   ],
+   "reading": [
+    "NotoSerifJP-Regular",
+    "HiraMinProN-W3",
+    "HiraginoSans-W3"
+   ]
+  },
   "voice": "ja-JP",
   "speakReading": true,
   "scriptPartsOfSpeech": [

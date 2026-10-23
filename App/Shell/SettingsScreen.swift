@@ -447,26 +447,16 @@ enum SettingsCopy {
         PackLibrary.shared.manifest(for: Language(pack))?.name ?? pack
     }
 
-    /// What each pack ships. One tier per pack, so Level is a plain row.
+    /// What each pack ships, from its manifest. One tier per pack, so Level is a plain row.
     static func levelLabel(_ language: Language) -> String {
-        switch language {
-        case .japanese: return "JLPT N5"
-        case .chinese: return "HSK 1–3"
-        case .korean: return "Beginner"
-        }
+        PackLibrary.shared.manifest(for: language)?.levelSummary ?? ""
     }
 
     static func levelKey(_ language: Language) -> String {
-        switch language {
-        case .japanese: return "N5"
-        case .chinese: return "HSK1-3"
-        case .korean: return "beginner"
-        }
+        PackLibrary.shared.manifest(for: language)?.levelSummary
+            .replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "JLPT", with: "") ?? ""
     }
 }
 
-/// Languages whose word list loads in this build. Japanese today; Chinese and
-/// Korean appear here, and in Settings, the day their bundles land.
-let installedPacks: [Language] = [.japanese, .chinese, .korean].filter {
-    ((try? bundledWords($0))?.isEmpty == false)
-}
+/// Languages whose pack is in this build, discovered from the pack files.
+var installedPacks: [Language] { PackLibrary.shared.manifests.map(\.language) }

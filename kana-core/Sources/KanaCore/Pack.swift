@@ -14,9 +14,9 @@ public struct PackManifest: Codable, Equatable, Sendable {
     public let levelLabels: [String: String]
     /// Plain label shown for the pack's level range, e.g. "JLPT N5", "HSK 1–3".
     public let levelSummary: String
-    /// Preferred font family for the words (nil = system), and a fallback.
-    public let font: String?
-    public let fallbackFont: String?
+    /// Ordered font lists (PostScript names), tried in order: bundled serif, an iOS
+    /// serif, then a sans iOS always ships for the script (right shapes beat serifs).
+    public let fonts: Fonts
     /// Voice / VoiceOver language, e.g. "zh-CN".
     public let voice: String
     /// Whether VoiceOver should speak the reading line (kana yes, pinyin no).
@@ -28,6 +28,12 @@ public struct PackManifest: Codable, Equatable, Sendable {
     /// Credits screen text: sources and licences.
     public let credits: [Credit]
     public let count: Int
+
+    public struct Fonts: Codable, Equatable, Sendable {
+        public let orthography: [String]
+        public let reading: [String]
+        public init(orthography: [String], reading: [String]) { self.orthography = orthography; self.reading = reading }
+    }
 
     public struct Credit: Codable, Equatable, Sendable {
         public let title: String

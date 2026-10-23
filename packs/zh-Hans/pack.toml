@@ -5,12 +5,15 @@ widget_name = "simplyKANA · Chinese"
 widget_slot = 1
 level_labels = { hsk = "HSK {n}" }
 level_summary = "HSK 1–3"
-font = "Noto Serif SC"
-fallback_font = "Songti SC"
 voice = "zh-CN"
 speak_reading = false
 script_parts_of_speech = []
 placeholder = { orthography = "水", reading = "shuǐ", meaning = "water", part_of_speech = "noun", level = { hsk = 1 } }
+
+# Dana, design-direction §2: word and reading faces, bundled serif → iOS serif → iOS sans.
+[fonts]
+orthography = ["NotoSerifSC-Medium", "STSongti-SC-Bold", "PingFangSC-Medium"]
+reading = ["NotoSerif-Regular", "Georgia"]
 
 [join]
 kind = "cedict-wordlist"

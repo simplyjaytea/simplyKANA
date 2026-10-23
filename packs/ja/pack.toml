@@ -5,11 +5,15 @@ widget_name = "simplyKANA · Japanese"
 widget_slot = 0
 level_labels = { jlpt = "N{n}" }
 level_summary = "JLPT N5"
-font = "Hiragino Mincho ProN"
 voice = "ja-JP"
 speak_reading = true
 script_parts_of_speech = ["hiragana", "katakana"]
 placeholder = { orthography = "日", reading = "にち", meaning = "day", part_of_speech = "noun", level = { jlpt = 5 } }
+
+# Dana, design-direction §2: word and reading faces, bundled serif → iOS serif → iOS sans.
+[fonts]
+orthography = ["NotoSerifJP-Medium", "HiraMinProN-W6", "HiraginoSans-W6"]
+reading = ["NotoSerifJP-Regular", "HiraMinProN-W3", "HiraginoSans-W3"]
 
 [join]
 kind = "jmdict-wordlist"

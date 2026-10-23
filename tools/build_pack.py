@@ -42,6 +42,12 @@ if any(w["language"] != lang for w in words):
     problems.append("a word's language differs from the pack's")
 if len({w["id"] for w in words}) != len(words):
     problems.append("duplicate ids")
+for w in words:
+    # Links carry the id: keep it safe to put in a URL path (Dana, #39 review).
+    if re.search(r"[%/\s]", w["id"]):
+        problems.append(f"{w['orthography']}: id has %, / or a space: {w['id']}")
+if not conf["fonts"]["orthography"] or not conf["fonts"]["reading"]:
+    problems.append("pack.toml [fonts] needs orthography and reading lists")
 if len({(w["orthography"], w["reading"]) for w in words}) != len(words):
     problems.append("duplicate (orthography, reading)")
 for w in words:
@@ -66,8 +72,9 @@ ph = conf["placeholder"]
 manifest = {
     "language": lang, "name": conf["name"], "widgetName": conf["widget_name"],
     "widgetSlot": conf["widget_slot"], "levelLabels": conf["level_labels"],
-    "levelSummary": conf["level_summary"], "font": conf.get("font"),
-    "fallbackFont": conf.get("fallback_font"), "voice": conf["voice"],
+    "levelSummary": conf["level_summary"],
+    "fonts": {"orthography": conf["fonts"]["orthography"], "reading": conf["fonts"]["reading"]},
+    "voice": conf["voice"],
     "speakReading": conf["speak_reading"], "scriptPartsOfSpeech": conf["script_parts_of_speech"],
     "placeholder": {"id": "placeholder", "language": lang, "orthography": ph["orthography"],
                     "reading": ph["reading"], "meanings": [ph["meaning"]],

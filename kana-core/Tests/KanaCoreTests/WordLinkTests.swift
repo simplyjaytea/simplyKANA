@@ -74,7 +74,7 @@ import Testing
     }
     let m = ja.manifest
     let manifest = PackManifest(language: xx, name: "Test", widgetName: "simplyKANA · Test", widgetSlot: 2,
-                                levelLabels: m.levelLabels, levelSummary: m.levelSummary, font: nil, fallbackFont: nil,
+                                levelLabels: m.levelLabels, levelSummary: m.levelSummary, fonts: m.fonts,
                                 voice: "en", speakReading: true, scriptPartsOfSpeech: [], placeholder: relabel(m.placeholder),
                                 credits: m.credits, count: m.count)
     let data = try JSONEncoder().encode(Pack(manifest: manifest, words: ja.words.map(relabel)))
@@ -88,4 +88,24 @@ import Testing
     let ja = try PackLibrary.shared.pack(.japanese)
     let bad = Pack(manifest: ja.manifest, words: Array(ja.words.dropLast()))
     #expect(throws: PackError.self) { try decodePack(from: JSONEncoder().encode(bad)) }
+}
+
+@Test func idsAreSafeInLinksAndStableAcrossToneFixes() throws {
+    for m in PackLibrary.shared.manifests {
+        for w in try bundledWords(m.language) {
+            #expect(w.id.rangeOfCharacter(from: CharacterSet(charactersIn: "%/ ")) == nil, "\(w.id)")
+        }
+    }
+    // 好处 is shown with the official tone (hǎochù) but keeps the dictionary entry's id,
+    // so correcting a shown tone never breaks a link on a Lock Screen.
+    let haochu = try bundledWords(.chinese).first { $0.orthography == "好处" }
+    #expect(haochu?.reading == "hǎochù")
+    #expect(haochu?.id == "cedict:好处:hao3chu5")
+}
+
+@Test func packsCarryTwoOrderedFontLists() {
+    for m in PackLibrary.shared.manifests {
+        #expect(!m.fonts.orthography.isEmpty && !m.fonts.reading.isEmpty, "\(m.language)")
+    }
+    #expect(PackLibrary.shared.manifest(for: .chinese)?.fonts.reading.first == "NotoSerif-Regular")
 }

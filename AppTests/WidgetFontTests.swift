@@ -9,7 +9,9 @@ import KanaCore
 @MainActor
 final class WidgetFontTests: XCTestCase {
     private func word(_ lang: Language) -> Word {
-        Word(id: "test", language: lang, orthography: "直骨角", reading: lang == .chinese ? "zhí gǔ jiǎo" : "ちょく",
+        // Same orthography, reading and meaning in both languages (Rachel, #39): the only
+        // thing that differs is the language, so a system font would draw them identically.
+        Word(id: "test", language: lang, orthography: "直骨角", reading: "直骨角",
              meanings: ["shapes test"], partOfSpeech: "noun", level: nil, isCommon: true)
     }
 
