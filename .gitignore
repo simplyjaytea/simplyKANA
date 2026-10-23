@@ -10,3 +10,7 @@ tools/JMdict_e*
 # XcodeGen output
 SimplyKANA.xcodeproj/
 Generated/
+
+# Python bytecode
+__pycache__/
+*.pyc
