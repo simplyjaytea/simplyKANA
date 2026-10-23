@@ -58,37 +58,39 @@ struct WordWidgetView: View {
     }
 }
 
-/// One widget kind per pack. Japanese keeps the original kind name so widgets
-/// already on a Lock Screen keep working after an update.
-struct KanaLockScreenWidget: Widget {
-    let language: Language
-
-    var kind: String { language == .japanese ? "KanaLockScreen" : "KanaLockScreen.\(language.rawValue)" }
-
-    var name: String {
-        switch language {
-        case .japanese: return "simplyKANA · Japanese"
-        case .chinese: return "simplyKANA · Chinese"
-        case .korean: return "simplyKANA · Korean"
-        }
+/// One widget kind per pack. WidgetKit needs a no-argument init, so each pack is
+/// its own small type sharing one configuration. Japanese keeps the original kind
+/// name so widgets already on a Lock Screen keep working after an update.
+func wordWidgetConfiguration(_ language: Language) -> some WidgetConfiguration {
+    let kind = language == .japanese ? "KanaLockScreen" : "KanaLockScreen.\(language.rawValue)"
+    let name: String
+    switch language {
+    case .japanese: name = "simplyKANA · Japanese"
+    case .chinese: name = "simplyKANA · Chinese"
+    case .korean: name = "simplyKANA · Korean"
     }
-
-    var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider(language: language)) { entry in
-            WordWidgetView(entry: entry)
-        }
-        .configurationDisplayName(name)
-        .description("One word, on schedule.")
-        .supportedFamilies([.accessoryRectangular, .accessoryInline, .accessoryCircular])
+    return StaticConfiguration(kind: kind, provider: Provider(language: language)) { entry in
+        WordWidgetView(entry: entry)
     }
+    .configurationDisplayName(name)
+    .description("One word, on schedule.")
+    .supportedFamilies([.accessoryRectangular, .accessoryInline, .accessoryCircular])
+}
+
+struct JapaneseWordWidget: Widget {
+    var body: some WidgetConfiguration { wordWidgetConfiguration(.japanese) }
+}
+
+struct ChineseWordWidget: Widget {
+    var body: some WidgetConfiguration { wordWidgetConfiguration(.chinese) }
 }
 
 /// Packs bundled in this build. Korean joins when its pack does.
 @main
 struct KanaWidgetBundle: WidgetBundle {
     var body: some Widget {
-        KanaLockScreenWidget(language: .japanese)
-        KanaLockScreenWidget(language: .chinese)
+        JapaneseWordWidget()
+        ChineseWordWidget()
     }
 }
 
