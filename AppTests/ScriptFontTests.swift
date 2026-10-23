@@ -9,7 +9,10 @@ import KanaCore
 @MainActor
 final class ScriptFontTests: XCTestCase {
     func testEveryLanguageResolvesToAnInstalledFace() {
-        for lang in [Language.japanese, .chinese, .korean] {
+        // Fonts come from each pack's manifest, so every installed pack must resolve.
+        // (Korean joins this list when its pack lands, with its own font lists.)
+        XCTAssertFalse(installedPacks.isEmpty)
+        for lang in installedPacks {
             for role in [ScriptFonts.Role.orthography, .reading] {
                 XCTAssertNotNil(ScriptFonts.name(lang, role), "\(lang) \(role): no installed face")
             }
