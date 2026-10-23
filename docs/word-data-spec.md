@@ -277,7 +277,7 @@ packs plus a language picker. Nothing in the scheduler changes.
 - Chinese ships **simplified** first. Traditional is a later toggle, stored as
   a second orthography on the same word, not a second word.
 - Korean foundation = the 40 hangul jamo (as kana are for Japanese), then
-  NIKL grade A vocabulary. Chinese has no foundation tier; HSK 1 is the entry.
+  NIKL beginner-level (초급) vocabulary. Chinese has no foundation tier; HSK 1 is the entry.
 
 **Candidate data sources (Poppy to verify licence and coverage before use)**
 - Chinese: CC-CEDICT (CC-BY-SA 4.0, credit MDBG/CC-CEDICT) for id, pinyin,
@@ -310,7 +310,7 @@ the official HSK 3.0 PDF. Korean inherits the rule when its pack is built.
   "jamo"`, `level = nil`, meaning = the letter's sounds, both where it has
   two: ㄱ "g / k", ㄹ "r / l", ㅇ "silent / ng"; single-sound letters show
   one), then
-  NIKL learner-list **grade A only** (초급, about a thousand words,
+  NIKL dictionary **beginner level only** (초급, about 1,770 words after drops,
   `level = .nikl(1)`, UI label "Beginner"). Grades B and C later.
 - **Sources (verified against the data, Ian, 2026-10-23):** the NIKL Basic
   Korean Dictionary **alone**. Its XML carries a `vocabularyLevel` per entry
@@ -324,10 +324,14 @@ the official HSK 3.0 PDF. Korean inherits the rule when its pack is built.
     and senses with English `lemma` and `definition`.
   - 101 초급 entries carry no pronunciation string; 97 are loanword nouns
     (라디오, 메뉴, 바나나) read as spelt, 2 are the 접사 -되다 (dropped under
-    rule 8) and 2 are 의존 명사. Rule: **no pronunciation → romanize from
-    the spelling, only when the part of speech is 명사 and the entry has no
-    sound-change letters at syllable joins; otherwise the build fails.**
-  - Grade A = `vocabularyLevel == 초급`. Expected count after drops: about
+    rule 8) and 2 are 의존 명사. Rule (Rachel's mechanical form): **no
+    pronunciation → romanize from the spelling only when no syllable before
+    the last ends in a consonant (no 받침 at any join); otherwise the build
+    fails on that word.** 라디오 passes, 커피숍 fails and is fixed by hand.
+  - Some entries list two pronunciations. **Take the first.** The build
+    fails on any pronunciation string containing anything other than
+    hangul syllables and the length mark ː, which is stripped.
+  - Beginner = `vocabularyLevel == 초급`. Expected count after drops: about
     1,770 words plus 40 jamo. The count rule below then applies.
   - 초급 parts of speech: 명사 1,160, 동사 290, 형용사 141, 부사 129,
     관형사 71, 수사 49, 의존 명사 43 (counters and bound nouns, kept as
@@ -361,10 +365,11 @@ the official HSK 3.0 PDF. Korean inherits the rule when its pack is built.
   second dictionary. Expect fewer hand fixes than Chinese: NIKL's English is
   written for learners, not inherited from a general dictionary.
 - **Licence:** CC BY-SA 2.0 KR, kept as its own notice, not relabelled 4.0.
-- **Word count:** 40 jamo plus grade A lands near 1,000. The count must not
-  be a multiple of 24 and must be coprime with every offered slots-per-day
-  (48, 24, 12, 8, 4). If the natural count fails, **hold back one grade A
-  word, not a jamo**, chosen in Rachel's reading pass and recorded in
+- **Word count:** 40 jamo plus about 1,770 beginner words lands near
+  1,810. The count must not be a multiple of 24 and must be coprime with
+  every offered slots-per-day (48, 24, 12, 8, 4). If the natural count
+  fails, **hold back one beginner word, not a jamo**, chosen in Rachel's
+  reading pass and recorded in
   `drops.txt` with the reason "count". The build check enforces it; the
   choice of word is human.
 
