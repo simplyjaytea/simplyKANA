@@ -312,9 +312,34 @@ the official HSK 3.0 PDF. Korean inherits the rule when its pack is built.
   one), then
   NIKL learner-list **grade A only** (초급, about a thousand words,
   `level = .nikl(1)`, UI label "Beginner"). Grades B and C later.
-- **Sources:** NIKL Basic Korean Dictionary download for id (`krdict:<entry>`),
-  orthography, English meanings and any reading; NIKL learner vocabulary list
-  for grade membership. Readings are Revised Romanization **generated from
+- **Sources (verified against the data, Ian, 2026-10-23):** the NIKL Basic
+  Korean Dictionary **alone**. Its XML carries a `vocabularyLevel` per entry
+  (초급 / 중급 / 고급), so the 2003 learner list is not needed and its site
+  is unreachable from our host anyway. Measured on the full dictionary
+  (54,828 entries, LMF XML, CC BY-SA 2.0 KR):
+  - 초급 entries: 1,940, **every one with an English equivalent**; 1,778
+    distinct spellings, 135 spellings with more than one entry (homonyms).
+  - Each entry has `id` (→ `krdict:<id>`), `homonym_number`, `partOfSpeech`,
+    `pronunciation` (e.g. 교ː육, strip the length mark ː), `vocabularyLevel`,
+    and senses with English `lemma` and `definition`.
+  - 101 초급 entries carry no pronunciation string; 97 are loanword nouns
+    (라디오, 메뉴, 바나나) read as spelt, 2 are the 접사 -되다 (dropped under
+    rule 8) and 2 are 의존 명사. Rule: **no pronunciation → romanize from
+    the spelling, only when the part of speech is 명사 and the entry has no
+    sound-change letters at syllable joins; otherwise the build fails.**
+  - Grade A = `vocabularyLevel == 초급`. Expected count after drops: about
+    1,770 words plus 40 jamo. The count rule below then applies.
+  - 초급 parts of speech: 명사 1,160, 동사 290, 형용사 141, 부사 129,
+    관형사 71, 수사 49, 의존 명사 43 (counters and bound nouns, kept as
+    counters are for Chinese), 대명사 38, 감탄사 17, 접사 2 (dropped).
+  - Obtain the data from the official "사전 전체 내려받기" on
+    krdict.korean.go.kr first; if that needs an account nobody on the team
+    has, use the 2019 snapshot mirrored at
+    github.com/spellcheck-ko/korean-dict-nikl-krdict (same licence, recorded
+    as a snapshot date in the manifest). One file in that mirror has a stray
+    `<` inside an attribute; the build escapes it rather than editing the
+    source.
+  - kengdic stays as Rachel's independent second dictionary. Readings are Revised Romanization **generated from
   the pronunciation NIKL lists for each entry**, not from the spelling:
   Korean changes sounds at syllable joins (국물 gungmul, 같이 gachi, 좋다
   jota), and a letter-by-letter converter gets every one of those wrong.
