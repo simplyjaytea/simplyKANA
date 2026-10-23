@@ -19,8 +19,14 @@ jobs:
     container: swift:6.1
     steps:
       - uses: actions/checkout@v4
-      - name: Korean romanization cases
-        run: python3 -I tools/test_ko_romanize.py
       - name: Test
         working-directory: kana-core
         run: swift test
+
+  pack-tools:
+    name: Pack tools (Python)
+    runs-on: ubuntu-latest   # the Swift image has no Python
+    steps:
+      - uses: actions/checkout@v4
+      - name: Korean romanization cases
+        run: python3 -I tools/test_ko_romanize.py
