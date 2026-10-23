@@ -9,7 +9,8 @@ struct SimplyKANAApp: App {
 }
 
 /// The app opens on the word that is on the Lock Screen now. A widget tap
-/// (simplykana://word/<id>) opens that word instead, until the app is left.
+/// (simplykana://word/<lang>/<id>, or the older simplykana://word/<id>) opens
+/// that exact word, whatever the app's own Language row says, until the app is left.
 struct RootView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var pinned: Word?
@@ -19,7 +20,7 @@ struct RootView: View {
         NavigationStack {
             // Re-evaluated every minute so the page turns with the drip.
             TimelineView(.everyMinute) { context in
-                let word = pinned ?? currentWord(at: context.date)
+                let word = pinned ?? AppLanguage.currentWord(at: context.date)
                 WordScreen(word: word)
                     .id(word.id)
                     .transition(.opacity)
@@ -40,15 +41,9 @@ struct RootView: View {
             .navigationDestination(isPresented: $showsSettings) { SettingsScreen() }
         }
         .tint(Ink.ink)
-        .onOpenURL { url in pinned = word(from: url) }
+        .onOpenURL { url in pinned = AppLanguage.word(from: url) }
         .onChange(of: scenePhase) { phase in // iOS 16 form
             if phase == .background { pinned = nil }
         }
-    }
-
-    private func word(from url: URL) -> Word? {
-        guard url.scheme == "simplykana", url.host == "word" else { return nil }
-        let id = url.path.dropFirst().removingPercentEncoding ?? ""
-        return packWords().first { $0.id == id } ?? appWords.first { $0.id == id }
     }
 }

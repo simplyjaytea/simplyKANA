@@ -32,11 +32,12 @@ why when it refuses. Nothing here may produce a dead widget.
   bundle count (781 = 11 × 71), so no word is ever hidden by aliasing. The
   bundle gate already checks "not a multiple of 24"; it grows to "no common
   factor with any offered slots-per-day" (see §4).
-- **Language pack** changes the bundle the picker draws from. Changing it
-  resets nothing else; the schedule is the user's, the words are the pack's.
-  One language per widget instance stands (lock-screen spec); the pack
-  setting is the widget's, surfaced in the app for MVP because the widget has
-  no configuration intent yet.
+- **Language pack** (revised 2026-10-22): the row controls the **app only**.
+  Widgets are one kind per language (lock-screen spec §1b) and ignore this
+  setting, so it works identically on the Xcode and sideload routes. The row
+  carries one line of secondary ink: "Widgets show the language you chose
+  when adding them." Plain row until two packs are installed; changing it
+  swaps the app's current word immediately.
 
 ## 2. Storage and reload (Poppy)
 
