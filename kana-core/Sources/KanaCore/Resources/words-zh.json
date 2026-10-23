@@ -827,10 +827,10 @@
   "orthography": "穿",
   "reading": "chuān",
   "meanings": [
+   "to wear; to put on",
    "to bore through",
    "to pierce",
-   "to perforate",
-   "to go through (e.g. a tunnel)"
+   "to perforate"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -1250,10 +1250,10 @@
   "orthography": "点",
   "reading": "diǎn",
   "meanings": [
+   "o'clock; a little",
    "to touch briefly",
    "to tap",
-   "to mark with a dot",
-   "to check off (on a list)"
+   "to mark with a dot"
   ],
   "partOfSpeech": null,
   "level": {
@@ -8272,10 +8272,10 @@
   "orthography": "笔",
   "reading": "bǐ",
   "meanings": [
+   "pen",
    "writing brush",
    "writing implement (pen, pencil etc) (CL:支[zhi1],枝[zhi1])",
-   "brushstroke",
-   "stroke (in painting or calligraphy)"
+   "brushstroke"
   ],
   "partOfSpeech": "measure word",
   "level": {
@@ -11803,10 +11803,10 @@
   "orthography": "加油",
   "reading": "jiāyóu",
   "meanings": [
+   "come on!; to refuel",
    "to add oil",
    "to top up with gas",
-   "to refuel",
-   "to accelerate"
+   "to refuel"
   ],
   "partOfSpeech": "verb",
   "level": {
@@ -15621,10 +15621,10 @@
   "orthography": "水平",
   "reading": "shuǐpíng",
   "meanings": [
+   "level; standard",
    "horizontal",
    "level",
-   "a standard",
-   "a level (of ability, development etc)"
+   "a standard"
   ],
   "partOfSpeech": "noun",
   "level": {
