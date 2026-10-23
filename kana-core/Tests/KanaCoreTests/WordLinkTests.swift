@@ -3,7 +3,7 @@ import Testing
 @testable import KanaCore
 
 @Test func wordLinkRoundTripsEveryWordInEveryPack() throws {
-    for lang in [Language.japanese, .chinese] {
+    for lang in PackLibrary.shared.manifests.map(\.language) {
         for w in try bundledWords(lang) {
             let target = parseWordLink(wordLink(for: w))
             #expect(target == .word(lang, id: w.id), "\(w.id)")
@@ -36,8 +36,9 @@ import Testing
     var c = Calendar(identifier: .gregorian); c.timeZone = TimeZone(identifier: "Asia/Tokyo")!
     let s = Schedule.from(settings: .defaults)
     let now = Date(timeIntervalSince1970: 1_767_225_600)
-    for lang in [Language.japanese, .chinese] {
-        let t = timeline(after: now, schedule: s, words: try bundledWords(lang), calendar: c, limit: 48)
+    for words in [try bundledWords(.japanese), try parkedPacks.pack(.chinese).words] {
+        let lang = words[0].language
+        let t = timeline(after: now, schedule: s, words: words, calendar: c, limit: 48)
         #expect(t.entries.allSatisfy { $0.word.language == lang })
     }
 }
@@ -46,8 +47,10 @@ import Testing
 
 @Test func packsAreDiscoveredNotNamed() {
     let m = PackLibrary.shared.manifests
-    #expect(m.map(\.language.rawValue) == ["ja", "zh-Hans"])
-    #expect(m.map(\.widgetSlot) == [0, 1])
+    // Chinese is parked (status "planned"): it's not in the app, so not discovered.
+    #expect(m.map(\.language.rawValue) == ["ja"])
+    #expect(m.map(\.widgetSlot) == [0])
+    #expect(parkedPacks.manifests.map(\.language.rawValue) == ["zh-Hans"])
     #expect(Set(m.map(\.widgetSlot)).count == m.count, "two packs claim the same widget slot")
     for p in m {
         #expect(p.count == (try? bundledWords(p.language).count))
@@ -58,7 +61,7 @@ import Testing
 
 @Test func levelLabelsComeFromTheManifest() {
     #expect(PackLibrary.shared.manifest(for: .japanese)?.levelLabel(.jlpt(5)) == "N5")
-    #expect(PackLibrary.shared.manifest(for: .chinese)?.levelLabel(.hsk(2)) == "HSK 2")
+    #expect(parkedPacks.manifest(for: .chinese)?.levelLabel(.hsk(2)) == "HSK 2")
 }
 
 @Test func aPackInATemporaryFolderIsPickedUp() throws {
@@ -98,7 +101,10 @@ import Testing
     }
     // 好处 is shown with the official tone (hǎochù) but keeps the dictionary entry's id,
     // so correcting a shown tone never breaks a link on a Lock Screen.
-    let haochu = try bundledWords(.chinese).first { $0.orthography == "好处" }
+    for w in try parkedPacks.pack(.chinese).words {
+        #expect(w.id.rangeOfCharacter(from: CharacterSet(charactersIn: "%/ ")) == nil, "\(w.id)")
+    }
+    let haochu = try parkedPacks.pack(.chinese).words.first { $0.orthography == "好处" }
     #expect(haochu?.reading == "hǎochù")
     #expect(haochu?.id == "cedict:好处:hao3chu5")
 }
@@ -107,5 +113,5 @@ import Testing
     for m in PackLibrary.shared.manifests {
         #expect(!m.fonts.orthography.isEmpty && !m.fonts.reading.isEmpty, "\(m.language)")
     }
-    #expect(PackLibrary.shared.manifest(for: .chinese)?.fonts.reading.first == "NotoSerif-Regular")
+    #expect(parkedPacks.manifest(for: .chinese)?.fonts.reading.first == "NotoSerif-Regular")
 }

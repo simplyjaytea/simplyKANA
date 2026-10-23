@@ -26,6 +26,11 @@ for B in "$APP" "$EXT"; do
   for P in "$(dirname "$0")"/../kana-core/Sources/KanaCore/Resources/Packs/*.pack.json; do
     P=$(basename "$P"); find "$B" -name "$P" | grep -q . || fail "$name has no $P"
   done
+  # Parked packs (status "planned", kept in packs/<lang>/) must not ship.
+  for P in "$(dirname "$0")"/../packs/*/*.pack.json; do
+    [ -e "$P" ] || continue
+    P=$(basename "$P"); ! find "$B" -name "$P" | grep -q . || fail "$name ships parked pack $P"
+  done
   echo "ok: $name  iphoneos arm64  iOS $MIN+  language packs present"
 done
 echo "IPA OK: $(du -h "$IPA" | cut -f1)"

@@ -20,6 +20,7 @@ final class ScriptFontTests: XCTestCase {
     }
 
     func testChineseAndJapaneseUseDifferentFaces() throws {
+        try XCTSkipUnless(installedPacks.contains(.chinese), "Chinese pack is parked (planned); runs again when it ships")
         let ja = try XCTUnwrap(ScriptFonts.name(.japanese, .orthography))
         let zh = try XCTUnwrap(ScriptFonts.name(.chinese, .orthography))
         XCTAssertNotEqual(ja, zh)
@@ -29,6 +30,7 @@ final class ScriptFontTests: XCTestCase {
 
     /// Side by side, for a human look: Japanese, then Chinese.
     func testRenderShapeComparison() throws {
+        try XCTSkipUnless(installedPacks.contains(.chinese), "Chinese pack is parked (planned); runs again when it ships")
         func page(_ lang: Language, _ o: String, _ r: String) -> some View {
             WordPage(word: Word(id: "shape:\(lang.rawValue):\(o)", language: lang, orthography: o, reading: r,
                                 meanings: ["shape check"], partOfSpeech: "noun", level: nil, isCommon: true))

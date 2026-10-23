@@ -1,5 +1,8 @@
 # Chinese (simplified) pack. Built by: python3 -I tools/build_pack.py zh-Hans
 language = "zh-Hans"
+# planned: built and gated, kept in the repo, not shipped in the app (user, 2026-10-23).
+# Change to "shipped" to put it back in the app and the widget list.
+status = "planned"
 name = "Chinese"
 widget_name = "simplyKANA · Chinese"
 widget_slot = 1

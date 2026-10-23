@@ -26,7 +26,8 @@ final class WidgetFontTests: XCTestCase {
         return data
     }
 
-    func testWidgetFontComesFromTheWordsLanguage() {
+    func testWidgetFontComesFromTheWordsLanguage() throws {
+        try XCTSkipUnless(installedPacks.contains(.chinese), "Chinese pack is parked (planned); runs again when it ships")
         let ja = ScriptFonts.name(.japanese, .orthography)
         let zh = ScriptFonts.name(.chinese, .orthography)
         XCTAssertNotNil(ja, "no Japanese face installed")
@@ -35,6 +36,7 @@ final class WidgetFontTests: XCTestCase {
     }
 
     func testChineseAndJapaneseWidgetsDrawDifferentShapes() throws {
+        try XCTSkipUnless(installedPacks.contains(.chinese), "Chinese pack is parked (planned); runs again when it ships")
         let rect = CGSize(width: 160, height: 72), circ = CGSize(width: 76, height: 76)
         let rJa = try png(RectangularWordView(word: word(.japanese)), rect, "widget-rect-直骨角-ja")
         let rZh = try png(RectangularWordView(word: word(.chinese)), rect, "widget-rect-直骨角-zh")

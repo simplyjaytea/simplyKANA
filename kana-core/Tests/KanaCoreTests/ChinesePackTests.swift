@@ -2,7 +2,7 @@ import Foundation
 import Testing
 @testable import KanaCore
 
-private let zh: [Word] = try! bundledWords(.chinese)
+private let zh: [Word] = try! parkedPacks.pack(.chinese).words  // parked: planned, not shipped
 private func cal(_ id: String) -> Calendar { var c = Calendar(identifier: .gregorian); c.timeZone = TimeZone(identifier: id)!; return c }
 
 @Test func chinesePackLoads() {

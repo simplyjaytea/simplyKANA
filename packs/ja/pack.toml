@@ -1,5 +1,6 @@
 # Japanese pack. Built by: python3 -I tools/build_pack.py ja
 language = "ja"
+status = "shipped"
 name = "Japanese"
 widget_name = "simplyKANA · Japanese"
 widget_slot = 0

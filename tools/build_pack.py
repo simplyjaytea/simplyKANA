@@ -20,6 +20,10 @@ out_dir = args[args.index("--out") + 1] if "--out" in args else f"{ROOT}/kana-co
 
 conf = tomllib.load(open(f"{ROOT}/packs/{lang}/pack.toml", "rb"))
 assert conf["language"] == lang, "pack.toml language must match its folder"
+assert conf.get("status") in ("shipped", "planned"), "pack.toml status must be shipped or planned"
+if conf["status"] == "planned" and "--out" not in args:
+    # Built and gated, kept in the repo next to its sources, not in the app.
+    out_dir = f"{ROOT}/packs/{lang}"
 
 # 1. Join: the one language-specific step. Each join script reads its sources and the
 #    pack's hand files and writes a plain word list.
