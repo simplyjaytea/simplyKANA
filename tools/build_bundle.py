@@ -1,6 +1,6 @@
 """Build the Japanese word bundle: 92 kana, then JLPT N5 joined to JMdict.
 
-usage: python3 -I tools/build_bundle.py JMdict_e tools/n5.csv kana-core/Sources/KanaCore/Resources/words-ja.json
+usage: python3 -I tools/build_bundle.py JMdict_e tools/n5.csv out.json  (normally run via tools/build_pack.py ja)
 
 Sources (credits screen, playbook rule 9):
   JMdict, EDRDG, CC-BY-SA 4.0. https://www.edrdg.org/edrdg/licence.html

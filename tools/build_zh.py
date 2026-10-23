@@ -1,6 +1,6 @@
 """Build the Chinese bundle: HSK 3.0 (GF 0025-2021) bands 1-3, simplified.
 
-usage: python3 -I tools/build_zh.py complete.json cedict_ts.u8 kana-core/Sources/KanaCore/Resources/words-zh.json
+usage: python3 -I tools/build_zh.py complete.json cedict_ts.u8 out.json  (normally run via tools/build_pack.py zh-Hans)
 
 Sources (credits screen; see tools/DATA-LICENSES.md):
   - Which words, and their band: complete-hsk-vocabulary (MIT), levels new-1..new-3.

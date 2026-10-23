@@ -118,8 +118,10 @@ struct FooterLine: View {
 
 /// Pure formatting rules, kept apart from the views so tests can check them.
 enum WordFormatting {
+    /// A script entry (kana, jamo): the pack's manifest says which parts of speech those are.
     static func isKana(_ word: Word) -> Bool {
-        word.partOfSpeech == "hiragana" || word.partOfSpeech == "katakana"
+        guard let pos = word.partOfSpeech else { return false }
+        return PackLibrary.shared.manifest(for: word.language)?.scriptPartsOfSpeech.contains(pos) ?? false
     }
 
     /// Hidden when it would repeat the orthography (kana, kana-only words).
@@ -137,15 +139,12 @@ enum WordFormatting {
         if isKana(word) { return word.partOfSpeech }
         var parts: [String] = []
         if let pos = word.partOfSpeech, !pos.isEmpty { parts.append(pos) }
-        if let level = word.level { parts.append(levelName(level)) }
+        if let level = word.level { parts.append(levelName(level, language: word.language)) }
         return parts.isEmpty ? nil : parts.joined(separator: " · ")
     }
 
-    static func levelName(_ level: Level) -> String {
-        switch level {
-        case .jlpt(let n): return "N\(n)"
-        case .hsk(let n): return "HSK \(n)"
-        case .nikl(let n): return "Grade \(n)"
-        }
+    static func levelName(_ level: Level, language: Language = .japanese) -> String {
+        PackLibrary.shared.manifest(for: language)?.levelLabel(level) ?? "\(level.scale.uppercased()) \(level.value)"
     }
+
 }

@@ -41,3 +41,51 @@ import Testing
         #expect(t.entries.allSatisfy { $0.word.language == lang })
     }
 }
+
+// MARK: - Packs (docs/pack-pipeline.md)
+
+@Test func packsAreDiscoveredNotNamed() {
+    let m = PackLibrary.shared.manifests
+    #expect(m.map(\.language.rawValue) == ["ja", "zh-Hans"])
+    #expect(m.map(\.widgetSlot) == [0, 1])
+    #expect(Set(m.map(\.widgetSlot)).count == m.count, "two packs claim the same widget slot")
+    for p in m {
+        #expect(p.count == (try? bundledWords(p.language).count))
+        #expect(p.placeholder.language == p.language)
+        #expect(!p.credits.isEmpty)
+    }
+}
+
+@Test func levelLabelsComeFromTheManifest() {
+    #expect(PackLibrary.shared.manifest(for: .japanese)?.levelLabel(.jlpt(5)) == "N5")
+    #expect(PackLibrary.shared.manifest(for: .chinese)?.levelLabel(.hsk(2)) == "HSK 2")
+}
+
+@Test func aPackInATemporaryFolderIsPickedUp() throws {
+    // Drop-in: a new language is a file. Copy the Japanese pack under a new code and
+    // a new slot, and the library finds it without code changes.
+    let dir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+    try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+    let ja = try PackLibrary.shared.pack(.japanese)
+    let xx = Language("x-test")
+    func relabel(_ w: Word) -> Word {
+        Word(id: w.id, language: xx, orthography: w.orthography, reading: w.reading, meanings: w.meanings,
+             partOfSpeech: w.partOfSpeech, level: w.level, isCommon: w.isCommon)
+    }
+    let m = ja.manifest
+    let manifest = PackManifest(language: xx, name: "Test", widgetName: "simplyKANA · Test", widgetSlot: 2,
+                                levelLabels: m.levelLabels, levelSummary: m.levelSummary, font: nil, fallbackFont: nil,
+                                voice: "en", speakReading: true, scriptPartsOfSpeech: [], placeholder: relabel(m.placeholder),
+                                credits: m.credits, count: m.count)
+    let data = try JSONEncoder().encode(Pack(manifest: manifest, words: ja.words.map(relabel)))
+    try data.write(to: dir.appendingPathComponent("x-test.pack.json"))
+    let lib = PackLibrary(directory: dir)
+    #expect(lib.manifests.map(\.name) == ["Test"])
+    #expect(try lib.pack(xx).words.count == 781)
+}
+
+@Test func aPackWithAWrongCountIsRejected() throws {
+    let ja = try PackLibrary.shared.pack(.japanese)
+    let bad = Pack(manifest: ja.manifest, words: Array(ja.words.dropLast()))
+    #expect(throws: PackError.self) { try decodePack(from: JSONEncoder().encode(bad)) }
+}

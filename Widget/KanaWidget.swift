@@ -7,23 +7,14 @@ struct WordEntry: TimelineEntry {
     let word: Word
 }
 
-/// Thin adapter: all logic is KanaCore.timeline (spec §2). One provider per pack
-/// (spec §1b): the pack is the widget kind, never a stored "current language".
+/// Thin adapter: all logic is KanaCore.timeline (spec §2). One provider per widget
+/// slot; the slot's pack comes from the manifests (docs/pack-pipeline.md).
 struct Provider: TimelineProvider {
-    let language: Language
+    let slot: Int
 
-    private var sample: Word {
-        switch language {
-        case .chinese:
-            return Word(id: "placeholder", language: .chinese, orthography: "水", reading: "shuǐ",
-                        meanings: ["water"], partOfSpeech: "noun", level: .hsk(1), isCommon: true)
-        default:
-            return Word(id: "placeholder", language: .japanese, orthography: "日", reading: "にち",
-                        meanings: ["day"], partOfSpeech: "noun", level: .jlpt(5), isCommon: true)
-        }
-    }
-
-    private var words: [Word] { (try? bundledWords(language)) ?? [] }
+    private var manifest: PackManifest? { PackLibrary.shared.manifests.first { $0.widgetSlot == slot } }
+    private var words: [Word] { manifest.flatMap { try? bundledWords($0.language) } ?? [] }
+    private var sample: Word { manifest?.placeholder ?? fallbackWord }
 
     func placeholder(in context: Context) -> WordEntry { WordEntry(date: Date(), word: sample) }
 
@@ -36,7 +27,7 @@ struct Provider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<WordEntry>) -> Void) {
         let words = self.words
         let t = timeline(after: Date(), schedule: currentSchedule, words: words, calendar: .current)
-        if words.isEmpty { NSLog("simplyKANA: \(language.rawValue) bundle failed to load; showing fallback") }
+        if words.isEmpty { NSLog("simplyKANA: no pack in widget slot \(slot); showing fallback") }
         completion(Timeline(entries: t.entries.map { WordEntry(date: $0.date, word: $0.word) },
                             policy: .after(t.reloadAt)))
     }
@@ -58,39 +49,35 @@ struct WordWidgetView: View {
     }
 }
 
-/// One widget kind per pack. WidgetKit needs a no-argument init, so each pack is
-/// its own small type sharing one configuration. Japanese keeps the original kind
-/// name so widgets already on a Lock Screen keep working after an update.
-func wordWidgetConfiguration(_ language: Language) -> some WidgetConfiguration {
-    let kind = language == .japanese ? "KanaLockScreen" : "KanaLockScreen.\(language.rawValue)"
-    let name: String
-    switch language {
-    case .japanese: name = "simplyKANA · Japanese"
-    case .chinese: name = "simplyKANA · Chinese"
-    case .korean: name = "simplyKANA · Korean"
-    }
-    return StaticConfiguration(kind: kind, provider: Provider(language: language)) { entry in
+/// One widget kind per pack slot. WidgetKit needs every widget kind as a Swift type
+/// with a no-argument init, known at build time, so the number of slots is fixed here.
+/// Which language fills a slot, and its gallery name, come from the pack manifests:
+/// adding a pack is a file, as long as a free slot exists. Slot 0 keeps the original
+/// kind name so widgets already on a Lock Screen keep working. A slot with no pack
+/// offers no sizes, so it doesn't appear in the gallery.
+func packWidgetConfiguration(slot: Int) -> some WidgetConfiguration {
+    let manifest = PackLibrary.shared.manifests.first { $0.widgetSlot == slot }
+    return StaticConfiguration(kind: slot == 0 ? "KanaLockScreen" : "KanaLockScreen.slot\(slot)",
+                               provider: Provider(slot: slot)) { entry in
         WordWidgetView(entry: entry)
     }
-    .configurationDisplayName(name)
+    .configurationDisplayName(manifest?.widgetName ?? "simplyKANA")
     .description("One word, on schedule.")
-    .supportedFamilies([.accessoryRectangular, .accessoryInline, .accessoryCircular])
+    .supportedFamilies(manifest == nil ? [] : [.accessoryRectangular, .accessoryInline, .accessoryCircular])
 }
 
-struct JapaneseWordWidget: Widget {
-    var body: some WidgetConfiguration { wordWidgetConfiguration(.japanese) }
-}
+struct PackWidget0: Widget { var body: some WidgetConfiguration { packWidgetConfiguration(slot: 0) } }
+struct PackWidget1: Widget { var body: some WidgetConfiguration { packWidgetConfiguration(slot: 1) } }
+struct PackWidget2: Widget { var body: some WidgetConfiguration { packWidgetConfiguration(slot: 2) } }
+struct PackWidget3: Widget { var body: some WidgetConfiguration { packWidgetConfiguration(slot: 3) } }
 
-struct ChineseWordWidget: Widget {
-    var body: some WidgetConfiguration { wordWidgetConfiguration(.chinese) }
-}
-
-/// Packs bundled in this build. Korean joins when its pack does.
 @main
 struct KanaWidgetBundle: WidgetBundle {
     var body: some Widget {
-        JapaneseWordWidget()
-        ChineseWordWidget()
+        PackWidget0()
+        PackWidget1()
+        PackWidget2()
+        PackWidget3()
     }
 }
 

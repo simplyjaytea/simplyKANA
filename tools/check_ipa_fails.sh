@@ -22,8 +22,8 @@ expect_fail "an IPA without the widget" "$T/no-widget.ipa" "$MIN"
 mutate simulator '/usr/libexec/PlistBuddy -c "Set :DTPlatformName iphonesimulator" Payload/SimplyKANA.app/Info.plist'
 expect_fail "a simulator build" "$T/simulator.ipa" "$MIN"
 
-mutate no-words 'find Payload -name words-ja.json -delete'
-expect_fail "an IPA without the word bundle" "$T/no-words.ipa" "$MIN"
+mutate no-words "find Payload -name 'zh-Hans.pack.json' -delete"
+expect_fail "an IPA without the language packs" "$T/no-words.ipa" "$MIN"
 
 expect_fail "the wrong minimum iOS" "$GOOD" "99.0"
 echo "check_ipa.sh fails on every bad archive"

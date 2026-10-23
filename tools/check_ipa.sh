@@ -22,7 +22,10 @@ for B in "$APP" "$EXT"; do
   lipo -archs "$exe" | grep -qw arm64 || fail "$name binary is $(lipo -archs "$exe"), not arm64"
   # 3. Minimum iOS and the word bundle.
   [ "$(plist "$B" MinimumOSVersion)" = "$MIN" ] || fail "$name MinimumOSVersion is '$(plist "$B" MinimumOSVersion)', want $MIN"
-  find "$B" -name words-ja.json | grep -q . || fail "$name has no words-ja.json"
-  echo "ok: $name  iphoneos arm64  iOS $MIN+  words-ja.json present"
+  # Every pack in the repo must be inside both the app and the widget.
+  for P in "$(dirname "$0")"/../kana-core/Sources/KanaCore/Resources/Packs/*.pack.json; do
+    P=$(basename "$P"); find "$B" -name "$P" | grep -q . || fail "$name has no $P"
+  done
+  echo "ok: $name  iphoneos arm64  iOS $MIN+  language packs present"
 done
 echo "IPA OK: $(du -h "$IPA" | cut -f1)"

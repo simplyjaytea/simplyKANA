@@ -1,0 +1,30 @@
+# Japanese pack. Built by: python3 -I tools/build_pack.py ja
+language = "ja"
+name = "Japanese"
+widget_name = "simplyKANA · Japanese"
+widget_slot = 0
+level_labels = { jlpt = "N{n}" }
+level_summary = "JLPT N5"
+font = "Hiragino Mincho ProN"
+voice = "ja-JP"
+speak_reading = true
+script_parts_of_speech = ["hiragana", "katakana"]
+placeholder = { orthography = "日", reading = "にち", meaning = "day", part_of_speech = "noun", level = { jlpt = 5 } }
+
+[join]
+kind = "jmdict-wordlist"
+script = "tools/build_bundle.py"
+inputs = ["JMdict_e", "tools/n5.csv"]
+
+[[source]]
+title = "JMdict"
+detail = "Meanings, part of speech and ids. © Electronic Dictionary Research and Development Group."
+licence = "CC-BY-SA 4.0"
+url = "https://www.edrdg.org/edrdg/licence.html"
+fetch = "http://ftp.edrdg.org/pub/Nihongo/JMdict_e.gz"
+
+[[source]]
+title = "JLPT N5 word list"
+detail = "open-anki-jlpt-decks, © 2020 Jamie Sinclair, based on Jonathan Waller's JLPT lists."
+licence = "MIT"
+url = "https://github.com/jamsinclair/open-anki-jlpt-decks"

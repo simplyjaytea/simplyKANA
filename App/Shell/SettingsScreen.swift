@@ -444,12 +444,7 @@ enum SettingsCopy {
     }
 
     static func language(_ pack: String) -> String {
-        switch Language(rawValue: pack) {
-        case .japanese: return "Japanese"
-        case .chinese: return "Chinese"
-        case .korean: return "Korean"
-        case nil: return pack
-        }
+        PackLibrary.shared.manifest(for: Language(pack))?.name ?? pack
     }
 
     /// What each pack ships. One tier per pack, so Level is a plain row.

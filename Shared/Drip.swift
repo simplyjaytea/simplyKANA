@@ -7,8 +7,10 @@ var currentSchedule: Schedule { Schedule.from(settings: SettingsStore.effective(
 /// Words for the chosen pack. Falls back to Japanese if a stored pack isn't bundled;
 /// an empty list means the bundle failed to load, and timeline() shows the fallback word.
 func packWords(_ settings: Settings = SettingsStore.effective()) -> [Word] {
-    let lang = Language(rawValue: settings.languagePack) ?? .japanese
-    return (try? bundledWords(lang)) ?? (try? bundledWords(.japanese)) ?? []
+    // A stored pack that isn't installed falls back to the first installed pack.
+    let lang = Language(settings.languagePack)
+    if let words = try? bundledWords(lang) { return words }
+    return PackLibrary.shared.manifests.first.flatMap { try? bundledWords($0.language) } ?? []
 }
 
 /// The Japanese bundle, loaded once (tests and placeholders).
