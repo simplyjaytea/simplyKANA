@@ -48,8 +48,8 @@ import Testing
 @Test func packsAreDiscoveredNotNamed() {
     let m = PackLibrary.shared.manifests
     // Chinese is parked (status "planned"): it's not in the app, so not discovered.
-    #expect(m.map(\.language.rawValue) == ["ja"])
-    #expect(m.map(\.widgetSlot) == [0])
+    #expect(m.map(\.language.rawValue) == ["ja", "ko"])
+    #expect(m.map(\.widgetSlot) == [0, 2])
     #expect(parkedPacks.manifests.map(\.language.rawValue) == ["zh-Hans"])
     #expect(Set(m.map(\.widgetSlot)).count == m.count, "two packs claim the same widget slot")
     for p in m {
@@ -78,7 +78,7 @@ import Testing
     let m = ja.manifest
     let manifest = PackManifest(language: xx, name: "Test", widgetName: "simplyKANA · Test", widgetSlot: 2,
                                 levelLabels: m.levelLabels, levelSummary: m.levelSummary, fonts: m.fonts,
-                                voice: "en", speakReading: true, scriptPartsOfSpeech: [], placeholder: relabel(m.placeholder),
+                                voice: "en", speakReading: true, scriptPartsOfSpeech: [], scriptSoundWord: nil, placeholder: relabel(m.placeholder),
                                 credits: m.credits, count: m.count)
     let data = try JSONEncoder().encode(Pack(manifest: manifest, words: ja.words.map(relabel)))
     try data.write(to: dir.appendingPathComponent("x-test.pack.json"))

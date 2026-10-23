@@ -1,0 +1,6 @@
+# word	reason. Rule 8 drops beyond the part-of-speech rule, and "count" holds.
+# count: 1,816 is 8 x 227 and would hide words at some intervals; 1,813 is safe.
+# Provisional picks (Poppy); Rachel confirms or swaps them in the reading pass.
+오래간만	count (same word as 오랜만, the longer form)
+그거	count (spoken form of 그것, which stays)
+하숙비	count (board-and-lodging fee; rare for a beginner)
