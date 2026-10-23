@@ -22,8 +22,15 @@ expect_fail "an IPA without the widget" "$T/no-widget.ipa" "$MIN"
 mutate simulator '/usr/libexec/PlistBuddy -c "Set :DTPlatformName iphonesimulator" Payload/SimplyKANA.app/Info.plist'
 expect_fail "a simulator build" "$T/simulator.ipa" "$MIN"
 
-mutate no-words "find Payload -name 'zh-Hans.pack.json' -delete"
+mutate no-words "find Payload -name 'ja.pack.json' -delete"
 expect_fail "an IPA without the language packs" "$T/no-words.ipa" "$MIN"
 
 expect_fail "the wrong minimum iOS" "$GOOD" "99.0"
+
+# A parked pack (status "planned") smuggled into the app must be caught.
+PARKED=$(ls "$HERE"/../packs/*/*.pack.json 2>/dev/null | head -1)
+if [ -n "$PARKED" ]; then
+  mutate parked "cp '$PARKED' Payload/SimplyKANA.app/"
+  expect_fail "an IPA that ships a parked pack" "$T/parked.ipa" "$MIN"
+fi
 echo "check_ipa.sh fails on every bad archive"
