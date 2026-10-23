@@ -10,6 +10,14 @@ human judgement. Everything else is the same code for every language.
 
 ---
 
+## 0a. Pack status (user, 2026-10-23)
+
+| Pack | Status | Shipped in the alpha download |
+|---|---|---|
+| Japanese | done, 781 words, human-read | yes |
+| Chinese | built and gated (2,207 words), **planned**, not shipped yet at the user's request | no, excluded from the pack list until the user says otherwise |
+| Korean | source decided (NIKL), pack not started | no |
+
 ## 0. The user's requirement (2026-10-23, verbatim intent)
 
 "Japanese is one file. Chinese is one file. Korean is one file. The app swaps
@@ -25,10 +33,10 @@ true:
   names a language: fonts, voice code, level labels and script names come
   from the pack's manifest, so a fourth language is a fourth file and zero
   code.
-- **The widget follows the same preference wherever it can read it** (Xcode
-  installs with the App Group). Where it cannot (sideload), the user chooses
-  per widget, which is why the per-language widget kinds (#39) exist. Both
-  paths read the same pack files.
+- **The widget's language is fixed by which widget the user adds**, on
+  every install route (#39). It never follows the app's Language setting,
+  so a widget added as Japanese stays Japanese. Both the app and the widgets
+  read the same pack files.
 
 ## 1. What a pack is
 
