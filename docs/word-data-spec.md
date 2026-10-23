@@ -282,9 +282,18 @@ packs plus a language picker. Nothing in the scheduler changes.
 **Candidate data sources (Poppy to verify licence and coverage before use)**
 - Chinese: CC-CEDICT (CC-BY-SA 4.0, credit MDBG/CC-CEDICT) for id, pinyin,
   glosses; the MIT-licensed HSK 3.0 list for band membership. Same join as §4.
-- Korean: NIKL Korean Basic Dictionary (한국어기초사전) or kengdic for id,
-  romanization, glosses; NIKL learner vocabulary list for grade membership.
-  Licences for all three unconfirmed as of 2026-10-22 (Poppy, before release two).
+- Korean (decided 2026-10-23): **NIKL's Basic Korean Dictionary
+  (한국어기초사전) is the source of meanings, readings and ids**; the NIKL
+  learner vocabulary list gives grade membership. Licence: CC BY-SA 2.0 KR
+  per krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo, which carves
+  out only audio and pronunciation files. **Accepted risk, recorded in
+  tools/DATA-LICENSES.md in plain words:** the page does not name the
+  English translations specifically; they fall under its "everything not
+  otherwise marked" line. That is an inference. If the user wants it in
+  writing from NIKL, the user sends the email; nobody on the team can.
+  **kengdic (MPL 2.0) becomes Rachel's independent second dictionary** for
+  the reading pass, reversing the earlier plan, so the check never compares
+  a source against itself.
 
 **Heteronym rule (Ian, 2026-10-22; applies to every pack).** A word with more
 than one reading in the dictionary takes its reading **and** its first meaning
