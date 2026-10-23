@@ -170,6 +170,18 @@ not the prose:
 Expected count after the list: 781 (not a multiple of 24; にち restored, ねん dropped). Any new drop or
 restore changes this table first and the bundle second.
 
+**Chinese readings and tones (2026-10-23, from Rachel's 141-pair check):**
+- Tones follow the official HSK list where the two sources disagree,
+  including neutral tones (好处, 过来, 出来). CC-CEDICT supplies the reading
+  everywhere else. Logged risk: the ~2,070 non-heteronym readings are
+  CC-CEDICT, unchecked against the official list, because no licensed text
+  copy of it exists. Accepted; revisit if a phone sample finds a wrong tone.
+- 子 is dropped under rule 8 (HSK 1 lists it only as the noun suffix in 桌子).
+  That leaves 2,208 = 48 × 46, which aliases the 30-minute interval, so the
+  pack must shed or add one more word; the count gate catches it either way.
+- 把 leads with the object-marker and measure-word senses, not "to hold".
+  称 leads with "to call"; "to weigh" is an HSK 4 sense and goes second.
+
 **First-meaning length (2026-10-22, from the first widget snapshots):** the
 Lock Screen shows only `meanings[0]`, and it must fit the rectangular widget
 on the smallest supported phone without truncation. Rachel's gate wins over
