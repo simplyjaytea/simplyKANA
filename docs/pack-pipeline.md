@@ -96,7 +96,9 @@ no_digits_in_reading = true
    {
      "manifest": {
        "language": "zh-Hans", "name": "Chinese", "levelScale": "hsk",
-       "font": "NotoSerifSC-Subset", "voice": "zh-CN",
+       "fonts": { "word": ["NotoSerifSC-Subset", "Songti SC", "PingFang SC"],
+                  "reading": ["Georgia", "PingFang SC"] },   // Dana: two ordered lists, bundled serif → iOS serif → iOS sans for the script
+       "voice": "zh-CN", "widgetSlot": 2,
        "scriptLabels": {}, "count": 2207, "sources": [...], "licences": "...",
        "builtFrom": { "list": "<sha256>", "dictionary": "<sha256>" }
      },
@@ -144,13 +146,16 @@ designed so it never needs a rewrite.
 3. Fold `build_bundle.py` and `build_zh.py` into `build_pack.py <lang>`;
    move the six Chinese hand files into `packs/zh-Hans/` as the three named
    files; same for Japanese.
-4. Gate: today's two bundles reproduce byte for byte from the new build.
+4. Gate (wording settled by Mira and Rachel, 2026-10-23): every word, id,
+   order, reading, meaning and level comes out identical to today's packs,
+   and the old and new builds produce the same set. Byte-for-byte cannot
+   hold once words, manifest and licences share one file.
 5. Then Korean is `packs/ko/pack.toml` and a reading pass.
 
 ## 5. Gates for the pipeline itself (Rachel)
 
-- Building Japanese and Chinese from their `pack.toml` reproduces today's
-  bundles byte for byte.
+- Building Japanese and Chinese from their `pack.toml` yields the same
+  words, ids, order, readings, meanings and levels as today's packs.
 - A new `packs/xx/pack.toml` with sources and no hand files builds and
   passes every gate or fails with a named rule, never with a stack trace.
 - Removing one override line changes exactly one word in the output.
