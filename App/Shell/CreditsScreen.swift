@@ -49,51 +49,6 @@ struct CreditsList: View {
     }
 
     var body: some View {
-        ScrollView { CreditsList() }
-            .background(Ink.paper.ignoresSafeArea())
-            .navigationTitle("Credits")
-            .navigationBarTitleDisplayMode(.inline)
-    }
-}
-
-/// The content without scrolling, so ImageRenderer can snapshot it.
-struct CreditsList: View {
-    struct Credit: Identifiable {
-        let id: String
-        let what: String
-        let who: String
-        let licence: String
-    }
-
-    /// Fonts are credited only when bundled; until then the app uses the
-    /// system's Hiragino Mincho and SF Pro, which need no credit.
-    /// Credits follow the data that ships: a pack's sources appear the day
-    /// its bundle lands (playbook rule 9).
-    static var credits: [Credit] { japanese + (installedPacks.contains(.chinese) ? chinese : []) }
-
-    static let japanese: [Credit] = [
-        Credit(id: "jmdict",
-               what: "Japanese meanings, readings and parts of speech",
-               who: "JMdict, © Electronic Dictionary Research and Development Group (EDRDG)",
-               licence: "Creative Commons Attribution-ShareAlike 4.0. The Japanese word list in this app is adapted from JMdict and shared under the same licence."),
-        Credit(id: "n5",
-               what: "Which words are JLPT N5",
-               who: "open-anki-jlpt-decks, © 2020 Jamie Sinclair, based on Jonathan Waller's JLPT lists (tanos.co.uk)",
-               licence: "MIT License"),
-    ]
-
-    static let chinese: [Credit] = [
-        Credit(id: "cedict",
-               what: "Chinese meanings and pinyin",
-               who: "CC-CEDICT, © MDBG",
-               licence: "Creative Commons Attribution-ShareAlike 4.0. The Chinese word list in this app is adapted from CC-CEDICT and shared under the same licence."),
-        Credit(id: "hsk",
-               what: "Which words are HSK 1–3",
-               who: "complete-hsk-vocabulary (drkameleon), from elkmovie/hsk30, after the HSK 3.0 standard (GF 0025-2021)",
-               licence: "MIT License"),
-    ]
-
-    var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             ForEach(Array(Self.credits.enumerated()), id: \.element.id) { index, credit in
                 if index > 0 { Rectangle().fill(Ink.rule).frame(height: 1) }
