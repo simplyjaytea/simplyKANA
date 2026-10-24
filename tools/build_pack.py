@@ -80,6 +80,7 @@ manifest = {
     "fonts": {"orthography": conf["fonts"]["orthography"], "reading": conf["fonts"]["reading"]},
     "voice": conf["voice"],
     "speakReading": conf["speak_reading"], "scriptPartsOfSpeech": conf["script_parts_of_speech"],
+    "scriptSoundWord": conf.get("script_sound_word", "romaji"),
     "placeholder": {"id": "placeholder", "language": lang, "orthography": ph["orthography"],
                     "reading": ph["reading"], "meanings": [ph["meaning"]],
                     "partOfSpeech": ph.get("part_of_speech"), "level": ph.get("level"), "isCommon": True},

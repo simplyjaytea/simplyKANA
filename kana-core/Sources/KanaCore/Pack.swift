@@ -23,6 +23,8 @@ public struct PackManifest: Codable, Equatable, Sendable {
     public let speakReading: Bool
     /// Parts of speech that are scripts, e.g. ["hiragana", "katakana"]: the reading line is hidden.
     public let scriptPartsOfSpeech: [String]
+    /// What a script entry's meaning is called in VoiceOver: "romaji" (kana), "sounds" (jamo).
+    public let scriptSoundWord: String?
     /// Word shown in widget previews.
     public let placeholder: Word
     /// Credits screen text: sources and licences.
@@ -42,8 +44,10 @@ public struct PackManifest: Codable, Equatable, Sendable {
         public let url: String?
     }
 
+    /// "nikl.1" wins over "nikl", so a scale can name a level ("Beginner") or template it ("N{n}").
     public func levelLabel(_ level: Level) -> String {
-        (levelLabels[level.scale] ?? "\(level.scale.uppercased()) {n}")
+        if let exact = levelLabels["\(level.scale).\(level.value)"] { return exact }
+        return (levelLabels[level.scale] ?? "\(level.scale.uppercased()) {n}")
             .replacingOccurrences(of: "{n}", with: String(level.value))
     }
 }
