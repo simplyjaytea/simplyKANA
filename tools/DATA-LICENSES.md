@@ -40,3 +40,13 @@ Checked before any Chinese or Korean data is bundled (start condition, word-data
 Open points, none blocking:
 - The Korean bundle mixes KOGL (word list) and MPL (glosses); the credits screen lists both.
 - kengdic glosses are sparse for some entries; expect more hand fixes per word than JMdict needed.
+
+## Bundled typefaces
+
+`Shared/Fonts/NotoSerif*.ttf` are subsets of Noto Serif JP (google/fonts,
+`ofl/notoserifjp`), © 2017–2024 Adobe, under the SIL Open Font License 1.1
+(`Shared/Fonts/OFL.txt`). They are static instances (wght 500 for words, 400
+for readings) cut by `tools/make_fonts.py` to the characters the packs draw;
+the OFL allows subsetting and bundling. The Credits screen lists them, with the
+copyright read from the font file. `BundledFontTests` fails if a pack character
+is missing from its face.
