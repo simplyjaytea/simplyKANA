@@ -37,7 +37,7 @@ no gamification, one surface (Lock Screen widget), deterministic drip schedule.
 ```sh
 cd kana-core && swift test
 ```
-Swift toolchain at `/opt/swift/usr/bin/swift`. 82+ tests.
+Swift toolchain at `/opt/swift/usr/bin/swift`. 75 tests on main (82 on the Korean branch PR #44).
 
 ### macOS (full build, needs Xcode 16+)
 ```sh
