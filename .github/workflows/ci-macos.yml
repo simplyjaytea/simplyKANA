@@ -1,19 +1,49 @@
 name: CI (macOS)
 
-# macOS minutes count ~10x against the free allowance. Playbook rule 3:
-# run on any change to kana-core/**, bundled data or workflows; skip docs only.
+# macOS minutes count ~10x against the free allowance.
+# CI runs ONLY on pull requests (not on every push to main) and on manual
+# dispatch. It also skips runs when only docs/config-only files change.
+# When a PR is opened or updated, the "notify" job posts a comment so you
+# know CI is running.
 on:
-  push:
-    branches: [main]
-    paths-ignore: ['docs/**']
   pull_request:
-    paths-ignore: ['docs/**']
+    paths:
+      - 'kana-core/**'
+      - 'App/**'
+      - 'AppTests/**'
+      - 'Shared/**'
+      - 'Widget/**'
+      - 'packs/**'
+      - 'project.yml'
+      - 'tools/**'
+      - '.github/workflows/ci-macos.yml'
+  workflow_dispatch:
 
 concurrency:
   group: ci-macos-${{ github.event_name == 'pull_request' && github.ref || github.sha }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  notify:
+    name: Notify (CI starting)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Post comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const prNumber = context.issue.number;
+            const sha = context.sha.substring(0, 7);
+            await github.rest.issues.createComment({
+              owner, repo,
+              issue_number: prNumber,
+              body: `🤖 macOS CI is now running for commit \`${sha}\`. Jobs: KanaCore (macOS), App + widget (simulator), unsigned IPA build. Watch this PR for results.`
+            });
+
   core-macos:
     name: KanaCore (macOS / Xcode)
     runs-on: macos-15
