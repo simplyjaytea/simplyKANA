@@ -43,7 +43,13 @@ Every view that draws an orthography or reading picks its face from
 | Chinese (Simplified) | Noto Serif SC 500 → Songti SC Bold → PingFang SC Medium | Pinyin is Latin: Noto Serif → Georgia |
 | Korean | Noto Serif KR 500 → AppleMyungjo → Apple SD Gothic Neo Medium | Noto Serif KR 400 → AppleMyungjo → Apple SD Gothic Neo |
 
-The last face in each row is a sans iOS always ships for that script. Right
+**Bundled (Dana, 2026-10-23, Ian approved):** the first face in each row is
+shipped in the app and the widget as a subset cut to the characters that pack
+draws (`tools/make_fonts.py`, `Shared/Fonts/`). Japanese words 248 KB, readings
+98 KB. Each pack's font lists live in its `pack.toml` `[fonts]`; Latin readings
+(pinyin, romanization) use a system serif and are not cut. A test fails if any
+pack character is missing from its face, so no word falls half into the system
+font. The last face in each row is a sans iOS always ships for that script. Right
 shapes beat a serif: if no serif is installed, the sans is correct and the
 serif is not. The Lock Screen widget uses the same table.
 

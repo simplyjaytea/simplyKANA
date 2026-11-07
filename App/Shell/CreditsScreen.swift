@@ -1,4 +1,6 @@
 import SwiftUI
+import CoreText
+import KanaCore
 
 /// The one screen allowed to be plain (design-direction §4, playbook rule 9).
 struct CreditsScreen: View {
@@ -19,33 +21,32 @@ struct CreditsList: View {
         let licence: String
     }
 
-    /// Fonts are credited only when bundled; until then the app uses the
-    /// system's Hiragino Mincho and SF Pro, which need no credit.
-    /// Credits follow the data that ships: a pack's sources appear the day
-    /// its bundle lands (playbook rule 9).
-    static var credits: [Credit] { japanese + (installedPacks.contains(.chinese) ? chinese : []) }
+    /// Every installed pack's own credits (pack.toml), then the bundled
+    /// typefaces. Swift names no language: a new pack brings its own lines.
+    static var credits: [Credit] {
+        let packs = installedPacks.flatMap { lang in
+            (PackLibrary.shared.manifest(for: lang)?.credits ?? []).map {
+                Credit(id: "\(lang.rawValue):\($0.title)", what: $0.title, who: $0.detail, licence: $0.licence)
+            }
+        }
+        return packs + fontCredits
+    }
 
-    static let japanese: [Credit] = [
-        Credit(id: "jmdict",
-               what: "Japanese meanings, readings and parts of speech",
-               who: "JMdict, © Electronic Dictionary Research and Development Group (EDRDG)",
-               licence: "Creative Commons Attribution-ShareAlike 4.0. The Japanese word list in this app is adapted from JMdict and shared under the same licence."),
-        Credit(id: "n5",
-               what: "Which words are JLPT N5",
-               who: "open-anki-jlpt-decks, © 2020 Jamie Sinclair, based on Jonathan Waller's JLPT lists (tanos.co.uk)",
-               licence: "MIT License"),
-    ]
-
-    static let chinese: [Credit] = [
-        Credit(id: "cedict",
-               what: "Chinese meanings and pinyin",
-               who: "CC-CEDICT, © MDBG",
-               licence: "Creative Commons Attribution-ShareAlike 4.0. The Chinese word list in this app is adapted from CC-CEDICT and shared under the same licence."),
-        Credit(id: "hsk",
-               what: "Which words are HSK 1–3",
-               who: "complete-hsk-vocabulary (drkameleon), from elkmovie/hsk30, after the HSK 3.0 standard (GF 0025-2021)",
-               licence: "MIT License"),
-    ]
+    /// One line per bundled family, copyright read from the font file itself.
+    static var fontCredits: [Credit] {
+        ScriptFonts.registerBundledFonts()
+        var seen = Set<String>()
+        return ScriptFonts.bundledFontURLs.compactMap { url in
+            guard let descs = CTFontManagerCreateFontDescriptorsFromURL(url as CFURL) as? [CTFontDescriptor],
+                  let desc = descs.first else { return nil }
+            let font = CTFontCreateWithFontDescriptor(desc, 12, nil)
+            let family = CTFontCopyFamilyName(font) as String
+            guard seen.insert(family).inserted else { return nil }
+            let copyright = (CTFontCopyName(font, kCTFontCopyrightNameKey) as String?) ?? ""
+            return Credit(id: "font:\(family)", what: "Typeface: \(family)", who: copyright,
+                          licence: "SIL Open Font License 1.1")
+        }.sorted { $0.id < $1.id }
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
