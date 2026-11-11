@@ -109,7 +109,8 @@ public func spokenLabel(for word: Word) -> [SpokenPart] {
     let meaning = word.meanings.first ?? ""
     let manifest = PackLibrary.shared.manifest(for: word.language)
     if let scripts = manifest?.scriptPartsOfSpeech, let pos = word.partOfSpeech, scripts.contains(pos) {
-        return [SpokenPart(word.orthography, lang), SpokenPart(", \(pos), romaji \(meaning)", nil)]
+        let sounds = manifest?.scriptSoundWord ?? "romaji"
+        return [SpokenPart(word.orthography, lang), SpokenPart(", \(pos), \(sounds) \(meaning)", nil)]
     }
     if manifest?.speakReading == false {
         // e.g. Chinese: the voice reads the characters; pinyin read aloud is noise.

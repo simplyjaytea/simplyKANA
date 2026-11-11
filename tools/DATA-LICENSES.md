@@ -26,6 +26,21 @@ Rebuild: download `https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-
 and complete-hsk-vocabulary's `complete.json`, then
 put `complete.json` and `cedict_ts.u8` in `/tmp/packsrc/zh-Hans/`, then `python3 -I tools/build_pack.py zh-Hans`
 
+## Korean pack
+
+`kana-core/Sources/KanaCore/Resources/Packs/ko.pack.json` is built by `tools/build_pack.py ko`
+(join: `tools/build_ko.py`, readings: `tools/ko_romanize.py`) from:
+
+- **Basic Korean Dictionary (한국어기초사전)**, National Institute of Korean Language (국립국어원):
+  words, learner level (초급 = grade A), pronunciation, English meanings.
+  Licence **CC BY-SA 2.0 KR**, per https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo
+  ("everything not otherwise marked"). The English translations aren't named on that page; using
+  them under it is a recorded inference (word-data-spec, PR #42). The pack keeps this licence; it
+  is not relabelled 4.0. Data: the 2019 snapshot at github.com/spellcheck-ko/korean-dict-nikl-krdict.
+- **Written by hand** (Poppy, reviewed by Rachel): `packs/ko/overrides.tsv`, `readings.tsv`, `drops.txt`.
+
+Rebuild: put the snapshot's `*.xml` in `/tmp/packsrc/ko/`, then `python3 -I tools/build_pack.py ko`.
+
 ## Release two: licence checks (Poppy, 2026-10-22)
 
 Checked before any Chinese or Korean data is bundled (start condition, word-data-spec §7).

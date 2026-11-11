@@ -1,0 +1,31 @@
+# Korean pack. Built by: python3 -I tools/build_pack.py ko   (sources in /tmp/packsrc/ko)
+language = "ko"
+status = "shipped"
+name = "Korean"
+widget_name = "simplyKANA · Korean"
+widget_slot = 2
+level_labels = { "nikl.1" = "Beginner", nikl = "Grade {n}" }
+level_summary = "Beginner"
+voice = "ko-KR"
+speak_reading = false
+script_parts_of_speech = ["jamo"]
+script_sound_word = "sounds"
+placeholder = { orthography = "물", reading = "mul", meaning = "water", part_of_speech = "noun", level = { nikl = 1 } }
+
+# Dana: bundled serif → the Korean sans iOS always has. AppleMyungjo is not on iOS.
+# Romanized readings use the Latin serif, like pinyin.
+[fonts]
+orthography = ["NotoSerifKR-Medium", "AppleSDGothicNeo-Medium"]
+reading = ["NotoSerif-Regular", "Georgia"]
+
+[join]
+kind = "krdict"
+script = "tools/build_ko.py"
+inputs = ["."]
+
+[[source]]
+title = "Basic Korean Dictionary (한국어기초사전)"
+detail = "Words, learner level, pronunciation and English meanings. National Institute of Korean Language (국립국어원). 2019 snapshot."
+licence = "CC BY-SA 2.0 KR"
+url = "https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo"
+fetch = "https://github.com/spellcheck-ko/korean-dict-nikl-krdict"

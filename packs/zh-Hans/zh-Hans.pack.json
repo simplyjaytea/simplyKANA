@@ -22,6 +22,7 @@
   "voice": "zh-CN",
   "speakReading": false,
   "scriptPartsOfSpeech": [],
+  "scriptSoundWord": "romaji",
   "placeholder": {
    "id": "placeholder",
    "language": "zh-Hans",
